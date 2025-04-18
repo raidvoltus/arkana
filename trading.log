@@ -1,0 +1,213 @@
+2025-04-18 09:19:54.410276: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-18 09:19:54.413612: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-18 09:19:54.422373: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1744967994.436402    2109 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1744967994.440625    2109 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1744967994.452614    2109 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744967994.452629    2109 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744967994.452631    2109 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744967994.452634    2109 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-18 09:19:54.456221: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Tidak ada model yang ditemukan untuk dihapus.
+ssibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897597 and endTime=1744967997. The requested range must be within the last 60 days.")
+2025-04-18 09:19:57,632 - WARNING - Data kosong/kurang untuk ADRO.JK
+2025-04-18 09:19:57,633 - ERROR - $ACES.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897597 and endTime=1744967997. The requested range must be within the last 60 days.")
+2025-04-18 09:19:57,634 - WARNING - Data kosong/kurang untuk ACES.JK
+2025-04-18 09:19:57,636 - ERROR - $AKRA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897597 and endTime=1744967997. The requested range must be within the last 60 days.")
+2025-04-18 09:19:57,636 - ERROR - $ADMR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897597 and endTime=1744967997. The requested range must be within the last 60 days.")
+2025-04-18 09:19:57,637 - WARNING - Data kosong/kurang untuk AKRA.JK
+2025-04-18 09:19:57,637 - WARNING - Data kosong/kurang untuk ADMR.JK
+2025-04-18 09:19:58,448 - ERROR - $ARTO.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897598 and endTime=1744967998. The requested range must be within the last 60 days.")
+2025-04-18 09:19:58,449 - WARNING - Data kosong/kurang untuk ARTO.JK
+2025-04-18 09:19:58,451 - ERROR - $ANTM.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897598 and endTime=1744967998. The requested range must be within the last 60 days.")
+2025-04-18 09:19:58,451 - WARNING - Data kosong/kurang untuk ANTM.JK
+2025-04-18 09:19:58,453 - ERROR - $AMRT.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897598 and endTime=1744967998. The requested range must be within the last 60 days.")
+2025-04-18 09:19:58,453 - WARNING - Data kosong/kurang untuk AMRT.JK
+2025-04-18 09:19:58,454 - ERROR - $AMMN.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897598 and endTime=1744967998. The requested range must be within the last 60 days.")
+2025-04-18 09:19:58,455 - WARNING - Data kosong/kurang untuk AMMN.JK
+2025-04-18 09:19:59,000 - ERROR - $AVIA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897598 and endTime=1744967998. The requested range must be within the last 60 days.")
+2025-04-18 09:19:59,000 - ERROR - $AUTO.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897598 and endTime=1744967998. The requested range must be within the last 60 days.")
+2025-04-18 09:19:59,001 - WARNING - Data kosong/kurang untuk AVIA.JK
+2025-04-18 09:19:59,001 - WARNING - Data kosong/kurang untuk AUTO.JK
+2025-04-18 09:19:59,002 - ERROR - $ASII.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897598 and endTime=1744967998. The requested range must be within the last 60 days.")
+2025-04-18 09:19:59,004 - ERROR - $BBCA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897598 and endTime=1744967998. The requested range must be within the last 60 days.")
+2025-04-18 09:19:59,005 - WARNING - Data kosong/kurang untuk ASII.JK
+2025-04-18 09:19:59,005 - WARNING - Data kosong/kurang untuk BBCA.JK
+2025-04-18 09:19:59,502 - ERROR - $BBTN.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897599 and endTime=1744967999. The requested range must be within the last 60 days.")
+2025-04-18 09:19:59,502 - ERROR - $BBNI.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897599 and endTime=1744967999. The requested range must be within the last 60 days.")
+2025-04-18 09:19:59,503 - WARNING - Data kosong/kurang untuk BBTN.JK
+2025-04-18 09:19:59,503 - ERROR - $BBYB.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897599 and endTime=1744967999. The requested range must be within the last 60 days.")
+2025-04-18 09:19:59,504 - WARNING - Data kosong/kurang untuk BBNI.JK
+2025-04-18 09:19:59,505 - WARNING - Data kosong/kurang untuk BBYB.JK
+2025-04-18 09:19:59,511 - ERROR - $BBRI.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897599 and endTime=1744967999. The requested range must be within the last 60 days.")
+2025-04-18 09:19:59,511 - WARNING - Data kosong/kurang untuk BBRI.JK
+2025-04-18 09:20:00,012 - ERROR - $BDKR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897599 and endTime=1744967999. The requested range must be within the last 60 days.")
+2025-04-18 09:20:00,012 - ERROR - $BMTR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897599 and endTime=1744967999. The requested range must be within the last 60 days.")
+2025-04-18 09:20:00,012 - WARNING - Data kosong/kurang untuk BDKR.JK
+2025-04-18 09:20:00,013 - WARNING - Data kosong/kurang untuk BMTR.JK
+2025-04-18 09:20:00,512 - ERROR - $BMRI.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897600 and endTime=1744968000. The requested range must be within the last 60 days.")
+2025-04-18 09:20:00,513 - WARNING - Data kosong/kurang untuk BMRI.JK
+2025-04-18 09:20:00,514 - ERROR - $BFIN.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897600 and endTime=1744968000. The requested range must be within the last 60 days.")
+2025-04-18 09:20:00,515 - WARNING - Data kosong/kurang untuk BFIN.JK
+2025-04-18 09:20:01,073 - ERROR - $BRIS.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897601 and endTime=1744968001. The requested range must be within the last 60 days.")
+2025-04-18 09:20:01,074 - WARNING - Data kosong/kurang untuk BRIS.JK
+2025-04-18 09:20:01,075 - ERROR - $BNGA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897601 and endTime=1744968001. The requested range must be within the last 60 days.")
+2025-04-18 09:20:01,076 - WARNING - Data kosong/kurang untuk BNGA.JK
+2025-04-18 09:20:01,077 - ERROR - $BRMS.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897601 and endTime=1744968001. The requested range must be within the last 60 days.")
+2025-04-18 09:20:01,077 - WARNING - Data kosong/kurang untuk BRMS.JK
+2025-04-18 09:20:01,846 - ERROR - $BRPT.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897601 and endTime=1744968001. The requested range must be within the last 60 days.")
+2025-04-18 09:20:01,846 - WARNING - Data kosong/kurang untuk BRPT.JK
+2025-04-18 09:20:02,355 - ERROR - $CMRY.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897602 and endTime=1744968002. The requested range must be within the last 60 days.")
+2025-04-18 09:20:02,355 - WARNING - Data kosong/kurang untuk CMRY.JK
+2025-04-18 09:20:02,358 - ERROR - $BSDE.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897602 and endTime=1744968002. The requested range must be within the last 60 days.")
+2025-04-18 09:20:02,358 - WARNING - Data kosong/kurang untuk BSDE.JK
+2025-04-18 09:20:02,369 - ERROR - $BTPS.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897602 and endTime=1744968002. The requested range must be within the last 60 days.")
+2025-04-18 09:20:02,369 - WARNING - Data kosong/kurang untuk BTPS.JK
+2025-04-18 09:20:03,242 - ERROR - $CPIN.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897603 and endTime=1744968003. The requested range must be within the last 60 days.")
+2025-04-18 09:20:03,242 - WARNING - Data kosong/kurang untuk CPIN.JK
+2025-04-18 09:20:03,650 - ERROR - $CTRA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897603 and endTime=1744968003. The requested range must be within the last 60 days.")
+2025-04-18 09:20:03,651 - WARNING - Data kosong/kurang untuk CTRA.JK
+2025-04-18 09:20:03,654 - ERROR - $DEWA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897603 and endTime=1744968003. The requested range must be within the last 60 days.")
+2025-04-18 09:20:03,654 - WARNING - Data kosong/kurang untuk DEWA.JK
+2025-04-18 09:20:04,084 - ERROR - $DSNG.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897604 and endTime=1744968004. The requested range must be within the last 60 days.")
+2025-04-18 09:20:04,085 - WARNING - Data kosong/kurang untuk DSNG.JK
+2025-04-18 09:20:04,613 - ERROR - $ELSA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897604 and endTime=1744968004. The requested range must be within the last 60 days.")
+2025-04-18 09:20:04,613 - WARNING - Data kosong/kurang untuk ELSA.JK
+2025-04-18 09:20:04,615 - ERROR - $EMTK.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897604 and endTime=1744968004. The requested range must be within the last 60 days.")
+2025-04-18 09:20:04,615 - WARNING - Data kosong/kurang untuk EMTK.JK
+2025-04-18 09:20:04,619 - ERROR - $ENRG.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897604 and endTime=1744968004. The requested range must be within the last 60 days.")
+2025-04-18 09:20:04,619 - WARNING - Data kosong/kurang untuk ENRG.JK
+2025-04-18 09:20:05,157 - ERROR - $ERAA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897605 and endTime=1744968005. The requested range must be within the last 60 days.")
+2025-04-18 09:20:05,157 - WARNING - Data kosong/kurang untuk ERAA.JK
+2025-04-18 09:20:05,603 - ERROR - $ESSA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897605 and endTime=1744968005. The requested range must be within the last 60 days.")
+2025-04-18 09:20:05,603 - WARNING - Data kosong/kurang untuk ESSA.JK
+2025-04-18 09:20:05,605 - ERROR - $EXCL.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897605 and endTime=1744968005. The requested range must be within the last 60 days.")
+2025-04-18 09:20:05,605 - WARNING - Data kosong/kurang untuk EXCL.JK
+2025-04-18 09:20:06,173 - ERROR - $FILM.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897606 and endTime=1744968006. The requested range must be within the last 60 days.")
+2025-04-18 09:20:06,174 - WARNING - Data kosong/kurang untuk FILM.JK
+2025-04-18 09:20:06,570 - ERROR - $GOTO.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897606 and endTime=1744968006. The requested range must be within the last 60 days.")
+2025-04-18 09:20:06,570 - WARNING - Data kosong/kurang untuk GOTO.JK
+2025-04-18 09:20:06,572 - ERROR - $GJTL.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897606 and endTime=1744968006. The requested range must be within the last 60 days.")
+2025-04-18 09:20:06,572 - WARNING - Data kosong/kurang untuk GJTL.JK
+2025-04-18 09:20:06,574 - ERROR - $GGRM.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897606 and endTime=1744968006. The requested range must be within the last 60 days.")
+2025-04-18 09:20:06,574 - WARNING - Data kosong/kurang untuk GGRM.JK
+2025-04-18 09:20:07,156 - ERROR - $HEAL.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897607 and endTime=1744968007. The requested range must be within the last 60 days.")
+2025-04-18 09:20:07,157 - WARNING - Data kosong/kurang untuk HEAL.JK
+2025-04-18 09:20:07,571 - ERROR - $ICBP.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897607 and endTime=1744968007. The requested range must be within the last 60 days.")
+2025-04-18 09:20:07,571 - WARNING - Data kosong/kurang untuk ICBP.JK
+2025-04-18 09:20:07,572 - ERROR - $HRUM.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897607 and endTime=1744968007. The requested range must be within the last 60 days.")
+2025-04-18 09:20:07,572 - WARNING - Data kosong/kurang untuk HRUM.JK
+2025-04-18 09:20:07,573 - ERROR - $HMSP.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897607 and endTime=1744968007. The requested range must be within the last 60 days.")
+2025-04-18 09:20:07,574 - WARNING - Data kosong/kurang untuk HMSP.JK
+2025-04-18 09:20:08,084 - ERROR - $INCO.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897608 and endTime=1744968008. The requested range must be within the last 60 days.")
+2025-04-18 09:20:08,085 - WARNING - Data kosong/kurang untuk INCO.JK
+2025-04-18 09:20:08,556 - ERROR - $INET.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897608 and endTime=1744968008. The requested range must be within the last 60 days.")
+2025-04-18 09:20:08,556 - WARNING - Data kosong/kurang untuk INET.JK
+2025-04-18 09:20:08,560 - ERROR - $INDY.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897608 and endTime=1744968008. The requested range must be within the last 60 days.")
+2025-04-18 09:20:08,560 - WARNING - Data kosong/kurang untuk INDY.JK
+2025-04-18 09:20:09,413 - ERROR - $INDF.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897609 and endTime=1744968009. The requested range must be within the last 60 days.")
+2025-04-18 09:20:09,414 - WARNING - Data kosong/kurang untuk INDF.JK
+2025-04-18 09:20:09,417 - ERROR - $INKP.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897609 and endTime=1744968009. The requested range must be within the last 60 days.")
+2025-04-18 09:20:09,417 - WARNING - Data kosong/kurang untuk INKP.JK
+2025-04-18 09:20:09,915 - ERROR - $INTP.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897609 and endTime=1744968009. The requested range must be within the last 60 days.")
+2025-04-18 09:20:09,917 - WARNING - Data kosong/kurang untuk INTP.JK
+2025-04-18 09:20:10,430 - ERROR - $JPFA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897610 and endTime=1744968010. The requested range must be within the last 60 days.")
+2025-04-18 09:20:10,431 - ERROR - $ITMG.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897610 and endTime=1744968010. The requested range must be within the last 60 days.")
+2025-04-18 09:20:10,431 - WARNING - Data kosong/kurang untuk JPFA.JK
+2025-04-18 09:20:10,432 - ERROR - $ISAT.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897610 and endTime=1744968010. The requested range must be within the last 60 days.")
+2025-04-18 09:20:10,432 - WARNING - Data kosong/kurang untuk ITMG.JK
+2025-04-18 09:20:10,433 - WARNING - Data kosong/kurang untuk ISAT.JK
+2025-04-18 09:20:10,983 - ERROR - $JSMR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897610 and endTime=1744968010. The requested range must be within the last 60 days.")
+2025-04-18 09:20:10,983 - WARNING - Data kosong/kurang untuk JSMR.JK
+2025-04-18 09:20:11,805 - ERROR - $KPIG.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897611 and endTime=1744968011. The requested range must be within the last 60 days.")
+2025-04-18 09:20:11,806 - WARNING - Data kosong/kurang untuk KPIG.JK
+2025-04-18 09:20:11,807 - ERROR - $KLBF.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897611 and endTime=1744968011. The requested range must be within the last 60 days.")
+2025-04-18 09:20:11,808 - WARNING - Data kosong/kurang untuk KLBF.JK
+2025-04-18 09:20:11,808 - ERROR - $KIJA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897611 and endTime=1744968011. The requested range must be within the last 60 days.")
+2025-04-18 09:20:11,809 - WARNING - Data kosong/kurang untuk KIJA.JK
+2025-04-18 09:20:12,290 - ERROR - $LSIP.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897612 and endTime=1744968012. The requested range must be within the last 60 days.")
+2025-04-18 09:20:12,290 - WARNING - Data kosong/kurang untuk LSIP.JK
+2025-04-18 09:20:12,298 - ERROR - $MARK.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897612 and endTime=1744968012. The requested range must be within the last 60 days.")
+2025-04-18 09:20:12,298 - WARNING - Data kosong/kurang untuk MARK.JK
+2025-04-18 09:20:12,299 - ERROR - $MAPA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897612 and endTime=1744968012. The requested range must be within the last 60 days.")
+2025-04-18 09:20:12,299 - WARNING - Data kosong/kurang untuk MAPA.JK
+2025-04-18 09:20:12,711 - ERROR - $MAPI.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897612 and endTime=1744968012. The requested range must be within the last 60 days.")
+2025-04-18 09:20:12,711 - WARNING - Data kosong/kurang untuk MAPI.JK
+2025-04-18 09:20:13,125 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897613 and endTime=1744968013. The requested range must be within the last 60 days.")
+2025-04-18 09:20:13,125 - WARNING - Data kosong/kurang untuk MBMA.JK
+2025-04-18 09:20:13,130 - ERROR - $MDKA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897613 and endTime=1744968013. The requested range must be within the last 60 days.")
+2025-04-18 09:20:13,130 - WARNING - Data kosong/kurang untuk MDKA.JK
+2025-04-18 09:20:13,554 - ERROR - $MEDC.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897613 and endTime=1744968013. The requested range must be within the last 60 days.")
+2025-04-18 09:20:13,555 - WARNING - Data kosong/kurang untuk MEDC.JK
+2025-04-18 09:20:13,557 - ERROR - $MIDI.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897613 and endTime=1744968013. The requested range must be within the last 60 days.")
+2025-04-18 09:20:13,557 - WARNING - Data kosong/kurang untuk MIDI.JK
+2025-04-18 09:20:14,244 - ERROR - $MIKA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897614 and endTime=1744968014. The requested range must be within the last 60 days.")
+2025-04-18 09:20:14,244 - WARNING - Data kosong/kurang untuk MIKA.JK
+2025-04-18 09:20:14,735 - ERROR - $MTEL.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897614 and endTime=1744968014. The requested range must be within the last 60 days.")
+2025-04-18 09:20:14,736 - WARNING - Data kosong/kurang untuk MTEL.JK
+2025-04-18 09:20:14,736 - ERROR - $MNCN.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897614 and endTime=1744968014. The requested range must be within the last 60 days.")
+2025-04-18 09:20:14,738 - WARNING - Data kosong/kurang untuk MNCN.JK
+2025-04-18 09:20:14,740 - ERROR - $MYOR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897614 and endTime=1744968014. The requested range must be within the last 60 days.")
+2025-04-18 09:20:14,741 - WARNING - Data kosong/kurang untuk MYOR.JK
+2025-04-18 09:20:15,404 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897615 and endTime=1744968015. The requested range must be within the last 60 days.")
+2025-04-18 09:20:15,404 - WARNING - Data kosong/kurang untuk NCKL.JK
+2025-04-18 09:20:15,409 - ERROR - $PANI.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897615 and endTime=1744968015. The requested range must be within the last 60 days.")
+2025-04-18 09:20:15,410 - WARNING - Data kosong/kurang untuk PANI.JK
+2025-04-18 09:20:15,878 - ERROR - $NISP.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897615 and endTime=1744968015. The requested range must be within the last 60 days.")
+2025-04-18 09:20:15,878 - WARNING - Data kosong/kurang untuk NISP.JK
+2025-04-18 09:20:15,880 - ERROR - $PGAS.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897615 and endTime=1744968015. The requested range must be within the last 60 days.")
+2025-04-18 09:20:15,880 - WARNING - Data kosong/kurang untuk PGAS.JK
+2025-04-18 09:20:16,323 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897616 and endTime=1744968016. The requested range must be within the last 60 days.")
+2025-04-18 09:20:16,324 - WARNING - Data kosong/kurang untuk PGEO.JK
+2025-04-18 09:20:16,737 - ERROR - $PTBA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897616 and endTime=1744968016. The requested range must be within the last 60 days.")
+2025-04-18 09:20:16,737 - WARNING - Data kosong/kurang untuk PTBA.JK
+2025-04-18 09:20:16,764 - ERROR - $PTPP.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897616 and endTime=1744968016. The requested range must be within the last 60 days.")
+2025-04-18 09:20:16,764 - WARNING - Data kosong/kurang untuk PTPP.JK
+2025-04-18 09:20:16,766 - ERROR - $PNLF.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897616 and endTime=1744968016. The requested range must be within the last 60 days.")
+2025-04-18 09:20:16,766 - WARNING - Data kosong/kurang untuk PNLF.JK
+2025-04-18 09:20:17,325 - ERROR - $PWON.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897617 and endTime=1744968017. The requested range must be within the last 60 days.")
+2025-04-18 09:20:17,325 - WARNING - Data kosong/kurang untuk PWON.JK
+2025-04-18 09:20:17,331 - ERROR - $PTRO.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897617 and endTime=1744968017. The requested range must be within the last 60 days.")
+2025-04-18 09:20:17,331 - WARNING - Data kosong/kurang untuk PTRO.JK
+2025-04-18 09:20:17,731 - ERROR - $RAJA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897617 and endTime=1744968017. The requested range must be within the last 60 days.")
+2025-04-18 09:20:17,731 - WARNING - Data kosong/kurang untuk RAJA.JK
+2025-04-18 09:20:17,734 - ERROR - $SCMA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897617 and endTime=1744968017. The requested range must be within the last 60 days.")
+2025-04-18 09:20:17,734 - WARNING - Data kosong/kurang untuk SCMA.JK
+2025-04-18 09:20:18,225 - ERROR - $SIDO.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897618 and endTime=1744968018. The requested range must be within the last 60 days.")
+2025-04-18 09:20:18,225 - WARNING - Data kosong/kurang untuk SIDO.JK
+2025-04-18 09:20:18,232 - ERROR - $SMIL.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897618 and endTime=1744968018. The requested range must be within the last 60 days.")
+2025-04-18 09:20:18,232 - WARNING - Data kosong/kurang untuk SMIL.JK
+2025-04-18 09:20:18,256 - ERROR - $SMGR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897618 and endTime=1744968018. The requested range must be within the last 60 days.")
+2025-04-18 09:20:18,256 - WARNING - Data kosong/kurang untuk SMGR.JK
+2025-04-18 09:20:18,935 - ERROR - $SMRA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897618 and endTime=1744968018. The requested range must be within the last 60 days.")
+2025-04-18 09:20:18,935 - WARNING - Data kosong/kurang untuk SMRA.JK
+2025-04-18 09:20:19,508 - ERROR - $SSMS.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897619 and endTime=1744968019. The requested range must be within the last 60 days.")
+2025-04-18 09:20:19,508 - WARNING - Data kosong/kurang untuk SSMS.JK
+2025-04-18 09:20:19,511 - ERROR - $SURI.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897619 and endTime=1744968019. The requested range must be within the last 60 days.")
+2025-04-18 09:20:19,511 - WARNING - Data kosong/kurang untuk SURI.JK
+2025-04-18 09:20:19,538 - ERROR - $SSIA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897619 and endTime=1744968019. The requested range must be within the last 60 days.")
+2025-04-18 09:20:19,539 - WARNING - Data kosong/kurang untuk SSIA.JK
+2025-04-18 09:20:19,549 - ERROR - $SRTG.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897619 and endTime=1744968019. The requested range must be within the last 60 days.")
+2025-04-18 09:20:19,550 - WARNING - Data kosong/kurang untuk SRTG.JK
+2025-04-18 09:20:20,113 - ERROR - $TINS.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897620 and endTime=1744968020. The requested range must be within the last 60 days.")
+2025-04-18 09:20:20,114 - WARNING - Data kosong/kurang untuk TINS.JK
+2025-04-18 09:20:20,116 - ERROR - $TLKM.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897620 and endTime=1744968020. The requested range must be within the last 60 days.")
+2025-04-18 09:20:20,116 - WARNING - Data kosong/kurang untuk TLKM.JK
+2025-04-18 09:20:20,118 - ERROR - $TOBA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897620 and endTime=1744968020. The requested range must be within the last 60 days.")
+2025-04-18 09:20:20,118 - WARNING - Data kosong/kurang untuk TOBA.JK
+2025-04-18 09:20:20,143 - ERROR - $TKIM.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897620 and endTime=1744968020. The requested range must be within the last 60 days.")
+2025-04-18 09:20:20,143 - WARNING - Data kosong/kurang untuk TKIM.JK
+2025-04-18 09:20:20,673 - ERROR - $TRIN.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897620 and endTime=1744968020. The requested range must be within the last 60 days.")
+2025-04-18 09:20:20,673 - WARNING - Data kosong/kurang untuk TRIN.JK
+2025-04-18 09:20:20,676 - ERROR - $TOWR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897620 and endTime=1744968020. The requested range must be within the last 60 days.")
+2025-04-18 09:20:20,676 - WARNING - Data kosong/kurang untuk TOWR.JK
+2025-04-18 09:20:20,680 - ERROR - $TPIA.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897620 and endTime=1744968020. The requested range must be within the last 60 days.")
+2025-04-18 09:20:20,680 - WARNING - Data kosong/kurang untuk TPIA.JK
+2025-04-18 09:20:21,152 - ERROR - $TSPC.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897621 and endTime=1744968021. The requested range must be within the last 60 days.")
+2025-04-18 09:20:21,153 - WARNING - Data kosong/kurang untuk TSPC.JK
+2025-04-18 09:20:21,587 - ERROR - $UNVR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897621 and endTime=1744968021. The requested range must be within the last 60 days.")
+2025-04-18 09:20:21,587 - WARNING - Data kosong/kurang untuk UNVR.JK
+2025-04-18 09:20:21,590 - ERROR - $UNTR.JK: possibly delisted; no price data found  (period=6mo) (Yahoo error = "15m data not available for startTime=1728897621 and endTime=1744968021. The requested range must be within the last 60 days.")
+2025-04-18 09:20:21,590 - WARNING - Data kosong/kurang untuk UNTR.JK
