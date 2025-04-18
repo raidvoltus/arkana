@@ -504,7 +504,7 @@ def main():
 
     # 2. Proses setiap simbol saham
     with ThreadPoolExecutor(max_workers=os.cpu_count() or 1) as executor:
-        futures = {executor.submit(process_symbol, symbol): symbol for symbol in STOCK_LIST}
+        futures = {executor.submit(analyze_stock, symbol): symbol for symbol in STOCK_LIST}
         for fut in futures:
             symbol = futures[fut]
             try:
