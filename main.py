@@ -40,6 +40,8 @@ MIN_VOLUME    = 10000
 MIN_VOLATILITY = 0.005
 MIN_PROB      = 0.8
 
+# --- Alias supaya main() bisa memanggil process_symbol ---
+process_symbol = analyze_stock
 # === Daftar Saham ===
 STOCK_LIST = [
     "ACES.JK", "ADMR.JK", "ADRO.JK", "AKRA.JK", "AMMN.JK", "AMRT.JK", "ANTM.JK", "ARTO.JK", "ASII.JK", "AUTO.JK",
@@ -494,9 +496,6 @@ def evaluate_prediction_accuracy(log_csv: str = "predictions/prediksi_log.csv",
 akurasi = evaluate_prediction_accuracy()
 for sym, acc in akurasi.items():
     logger.info(f"Akurasi {sym}: {acc:.2%}")
-
-# Jadikan analyze_stock sebagai process_symbol supaya main() tetap konsisten
-process_symbol = analyze_stock
 
 def main():
     # 1. Siapkan folder dan logging
