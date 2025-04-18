@@ -45,19 +45,12 @@ def process_ticker(ticker: str):
         logger.error(f"Error processing {ticker}: {e}")
         traceback.print_exc()
 
-
 def main():
-    tickers = config["TICKERS"]
-    logger.info("Starting trading bot...")
-    
-    for ticker in tickers:
-        process_ticker(ticker)
-    
-    logger.info("Finished processing all tickers.")
-
+    try:
+        for ticker in config["TICKERS"]:
+            analyze_and_signal(ticker)
+    except Exception as e:
+        send_telegram_message(f"Error saat menjalankan bot: {e}")
 
 if __name__ == "__main__":
-    while True:
-        main()
-        logger.info(f"Sleeping for {config['SLEEP_INTERVAL']} seconds before next run...")
-        time.sleep(config['SLEEP_INTERVAL'])
+    main()
