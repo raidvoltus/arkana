@@ -495,6 +495,9 @@ akurasi = evaluate_prediction_accuracy()
 for sym, acc in akurasi.items():
     logger.info(f"Akurasi {sym}: {acc:.2%}")
 
+# Jadikan analyze_stock sebagai process_symbol supaya main() tetap konsisten
+process_symbol = analyze_stock
+
 def main():
     # 1. Siapkan folder dan logging
     validate_paths()
