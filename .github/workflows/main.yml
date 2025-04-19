@@ -1,9 +1,6 @@
 name: ArkAI
 
 on:
-  schedule:
-    - cron: '0 4 * * 1-5'   # 11:00 WIB
-    - cron: '0 8 * * 1-5'   # 15:00 WIB
   workflow_dispatch:
 
 jobs:
