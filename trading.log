@@ -1,16 +1,1409 @@
-2025-04-18 23:36:00.805994: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-18 23:36:00.809343: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-18 23:36:00.817961: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-19 00:12:08.136130: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 00:12:08.139458: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 00:12:08.148072: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745019360.831788    2086 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745019360.835950    2086 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745019360.847825    2086 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745019360.847840    2086 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745019360.847843    2086 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745019360.847845    2086 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-18 23:36:00.851409: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745021528.162207    2050 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745021528.166382    2050 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745021528.178396    2050 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745021528.178411    2050 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745021528.178414    2050 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745021528.178416    2050 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-19 00:12:08.181987: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 499, in <module>
-    process_symbol = analyze_stock
-NameError: name 'analyze_stock' is not defined
+Dihapus: model_high_PTRO.JK.pkl
+Dihapus: model_high_GGRM.JK.pkl
+Dihapus: model_high_BBRI.JK.pkl
+Dihapus: model_high_TOBA.JK.pkl
+Dihapus: model_high_ENRG.JK.pkl
+Dihapus: model_high_SCMA.JK.pkl
+Dihapus: model_high_RAJA.JK.pkl
+Dihapus: model_high_CTRA.JK.pkl
+Dihapus: model_high_JPFA.JK.pkl
+Dihapus: model_high_CMRY.JK.pkl
+Dihapus: model_high_ADMR.JK.pkl
+Dihapus: model_high_SMRA.JK.pkl
+Dihapus: model_high_PGAS.JK.pkl
+Dihapus: model_high_BBTN.JK.pkl
+Dihapus: model_high_GJTL.JK.pkl
+Dihapus: model_high_SMGR.JK.pkl
+Dihapus: model_high_TSPC.JK.pkl
+Dihapus: model_high_BRMS.JK.pkl
+Dihapus: model_high_ADRO.JK.pkl
+Dihapus: model_high_PANI.JK.pkl
+Dihapus: model_high_BNGA.JK.pkl
+Dihapus: model_high_HRUM.JK.pkl
+Dihapus: model_high_MARK.JK.pkl
+Dihapus: model_high_MDKA.JK.pkl
+Dihapus: model_high_MNCN.JK.pkl
+Dihapus: model_high_BTPS.JK.pkl
+Dihapus: model_high_JSMR.JK.pkl
+Dihapus: model_high_SSIA.JK.pkl
+Dihapus: model_high_BBYB.JK.pkl
+Dihapus: model_high_BMTR.JK.pkl
+Dihapus: model_high_INDY.JK.pkl
+Dihapus: model_high_UNTR.JK.pkl
+Dihapus: model_high_DSNG.JK.pkl
+Dihapus: model_high_HMSP.JK.pkl
+Dihapus: model_high_SRTG.JK.pkl
+Dihapus: model_high_AMRT.JK.pkl
+Dihapus: model_high_INKP.JK.pkl
+Dihapus: model_high_CPIN.JK.pkl
+Dihapus: model_high_NISP.JK.pkl
+Dihapus: model_high_KPIG.JK.pkl
+Dihapus: model_high_ITMG.JK.pkl
+Dihapus: model_high_ACES.JK.pkl
+Dihapus: model_high_ANTM.JK.pkl
+Dihapus: model_high_ASII.JK.pkl
+Dihapus: model_high_ERAA.JK.pkl
+Dihapus: model_high_PTBA.JK.pkl
+Dihapus: model_high_TINS.JK.pkl
+Dihapus: model_high_MIKA.JK.pkl
+Dihapus: model_high_AKRA.JK.pkl
+Dihapus: model_high_TKIM.JK.pkl
+Dihapus: model_high_HEAL.JK.pkl
+Dihapus: model_high_MAPI.JK.pkl
+Dihapus: model_high_ESSA.JK.pkl
+Dihapus: model_high_BRPT.JK.pkl
+Dihapus: model_high_SSMS.JK.pkl
+Dihapus: model_high_INCO.JK.pkl
+Dihapus: model_high_PNLF.JK.pkl
+Dihapus: model_high_ICBP.JK.pkl
+Dihapus: model_high_MTEL.JK.pkl
+Dihapus: model_high_ELSA.JK.pkl
+Dihapus: model_high_EMTK.JK.pkl
+Dihapus: model_high_DEWA.JK.pkl
+Dihapus: model_high_PTPP.JK.pkl
+Dihapus: model_high_BBCA.JK.pkl
+Dihapus: model_high_MEDC.JK.pkl
+Dihapus: model_high_MAPA.JK.pkl
+Dihapus: model_high_LSIP.JK.pkl
+Dihapus: model_high_TOWR.JK.pkl
+Dihapus: model_high_TPIA.JK.pkl
+Dihapus: model_high_INET.JK.pkl
+Dihapus: model_high_BMRI.JK.pkl
+Dihapus: model_high_MIDI.JK.pkl
+Dihapus: model_high_SIDO.JK.pkl
+Dihapus: model_high_ISAT.JK.pkl
+Dihapus: model_high_SMIL.JK.pkl
+Dihapus: model_high_AMMN.JK.pkl
+Dihapus: model_high_EXCL.JK.pkl
+Dihapus: model_high_BBNI.JK.pkl
+Dihapus: model_high_TLKM.JK.pkl
+Dihapus: model_high_KLBF.JK.pkl
+Dihapus: model_high_ARTO.JK.pkl
+Dihapus: model_high_FILM.JK.pkl
+Dihapus: model_high_AUTO.JK.pkl
+Dihapus: model_high_MYOR.JK.pkl
+Dihapus: model_high_BFIN.JK.pkl
+Dihapus: model_high_PWON.JK.pkl
+Dihapus: model_high_AVIA.JK.pkl
+Dihapus: model_high_KIJA.JK.pkl
+Dihapus: model_high_INDF.JK.pkl
+Dihapus: model_high_BSDE.JK.pkl
+Dihapus: model_high_BRIS.JK.pkl
+Dihapus: model_high_INTP.JK.pkl
+Dihapus: model_high_UNVR.JK.pkl
+Dihapus: model_low_AMRT.JK.pkl
+Dihapus: model_low_MYOR.JK.pkl
+Dihapus: model_low_BBYB.JK.pkl
+Dihapus: model_low_TSPC.JK.pkl
+Dihapus: model_low_CPIN.JK.pkl
+Dihapus: model_low_SMGR.JK.pkl
+Dihapus: model_low_HEAL.JK.pkl
+Dihapus: model_low_ELSA.JK.pkl
+Dihapus: model_low_NISP.JK.pkl
+Dihapus: model_low_TOWR.JK.pkl
+Dihapus: model_low_SMIL.JK.pkl
+Dihapus: model_low_TKIM.JK.pkl
+Dihapus: model_low_INDY.JK.pkl
+Dihapus: model_low_HMSP.JK.pkl
+Dihapus: model_low_SMRA.JK.pkl
+Dihapus: model_low_MDKA.JK.pkl
+Dihapus: model_low_BNGA.JK.pkl
+Dihapus: model_low_ADMR.JK.pkl
+Dihapus: model_low_KIJA.JK.pkl
+Dihapus: model_low_TINS.JK.pkl
+Dihapus: model_low_AUTO.JK.pkl
+Dihapus: model_low_BRPT.JK.pkl
+Dihapus: model_low_ASII.JK.pkl
+Dihapus: model_low_JSMR.JK.pkl
+Dihapus: model_low_BBRI.JK.pkl
+Dihapus: model_low_MNCN.JK.pkl
+Dihapus: model_low_ADRO.JK.pkl
+Dihapus: model_low_PTRO.JK.pkl
+Dihapus: model_low_MEDC.JK.pkl
+Dihapus: model_low_MARK.JK.pkl
+Dihapus: model_low_INET.JK.pkl
+Dihapus: model_low_HRUM.JK.pkl
+Dihapus: model_low_ITMG.JK.pkl
+Dihapus: model_low_PTBA.JK.pkl
+Dihapus: model_low_BSDE.JK.pkl
+Dihapus: model_low_UNVR.JK.pkl
+Dihapus: model_low_INTP.JK.pkl
+Dihapus: model_low_DEWA.JK.pkl
+Dihapus: model_low_KLBF.JK.pkl
+Dihapus: model_low_BRMS.JK.pkl
+Dihapus: model_low_ERAA.JK.pkl
+Dihapus: model_low_SSIA.JK.pkl
+Dihapus: model_low_EXCL.JK.pkl
+Dihapus: model_low_AVIA.JK.pkl
+Dihapus: model_low_PANI.JK.pkl
+Dihapus: model_low_SIDO.JK.pkl
+Dihapus: model_low_BBNI.JK.pkl
+Dihapus: model_low_INDF.JK.pkl
+Dihapus: model_low_TLKM.JK.pkl
+Dihapus: model_low_BMRI.JK.pkl
+Dihapus: model_low_PGAS.JK.pkl
+Dihapus: model_low_SRTG.JK.pkl
+Dihapus: model_low_MAPA.JK.pkl
+Dihapus: model_low_CMRY.JK.pkl
+Dihapus: model_low_UNTR.JK.pkl
+Dihapus: model_low_MIKA.JK.pkl
+Dihapus: model_low_GGRM.JK.pkl
+Dihapus: model_low_PNLF.JK.pkl
+Dihapus: model_low_AKRA.JK.pkl
+Dihapus: model_low_ISAT.JK.pkl
+Dihapus: model_low_CTRA.JK.pkl
+Dihapus: model_low_ARTO.JK.pkl
+Dihapus: model_low_INCO.JK.pkl
+Dihapus: model_low_BTPS.JK.pkl
+Dihapus: model_low_GJTL.JK.pkl
+Dihapus: model_low_ACES.JK.pkl
+Dihapus: model_low_SSMS.JK.pkl
+Dihapus: model_low_AMMN.JK.pkl
+Dihapus: model_low_MTEL.JK.pkl
+Dihapus: model_low_PTPP.JK.pkl
+Dihapus: model_low_LSIP.JK.pkl
+Dihapus: model_low_BFIN.JK.pkl
+Dihapus: model_low_JPFA.JK.pkl
+Dihapus: model_low_RAJA.JK.pkl
+Dihapus: model_low_MAPI.JK.pkl
+Dihapus: model_low_FILM.JK.pkl
+Dihapus: model_low_BBCA.JK.pkl
+Dihapus: model_low_BRIS.JK.pkl
+Dihapus: model_low_EMTK.JK.pkl
+Dihapus: model_low_TPIA.JK.pkl
+Dihapus: model_low_INKP.JK.pkl
+Dihapus: model_low_TOBA.JK.pkl
+Dihapus: model_low_ICBP.JK.pkl
+Dihapus: model_low_SCMA.JK.pkl
+Dihapus: model_low_BMTR.JK.pkl
+Dihapus: model_low_DSNG.JK.pkl
+Dihapus: model_low_ENRG.JK.pkl
+Dihapus: model_low_MIDI.JK.pkl
+Dihapus: model_low_ANTM.JK.pkl
+Dihapus: model_low_BBTN.JK.pkl
+Dihapus: model_low_ESSA.JK.pkl
+Dihapus: model_low_PWON.JK.pkl
+Dihapus: model_low_KPIG.JK.pkl
+Dihapus: model_lstm_SMGR.JK.keras
+Dihapus: model_lstm_CMRY.JK.keras
+Dihapus: model_lstm_RAJA.JK.keras
+Dihapus: model_lstm_BBYB.JK.keras
+Dihapus: model_lstm_JSMR.JK.keras
+Dihapus: model_lstm_ANTM.JK.keras
+Dihapus: model_lstm_CTRA.JK.keras
+Dihapus: model_lstm_JPFA.JK.keras
+Dihapus: model_lstm_PNLF.JK.keras
+Dihapus: model_lstm_FILM.JK.keras
+Dihapus: model_lstm_AMMN.JK.keras
+Dihapus: model_lstm_KIJA.JK.keras
+Dihapus: model_lstm_GGRM.JK.keras
+Dihapus: model_lstm_AKRA.JK.keras
+Dihapus: model_lstm_SMIL.JK.keras
+Dihapus: model_lstm_BBTN.JK.keras
+Dihapus: model_lstm_ENRG.JK.keras
+Dihapus: model_lstm_GJTL.JK.keras
+Dihapus: model_lstm_BRMS.JK.keras
+Dihapus: model_lstm_TPIA.JK.keras
+Dihapus: model_lstm_PANI.JK.keras
+Dihapus: model_lstm_MNCN.JK.keras
+Dihapus: model_lstm_BMTR.JK.keras
+Dihapus: model_lstm_TINS.JK.keras
+Dihapus: model_lstm_ELSA.JK.keras
+Dihapus: model_lstm_BBCA.JK.keras
+Dihapus: model_lstm_KLBF.JK.keras
+Dihapus: model_lstm_BRPT.JK.keras
+Dihapus: model_lstm_PTPP.JK.keras
+Dihapus: model_lstm_TOBA.JK.keras
+Dihapus: model_lstm_AVIA.JK.keras
+Dihapus: model_lstm_PTBA.JK.keras
+Dihapus: model_lstm_MTEL.JK.keras
+Dihapus: model_lstm_MAPI.JK.keras
+Dihapus: model_lstm_HMSP.JK.keras
+Dihapus: model_lstm_MDKA.JK.keras
+Dihapus: model_lstm_BBRI.JK.keras
+Dihapus: model_lstm_HEAL.JK.keras
+Dihapus: model_lstm_ERAA.JK.keras
+Dihapus: model_lstm_INDF.JK.keras
+Dihapus: model_lstm_BFIN.JK.keras
+Dihapus: model_lstm_ARTO.JK.keras
+Dihapus: model_lstm_UNTR.JK.keras
+Dihapus: model_lstm_EXCL.JK.keras
+Dihapus: model_lstm_BTPS.JK.keras
+Dihapus: model_lstm_ASII.JK.keras
+Dihapus: model_lstm_LSIP.JK.keras
+Dihapus: model_lstm_NISP.JK.keras
+Dihapus: model_lstm_INDY.JK.keras
+Dihapus: model_lstm_AUTO.JK.keras
+Dihapus: model_lstm_PTRO.JK.keras
+Dihapus: model_lstm_ITMG.JK.keras
+Dihapus: model_lstm_UNVR.JK.keras
+Dihapus: model_lstm_MYOR.JK.keras
+Dihapus: model_lstm_BBNI.JK.keras
+Dihapus: model_lstm_SRTG.JK.keras
+Dihapus: model_lstm_BSDE.JK.keras
+Dihapus: model_lstm_ADMR.JK.keras
+Dihapus: model_lstm_ESSA.JK.keras
+Dihapus: model_lstm_MAPA.JK.keras
+Dihapus: model_lstm_ICBP.JK.keras
+Dihapus: model_lstm_MIDI.JK.keras
+Dihapus: model_lstm_EMTK.JK.keras
+Dihapus: model_lstm_MARK.JK.keras
+Dihapus: model_lstm_PWON.JK.keras
+Dihapus: model_lstm_INET.JK.keras
+Dihapus: model_lstm_INCO.JK.keras
+Dihapus: model_lstm_TOWR.JK.keras
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000481 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4885
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 2964.058242
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000951 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4729
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 738.997862
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000986 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4963
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 1403.348918
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000777 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4767
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1418.655440
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000516 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4729
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 711.042544
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001056 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4885
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 2870.141598
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003370 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4767
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1374.121198
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000944 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4963
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 1340.191023
+2025-04-19 00:12:16.228425: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000765 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4988
+[LightGBM] [Info] Number of data points in the train set: 2236, number of used features: 23
+[LightGBM] [Info] Start training from score 8332.242844
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000460 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4988
+[LightGBM] [Info] Number of data points in the train set: 2236, number of used features: 23
+[LightGBM] [Info] Start training from score 7996.618962
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001239 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4771
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 2733.700240
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001277 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4771
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 2649.219877
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002482 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4883
+[LightGBM] [Info] Number of data points in the train set: 3744, number of used features: 23
+[LightGBM] [Info] Start training from score 1793.114316
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001050 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4883
+[LightGBM] [Info] Number of data points in the train set: 3744, number of used features: 23
+[LightGBM] [Info] Start training from score 1740.319177
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001351 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5135
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 3753.397008
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001178 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5135
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 3554.922522
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001419 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4735
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 5774.778075
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001210 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4735
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 5644.660428
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001120 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4936
+[LightGBM] [Info] Number of data points in the train set: 3739, number of used features: 23
+[LightGBM] [Info] Start training from score 2076.473656
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001128 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4936
+[LightGBM] [Info] Number of data points in the train set: 3739, number of used features: 23
+[LightGBM] [Info] Start training from score 2008.128484
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001145 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4640
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 598.544118
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000980 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4640
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 579.121925
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003052 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4624
+[LightGBM] [Info] Number of data points in the train set: 3747, number of used features: 23
+[LightGBM] [Info] Start training from score 9197.264478
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001230 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4624
+[LightGBM] [Info] Number of data points in the train set: 3747, number of used features: 23
+[LightGBM] [Info] Start training from score 9041.586603
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001126 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4944
+[LightGBM] [Info] Number of data points in the train set: 3744, number of used features: 23
+[LightGBM] [Info] Start training from score 3773.203459
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001153 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4944
+[LightGBM] [Info] Number of data points in the train set: 3744, number of used features: 23
+[LightGBM] [Info] Start training from score 3674.949152
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001406 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4815
+[LightGBM] [Info] Number of data points in the train set: 3748, number of used features: 23
+[LightGBM] [Info] Start training from score 4942.251868
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001288 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4815
+[LightGBM] [Info] Number of data points in the train set: 3748, number of used features: 23
+[LightGBM] [Info] Start training from score 4831.178922
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001381 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4657
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1338.668805
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001242 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4657
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1305.419674
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000866 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5052
+[LightGBM] [Info] Number of data points in the train set: 3736, number of used features: 23
+[LightGBM] [Info] Start training from score 529.293630
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001109 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5052
+[LightGBM] [Info] Number of data points in the train set: 3736, number of used features: 23
+[LightGBM] [Info] Start training from score 496.592184
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001161 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4642
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1123.066845
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001171 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4642
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1082.438984
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001335 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4869
+[LightGBM] [Info] Number of data points in the train set: 3746, number of used features: 23
+[LightGBM] [Info] Start training from score 5023.976241
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001214 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4869
+[LightGBM] [Info] Number of data points in the train set: 3746, number of used features: 23
+[LightGBM] [Info] Start training from score 4899.055993
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001177 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4585
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 264.792513
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000930 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4585
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 256.147594
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001186 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4697
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1569.922460
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001566 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4697
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1538.987968
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001356 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4898
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 2050.772521
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001122 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4898
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1984.358460
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001376 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4810
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 219.031526
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001186 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4810
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 207.802832
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001064 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5125
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 965.779182
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001384 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5125
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 923.381500
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001258 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4477
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1022.751337
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001088 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4477
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 996.122995
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002322 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4975
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1885.010692
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001280 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4975
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1820.961775
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.004873 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4824
+[LightGBM] [Info] Number of data points in the train set: 3728, number of used features: 23
+[LightGBM] [Info] Start training from score 4592.505365
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001054 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4707
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 5230.136364
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001183 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4824
+[LightGBM] [Info] Number of data points in the train set: 3728, number of used features: 23
+[LightGBM] [Info] Start training from score 4440.873820
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001167 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4707
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 5095.576203
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001197 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4563
+[LightGBM] [Info] Number of data points in the train set: 3738, number of used features: 23
+[LightGBM] [Info] Start training from score 1091.056715
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000988 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4563
+[LightGBM] [Info] Number of data points in the train set: 3738, number of used features: 23
+[LightGBM] [Info] Start training from score 1056.213216
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002150 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4443
+[LightGBM] [Info] Number of data points in the train set: 3450, number of used features: 23
+[LightGBM] [Info] Start training from score 74.828696
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000907 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4443
+[LightGBM] [Info] Number of data points in the train set: 3450, number of used features: 23
+[LightGBM] [Info] Start training from score 70.281449
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.004690 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4613
+[LightGBM] [Info] Number of data points in the train set: 3736, number of used features: 23
+[LightGBM] [Info] Start training from score 683.140792
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001052 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4613
+[LightGBM] [Info] Number of data points in the train set: 3736, number of used features: 23
+[LightGBM] [Info] Start training from score 656.448393
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001246 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4532
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 391.964725
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001286 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4532
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 380.374890
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001354 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4997
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 848.514301
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001181 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4997
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 811.384389
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001373 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4545
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 243.389201
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001184 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4545
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 231.180454
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001386 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4605
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 447.601015
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001391 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4755
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 824.459358
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001160 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4605
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 433.327365
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001071 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4755
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 782.264545
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001258 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4607
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 2313.898690
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001021 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4607
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 2242.056990
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001342 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5147
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 3258.556150
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001199 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5147
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 3089.232620
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001168 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5142
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 21221.056150
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000974 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5142
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 20695.092781
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000678 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4732
+[LightGBM] [Info] Number of data points in the train set: 3737, number of used features: 23
+[LightGBM] [Info] Start training from score 941.768799
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000833 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4732
+[LightGBM] [Info] Number of data points in the train set: 3737, number of used features: 23
+[LightGBM] [Info] Start training from score 907.535456
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001400 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4620
+[LightGBM] [Info] Number of data points in the train set: 3736, number of used features: 23
+[LightGBM] [Info] Start training from score 1428.141060
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001214 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4620
+[LightGBM] [Info] Number of data points in the train set: 3736, number of used features: 23
+[LightGBM] [Info] Start training from score 1386.084047
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001184 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4546
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 862.801390
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001177 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4546
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 838.685164
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001359 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4969
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1463.418872
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001094 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4790
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 10687.399786
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001320 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4969
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1410.125635
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001115 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4790
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 10433.117851
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000936 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5023
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 5284.343934
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000282 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 5023
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 5119.321219
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002201 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4458
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 6816.238974
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001269 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4458
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 6676.472334
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001384 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4969
+[LightGBM] [Info] Number of data points in the train set: 3739, number of used features: 23
+[LightGBM] [Info] Start training from score 1985.928056
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001400 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4969
+[LightGBM] [Info] Number of data points in the train set: 3739, number of used features: 23
+[LightGBM] [Info] Start training from score 1915.403851
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000706 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4581
+[LightGBM] [Info] Number of data points in the train set: 2120, number of used features: 23
+[LightGBM] [Info] Start training from score 105.027358
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000679 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4581
+[LightGBM] [Info] Number of data points in the train set: 2120, number of used features: 23
+[LightGBM] [Info] Start training from score 96.806132
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001433 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4907
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 8390.713713
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001100 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4907
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 8143.454959
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001153 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4894
+[LightGBM] [Info] Number of data points in the train set: 3738, number of used features: 23
+[LightGBM] [Info] Start training from score 8866.633226
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001140 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4894
+[LightGBM] [Info] Number of data points in the train set: 3738, number of used features: 23
+[LightGBM] [Info] Start training from score 8635.154093
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001321 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5013
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 2187.654622
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001294 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5013
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 2111.940622
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000983 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5168
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 30124.304813
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001298 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5168
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 29424.211230
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001322 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4828
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1450.342246
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000895 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4828
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1404.463048
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002369 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4934
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 4249.340909
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001329 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4934
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 4131.065508
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001189 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4469
+[LightGBM] [Info] Number of data points in the train set: 3706, number of used features: 23
+[LightGBM] [Info] Start training from score 152.235024
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001236 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4469
+[LightGBM] [Info] Number of data points in the train set: 3706, number of used features: 23
+[LightGBM] [Info] Start training from score 147.136063
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001995 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4769
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1722.380380
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001257 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4769
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 1673.732531
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001671 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4575
+[LightGBM] [Info] Number of data points in the train set: 3647, number of used features: 23
+[LightGBM] [Info] Start training from score 94.630655
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001181 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4575
+[LightGBM] [Info] Number of data points in the train set: 3647, number of used features: 23
+[LightGBM] [Info] Start training from score 89.871675
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000646 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4544
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1032.070856
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000661 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4544
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1006.036096
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001168 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4932
+[LightGBM] [Info] Number of data points in the train set: 3728, number of used features: 23
+[LightGBM] [Info] Start training from score 706.271057
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001183 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4932
+[LightGBM] [Info] Number of data points in the train set: 3728, number of used features: 23
+[LightGBM] [Info] Start training from score 675.010864
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000328 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4894
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1537.086898
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001197 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4894
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1476.576203
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001187 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4658
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 812.921658
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000532 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4658
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 777.458449
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003053 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5070
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 3107.953513
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001312 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5070
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 2982.796580
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002684 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4801
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1134.131016
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001226 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4801
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1089.077540
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001076 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4775
+[LightGBM] [Info] Number of data points in the train set: 3325, number of used features: 23
+[LightGBM] [Info] Start training from score 405.137744
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001154 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4775
+[LightGBM] [Info] Number of data points in the train set: 3325, number of used features: 23
+[LightGBM] [Info] Start training from score 388.849399
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001250 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4586
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 2816.275401
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001155 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4586
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 2722.542781
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001218 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4741
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 534.012557
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001349 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4741
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 517.422923
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001304 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4294
+[LightGBM] [Info] Number of data points in the train set: 3737, number of used features: 23
+[LightGBM] [Info] Start training from score 684.079476
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001437 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4294
+[LightGBM] [Info] Number of data points in the train set: 3737, number of used features: 23
+[LightGBM] [Info] Start training from score 666.671394
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001228 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4686
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 2447.660428
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000722 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4686
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 2375.207219
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001548 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5203
+[LightGBM] [Info] Number of data points in the train set: 3688, number of used features: 23
+[LightGBM] [Info] Start training from score 5720.709056
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001186 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5203
+[LightGBM] [Info] Number of data points in the train set: 3688, number of used features: 23
+[LightGBM] [Info] Start training from score 5358.896421
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001218 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4763
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1518.708556
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001329 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4763
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1477.443316
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001454 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4814
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 364.645989
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001341 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4814
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 347.023797
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001382 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4846
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 3160.296791
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001272 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4846
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 3077.661390
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.004254 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4883
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 594.428610
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000878 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4883
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 570.472460
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001146 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5234
+[LightGBM] [Info] Number of data points in the train set: 3730, number of used features: 23
+[LightGBM] [Info] Start training from score 909.008981
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001445 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5234
+[LightGBM] [Info] Number of data points in the train set: 3730, number of used features: 23
+[LightGBM] [Info] Start training from score 852.382424
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001703 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4479
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 450.518182
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001208 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4479
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 438.626203
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001218 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5113
+[LightGBM] [Info] Number of data points in the train set: 3736, number of used features: 23
+[LightGBM] [Info] Start training from score 1358.703694
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001194 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5113
+[LightGBM] [Info] Number of data points in the train set: 3736, number of used features: 23
+[LightGBM] [Info] Start training from score 1277.785064
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002000 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4565
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 177.916600
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001291 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4565
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 170.391072
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001474 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4467
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 700.198128
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000648 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4467
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 681.868182
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001500 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4944
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 5655.196472
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000645 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4944
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 5499.727346
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000687 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4685
+[LightGBM] [Info] Number of data points in the train set: 2417, number of used features: 23
+[LightGBM] [Info] Start training from score 190.304510
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000545 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4685
+[LightGBM] [Info] Number of data points in the train set: 2417, number of used features: 23
+[LightGBM] [Info] Start training from score 178.901531
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001068 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4454
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 591.209035
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000735 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4454
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 570.341620
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001332 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4978
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 2052.238108
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001348 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4978
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 1976.344201
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001021 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4908
+[LightGBM] [Info] Number of data points in the train set: 3735, number of used features: 23
+[LightGBM] [Info] Start training from score 660.469076
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001371 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4908
+[LightGBM] [Info] Number of data points in the train set: 3735, number of used features: 23
+[LightGBM] [Info] Start training from score 631.543507
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001177 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4804
+[LightGBM] [Info] Number of data points in the train set: 3728, number of used features: 23
+[LightGBM] [Info] Start training from score 1300.492221
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001755 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4804
+[LightGBM] [Info] Number of data points in the train set: 3728, number of used features: 23
+[LightGBM] [Info] Start training from score 1243.914968
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001042 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4900
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1079.955882
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000624 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4900
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 1039.406257
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003608 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4817
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 7147.850842
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001452 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4817
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 6935.871425
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002476 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4814
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 3636.444029
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001723 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4814
+[LightGBM] [Info] Number of data points in the train set: 3743, number of used features: 23
+[LightGBM] [Info] Start training from score 3556.994390
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003225 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4941
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 478.163325
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000932 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4941
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 453.689762
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001157 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4596
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 937.180919
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000687 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4596
+[LightGBM] [Info] Number of data points in the train set: 3742, number of used features: 23
+[LightGBM] [Info] Start training from score 911.238642
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001292 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5104
+[LightGBM] [Info] Number of data points in the train set: 3735, number of used features: 23
+[LightGBM] [Info] Start training from score 4846.475234
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003722 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5104
+[LightGBM] [Info] Number of data points in the train set: 3735, number of used features: 23
+[LightGBM] [Info] Start training from score 4648.812249
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001873 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4706
+[LightGBM] [Info] Number of data points in the train set: 3726, number of used features: 23
+[LightGBM] [Info] Start training from score 1879.111648
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001271 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4706
+[LightGBM] [Info] Number of data points in the train set: 3726, number of used features: 23
+[LightGBM] [Info] Start training from score 1837.262480
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001180 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5123
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 26591.867148
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001247 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5123
+[LightGBM] [Info] Number of data points in the train set: 3741, number of used features: 23
+[LightGBM] [Info] Start training from score 25969.246191
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001335 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5043
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 3473.701872
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001804 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5043
+[LightGBM] [Info] Number of data points in the train set: 3740, number of used features: 23
+[LightGBM] [Info] Start training from score 3381.072086
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+Dihapus: model_lstm_MIKA.JK.keras
+Dihapus: model_lstm_MEDC.JK.keras
+Dihapus: model_lstm_SMRA.JK.keras
+Dihapus: model_lstm_SCMA.JK.keras
+Dihapus: model_lstm_KPIG.JK.keras
+Dihapus: model_lstm_TKIM.JK.keras
+Dihapus: model_lstm_SSIA.JK.keras
+Dihapus: model_lstm_BMRI.JK.keras
+Dihapus: model_lstm_CPIN.JK.keras
+Dihapus: model_lstm_DEWA.JK.keras
+Dihapus: model_lstm_ADRO.JK.keras
+Dihapus: model_lstm_BRIS.JK.keras
+Dihapus: model_lstm_ISAT.JK.keras
+Dihapus: model_lstm_TSPC.JK.keras
+Dihapus: model_lstm_ACES.JK.keras
+Dihapus: model_lstm_SIDO.JK.keras
+Dihapus: model_lstm_DSNG.JK.keras
+Dihapus: model_lstm_AMRT.JK.keras
+Dihapus: model_lstm_INTP.JK.keras
+Dihapus: model_lstm_SSMS.JK.keras
+Dihapus: model_lstm_BNGA.JK.keras
+Dihapus: model_lstm_PGAS.JK.keras
+Dihapus: model_lstm_TLKM.JK.keras
+Dihapus: model_lstm_INKP.JK.keras
+Dihapus: model_lstm_HRUM.JK.keras
+Total 279 model dihapus.
