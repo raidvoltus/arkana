@@ -466,6 +466,93 @@ def reset_models():
     else:
         print(f"Total {total_deleted} model dihapus.")
         
+
+def evaluate_and_select_best_model(
+    y_true, y_pred_lgbm, y_pred_lstm, send_telegram=True, show_plot=True,
+    mae_threshold=0.02, telegram_token=None, telegram_chat_id=None
+):
+    """
+    Evaluasi performa model LGBM, LSTM, dan blended, kirim notifikasi ke Telegram jika MAE terlalu tinggi.
+
+    Parameters:
+    - y_true: array-like, nilai aktual
+    - y_pred_lgbm: prediksi dari model LightGBM
+    - y_pred_lstm: prediksi dari model LSTM
+    - send_telegram: bool, apakah akan mengirim notifikasi ke Telegram
+    - show_plot: bool, apakah akan menampilkan grafik MAE
+    - mae_threshold: float, batas maksimum MAE blended untuk memicu notifikasi
+    - telegram_token: str, token bot Telegram
+    - telegram_chat_id: str/int, ID chat Telegram
+
+    Returns:
+    - best_model (str)
+    - mae_dict (dict)
+    - y_pred_best (array)
+    """
+    import matplotlib.pyplot as plt
+    from sklearn.metrics import mean_absolute_error
+    import requests
+
+    # Hitung MAE
+    mae_lgbm = mean_absolute_error(y_true, y_pred_lgbm)
+    mae_lstm = mean_absolute_error(y_true, y_pred_lstm)
+    y_pred_blended = (y_pred_lgbm + y_pred_lstm) / 2
+    mae_blended = mean_absolute_error(y_true, y_pred_blended)
+
+    mae_dict = {
+        'lgbm': mae_lgbm,
+        'lstm': mae_lstm,
+        'blended': mae_blended
+    }
+
+    # Pilih model terbaik
+    best_model = min(mae_dict, key=mae_dict.get)
+    y_pred_best = {
+        'lgbm': y_pred_lgbm,
+        'lstm': y_pred_lstm,
+        'blended': y_pred_blended
+    }[best_model]
+
+    # Visualisasi
+    if show_plot:
+        plt.figure(figsize=(8, 5))
+        plt.bar(mae_dict.keys(), mae_dict.values(), color=['skyblue', 'orange', 'green'])
+        plt.ylabel('MAE')
+        plt.title('MAE Comparison')
+        plt.grid(axis='y', linestyle='--', alpha=0.7)
+        for i, v in enumerate(mae_dict.values()):
+            plt.text(i, v + 0.001, f"{v:.4f}", ha='center', va='bottom')
+        plt.tight_layout()
+        plt.show()
+
+    # Notifikasi Telegram
+    if send_telegram and telegram_token and telegram_chat_id:
+        if mae_blended > mae_threshold:
+            message = (
+                f"[ALERT] MAE terlalu tinggi:\n"
+                f"• LGBM: {mae_lgbm:.4f}\n"
+                f"• LSTM: {mae_lstm:.4f}\n"
+                f"• Blended: {mae_blended:.4f}\n"
+                f"• Model terbaik: {best_model.upper()}"
+            )
+            url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
+            payload = {
+                "chat_id": telegram_chat_id,
+                "text": message,
+                "parse_mode": "Markdown"
+            }
+            try:
+                response = requests.post(url, json=payload)
+                response.raise_for_status()
+                print("[INFO] Notifikasi Telegram terkirim.")
+            except requests.exceptions.RequestException as e:
+                print(f"[ERROR] Gagal kirim Telegram: {e}")
+
+    print(f"[INFO] MAE LGBM: {mae_lgbm:.4f}, LSTM: {mae_lstm:.4f}, Blended: {mae_blended:.4f}")
+    print(f"[INFO] Selected best model: {best_model}")
+
+    return best_model, mae_dict, y_pred_best
+    
 # === Daftar Kutipan Motivasi ===
 MOTIVATION_QUOTES = [
     "Setiap peluang adalah langkah kecil menuju kebebasan finansial.",
