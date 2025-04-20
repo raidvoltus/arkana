@@ -286,7 +286,10 @@ def analyze_stock(ticker: str):
     price      = df["Close"].iloc[-1]
     avg_volume = df["Volume"].tail(20).mean()
     atr        = df["ATR"].iloc[-1]
-
+    
+    except Exception as e:
+        print(f"[{symbol}] Error: {e}")
+        return None
     if price < MIN_PRICE:
         logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
         return None
