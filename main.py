@@ -275,10 +275,21 @@ def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
         
 # === Fungsi Utama Per-Ticker ===
 def analyze_stock(ticker: str):
+    
+    def analyze_stock(symbol):
+    df = download_data(symbol)
+    if df is None or df.empty:
+        print(f"[{symbol}] Data kosong.")
+        return None
+
+    price = df["Close"].iloc[-1]
+    ...
     df = get_stock_data(ticker)
     if df is None:
         return None
 
+    price = df["Close"].iloc[-1]
+    
     df = calculate_indicators(df)
 
     # -- Early filter: harga, volume, volatilitas --
