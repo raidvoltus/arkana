@@ -254,6 +254,9 @@ def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
         
 # === Fungsi Utama Per-Ticker ===
 def analyze_stock(ticker: str):
+    # Periksa jika model perlu retraining berdasarkan akurasi
+    retrain_if_needed(ticker)  # Menambahkan panggilan retraining di sini
+    
     df = get_stock_data(ticker)
     if df is None:
         return None
@@ -275,7 +278,7 @@ def analyze_stock(ticker: str):
         logging.info(f"{ticker} dilewati: volatilitas terlalu rendah (ATR={atr:.4f})")
         return None
 
-    # -- Siapkan fitur & label (disesuaikan untuk prediksi harga besok) --
+    # Siapkan fitur & label
     features = [
         "Close", "ATR", "RSI", "MACD", "MACD_Hist",
         "SMA_14", "SMA_28", "SMA_84", "EMA_10",
@@ -293,7 +296,7 @@ def analyze_stock(ticker: str):
     y_high = df["future_high"]
     y_low  = df["future_low"]
 
-    # -- Split data sinkron --
+    # Split data sinkron
     X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = train_test_split(
         X, y_high, y_low, test_size=0.2, random_state=42
     )
