@@ -1,167 +1,1553 @@
-2025-04-21 01:56:26.861965: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-21 01:56:26.865267: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-21 01:56:26.874040: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-21 02:10:22.123292: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 02:10:22.126622: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 02:10:22.135364: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745200586.888082    2095 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745200586.892293    2095 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745200586.904194    2095 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745200586.904212    2095 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745200586.904214    2095 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745200586.904216    2095 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-21 01:56:26.907781: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745201422.149459    2180 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745201422.153642    2180 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745201422.165591    2180 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745201422.165606    2180 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745201422.165609    2180 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745201422.165611    2180 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-21 02:10:22.169191: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Tidak ada model yang ditemukan untuk dihapus.
-[AALI.JK] Error: name 'download_data' is not defined
-[ABBA.JK] Error: name 'download_data' is not defined
-[ABMM.JK] Error: name 'download_data' is not defined
-[ACES.JK] Error: name 'download_data' is not defined
-[ACST.JK] Error: name 'download_data' is not defined
-[ADHI.JK] Error: name 'download_data' is not defined
-[ADMF.JK] Error: name 'download_data' is not defined
-[ADMG.JK] Error: name 'download_data' is not defined
-[ADRO.JK] Error: name 'download_data' is not defined
-[AGII.JK] Error: name 'download_data' is not defined
-[AGRO.JK] Error: name 'download_data' is not defined
-[AKRA.JK] Error: name 'download_data' is not defined
-[AKSI.JK] Error: name 'download_data' is not defined
-[ALDO.JK] Error: name 'download_data' is not defined
-[ALKA.JK] Error: name 'download_data' is not defined
-[ALMI.JK] Error: name 'download_data' is not defined
-[AMAG.JK] Error: name 'download_data' is not defined
-[AMRT.JK] Error: name 'download_data' is not defined
-[ANDI.JK] Error: name 'download_data' is not defined
-[ANJT.JK] Error: name 'download_data' is not defined
-[ANTM.JK] Error: name 'download_data' is not defined
-[APIC.JK] Error: name 'download_data' is not defined
-[APLN.JK] Error: name 'download_data' is not defined
-[ARNA.JK] Error: name 'download_data' is not defined
-[ARTA.JK] Error: name 'download_data' is not defined
-[ASII.JK] Error: name 'download_data' is not defined
-[ASJT.JK] Error: name 'download_data' is not defined
-[ASRI.JK] Error: name 'download_data' is not defined
-[ASSA.JK] Error: name 'download_data' is not defined
-[ATIC.JK] Error: name 'download_data' is not defined
-[AUTO.JK] Error: name 'download_data' is not defined
-[BABP.JK] Error: name 'download_data' is not defined
-[BACA.JK] Error: name 'download_data' is not defined
-[BAEK.JK] Error: name 'download_data' is not defined
-[BALI.JK] Error: name 'download_data' is not defined
-[BAPA.JK] Error: name 'download_data' is not defined
-[BAPI.JK] Error: name 'download_data' is not defined
-[BATA.JK] Error: name 'download_data' is not defined
-[BBCA.JK] Error: name 'download_data' is not defined
-[BBHI.JK] Error: name 'download_data' is not defined
-[BBKP.JK] Error: name 'download_data' is not defined
-[BBNI.JK] Error: name 'download_data' is not defined
-[BBRI.JK] Error: name 'download_data' is not defined
-[BBTN.JK] Error: name 'download_data' is not defined
-[BINA.JK] Error: name 'download_data' is not defined
-[BIPP.JK] Error: name 'download_data' is not defined
-[BISI.JK] Error: name 'download_data' is not defined
-[BJBR.JK] Error: name 'download_data' is not defined
-[BJTM.JK] Error: name 'download_data' is not defined
-[BKDP.JK] Error: name 'download_data' is not defined
-[BKSL.JK] Error: name 'download_data' is not defined
-[BKSW.JK] Error: name 'download_data' is not defined
-[BLTA.JK] Error: name 'download_data' is not defined
-[BLTZ.JK] Error: name 'download_data' is not defined
-[BLUE.JK] Error: name 'download_data' is not defined
-[BMAS.JK] Error: name 'download_data' is not defined
-[BMRI.JK] Error: name 'download_data' is not defined
-[BMSR.JK] Error: name 'download_data' is not defined
-[BMTR.JK] Error: name 'download_data' is not defined
-[BNBA.JK] Error: name 'download_data' is not defined
-[BNGA.JK] Error: name 'download_data' is not defined
-[BNII.JK] Error: name 'download_data' is not defined
-[BNLI.JK] Error: name 'download_data' is not defined
-[BOBA.JK] Error: name 'download_data' is not defined
-[BOGA.JK] Error: name 'download_data' is not defined
-[BOLT.JK] Error: name 'download_data' is not defined
-[BOSS.JK] Error: name 'download_data' is not defined
-[BPFI.JK] Error: name 'download_data' is not defined
-[BPII.JK] Error: name 'download_data' is not defined
-[BPTR.JK] Error: name 'download_data' is not defined
-[BRAM.JK] Error: name 'download_data' is not defined
-[BRIS.JK] Error: name 'download_data' is not defined
-[BRMS.JK] Error: name 'download_data' is not defined
-[BRPT.JK] Error: name 'download_data' is not defined
-[BSDE.JK] Error: name 'download_data' is not defined
-[BSSR.JK] Error: name 'download_data' is not defined
-[BTEK.JK] Error: name 'download_data' is not defined
-[BTEL.JK] Error: name 'download_data' is not defined
-[BTON.JK] Error: name 'download_data' is not defined
-[BTPN.JK] Error: name 'download_data' is not defined
-[BTPS.JK] Error: name 'download_data' is not defined
-[BUDI.JK] Error: name 'download_data' is not defined
-[BUVA.JK] Error: name 'download_data' is not defined
-[BVSN.JK] Error: name 'download_data' is not defined
-[BYAN.JK] Error: name 'download_data' is not defined
-[CAKK.JK] Error: name 'download_data' is not defined
-[CAMP.JK] Error: name 'download_data' is not defined
-[CANI.JK] Error: name 'download_data' is not defined
-[CARS.JK] Error: name 'download_data' is not defined
-[CASA.JK] Error: name 'download_data' is not defined
-[CASH.JK] Error: name 'download_data' is not defined
-[CBMF.JK] Error: name 'download_data' is not defined
-[CEKA.JK] Error: name 'download_data' is not defined
-[CENT.JK] Error: name 'download_data' is not defined
-[CFIN.JK] Error: name 'download_data' is not defined
-[CINT.JK] Error: name 'download_data' is not defined
-[CITA.JK] Error: name 'download_data' is not defined
-[CITY.JK] Error: name 'download_data' is not defined
-[CLAY.JK] Error: name 'download_data' is not defined
-[CLEO.JK] Error: name 'download_data' is not defined
-[CLPI.JK] Error: name 'download_data' is not defined
-[CMNP.JK] Error: name 'download_data' is not defined
-[CMRY.JK] Error: name 'download_data' is not defined
-[CMPP.JK] Error: name 'download_data' is not defined
-[CNKO.JK] Error: name 'download_data' is not defined
-[CNTX.JK] Error: name 'download_data' is not defined
-[COCO.JK] Error: name 'download_data' is not defined
-[COWL.JK] Error: name 'download_data' is not defined
-[CPIN.JK] Error: name 'download_data' is not defined
-[CPRO.JK] Error: name 'download_data' is not defined
-[CSAP.JK] Error: name 'download_data' is not defined
-[CSIS.JK] Error: name 'download_data' is not defined
-[CTRA.JK] Error: name 'download_data' is not defined
-[CTTH.JK] Error: name 'download_data' is not defined
-[DEAL.JK] Error: name 'download_data' is not defined
-[DEFI.JK] Error: name 'download_data' is not defined
-[DEPO.JK] Error: name 'download_data' is not defined
-[DGIK.JK] Error: name 'download_data' is not defined
-[DIGI.JK] Error: name 'download_data' is not defined
-[DILD.JK] Error: name 'download_data' is not defined
-[DIVA.JK] Error: name 'download_data' is not defined
-[DKFT.JK] Error: name 'download_data' is not defined
-[DLTA.JK] Error: name 'download_data' is not defined
-[DMAS.JK] Error: name 'download_data' is not defined
-[DNAR.JK] Error: name 'download_data' is not defined
-[DOID.JK] Error: name 'download_data' is not defined
-[DSSA.JK] Error: name 'download_data' is not defined
-[DUCK.JK] Error: name 'download_data' is not defined
-[DUTI.JK] Error: name 'download_data' is not defined
-[DVLA.JK] Error: name 'download_data' is not defined
-[DYAN.JK] Error: name 'download_data' is not defined
-[EAST.JK] Error: name 'download_data' is not defined
-[ECII.JK] Error: name 'download_data' is not defined
-[EDGE.JK] Error: name 'download_data' is not defined
-[EKAD.JK] Error: name 'download_data' is not defined
-[ELSA.JK] Error: name 'download_data' is not defined
-[EMDE.JK] Error: name 'download_data' is not defined
-[EMTK.JK] Error: name 'download_data' is not defined
-[ENRG.JK] Error: name 'download_data' is not defined
-[ENZO.JK] Error: name 'download_data' is not defined
-[EPAC.JK] Error: name 'download_data' is not defined
-[ERA.JK] Error: name 'download_data' is not defined
-[ERAA.JK] Error: name 'download_data' is not defined
-[ESSA.JK] Error: name 'download_data' is not defined
-[ESTA.JK] Error: name 'download_data' is not defined
-[FAST.JK] Error: name 'download_data' is not defined
-[FASW.JK] Error: name 'download_data' is not defined
-[FILM.JK] Error: name 'download_data' is not defined
-[FISH.JK] Error: name 'download_data' is not defined
-[FITT.JK] Error: name 'download_data' is not defined
-[FLMC.JK] Error: name 'download_data' is not defined
-[FMII.JK] Error: name 'download_data' is not defined
-[FOOD.JK] Error: name 'download_data' is not defined
-[FORU.JK] Error: name 'download_data' is not defined
+rjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,295 - ERROR - [ABBA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,296 - ERROR - [ABMM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,296 - ERROR - [ACES.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,419 - ERROR - [ACST.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,420 - ERROR - [ADHI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,420 - ERROR - [ADMF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,420 - ERROR - [ADMG.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,421 - ERROR - [ADRO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,421 - ERROR - [AGII.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,421 - ERROR - [AGRO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,421 - ERROR - [AKRA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,422 - ERROR - [AKSI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,422 - ERROR - [ALDO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,422 - ERROR - [ALKA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,422 - ERROR - [ALMI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,422 - ERROR - [AMAG.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,422 - ERROR - [AMRT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,423 - ERROR - [ANDI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,423 - ERROR - [ANJT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,423 - ERROR - [ANTM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,423 - ERROR - [APIC.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,423 - ERROR - [APLN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,423 - ERROR - [ARNA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,424 - ERROR - [ARTA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,424 - ERROR - [ASII.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,424 - ERROR - [ASJT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,424 - ERROR - [ASRI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,424 - ERROR - [ASSA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,424 - ERROR - [ATIC.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,425 - ERROR - [AUTO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,425 - ERROR - [BABP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,425 - ERROR - [BACA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,425 - ERROR - [BAEK.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,425 - ERROR - [BALI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,425 - ERROR - [BAPA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,426 - ERROR - [BAPI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,426 - ERROR - [BATA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,426 - ERROR - [BBCA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,426 - ERROR - [BBHI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,426 - ERROR - [BBKP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,426 - ERROR - [BBNI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,427 - ERROR - [BBRI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,427 - ERROR - [BBTN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,427 - ERROR - [BINA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,427 - ERROR - [BIPP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,427 - ERROR - [BISI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,427 - ERROR - [BJBR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,428 - ERROR - [BJTM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,428 - ERROR - [BKDP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,428 - ERROR - [BKSL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,428 - ERROR - [BKSW.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,428 - ERROR - [BLTA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,428 - ERROR - [BLTZ.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,428 - ERROR - [BLUE.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,429 - ERROR - [BMAS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,429 - ERROR - [BMRI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,429 - ERROR - [BMSR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,429 - ERROR - [BMTR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,429 - ERROR - [BNBA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,429 - ERROR - [BNGA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,430 - ERROR - [BNII.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,430 - ERROR - [BNLI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,430 - ERROR - [BOBA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,430 - ERROR - [BOGA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,430 - ERROR - [BOLT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,430 - ERROR - [BOSS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,431 - ERROR - [BPFI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,431 - ERROR - [BPII.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,431 - ERROR - [BPTR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,431 - ERROR - [BRAM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,431 - ERROR - [BRIS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,431 - ERROR - [BRMS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,432 - ERROR - [BRPT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,432 - ERROR - [BSDE.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,432 - ERROR - [BSSR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,432 - ERROR - [BTEK.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,432 - ERROR - [BTEL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,432 - ERROR - [BTON.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,433 - ERROR - [BTPN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,433 - ERROR - [BTPS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,433 - ERROR - [BUDI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,433 - ERROR - [BUVA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,433 - ERROR - [BVSN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,433 - ERROR - [BYAN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,434 - ERROR - [CAKK.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,434 - ERROR - [CAMP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,434 - ERROR - [CANI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,434 - ERROR - [CARS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,434 - ERROR - [CASA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,434 - ERROR - [CASH.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,435 - ERROR - [CBMF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,435 - ERROR - [CEKA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,435 - ERROR - [CENT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,435 - ERROR - [CFIN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,435 - ERROR - [CINT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,435 - ERROR - [CITA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,436 - ERROR - [CITY.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,436 - ERROR - [CLAY.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,436 - ERROR - [CLEO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,436 - ERROR - [CLPI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,436 - ERROR - [CMNP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,436 - ERROR - [CMRY.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,436 - ERROR - [CMPP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,437 - ERROR - [CNKO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,437 - ERROR - [CNTX.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,437 - ERROR - [COCO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,437 - ERROR - [COWL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,437 - ERROR - [CPIN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,437 - ERROR - [CPRO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,438 - ERROR - [CSAP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,438 - ERROR - [CSIS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,438 - ERROR - [CTRA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,438 - ERROR - [CTTH.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,438 - ERROR - [DEAL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,438 - ERROR - [DEFI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,439 - ERROR - [DEPO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,439 - ERROR - [DGIK.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,439 - ERROR - [DIGI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,439 - ERROR - [DILD.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,439 - ERROR - [DIVA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,439 - ERROR - [DKFT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,440 - ERROR - [DLTA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,440 - ERROR - [DMAS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,440 - ERROR - [DNAR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,440 - ERROR - [DOID.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,440 - ERROR - [DSSA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,440 - ERROR - [DUCK.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,441 - ERROR - [DUTI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,441 - ERROR - [DVLA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,441 - ERROR - [DYAN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,441 - ERROR - [EAST.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,441 - ERROR - [ECII.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,441 - ERROR - [EDGE.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,442 - ERROR - [EKAD.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,442 - ERROR - [ELSA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,442 - ERROR - [EMDE.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,442 - ERROR - [EMTK.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,442 - ERROR - [ENRG.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,442 - ERROR - [ENZO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,443 - ERROR - [EPAC.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,443 - ERROR - [ERA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,443 - ERROR - [ERAA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,443 - ERROR - [ESSA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,443 - ERROR - [ESTA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,443 - ERROR - [FAST.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,443 - ERROR - [FASW.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,444 - ERROR - [FILM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,444 - ERROR - [FISH.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,444 - ERROR - [FITT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,444 - ERROR - [FLMC.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,444 - ERROR - [FMII.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,444 - ERROR - [FOOD.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,445 - ERROR - [FORU.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,445 - ERROR - [FPNI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,445 - ERROR - [GAMA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,445 - ERROR - [GEMS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,445 - ERROR - [GGRM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,445 - ERROR - [GJTL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,446 - ERROR - [GLVA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,446 - ERROR - [GOOD.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,446 - ERROR - [GPRA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,446 - ERROR - [GSMF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,446 - ERROR - [GZCO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,446 - ERROR - [HDTX.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,447 - ERROR - [HERO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,447 - ERROR - [HEXA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,447 - ERROR - [HITS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,447 - ERROR - [HKMU.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,447 - ERROR - [HMSP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,447 - ERROR - [HOKI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,448 - ERROR - [HRUM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,448 - ERROR - [ICBP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,448 - ERROR - [IDPR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,448 - ERROR - [IFII.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,448 - ERROR - [INAF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,448 - ERROR - [INAI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,449 - ERROR - [INCF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,449 - ERROR - [INCI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,449 - ERROR - [INCO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,449 - ERROR - [INDF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,449 - ERROR - [INDY.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,449 - ERROR - [INKP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,450 - ERROR - [INPP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,450 - ERROR - [INTA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,450 - ERROR - [INTD.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,450 - ERROR - [INTP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,450 - ERROR - [IPCC.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,451 - ERROR - [IPCM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,451 - ERROR - [IPOL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,451 - ERROR - [IPTV.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,451 - ERROR - [IRRA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,451 - ERROR - [ISAT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,451 - ERROR - [ITMG.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,452 - ERROR - [JAST.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,452 - ERROR - [JAWA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,452 - ERROR - [JGLE.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,452 - ERROR - [JKON.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,452 - ERROR - [JPFA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,452 - ERROR - [JSMR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,452 - ERROR - [KAEF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,453 - ERROR - [KARW.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,453 - ERROR - [KBLI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,453 - ERROR - [KBLM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,453 - ERROR - [KDSI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,453 - ERROR - [KIAS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,453 - ERROR - [KIJA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,454 - ERROR - [KINO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,454 - ERROR - [KLBF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,454 - ERROR - [KMTR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,454 - ERROR - [LEAD.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,454 - ERROR - [LIFE.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,454 - ERROR - [LINK.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,455 - ERROR - [LPKR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,455 - ERROR - [LPPF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,455 - ERROR - [LUCK.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,455 - ERROR - [MAIN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,455 - ERROR - [MAPB.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,455 - ERROR - [MAPA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,456 - ERROR - [MASA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,456 - ERROR - [MCAS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,456 - ERROR - [MDKA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,456 - ERROR - [MEDC.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,456 - ERROR - [MFIN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,456 - ERROR - [MIDI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,456 - ERROR - [MIRA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,457 - ERROR - [MITI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,457 - ERROR - [MKNT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,457 - ERROR - [MLPL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,457 - ERROR - [MLPT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,457 - ERROR - [MNCN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,457 - ERROR - [MPPA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,458 - ERROR - [MPRO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,458 - ERROR - [MTDL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,458 - ERROR - [MYOR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,458 - ERROR - [NATO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,458 - ERROR - [NELY.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,458 - ERROR - [NFCX.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,459 - ERROR - [NISP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,459 - ERROR - [NRCA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,459 - ERROR - [OKAS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,459 - ERROR - [OMRE.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,459 - ERROR - [PANI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,459 - ERROR - [PBID.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,460 - ERROR - [PCAR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,460 - ERROR - [PDES.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,460 - ERROR - [PEHA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,460 - ERROR - [PGAS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,460 - ERROR - [PJAA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,460 - ERROR - [PMJS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,461 - ERROR - [PNBN.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,461 - ERROR - [PNLF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,461 - ERROR - [POLA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,461 - ERROR - [POOL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,461 - ERROR - [PPGL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,461 - ERROR - [PPRO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,462 - ERROR - [PSSI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,462 - ERROR - [PTBA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,462 - ERROR - [PTIS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,462 - ERROR - [PWON.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,462 - ERROR - [RAJA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,462 - ERROR - [RDTX.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,463 - ERROR - [REAL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,463 - ERROR - [RICY.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,463 - ERROR - [RIGS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,463 - ERROR - [ROTI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,463 - ERROR - [SAME.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,463 - ERROR - [SAPX.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,464 - ERROR - [SCCO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,464 - ERROR - [SCMA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,464 - ERROR - [SIDO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,464 - ERROR - [SILO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,464 - ERROR - [SIMP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,464 - ERROR - [SIPD.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,464 - ERROR - [SMBR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,465 - ERROR - [SMCB.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,465 - ERROR - [SMDR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,465 - ERROR - [SMGR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,465 - ERROR - [SMKL.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,465 - ERROR - [SMRA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,465 - ERROR - [SMSM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,466 - ERROR - [SOCI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,466 - ERROR - [SQMI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,466 - ERROR - [SRAJ.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,466 - ERROR - [SRTG.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,466 - ERROR - [STAA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,466 - ERROR - [STTP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,467 - ERROR - [TALF.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,467 - ERROR - [TARA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,467 - ERROR - [TBIG.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,467 - ERROR - [TCID.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,467 - ERROR - [TIFA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,467 - ERROR - [TINS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,467 - ERROR - [TKIM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,468 - ERROR - [TLKM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,468 - ERROR - [TOTO.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,468 - ERROR - [TPIA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,468 - ERROR - [TRIM.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,468 - ERROR - [TURI.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,468 - ERROR - [ULTJ.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,469 - ERROR - [UNIC.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,469 - ERROR - [UNTR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,469 - ERROR - [UNVR.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,469 - ERROR - [WIKA.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,469 - ERROR - [WSBP.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,469 - ERROR - [WSKT.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,470 - ERROR - [YPAS.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+2025-04-21 02:10:25,470 - ERROR - [ZINC.JK] Terjadi error: name 'download_data' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
