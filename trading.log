@@ -1,4 +1,186 @@
-  File "/home/runner/work/arkana/arkana/main.py", line 284
-    df = calculate_indicators(df)
-    ^^
-SyntaxError: expected 'except' or 'finally' block
+2025-04-21 01:22:01.793680: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 01:22:01.796999: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 01:22:01.805710: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745198521.820065    2116 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745198521.824289    2116 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745198521.836256    2116 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745198521.836275    2116 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745198521.836278    2116 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745198521.836280    2116 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-21 01:22:01.839874: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Dihapus: model_high_BBRI.JK.pkl
+Dihapus: model_high_BINA.JK.pkl
+Dihapus: model_high_BBTN.JK.pkl
+Dihapus: model_high_ADHI.JK.pkl
+Dihapus: model_high_BLUE.JK.pkl
+Dihapus: model_high_BBHI.JK.pkl
+Dihapus: model_high_ABMM.JK.pkl
+Dihapus: model_high_BRMS.JK.pkl
+Dihapus: model_high_ADRO.JK.pkl
+Dihapus: model_high_BPII.JK.pkl
+Dihapus: model_high_BNGA.JK.pkl
+Dihapus: model_high_ATIC.JK.pkl
+Dihapus: model_high_ASSA.JK.pkl
+Dihapus: model_high_BJBR.JK.pkl
+Dihapus: model_high_ANJT.JK.pkl
+Dihapus: model_high_BTPS.JK.pkl
+Dihapus: model_high_ASRI.JK.pkl
+Dihapus: model_high_BMTR.JK.pkl
+Dihapus: model_high_ALDO.JK.pkl
+Dihapus: model_high_BISI.JK.pkl
+Dihapus: model_high_BOBA.JK.pkl
+Dihapus: model_high_AMRT.JK.pkl
+Dihapus: model_high_BSSR.JK.pkl
+Dihapus: model_high_ACES.JK.pkl
+Dihapus: model_high_ANTM.JK.pkl
+Dihapus: model_high_ASII.JK.pkl
+Dihapus: model_high_BNLI.JK.pkl
+Dihapus: model_high_BNBA.JK.pkl
+Dihapus: model_high_AKSI.JK.pkl
+Dihapus: model_high_ARNA.JK.pkl
+Dihapus: model_high_AKRA.JK.pkl
+Dihapus: model_high_BJTM.JK.pkl
+Dihapus: model_high_BOGA.JK.pkl
+Dihapus: model_high_BRPT.JK.pkl
+Dihapus: model_high_ADMG.JK.pkl
+Dihapus: model_high_APIC.JK.pkl
+Dihapus: model_high_BBCA.JK.pkl
+Dihapus: model_high_BACA.JK.pkl
+Dihapus: model_high_CAMP.JK.pkl
+Dihapus: model_high_BMRI.JK.pkl
+Dihapus: model_high_CAKK.JK.pkl
+Dihapus: model_high_ADMF.JK.pkl
+Dihapus: model_high_BBNI.JK.pkl
+Dihapus: model_high_AGRO.JK.pkl
+Dihapus: model_high_AUTO.JK.pkl
+Dihapus: model_high_BSDE.JK.pkl
+Dihapus: model_high_BALI.JK.pkl
+Dihapus: model_high_BRIS.JK.pkl
+Dihapus: model_high_BNII.JK.pkl
+Dihapus: model_high_ASJT.JK.pkl
+Dihapus: model_low_BLUE.JK.pkl
+Dihapus: model_low_AMRT.JK.pkl
+Dihapus: model_low_BOGA.JK.pkl
+Dihapus: model_low_ASRI.JK.pkl
+Dihapus: model_low_ADHI.JK.pkl
+Dihapus: model_low_ATIC.JK.pkl
+Dihapus: model_low_BBHI.JK.pkl
+Dihapus: model_low_ALDO.JK.pkl
+Dihapus: model_low_ASJT.JK.pkl
+Dihapus: model_low_APIC.JK.pkl
+Dihapus: model_low_BNGA.JK.pkl
+Dihapus: model_low_AUTO.JK.pkl
+Dihapus: model_low_BPII.JK.pkl
+Dihapus: model_low_BRPT.JK.pkl
+Dihapus: model_low_BJTM.JK.pkl
+Dihapus: model_low_ASII.JK.pkl
+Dihapus: model_low_BBRI.JK.pkl
+Dihapus: model_low_ADRO.JK.pkl
+Dihapus: model_low_BSDE.JK.pkl
+Dihapus: model_low_BALI.JK.pkl
+Dihapus: model_low_ASSA.JK.pkl
+Dihapus: model_low_BRMS.JK.pkl
+Dihapus: model_low_BISI.JK.pkl
+Dihapus: model_low_ANJT.JK.pkl
+Dihapus: model_low_ARNA.JK.pkl
+Dihapus: model_low_BNII.JK.pkl
+Dihapus: model_low_BBNI.JK.pkl
+Dihapus: model_low_BMRI.JK.pkl
+Dihapus: model_low_ABMM.JK.pkl
+Dihapus: model_low_ADMG.JK.pkl
+Dihapus: model_low_BNBA.JK.pkl
+Dihapus: model_low_BJBR.JK.pkl
+Dihapus: model_low_AKRA.JK.pkl
+Dihapus: model_low_BTPS.JK.pkl
+Dihapus: model_low_ACES.JK.pkl
+Dihapus: model_low_BSSR.JK.pkl
+Dihapus: model_low_BNLI.JK.pkl
+Dihapus: model_low_ADMF.JK.pkl
+Dihapus: model_low_AKSI.JK.pkl
+Dihapus: model_low_BBCA.JK.pkl
+Dihapus: model_low_BRIS.JK.pkl
+Dihapus: model_low_CAKK.JK.pkl
+Dihapus: model_low_CAMP.JK.pkl
+Dihapus: model_low_BOBA.JK.pkl
+Dihapus: model_low_BMTR.JK.pkl
+Dihapus: model_low_AGRO.JK.pkl
+Dihapus: model_low_BACA.JK.pkl
+Dihapus: model_low_ANTM.JK.pkl
+Dihapus: model_low_BBTN.JK.pkl
+Dihapus: model_low_BINA.JK.pkl
+Dihapus: model_lstm_BINA.JK.keras
+Dihapus: model_lstm_ANTM.JK.keras
+Dihapus: model_lstm_BPII.JK.keras
+Dihapus: model_lstm_CAMP.JK.keras
+Dihapus: model_lstm_AGRO.JK.keras
+Dihapus: model_lstm_BSSR.JK.keras
+Dihapus: model_lstm_BNLI.JK.keras
+Dihapus: model_lstm_ALDO.JK.keras
+Dihapus: model_lstm_AKRA.JK.keras
+Dihapus: model_lstm_BALI.JK.keras
+Dihapus: model_lstm_BBTN.JK.keras
+Dihapus: model_lstm_BISI.JK.keras
+Dihapus: model_lstm_BRMS.JK.keras
+Dihapus: model_lstm_ADMG.JK.keras
+Dihapus: model_lstm_BMTR.JK.keras
+Dihapus: model_lstm_BBCA.JK.keras
+Dihapus: model_lstm_BOBA.JK.keras
+Dihapus: model_lstm_BRPT.JK.keras
+Dihapus: model_lstm_ADMF.JK.keras
+Dihapus: model_lstm_ASJT.JK.keras
+Dihapus: model_lstm_AKSI.JK.keras
+Dihapus: model_lstm_BBRI.JK.keras
+Dihapus: model_lstm_BACA.JK.keras
+Dihapus: model_lstm_CAKK.JK.keras
+Dihapus: model_lstm_BNII.JK.keras
+Dihapus: model_lstm_ARNA.JK.keras
+Dihapus: model_lstm_APIC.JK.keras
+Dihapus: model_lstm_ABMM.JK.keras
+Dihapus: model_lstm_ATIC.JK.keras
+Dihapus: model_lstm_ADHI.JK.keras
+Dihapus: model_lstm_BTPS.JK.keras
+Dihapus: model_lstm_ASII.JK.keras
+Dihapus: model_lstm_BNBA.JK.keras
+Dihapus: model_lstm_AUTO.JK.keras
+Dihapus: model_lstm_BBNI.JK.keras
+Dihapus: model_lstm_ANJT.JK.keras
+Dihapus: model_lstm_BSDE.JK.keras
+Dihapus: model_lstm_ASRI.JK.keras
+Dihapus: model_lstm_BBHI.JK.keras
+Dihapus: model_lstm_BJTM.JK.keras
+Dihapus: model_lstm_BMRI.JK.keras
+Dihapus: model_lstm_ADRO.JK.keras
+Dihapus: model_lstm_BJBR.JK.keras
+Dihapus: model_lstm_BRIS.JK.keras
+Dihapus: model_lstm_ACES.JK.keras
+Dihapus: model_lstm_AMRT.JK.keras
+Dihapus: model_lstm_ASSA.JK.keras
+Dihapus: model_lstm_BNGA.JK.keras
+Dihapus: model_lstm_BOGA.JK.keras
+Dihapus: model_lstm_BLUE.JK.keras
+Total 150 model dihapus.
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 279, in analyze_stock
+    df = download_data(ticker)
+NameError: name 'download_data' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 612, in <module>
+    results = list(executor.map(analyze_stock, STOCK_LIST))
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/runner/work/arkana/arkana/main.py", line 292, in analyze_stock
+    print(f"[{symbol}] Error: {e}")
+NameError: name 'symbol' is not defined
