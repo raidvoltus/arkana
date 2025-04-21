@@ -62,3 +62,17 @@ def log_prediction(ticker: str, tanggal: str, pred_high: float, pred_low: float,
     logger.info(f"Prediksi untuk {ticker} pada {tanggal} | Harga awal: {harga_awal}, High: {pred_high}, Low: {pred_low}")
     with open("prediksi_log.csv", "a") as f:
         f.write(f"{ticker},{tanggal},{harga_awal},{pred_high},{pred_low}\n")
+
+def send_telegram_message(message: str):
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    data = {
+        "chat_id": CHAT_ID,
+        "text": message,
+        "parse_mode": "HTML"
+    }
+    try:
+        response = requests.post(url, data=data, timeout=10)
+        response.raise_for_status()  # Biar error HTTP ditangkap
+        logging.info("Pesan Telegram berhasil dikirim.")
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Gagal kirim pesan Telegram: {e}")
