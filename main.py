@@ -194,13 +194,23 @@ def get_realized_price_data() -> pd.DataFrame:
     return pd.DataFrame(result)
 
 def evaluate_prediction_accuracy() -> Dict[str, float]:
-    if not os.path.exists("prediksi_log.csv"): return {}
+    if not os.path.exists("prediksi_log.csv"):
+        return {}
+
     df_log = pd.read_csv("prediksi_log.csv", names=["ticker", "tanggal", "harga_awal", "pred_high", "pred_low"])
     df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
+
     df_real = get_realized_price_data()
-    if df_real.empty: return {}
+    if df_real.empty:
+        return {}
+
+    df_real["tanggal"] = pd.to_datetime(df_real["tanggal"])  # FIX di sini
+
     df_merged = df_log.merge(df_real, on=["ticker", "tanggal"], how="inner")
-    df_merged["benar"] = (df_merged["actual_high"] >= df_merged["pred_high"]) & (df_merged["actual_low"] <= df_merged["pred_low"])
+
+    df_merged["benar"] = (df_merged["actual_high"] >= df_merged["pred_high"]) & \
+                         (df_merged["actual_low"] <= df_merged["pred_low"])
+
     return df_merged.groupby("ticker")["benar"].mean().to_dict()
 
 def retrain_if_needed(ticker: str):
