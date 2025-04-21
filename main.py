@@ -183,24 +183,45 @@ def analyze_stock(ticker: str):
 
 # === Evaluasi dan Retraining ===
 def get_realized_price_data() -> pd.DataFrame:
-    if not os.path.exists("prediksi_log.csv"): return pd.DataFrame()
+    if not os.path.exists("prediksi_log.csv"):
+        return pd.DataFrame()
     df_log = pd.read_csv("prediksi_log.csv", names=["ticker", "tanggal", "harga_awal", "pred_high", "pred_low"])
     result = []
     for _, row in df_log.iterrows():
-        ticker, tanggal = row["ticker"], pd.to_datetime(row["tanggal"])
-        df = yf.download(ticker, start=tanggal.strftime("%Y-%m-%d"), end=(tanggal + pd.Timedelta(days=5)).strftime("%Y-%m-%d"))
-        if df.empty: continue
-        result.append({"ticker": ticker, "tanggal": row["tanggal"], "actual_high": df["High"].max(), "actual_low": df["Low"].min()})
+        ticker = row["ticker"]
+        tanggal = pd.to_datetime(row["tanggal"])
+        try:
+            df = yf.download(
+                ticker,
+                start=tanggal.strftime("%Y-%m-%d"),
+                end=(tanggal + pd.Timedelta(days=5)).strftime("%Y-%m-%d"),
+                auto_adjust=False  # Tambahkan eksplisit agar tidak terpengaruh default baru
+            )
+            if not df.empty:
+                result.append({
+                    "ticker": ticker,
+                    "tanggal": tanggal,  # langsung datetime
+                    "actual_high": df["High"].max(),
+                    "actual_low": df["Low"].min()
+                })
+        except Exception as e:
+            logging.error(f"Download gagal untuk {ticker} - {tanggal}: {e}")
     return pd.DataFrame(result)
 
 def evaluate_prediction_accuracy() -> Dict[str, float]:
-    if not os.path.exists("prediksi_log.csv"): return {}
+    if not os.path.exists("prediksi_log.csv"):
+        return {}
     df_log = pd.read_csv("prediksi_log.csv", names=["ticker", "tanggal", "harga_awal", "pred_high", "pred_low"])
     df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
+
     df_real = get_realized_price_data()
-    if df_real.empty: return {}
+    if df_real.empty:
+        return {}
+    df_real["tanggal"] = pd.to_datetime(df_real["tanggal"])  # Pastikan datetime
+
     df_merged = df_log.merge(df_real, on=["ticker", "tanggal"], how="inner")
-    df_merged["benar"] = (df_merged["actual_high"] >= df_merged["pred_high"]) & (df_merged["actual_low"] <= df_merged["pred_low"])
+    df_merged["benar"] = (df_merged["actual_high"] >= df_merged["pred_high"]) & \
+                         (df_merged["actual_low"] <= df_merged["pred_low"])
     return df_merged.groupby("ticker")["benar"].mean().to_dict()
 
 def retrain_if_needed(ticker: str):
