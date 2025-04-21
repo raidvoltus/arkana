@@ -1,24 +1,54 @@
-2025-04-21 13:19:28.582622: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-21 13:19:28.585955: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-21 13:19:28.594784: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-21 13:25:42.760808: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 13:25:42.764292: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 13:25:42.773220: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745241568.609016    2101 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745241568.613346    2101 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745241568.625380    2101 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745241568.625396    2101 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745241568.625398    2101 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745241568.625401    2101 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-21 13:19:28.628949: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745241942.788129    2046 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745241942.792381    2046 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745241942.804639    2046 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745241942.804669    2046 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745241942.804672    2046 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745241942.804674    2046 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-21 13:25:42.808329: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-04-21 13:19:32,533 - ERROR - $BBCA.JK: possibly delisted; no price data found  (period=365d) (Yahoo error = "15m data not available for startTime=1713705572 and endTime=1745241572. The requested range must be within the last 60 days.")
-2025-04-21 13:19:32,533 - WARNING - Data kosong/kurang untuk BBCA.JK
-2025-04-21 13:19:33,424 - ERROR - $TLKM.JK: possibly delisted; no price data found  (period=365d) (Yahoo error = "15m data not available for startTime=1713705573 and endTime=1745241573. The requested range must be within the last 60 days.")
-2025-04-21 13:19:33,424 - WARNING - Data kosong/kurang untuk TLKM.JK
-2025-04-21 13:19:34,627 - ERROR - $BBRI.JK: possibly delisted; no price data found  (period=365d) (Yahoo error = "15m data not available for startTime=1713705574 and endTime=1745241574. The requested range must be within the last 60 days.")
-2025-04-21 13:19:34,627 - WARNING - Data kosong/kurang untuk BBRI.JK
-2025-04-21 13:19:35,473 - ERROR - $BMRI.JK: possibly delisted; no price data found  (period=365d) (Yahoo error = "15m data not available for startTime=1713705575 and endTime=1745241575. The requested range must be within the last 60 days.")
-2025-04-21 13:19:35,474 - WARNING - Data kosong/kurang untuk BMRI.JK
-2025-04-21 13:19:36,413 - ERROR - $ANTM.JK: possibly delisted; no price data found  (period=365d) (Yahoo error = "15m data not available for startTime=1713705576 and endTime=1745241576. The requested range must be within the last 60 days.")
-2025-04-21 13:19:36,414 - WARNING - Data kosong/kurang untuk ANTM.JK
-2025-04-21 13:19:37,650 - ERROR - $ASII.JK: possibly delisted; no price data found  (period=365d) (Yahoo error = "15m data not available for startTime=1713705577 and endTime=1745241577. The requested range must be within the last 60 days.")
-2025-04-21 13:19:37,651 - WARNING - Data kosong/kurang untuk ASII.JK
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000188 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4673
+[LightGBM] [Info] Number of data points in the train set: 1916, number of used features: 23
+[LightGBM] [Info] Start training from score 2806.090814
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000188 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4581
+[LightGBM] [Info] Number of data points in the train set: 1915, number of used features: 23
+[LightGBM] [Info] Start training from score 1469.169713
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000203 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4527
+[LightGBM] [Info] Number of data points in the train set: 1917, number of used features: 23
+[LightGBM] [Info] Start training from score 2864.616588
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000179 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 4702
+[LightGBM] [Info] Number of data points in the train set: 1915, number of used features: 23
+[LightGBM] [Info] Start training from score 5118.966057
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 285, in <module>
+    price = df["Close"].iloc[-1]
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
+    self._validate_integer(key, axis)
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
