@@ -47,7 +47,7 @@ def log_prediction(ticker: str, tanggal: str, pred_high: float, pred_low: float,
 # === Ambil Data Saham ===
 def get_stock_data(ticker: str) -> pd.DataFrame:
     try:
-        df = yf.Ticker(ticker).history(period="730d", interval="1h")
+        df = yf.Ticker(ticker).history(period="365d", interval="30m")
         if df is not None and not df.empty and len(df) >= 200:
             df["ticker"] = ticker
             return df
