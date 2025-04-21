@@ -1,4 +1,4 @@
-  File "/home/runner/work/arkana/arkana/main.py", line 150
-    msg = "<b>Sinyal Saham Top 5:</b>
-          ^
-SyntaxError: unterminated string literal (detected at line 150)
+  File "/home/runner/work/arkana/arkana/main.py", line 151
+    "
+    ^
+SyntaxError: unterminated string literal (detected at line 151)
