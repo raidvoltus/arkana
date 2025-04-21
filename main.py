@@ -222,8 +222,16 @@ def evaluate_prediction_accuracy() -> Dict[str, float]:
     df_real["tanggal"] = pd.to_datetime(df_real["tanggal"])  # Pastikan datetime
 
     df_merged = df_log.merge(df_real, on=["ticker", "tanggal"], how="inner")
+    # Pastikan semua kolom yang dibandingkan bertipe numerik
+    df_merged["actual_high"] = pd.to_numeric(df_merged["actual_high"], errors="coerce")
+    df_merged["actual_low"] = pd.to_numeric(df_merged["actual_low"], errors="coerce")
+    df_merged["pred_high"] = pd.to_numeric(df_merged["pred_high"], errors="coerce")
+    df_merged["pred_low"] = pd.to_numeric(df_merged["pred_low"], errors="coerce")
+
+    # Lalu baru lakukan perbandingan
     df_merged["benar"] = (df_merged["actual_high"] >= df_merged["pred_high"]) & \
                          (df_merged["actual_low"] <= df_merged["pred_low"])
+    df_merged = df_merged.dropna(subset=["actual_high", "actual_low", "pred_high", "pred_low"])
     return df_merged.groupby("ticker")["benar"].mean().to_dict()
 
 def retrain_if_needed(ticker: str):
