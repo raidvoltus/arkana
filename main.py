@@ -204,7 +204,7 @@ def evaluate_prediction_accuracy() -> Dict[str, float]:
     if df_real.empty:
         return {}
 
-    df_real["tanggal"] = pd.to_datetime(df_real["tanggal"])  # FIX di sini
+    df_real["tanggal"] = pd.to_datetime(df_real["tanggal"])
 
     df_merged = df_log.merge(df_real, on=["ticker", "tanggal"], how="inner")
 
