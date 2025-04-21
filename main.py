@@ -147,7 +147,7 @@ def send_top_predictions():
     top5 = sorted(predictions, key=lambda x: max(x["profit_pct"], x["probabilitas"]), reverse=True)[:5]
     if not top5: return
 
-    msg = "<b>Sinyal Saham Top 5:</b>
+    msg = "<b>Sinyal Saham Top 5:</b>"
 "
     for p in top5:
         msg += f"<b>{p['ticker']}</b> Harga: {p['harga']:,.0f}, Pred: {p['pred_high']:,.0f}, Potensi: {p['profit_pct']}%, Prob: {p['probabilitas']}
