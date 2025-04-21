@@ -1,14 +1,14 @@
-2025-04-21 12:33:15.253879: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-21 12:33:15.257262: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-21 12:33:15.265963: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-21 12:38:05.855839: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 12:38:05.859184: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 12:38:05.867846: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745238795.280092    2056 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745238795.284368    2056 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745238795.296357    2056 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745238795.296374    2056 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745238795.296376    2056 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745238795.296378    2056 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-21 12:33:15.299920: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745239085.881836    2057 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745239085.886093    2057 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745239085.898337    2057 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745239085.898352    2057 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745239085.898355    2057 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745239085.898357    2057 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-21 12:38:05.901950: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 [*********************100%***********************]  1 of 1 completed
 [*********************100%***********************]  1 of 1 completed
@@ -312,11 +312,11 @@ To enable the following instructions: AVX2 FMA, in other operations, rebuild Ten
 [*********************100%***********************]  1 of 1 completed
 [*********************100%***********************]  1 of 1 completed
 Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 238, in <module>
+  File "/home/runner/work/arkana/arkana/main.py", line 240, in <module>
     retrain_if_needed(ticker)
-  File "/home/runner/work/arkana/arkana/main.py", line 228, in retrain_if_needed
+  File "/home/runner/work/arkana/arkana/main.py", line 230, in retrain_if_needed
     akurasi_map = evaluate_prediction_accuracy()
-  File "/home/runner/work/arkana/arkana/main.py", line 223, in evaluate_prediction_accuracy
+  File "/home/runner/work/arkana/arkana/main.py", line 225, in evaluate_prediction_accuracy
     df_merged["benar"] = (df_merged["actual_high"] >= df_merged["pred_high"]) & \
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
     return method(self, other)
