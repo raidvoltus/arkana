@@ -275,10 +275,11 @@ def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
         
 # === Fungsi Utama Per-Ticker ===
 def analyze_stock(ticker: str):
-    df = download_data(ticker)
-    if df is None or df.empty:
-        print(f"[{ticker}] Data kosong.")
-        return 
+    try:
+        df = download_data(ticker)
+        if df is None or df.empty:
+            print(f"[{ticker}] Data kosong.")
+            return None
     
     df = calculate_indicators(df)
 
