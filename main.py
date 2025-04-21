@@ -242,7 +242,58 @@ def retrain_if_needed(ticker: str):
 
 # === Main Eksekusi ===
 if __name__ == "__main__":
-    ticker_list = ["BBCA.JK", "TLKM.JK", "BBRI.JK"]  # Ganti sesuai kebutuhan
+    ticker_list = ["BBCA.JK", "TLKM.JK", "BBRI.JK", "BMRI.JK", "ANTM.JK", "ASII.JK"]  # Bebas
+    kandidat_sinyal = []
+
     for ticker in ticker_list:
-        analyze_stock(ticker)
-        retrain_if_needed(ticker)
+        df = get_stock_data(ticker)
+        if df is None: continue
+        df = calculate_indicators(df)
+
+        price = df["Close"].iloc[-1]
+        avg_volume = df["Volume"].tail(20).mean()
+        atr = df["ATR"].iloc[-1]
+        if price < MIN_PRICE or avg_volume < MIN_VOLUME or (atr / price) < MIN_VOLATILITY:
+            continue
+
+        features = [
+            "Close", "ATR", "RSI", "MACD", "MACD_Hist", "SMA_14", "SMA_28", "SMA_84",
+            "EMA_10", "BB_Upper", "BB_Lower", "Support", "Resistance", "VWAP", "ADX",
+            "CCI", "Momentum", "WilliamsR", "daily_avg", "daily_std", "daily_range",
+            "is_opening_hour", "is_closing_hour"
+        ]
+        check_and_reset_model_if_needed(ticker, features)
+        df = df.dropna(subset=features + ["future_high", "future_low"])
+        if df.empty: continue
+
+        X, y_high, y_low = df[features], df["future_high"], df["future_low"]
+        X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = train_test_split(X, y_high, y_low, test_size=0.2, random_state=42)
+
+        # Load atau train model
+        high_path = f"model_high_{ticker}.pkl"
+        model_high = joblib.load(high_path) if os.path.exists(high_path) else train_lightgbm(X_tr, yh_tr)
+        if not os.path.exists(high_path): joblib.dump(model_high, high_path)
+
+        harga_awal = df["Close"].iloc[-1]
+        pred_high = model_high.predict([X.iloc[-1]])[0]
+
+        # Hitung probabilitas dan expected gain
+        prob = calculate_probability(model_high, X_te, yh_te)
+        expected_gain = (pred_high - harga_awal) / harga_awal
+
+        # Simpan kalau lolos ambang
+        if prob > 0.7 and expected_gain > 0.02:
+            kandidat_sinyal.append((ticker, harga_awal, pred_high, expected_gain, prob))
+
+    # Kirim sinyal untuk top 5 berdasarkan expected_gain
+    top_kandidat = sorted(kandidat_sinyal, key=lambda x: x[3], reverse=True)[:5]
+    for ticker, harga_awal, pred_high, gain, prob in top_kandidat:
+        message = (
+            f"<b>{ticker}</b>\n"
+            f"Harga: {harga_awal:,.0f}\n"
+            f"Pred High: {pred_high:,.0f}\n"
+            f"Potensi Naik: {gain*100:.2f}%\n"
+            f"Akurasi Historis: {prob*100:.2f}%"
+        )
+        send_telegram_message(message)
+        log_prediction(ticker, datetime.today().strftime("%Y-%m-%d"), pred_high, harga_awal * 0.95, harga_awal)
