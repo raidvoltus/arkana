@@ -1,4 +1,4 @@
-  File "/home/runner/work/arkana/arkana/main.py", line 290
-    except Exception as e:
-    ^^^^^^
-SyntaxError: invalid syntax
+  File "/home/runner/work/arkana/arkana/main.py", line 284
+    df = calculate_indicators(df)
+    ^^
+SyntaxError: expected 'except' or 'finally' block
