@@ -1,1698 +1,330 @@
-2025-04-21 03:22:58.192415: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-21 03:22:58.195819: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-21 03:22:58.204582: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-21 09:48:36.166766: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 09:48:36.170132: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-21 09:48:36.178835: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745205778.218641    2133 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745205778.222831    2133 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745205778.234790    2133 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745205778.234808    2133 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745205778.234811    2133 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745205778.234813    2133 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-21 03:22:58.238396: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745228916.193298    2092 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745228916.197547    2092 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745228916.209431    2092 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745228916.209447    2092 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745228916.209449    2092 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745228916.209451    2092 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-21 09:48:36.213112: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-Tidak ada model yang ditemukan untuk dihapus.
-[BAEK.JK] Data kosong.
-[BVSN.JK] Data kosong.
-[ERA.JK] Data kosong.
-[TURI.JK] Data kosong.
-call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:01,547 - ERROR - [AALI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:01,550 - ERROR - [ACES.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:02,439 - ERROR - [ADHI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:02,444 - ERROR - [ADMF.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:02,462 - ERROR - [ADMG.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:02,751 - ERROR - [ADRO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:03,262 - ERROR - [AGRO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:03,274 - ERROR - [AKRA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:03,410 - ERROR - [AKSI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:04,151 - ERROR - [ALDO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:04,346 - ERROR - [AMRT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:04,931 - ERROR - [ANTM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:05,036 - ERROR - [ANJT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:05,150 - ERROR - [APIC.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:05,499 - ERROR - [ARNA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:05,810 - ERROR - [ASII.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:06,282 - ERROR - [ASRI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:06,355 - ERROR - [ASSA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:06,607 - ERROR - [ATIC.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:06,683 - ERROR - [AUTO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:06,982 - ERROR - [BACA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:07,883 - ERROR - [BALI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:07,971 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BAEK.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BAEK.JK&crumb=8W3eBC%2F.k1q
-2025-04-21 03:23:07,971 - ERROR - Error mengambil data BAEK.JK: 'NoneType' object has no attribute 'update'
-2025-04-21 03:23:08,686 - ERROR - [BBHI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:08,829 - ERROR - [BBCA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:09,476 - ERROR - [BBNI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:09,666 - ERROR - [BBTN.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:09,674 - ERROR - [BINA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:09,676 - ERROR - [BBRI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:10,579 - ERROR - [BJBR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:10,584 - ERROR - [BJTM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:10,589 - ERROR - [BISI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:11,526 - ERROR - [BLUE.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:12,194 - ERROR - [BMRI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:12,267 - ERROR - [BMTR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:12,796 - ERROR - [BNGA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:12,798 - ERROR - [BNBA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:13,171 - ERROR - [BNII.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:13,208 - ERROR - [BNLI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:13,560 - ERROR - [BOGA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:13,564 - ERROR - [BOBA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:14,221 - ERROR - [BPII.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:14,286 - ERROR - [BRAM.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:14,730 - ERROR - [BRIS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:14,796 - ERROR - [BRMS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:15,172 - ERROR - [BSDE.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:15,256 - ERROR - [BRPT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:15,401 - ERROR - [BTEL.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:15,510 - ERROR - [BSSR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:16,276 - ERROR - [BTPS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:17,148 - ERROR - [CAMP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:17,174 - ERROR - [CAKK.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:17,358 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BVSN.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BVSN.JK&crumb=8W3eBC%2F.k1q
-2025-04-21 03:23:17,358 - ERROR - Error mengambil data BVSN.JK: 'NoneType' object has no attribute 'update'
-2025-04-21 03:23:18,086 - ERROR - [CASA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:18,974 - ERROR - [CINT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:19,034 - ERROR - [CENT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:19,039 - ERROR - [CFIN.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:19,529 - ERROR - [CLAY.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:19,825 - ERROR - [CLEO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:20,364 - ERROR - [CMNP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:20,403 - ERROR - [CLPI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:20,514 - ERROR - [CMRY.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:20,903 - ERROR - [COWL.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:21,381 - ERROR - [CPIN.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:21,778 - ERROR - [CSAP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:22,074 - ERROR - [DEFI.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:22,078 - ERROR - [CTRA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:22,896 - ERROR - [DEPO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:22,935 - ERROR - [DILD.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:23,607 - ERROR - [DKFT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:23,677 - ERROR - [DMAS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:24,054 - ERROR - [DUCK.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:24,202 - ERROR - [DOID.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:24,475 - ERROR - [DSSA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:24,886 - ERROR - [DVLA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:25,215 - ERROR - [ECII.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:25,547 - ERROR - [EKAD.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:25,954 - ERROR - [ELSA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:26,196 - ERROR - [EMTK.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:26,552 - ERROR - [ENRG.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:27,349 - ERROR - [ESSA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:27,500 - ERROR - [ERAA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:27,553 - ERROR - $ERA.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-21 03:23:27,553 - WARNING - Data kosong/kurang untuk ERA.JK
-2025-04-21 03:23:27,941 - ERROR - [FISH.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:28,258 - ERROR - [FAST.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:28,292 - ERROR - [FILM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:28,405 - ERROR - [FITT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:29,226 - ERROR - [FORU.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:29,227 - ERROR - [FPNI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:29,912 - ERROR - [GEMS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:30,169 - ERROR - [GGRM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:30,173 - ERROR - [GJTL.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:30,400 - ERROR - [GOOD.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:30,664 - ERROR - [HDTX.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:31,729 - ERROR - [HITS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:31,736 - ERROR - [HEXA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:32,096 - ERROR - [HMSP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:32,558 - ERROR - [ICBP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:32,596 - ERROR - [HRUM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:32,879 - ERROR - [IDPR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:32,922 - ERROR - [IFII.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:33,135 - ERROR - [INAF.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:33,163 - ERROR - [INAI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:33,571 - ERROR - [INCI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:34,105 - ERROR - [INCO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:34,111 - ERROR - [INDY.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:34,135 - ERROR - [INDF.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:34,270 - ERROR - [INKP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:34,727 - ERROR - [INTD.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:34,933 - ERROR - [INTP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:35,479 - ERROR - [IPCC.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:35,524 - ERROR - [IPCM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:35,973 - ERROR - [IRRA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:36,479 - ERROR - [ITMG.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:36,524 - ERROR - [ISAT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:37,324 - ERROR - [JPFA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:37,430 - ERROR - [JSMR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:37,615 - ERROR - [KAEF.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:37,933 - ERROR - [KARW.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:38,019 - ERROR - [KBLI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:38,239 - ERROR - [KBLM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:38,317 - ERROR - [KDSI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:38,588 - ERROR - [KIJA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:39,193 - ERROR - [KLBF.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:39,349 - ERROR - [LIFE.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:40,202 - ERROR - [LPPF.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:40,591 - ERROR - [MAIN.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:41,139 - ERROR - [MCAS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:41,258 - ERROR - [MAPA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:41,364 - ERROR - [MDKA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:41,608 - ERROR - [MEDC.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:42,020 - ERROR - [MIDI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:42,680 - ERROR - [MLPT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:43,102 - ERROR - [MNCN.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:43,321 - ERROR - [MPRO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:43,390 - ERROR - [MTDL.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:43,733 - ERROR - [MYOR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:43,735 - ERROR - [NATO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:43,986 - ERROR - [NELY.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:44,191 - ERROR - [NFCX.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:44,560 - ERROR - [NRCA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:44,752 - ERROR - [NISP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:44,763 - ERROR - [OKAS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:45,031 - ERROR - [PANI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:45,346 - ERROR - [PDES.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:45,740 - ERROR - [PBID.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:46,145 - ERROR - [PGAS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:46,153 - ERROR - [PJAA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:46,515 - ERROR - [PNBN.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:46,828 - ERROR - [POOL.JK] Terjadi error: single positional indexer is out-of-bounds
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in analyze_stock
-    price      = df["Close"].iloc[-1]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
-    return self._getitem_axis(maybe_callable, axis=axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
-    self._validate_integer(key, axis)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
-    raise IndexError("single positional indexer is out-of-bounds")
-IndexError: single positional indexer is out-of-bounds
-2025-04-21 03:23:46,879 - ERROR - [PNLF.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:47,488 - ERROR - [PSSI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:47,816 - ERROR - [PTBA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:47,991 - ERROR - [PTIS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:48,392 - ERROR - [PWON.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:48,418 - ERROR - [RAJA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:48,990 - ERROR - [RIGS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:49,349 - ERROR - [ROTI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:49,373 - ERROR - [SAME.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:49,525 - ERROR - [SAPX.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:50,219 - ERROR - [SCMA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:50,320 - ERROR - [SIDO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:50,453 - ERROR - [SILO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:50,515 - ERROR - [SIMP.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:51,026 - ERROR - [SMBR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:51,448 - ERROR - [SMDR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:51,449 - ERROR - [SMGR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:51,799 - ERROR - [SMKL.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:51,840 - ERROR - [SMRA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:52,209 - ERROR - [SMSM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:52,218 - ERROR - [SOCI.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:52,556 - ERROR - [SRAJ.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:52,968 - ERROR - [STAA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:52,971 - ERROR - [SRTG.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:53,534 - ERROR - [TBIG.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:53,920 - ERROR - [TINS.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:54,310 - ERROR - [TLKM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:54,331 - ERROR - [TKIM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:54,695 - ERROR - [TOTO.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:54,728 - ERROR - [TPIA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:54,881 - ERROR - [TRIM.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:55,604 - ERROR - [ULTJ.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:55,608 - ERROR - [UNTR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:55,702 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-21 03:23:55,703 - WARNING - Data kosong/kurang untuk TURI.JK
-2025-04-21 03:23:55,888 - ERROR - [WSKT.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:56,372 - ERROR - [WIKA.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
-2025-04-21 03:23:56,460 - ERROR - [UNVR.JK] Terjadi error: sequence item 0: expected str instance, ellipsis found
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 304, in analyze_stock
-    check_and_reset_model_if_needed(ticker, features)
-  File "/home/runner/work/arkana/arkana/main.py", line 243, in check_and_reset_model_if_needed
-    current_hash = get_feature_hash(current_features)
-  File "/home/runner/work/arkana/arkana/main.py", line 239, in get_feature_hash
-    features_str = ",".join(sorted(features))
-TypeError: sequence item 0: expected str instance, ellipsis found
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+YF.download() has changed argument auto_adjust default to True
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 217, in <module>
+    retrain_if_needed(ticker)
+  File "/home/runner/work/arkana/arkana/main.py", line 207, in retrain_if_needed
+    akurasi_map = evaluate_prediction_accuracy()
+  File "/home/runner/work/arkana/arkana/main.py", line 202, in evaluate_prediction_accuracy
+    df_merged = df_log.merge(df_real, on=["ticker", "tanggal"], how="inner")
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/frame.py", line 10832, in merge
+    return merge(
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 170, in merge
+    op = _MergeOperation(
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 807, in __init__
+    self._maybe_coerce_merge_keys()
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 1512, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[ns] and object columns for key 'tanggal'. If you wish to proceed you should use pd.concat
