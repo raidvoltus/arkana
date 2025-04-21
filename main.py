@@ -291,6 +291,7 @@ def analyze_stock(ticker: str):
     except Exception as e:
         print(f"[{ticker}] Error: {e}")
         return None
+        
     if price < MIN_PRICE:
         logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
         return None
