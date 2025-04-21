@@ -280,117 +280,103 @@ def analyze_stock(ticker: str):
         if df is None or df.empty:
             print(f"[{ticker}] Data kosong.")
             return None
-    
+
         df = calculate_indicators(df)
 
-        # -- Early filter: harga, volume, volatilitas --
+        # Early filter
         price      = df["Close"].iloc[-1]
         avg_volume = df["Volume"].tail(20).mean()
         atr        = df["ATR"].iloc[-1]
-    
+
+        if price < MIN_PRICE:
+            logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
+            return None
+        if avg_volume < MIN_VOLUME:
+            logging.info(f"{ticker} dilewati: volume terlalu rendah ({avg_volume:.0f})")
+            return None
+        if (atr / price) < MIN_VOLATILITY:
+            logging.info(f"{ticker} dilewati: volatilitas terlalu rendah (ATR={atr:.4f})")
+            return None
+
+        # Siapkan fitur & label
+        features = [ ... ]  # seperti sebelumnya
+
+        check_and_reset_model_if_needed(ticker, features)
+
+        df = df.dropna(subset=features + ["future_high", "future_low"])
+        X      = df[features]
+        y_high = df["future_high"]
+        y_low  = df["future_low"]
+
+        X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = train_test_split(
+            X, y_high, y_low, test_size=0.2, random_state=42
+        )
+
+        # Load atau train model
+        # High
+        high_path = f"model_high_{ticker}.pkl"
+        if os.path.exists(high_path):
+            model_high = joblib.load(high_path)
+        else:
+            model_high = train_lightgbm(X_tr, yh_tr)
+            with model_save_lock:
+                joblib.dump(model_high, high_path)
+
+        # Low
+        low_path = f"model_low_{ticker}.pkl"
+        if os.path.exists(low_path):
+            model_low = joblib.load(low_path)
+        else:
+            model_low = train_lightgbm(X_tr, yl_tr)
+            with model_save_lock:
+                joblib.dump(model_low, low_path)
+
+        # LSTM
+        lstm_path = f"model_lstm_{ticker}.keras"
+        if os.path.exists(lstm_path):
+            model_lstm = load_model(lstm_path)
+        else:
+            model_lstm = train_lstm(X_tr, yh_tr)
+            with model_save_lock:
+                model_lstm.save(lstm_path)
+
+        # Prediksi probabilitas
+        prob_high = calculate_probability(model_high, X_te, yh_te)
+        prob_low  = calculate_probability(model_low,  X_te, yl_te)
+
+        if prob_high < 0.8 or prob_low < 0.8:
+            logging.info(f"{ticker} dilewati: prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
+            return None
+
+        X_last    = X.iloc[-1:]
+        ph        = model_high.predict(X_last)[0]
+        pl        = model_low.predict(X_last)[0]
+        action    = "beli" if ph > price else "jual"
+        prob_succ = (prob_high + prob_low) / 2
+        if action == "beli":
+            profit_potential_pct = (ph - price) / price * 100
+        else:
+            profit_potential_pct = (price - pl) / price * 100
+
+        # Logging
+        tanggal = pd.Timestamp.now().strftime("%Y-%m-%d")
+        log_prediction(ticker, tanggal, ph, pl, price)
+
+        return {
+            "ticker":       ticker,
+            "harga":        round(price,     2),
+            "take_profit":  round(ph,        2),
+            "stop_loss":    round(pl,        2),
+            "aksi":         action,
+            "prob_high":    round(prob_high, 2),
+            "prob_low":     round(prob_low,  2),
+            "prob_success": round(prob_succ,  2),
+            "profit_potential_pct": round(profit_potential_pct, 2),
+        }
+
     except Exception as e:
-        print(f"[{ticker}] Error: {e}")
+        logging.error(f"[{ticker}] Terjadi error: {e}", exc_info=True)
         return None
-        
-    if price < MIN_PRICE:
-        logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
-        return None
-    if avg_volume < MIN_VOLUME:
-        logging.info(f"{ticker} dilewati: volume terlalu rendah ({avg_volume:.0f})")
-        return None
-    if (atr / price) < MIN_VOLATILITY:
-        logging.info(f"{ticker} dilewati: volatilitas terlalu rendah (ATR={atr:.4f})")
-        return None
-
-    # -- Siapkan fitur & label (disesuaikan untuk prediksi harga besok) --
-    features = [
-        "Close", "ATR", "RSI", "MACD", "MACD_Hist",
-        "SMA_14", "SMA_28", "SMA_84", "EMA_10",
-        "BB_Upper", "BB_Lower", "Support", "Resistance",
-        "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
-        "daily_avg", "daily_std", "daily_range",
-        "is_opening_hour", "is_closing_hour"
-    ]
-    
-    # --- Cek dan reset model bila fitur berubah ---
-    check_and_reset_model_if_needed(ticker, features)
-
-    df = df.dropna(subset=features + ["future_high", "future_low"])
-    X      = df[features]
-    y_high = df["future_high"]
-    y_low  = df["future_low"]
-
-    # -- Split data sinkron --
-    X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = train_test_split(
-        X, y_high, y_low, test_size=0.2, random_state=42
-    )
-
-    # -- Load atau Train LightGBM High --
-    high_path = f"model_high_{ticker}.pkl"
-    if os.path.exists(high_path):
-        model_high = joblib.load(high_path)
-        logging.info(f"Loaded LGB High for {ticker}")
-    else:
-        model_high = train_lightgbm(X_tr, yh_tr)
-        with model_save_lock:
-            joblib.dump(model_high, high_path)
-        logging.info(f"Trained & saved LGB High for {ticker}")
-
-    # -- Load atau Train LightGBM Low --
-    low_path = f"model_low_{ticker}.pkl"
-    if os.path.exists(low_path):
-        model_low = joblib.load(low_path)
-        logging.info(f"Loaded LGB Low for {ticker}")
-    else:
-        model_low = train_lightgbm(X_tr, yl_tr)
-        with model_save_lock:
-            joblib.dump(model_low, low_path)
-        logging.info(f"Trained & saved LGB Low for {ticker}")
-
-    # -- Load atau Train LSTM --
-    lstm_path = f"model_lstm_{ticker}.keras"
-    if os.path.exists(lstm_path):
-        model_lstm = load_model(lstm_path)
-        logging.info(f"Loaded LSTM for {ticker}")
-    else:
-        model_lstm = train_lstm(X_tr, yh_tr)
-        with model_save_lock:
-            model_lstm.save(lstm_path)
-        logging.info(f"Trained & saved LSTM for {ticker}")
-
-    # -- Hitung probabilitas --
-    prob_high = calculate_probability(model_high, X_te, yh_te)
-    prob_low  = calculate_probability(model_low,  X_te, yl_te)
-
-    if prob_high < 0.8 or prob_low < 0.8:
-        logging.info(f"{ticker} dilewati: prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
-        return None
-
-    # -- Prediksi sinyal terbaru --
-    X_last    = X.iloc[-1:]
-    ph        = model_high.predict(X_last)[0]
-    pl        = model_low.predict(X_last)[0]
-    action    = "beli" if ph > price else "jual"
-    prob_succ = (prob_high + prob_low) / 2
-    if action == "beli":
-        profit_potential_pct = (ph - price) / price * 100
-    else:
-        profit_potential_pct = (price - pl) / price * 100
-    # === Logging Prediksi ===
-    tanggal = pd.Timestamp.now().strftime("%Y-%m-%d")
-    log_prediction(ticker, tanggal, ph, pl, price)
-
-    return {
-        "ticker":       ticker,
-        "harga":        round(price,     2),
-        "take_profit":  round(ph,        2),
-        "stop_loss":    round(pl,        2),
-        "aksi":         action,
-        "prob_high":    round(prob_high, 2),
-        "prob_low":     round(prob_low,  2),
-        "prob_success": round(prob_succ,  2),
-        "profit_potential_pct": round(profit_potential_pct, 2),
-    }
 
 def retrain_if_needed(ticker: str):
     akurasi_map = evaluate_prediction_accuracy()
