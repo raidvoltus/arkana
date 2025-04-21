@@ -281,12 +281,12 @@ def analyze_stock(ticker: str):
             print(f"[{ticker}] Data kosong.")
             return None
     
-    df = calculate_indicators(df)
+        df = calculate_indicators(df)
 
-    # -- Early filter: harga, volume, volatilitas --
-    price      = df["Close"].iloc[-1]
-    avg_volume = df["Volume"].tail(20).mean()
-    atr        = df["ATR"].iloc[-1]
+        # -- Early filter: harga, volume, volatilitas --
+        price      = df["Close"].iloc[-1]
+        avg_volume = df["Volume"].tail(20).mean()
+        atr        = df["ATR"].iloc[-1]
     
     except Exception as e:
         print(f"[{symbol}] Error: {e}")
