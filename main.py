@@ -113,7 +113,9 @@ def calculate_probability(model, X, y_true) -> float:
     close_price = X["Close"]
     correct_dir = ((y_pred > close_price) & (y_true > close_price)) | \
                   ((y_pred < close_price) & (y_true < close_price))
-    return correct_dir.sum() / len(correct_dir.dropna()) if len(correct_dir.dropna()) else 0.0
+    correct_dir = correct_dir.dropna()
+    n = len(correct_dir)
+    return correct_dir.sum() / n if n > 0 else 0.0
 
 # === Hash Fitur ===
 def get_feature_hash(features: list[str]) -> str:
