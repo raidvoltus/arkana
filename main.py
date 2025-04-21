@@ -188,7 +188,7 @@ def get_realized_price_data() -> pd.DataFrame:
     result = []
     for _, row in df_log.iterrows():
         ticker, tanggal = row["ticker"], pd.to_datetime(row["tanggal"])
-        df = yf.download(ticker, start=tanggal.strftime("%Y-%m-%d"), end=(tanggal + pd.Timedelta(days=5)).strftime("%Y-%m-%d"))
+        df = yf.download(ticker, start=tanggal.strftime("%Y-%m-%d"), end=(tanggal + pd.Timedelta(days=5)).strftime("%Y-%m-%d")auto_adjust=False)
         if df.empty: continue
         result.append({"ticker": ticker, "tanggal": row["tanggal"], "actual_high": df["High"].max(), "actual_low": df["Low"].min()})
     return pd.DataFrame(result)
