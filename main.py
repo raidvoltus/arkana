@@ -75,7 +75,7 @@ def send_telegram_message(message: str):
 def get_stock_data(ticker: str) -> pd.DataFrame:
     try:
         stock = yf.Ticker(ticker)
-        df    = stock.history(period="730d", interval="1d")
+        df    = stock.history(period="730d", interval="1h")
         if df is not None and not df.empty and len(df) >= 200:
             df["ticker"] = ticker
             return df
@@ -86,7 +86,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
 
 # === Hitung Indikator ===
 def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
-    HOURS_PER_DAY = 6  # jumlah jam trading aktif per hari
+    HOURS_PER_DAY = 36  # jumlah jam trading aktif per hari
 
     # === Indikator teknikal utama ===
     df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=14).average_true_range()
