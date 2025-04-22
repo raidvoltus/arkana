@@ -144,6 +144,11 @@ def analyze_stock(ticker: str):
     if df is None: return
     df = calculate_indicators(df)
 
+    # Cek apakah dataframe kosong setelah pengolahan
+    if df.empty or "Close" not in df.columns:
+        logging.warning(f"Data kosong atau kolom 'Close' tidak ditemukan untuk {ticker}")
+        return
+
     price = df["Close"].iloc[-1]
     avg_volume = df["Volume"].tail(20).mean()
     atr = df["ATR"].iloc[-1]
