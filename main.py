@@ -30,11 +30,6 @@ ATR_MULTIPLIER   = 2.5
 RETRAIN_INTERVAL = 7
 BACKUP_CSV_PATH  = "stock_data_backup.csv"
 HASH_PATH = "features_hash.json"
-# Konstanta threshold (letakkan di atas fungsi analyze_stock)
-MIN_PRICE = 500
-MIN_VOLUME = 10000
-MIN_VOLATILITY = 0.005
-MIN_PROB = 0.8
 # === Daftar Saham ===
 STOCK_LIST = [
     "ACES.JK", "ADMR.JK", "ADRO.JK", "AKRA.JK", "AMMN.JK", "AMRT.JK", "ANTM.JK", "ARTO.JK", "ASII.JK", "AUTO.JK",
