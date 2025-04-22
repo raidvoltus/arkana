@@ -264,7 +264,11 @@ def analyze_stock(ticker: str):
     price      = df["Close"].iloc[-1]
     avg_volume = df["Volume"].tail(20).mean()
     atr        = df["ATR"].iloc[-1]
-
+    # Konstanta threshold (letakkan di atas fungsi analyze_stock)
+    MIN_PRICE = 500
+    MIN_VOLUME = 10000
+    MIN_VOLATILITY = 0.005
+    MIN_PROB = 0.8
     if price < MIN_PRICE:
         logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
         return None
