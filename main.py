@@ -396,25 +396,30 @@ def get_realized_price_data() -> pd.DataFrame:
         return pd.DataFrame()
 
     df_log = pd.read_csv("prediksi_log.csv")
+    df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
     result = []
 
-    for _, row in df_log.iterrows():
-        ticker = row["ticker"]
-        tanggal = pd.to_datetime(row["tanggal"])
-        tanggal_target = tanggal + pd.Timedelta(days=5)
-        df_future = yf.download(ticker, start=tanggal.strftime("%Y-%m-%d"), 
-                                end=(tanggal_target + pd.Timedelta(days=1)).strftime("%Y-%m-%d"),
-                                interval="1d", progress=False)
-        if df_future.empty or len(df_future) < 5:
+    for ticker in df_log["ticker"].unique():
+        df_ticker = df_log[df_log["ticker"] == ticker]
+        start_date = df_ticker["tanggal"].min()
+        end_date = df_ticker["tanggal"].max() + pd.Timedelta(days=6)
+
+        df_price = yf.download(ticker, start=start_date.strftime("%Y-%m-%d"),
+                               end=end_date.strftime("%Y-%m-%d"), interval="1d", progress=False)
+        if df_price.empty:
             continue
-        actual_high = df_future["High"].max()
-        actual_low  = df_future["Low"].min()
-        result.append({
-            "ticker": row["ticker"],
-            "tanggal": row["tanggal"],
-            "actual_high": actual_high,
-            "actual_low": actual_low
-        })
+
+        for _, row in df_ticker.iterrows():
+            tanggal = row["tanggal"]
+            df_window = df_price.loc[tanggal + pd.Timedelta(days=1): tanggal + pd.Timedelta(days=5)]
+            if len(df_window) < 3:  # fleksibel sedikit
+                continue
+            result.append({
+                "ticker": ticker,
+                "tanggal": tanggal,
+                "actual_high": df_window["High"].max(),
+                "actual_low": df_window["Low"].min()
+            })
 
     return pd.DataFrame(result)
     
