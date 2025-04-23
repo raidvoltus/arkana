@@ -31,9 +31,7 @@ RETRAIN_INTERVAL = 7
 BACKUP_CSV_PATH  = "stock_data_backup.csv"
 HASH_PATH = "features_hash.json"
 # === Daftar Saham ===
-STOCK_LIST = [
-    "BBCA.JK", "BBRI.JK", "BMRI.JK", "TLKM.JK", "ASII.JK", "UNVR.JK", "BBNI.JK", "ICBP.JK", "ANTM.JK", "ADRO.JK",
-]
+STOCK_LIST = [ "BBCA.JK", "BBRI.JK", "BMRI.JK", "TLKM.JK", "ASII.JK", "UNVR.JK", "BBNI.JK", "ICBP.JK", "ANTM.JK", "ADRO.JK", ]
 
 # === Logging Setup ===
 log_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
