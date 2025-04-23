@@ -1,0 +1,123 @@
+2025-04-23 16:07:07.676723: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-23 16:07:07.679995: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-23 16:07:07.688605: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745424427.703072    2073 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745424427.707327    2073 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745424427.719000    2073 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745424427.719018    2073 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745424427.719021    2073 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745424427.719023    2073 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-23 16:07:07.722558: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Tidak ada model yang ditemukan untuk dihapus.
+om yang diperlukan tidak lengkap.
+2025-04-23 16:07:13,503 - ERROR - ADMR.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:13,579 - ERROR - ACES.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:13,831 - ERROR - AMMN.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:13,910 - ERROR - AMRT.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:13,959 - ERROR - ANTM.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:14,332 - ERROR - ARTO.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:14,336 - ERROR - ASII.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:14,339 - ERROR - AKRA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:14,405 - ERROR - AUTO.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:14,846 - ERROR - BBCA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:14,874 - ERROR - AVIA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:14,876 - ERROR - BBNI.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:14,916 - ERROR - BBRI.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:15,390 - ERROR - BBTN.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:16,064 - ERROR - $BDKR.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677808800 and endTime=1745424436. The requested range must be within the last 730 days.")
+2025-04-23 16:07:16,065 - WARNING - Data kosong/kurang untuk BDKR.JK
+2025-04-23 16:07:16,065 - ERROR - BDKR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-23 16:07:16,454 - ERROR - BBYB.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:16,462 - ERROR - BFIN.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:16,467 - ERROR - BMRI.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:16,471 - ERROR - BMTR.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:16,730 - ERROR - BNGA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:16,840 - ERROR - BRIS.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,000 - ERROR - BRPT.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,006 - ERROR - BSDE.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,050 - ERROR - BRMS.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,341 - ERROR - BTPS.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,362 - ERROR - CMRY.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,387 - ERROR - CPIN.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,622 - ERROR - CTRA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,845 - ERROR - ELSA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,849 - ERROR - DEWA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:17,852 - ERROR - DSNG.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:18,006 - ERROR - EMTK.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:18,083 - ERROR - ENRG.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:18,238 - ERROR - ESSA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:18,749 - ERROR - ERAA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:18,954 - ERROR - GGRM.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:18,975 - ERROR - FILM.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:18,999 - ERROR - EXCL.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:19,237 - ERROR - GJTL.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:19,394 - ERROR - HEAL.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:19,435 - ERROR - HMSP.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:20,438 - ERROR - $GOTO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1649642400 and endTime=1745424440. The requested range must be within the last 730 days.")
+2025-04-23 16:07:20,438 - WARNING - Data kosong/kurang untuk GOTO.JK
+2025-04-23 16:07:20,438 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-23 16:07:20,630 - ERROR - ICBP.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:20,780 - ERROR - INCO.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:20,806 - ERROR - HRUM.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:20,827 - ERROR - INDF.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,015 - ERROR - INET.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,182 - ERROR - INDY.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,229 - ERROR - INTP.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,234 - ERROR - INKP.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,459 - ERROR - ISAT.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,561 - ERROR - ITMG.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,641 - ERROR - JSMR.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,646 - ERROR - JPFA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,806 - ERROR - KIJA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:21,886 - ERROR - KLBF.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:22,006 - ERROR - KPIG.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:22,203 - ERROR - LSIP.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:22,279 - ERROR - MAPA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:22,315 - ERROR - MAPI.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:22,352 - ERROR - MARK.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:22,662 - ERROR - MDKA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:22,992 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681783200 and endTime=1745424442. The requested range must be within the last 730 days.")
+2025-04-23 16:07:22,993 - WARNING - Data kosong/kurang untuk MBMA.JK
+2025-04-23 16:07:22,993 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-23 16:07:23,277 - ERROR - MIDI.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:23,366 - ERROR - MNCN.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:23,369 - ERROR - MEDC.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:23,433 - ERROR - MIKA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:23,795 - ERROR - MTEL.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:23,798 - ERROR - MYOR.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:23,849 - ERROR - NISP.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:24,458 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681264800 and endTime=1745424444. The requested range must be within the last 730 days.")
+2025-04-23 16:07:24,459 - WARNING - Data kosong/kurang untuk NCKL.JK
+2025-04-23 16:07:24,459 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-23 16:07:24,773 - ERROR - PANI.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:24,831 - ERROR - PNLF.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:24,909 - ERROR - PGAS.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:25,665 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677204000 and endTime=1745424445. The requested range must be within the last 730 days.")
+2025-04-23 16:07:25,666 - WARNING - Data kosong/kurang untuk PGEO.JK
+2025-04-23 16:07:25,666 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-23 16:07:25,750 - ERROR - PTPP.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:25,863 - ERROR - PTBA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:25,948 - ERROR - PTRO.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,138 - ERROR - RAJA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,385 - ERROR - SIDO.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,387 - ERROR - PWON.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,427 - ERROR - SCMA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,604 - ERROR - SMGR.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,784 - ERROR - SRTG.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,791 - ERROR - SMRA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,936 - ERROR - SMIL.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:26,961 - ERROR - SURI.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,002 - ERROR - SSIA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,178 - ERROR - SSMS.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,309 - ERROR - TINS.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,454 - ERROR - TKIM.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,544 - ERROR - TOBA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,599 - ERROR - TOWR.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,660 - ERROR - TLKM.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,981 - ERROR - TPIA.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,990 - ERROR - TRIN.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:27,991 - ERROR - TSPC.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:28,068 - ERROR - UNTR.JK: Kolom yang diperlukan tidak lengkap.
+2025-04-23 16:07:28,339 - ERROR - UNVR.JK: Kolom yang diperlukan tidak lengkap.
