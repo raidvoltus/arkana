@@ -1,113 +1,33 @@
-2025-04-23 16:14:01.863371: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-23 16:14:01.866536: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-23 16:14:01.875040: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-23 16:25:16.920382: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-23 16:25:16.923516: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-23 16:25:16.931945: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745424841.889257    2029 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745424841.893557    2029 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745424841.905240    2029 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745424841.905264    2029 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745424841.905267    2029 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745424841.905269    2029 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-23 16:14:01.908861: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745425516.945763    2013 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745425516.949984    2013 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745425516.961416    2013 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745425516.961432    2013 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745425516.961434    2013 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745425516.961437    2013 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-23 16:25:16.964959: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Tidak ada model yang ditemukan untuk dihapus.
-om yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,212 - ERROR - AKRA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,214 - ERROR - ADRO.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,257 - ERROR - ADMR.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,341 - ERROR - AMMN.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,452 - ERROR - AMRT.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,550 - ERROR - ARTO.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,557 - ERROR - ANTM.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,734 - ERROR - AUTO.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,805 - ERROR - AVIA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,825 - ERROR - BBCA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:05,898 - ERROR - ASII.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,061 - ERROR - BBTN.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,134 - ERROR - BBRI.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,142 - ERROR - BBNI.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,239 - ERROR - BBYB.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,335 - ERROR - BDKR.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,487 - ERROR - BMTR.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,495 - ERROR - BMRI.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,550 - ERROR - BFIN.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,624 - ERROR - BNGA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,726 - ERROR - BRIS.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,738 - ERROR - BRMS.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,877 - ERROR - BRPT.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:06,927 - ERROR - BSDE.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,038 - ERROR - BTPS.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,042 - ERROR - CMRY.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,172 - ERROR - CPIN.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,227 - ERROR - CTRA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,263 - ERROR - DSNG.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,285 - ERROR - DEWA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,401 - ERROR - ELSA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,569 - ERROR - EMTK.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,638 - ERROR - ENRG.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,667 - ERROR - ESSA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,668 - ERROR - ERAA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,870 - ERROR - EXCL.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,872 - ERROR - GJTL.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:07,978 - ERROR - FILM.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,099 - ERROR - GOTO.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,127 - ERROR - HEAL.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,132 - ERROR - GGRM.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,230 - ERROR - HMSP.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,373 - ERROR - INCO.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,392 - ERROR - ICBP.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,403 - ERROR - HRUM.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,591 - ERROR - INDF.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,631 - ERROR - INKP.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,691 - ERROR - INDY.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,742 - ERROR - INET.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:08,965 - ERROR - INTP.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,073 - ERROR - JPFA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,079 - ERROR - ITMG.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,086 - ERROR - ISAT.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,234 - ERROR - JSMR.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,283 - ERROR - KLBF.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,311 - ERROR - KPIG.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,448 - ERROR - KIJA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,468 - ERROR - LSIP.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,573 - ERROR - MAPI.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,574 - ERROR - MAPA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,781 - ERROR - MARK.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,862 - ERROR - MBMA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:09,895 - ERROR - MDKA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,034 - ERROR - MEDC.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,041 - ERROR - MIDI.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,221 - ERROR - MIKA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,221 - ERROR - MNCN.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,292 - ERROR - MYOR.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,332 - ERROR - MTEL.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,658 - ERROR - NCKL.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,660 - ERROR - NISP.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,676 - ERROR - PANI.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,695 - ERROR - PGAS.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,952 - ERROR - PGEO.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,956 - ERROR - PNLF.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:10,959 - ERROR - PTBA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,023 - ERROR - PTPP.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,297 - ERROR - RAJA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,344 - ERROR - PTRO.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,402 - ERROR - PWON.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,449 - ERROR - SCMA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,608 - ERROR - SIDO.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,648 - ERROR - SMGR.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,715 - ERROR - SMIL.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,735 - ERROR - SMRA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,873 - ERROR - SRTG.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,985 - ERROR - SSIA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:11,988 - ERROR - SURI.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,082 - ERROR - SSMS.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,134 - ERROR - TINS.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,214 - ERROR - TLKM.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,288 - ERROR - TKIM.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,378 - ERROR - TOWR.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,463 - ERROR - TPIA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,475 - ERROR - TOBA.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,496 - ERROR - TRIN.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,599 - ERROR - TSPC.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,691 - ERROR - UNTR.JK: Kolom yang diperlukan tidak lengkap.
-2025-04-23 16:14:12,825 - ERROR - UNVR.JK: Kolom yang diperlukan tidak lengkap.
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 612, in <module>
+    results = [r for r in results if r]
+  File "/home/runner/work/arkana/arkana/main.py", line 612, in <listcomp>
+    results = [r for r in results if r]
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/generic.py", line 1577, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+9642400 and endTime=1745425529. The requested range must be within the last 730 days.")
+2025-04-23 16:25:29,646 - WARNING - GOTO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-23 16:25:29,646 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-23 16:25:34,340 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681783200 and endTime=1745425534. The requested range must be within the last 730 days.")
+2025-04-23 16:25:34,340 - WARNING - MBMA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-23 16:25:34,340 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-23 16:25:36,069 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681264800 and endTime=1745425536. The requested range must be within the last 730 days.")
+2025-04-23 16:25:36,069 - WARNING - NCKL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-23 16:25:36,070 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-23 16:25:37,726 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677204000 and endTime=1745425537. The requested range must be within the last 730 days.")
+2025-04-23 16:25:37,726 - WARNING - PGEO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-23 16:25:37,726 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
