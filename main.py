@@ -259,39 +259,40 @@ MIN_VOLUME = 10000
 MIN_VOLATILITY = 0.005
 MIN_PROB = 0.9
 
+def is_stock_eligible(price, avg_volume, atr, ticker):
+    if price < MIN_PRICE:
+        logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
+        return False
+    if avg_volume < MIN_VOLUME:
+        logging.info(f"{ticker} dilewati: volume terlalu rendah ({avg_volume:.0f})")
+        return False
+    if (atr / price) < MIN_VOLATILITY:
+        logging.info(f"{ticker} dilewati: volatilitas terlalu rendah (ATR={atr:.4f})")
+        return False
+    return True
+
 def analyze_stock(ticker: str):
-    # Ambil data saham
     df = get_stock_data(ticker)
-    
     if df is None or df.empty:
         logging.error(f"{ticker}: Data saham tidak ditemukan atau kosong.")
         return None
 
-    # Pastikan kolom yang diperlukan ada
+    df = calculate_indicators(df)
+
     required_columns = ["High", "Low", "Close", "Volume", "ATR"]
     if not all(col in df.columns for col in required_columns):
         logging.error(f"{ticker}: Kolom yang diperlukan tidak lengkap.")
+        logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
         return None
-    
-    df = calculate_indicators(df)
 
-    # -- Early filter: harga, volume, volatilitas --
     price = df["Close"].iloc[-1]
     avg_volume = df["Volume"].tail(20).mean()
     atr = df["ATR"].iloc[-1]
 
-    if price < MIN_PRICE:
-        logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
-        return None
-    if avg_volume < MIN_VOLUME:
-        logging.info(f"{ticker} dilewati: volume terlalu rendah ({avg_volume:.0f})")
-        return None
-    if (atr / price) < MIN_VOLATILITY:
-        logging.info(f"{ticker} dilewati: volatilitas terlalu rendah (ATR={atr:.4f})")
+    if not is_stock_eligible(price, avg_volume, atr, ticker):
         return None
 
-    # Lanjutkan analisis atau pemrosesan lebih lanjut jika memenuhi kriteria
-    return df  # Atau hasil analisis lainnya
+    return df  # Lanjut ke analisis atau prediksi
 
     # -- Siapkan fitur & label (disesuaikan untuk prediksi harga besok) --
     features = [
