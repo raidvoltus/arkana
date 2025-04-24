@@ -424,13 +424,13 @@ def get_realized_price_data() -> pd.DataFrame:
         end_date = df_ticker["tanggal"].max() + pd.Timedelta(days=6)
 
         df_price = yf.download(ticker, start=start_date.strftime("%Y-%m-%d"),
-                               end=end_date.strftime("%Y-%m-%d"), interval="1d", progress=False)
+                               end=end_date.strftime("%Y-%m-%d"), interval="1h", progress=False)
         if df_price.empty:
             continue
 
         for _, row in df_ticker.iterrows():
             tanggal = row["tanggal"]
-            df_window = df_price.loc[tanggal + pd.Timedelta(days=1): tanggal + pd.Timedelta(days=5)]
+            df_window = df_price.loc[tanggal + pd.Timedelta(days=1): tanggal + pd.Timedelta(days=6)]
             if len(df_window) < 3:  # fleksibel sedikit
                 continue
             result.append({
