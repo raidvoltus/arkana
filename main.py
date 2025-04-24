@@ -352,7 +352,7 @@ def analyze_stock(ticker: str):
     X_last = df[features].iloc[[-1]]
     ph = model_high.predict(X_last)[0]
     pl = model_low.predict(X_last)[0]
-    action = "beli" if ph > price else "jual"
+    action = "beli" if (ph - price) / price > 0.02 else "jual"
     prob_succ = (prob_high + prob_low) / 2
     profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
 
