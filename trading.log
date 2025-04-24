@@ -1,14 +1,14 @@
-2025-04-23 16:25:16.920382: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-23 16:25:16.923516: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-23 16:25:16.931945: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-24 03:56:30.147623: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-24 03:56:30.150731: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-24 03:56:30.160169: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745425516.945763    2013 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745425516.949984    2013 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745425516.961416    2013 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745425516.961432    2013 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745425516.961434    2013 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745425516.961437    2013 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-23 16:25:16.964959: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745466990.176203    2048 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745466990.181535    2048 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745466990.196463    2048 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745466990.196478    2048 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745466990.196481    2048 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745466990.196483    2048 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-24 03:56:30.200817: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Tidak ada model yang ditemukan untuk dihapus.
 Traceback (most recent call last):
@@ -19,15 +19,15 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/generic.py", line 1577, in __nonzero__
     raise ValueError(
 ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
-9642400 and endTime=1745425529. The requested range must be within the last 730 days.")
-2025-04-23 16:25:29,646 - WARNING - GOTO.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-23 16:25:29,646 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
-2025-04-23 16:25:34,340 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681783200 and endTime=1745425534. The requested range must be within the last 730 days.")
-2025-04-23 16:25:34,340 - WARNING - MBMA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-23 16:25:34,340 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-23 16:25:36,069 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681264800 and endTime=1745425536. The requested range must be within the last 730 days.")
-2025-04-23 16:25:36,069 - WARNING - NCKL.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-23 16:25:36,070 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
-2025-04-23 16:25:37,726 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677204000 and endTime=1745425537. The requested range must be within the last 730 days.")
-2025-04-23 16:25:37,726 - WARNING - PGEO.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-23 16:25:37,726 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
+9642400 and endTime=1745467002. The requested range must be within the last 730 days.")
+2025-04-24 03:56:42,296 - WARNING - GOTO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-24 03:56:42,296 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 03:56:46,754 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681783200 and endTime=1745467006. The requested range must be within the last 730 days.")
+2025-04-24 03:56:46,754 - WARNING - MBMA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-24 03:56:46,754 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 03:56:48,440 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681264800 and endTime=1745467008. The requested range must be within the last 730 days.")
+2025-04-24 03:56:48,440 - WARNING - NCKL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-24 03:56:48,440 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 03:56:49,522 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677204000 and endTime=1745467009. The requested range must be within the last 730 days.")
+2025-04-24 03:56:49,523 - WARNING - PGEO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-24 03:56:49,523 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
