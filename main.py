@@ -271,6 +271,27 @@ def is_stock_eligible(price, avg_volume, atr, ticker):
         return False
     return True
 
+def prepare_features_and_labels(df, features):
+    df = df.dropna(subset=features + ["future_high", "future_low"])
+    X = df[features]
+    y_high = df["future_high"]
+    y_low = df["future_low"]
+    return train_test_split(X, y_high, y_low, test_size=0.2, random_state=42)
+
+def load_or_train_model(path, train_fn, X_train, y_train, model_type="joblib"):
+    if os.path.exists(path):
+        model = joblib.load(path) if model_type == "joblib" else load_model(path)
+        logging.info(f"Loaded model from {path}")
+    else:
+        model = train_fn(X_train, y_train)
+        with model_save_lock:
+            if model_type == "joblib":
+                joblib.dump(model, path)
+            else:
+                model.save(path)
+        logging.info(f"Trained & saved model to {path}")
+    return model
+    
 def analyze_stock(ticker: str):
     df = get_stock_data(ticker)
     if df is None or df.empty:
@@ -290,11 +311,9 @@ def analyze_stock(ticker: str):
     atr = df["ATR"].iloc[-1]
 
     if not is_stock_eligible(price, avg_volume, atr, ticker):
+        logging.debug(f"{ticker}: Tidak memenuhi kriteria awal.")
         return None
 
-    return df  # Lanjut ke analisis atau prediksi
-
-    # -- Siapkan fitur & label (disesuaikan untuk prediksi harga besok) --
     features = [
         "Close", "ATR", "RSI", "MACD", "MACD_Hist",
         "SMA_14", "SMA_28", "SMA_84", "EMA_10",
@@ -303,84 +322,48 @@ def analyze_stock(ticker: str):
         "daily_avg", "daily_std", "daily_range",
         "is_opening_hour", "is_closing_hour"
     ]
-    
-    # --- Cek dan reset model bila fitur berubah ---
     check_and_reset_model_if_needed(ticker, features)
 
-    df = df.dropna(subset=features + ["future_high", "future_low"])
-    X      = df[features]
-    y_high = df["future_high"]
-    y_low  = df["future_low"]
-
-    # -- Split data sinkron --
-    X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = train_test_split(
-        X, y_high, y_low, test_size=0.2, random_state=42
-    )
-
-    # -- Load atau Train LightGBM High --
-    high_path = f"model_high_{ticker}.pkl"
-    if os.path.exists(high_path):
-        model_high = joblib.load(high_path)
-        logging.info(f"Loaded LGB High for {ticker}")
-    else:
-        model_high = train_lightgbm(X_tr, yh_tr)
-        with model_save_lock:
-            joblib.dump(model_high, high_path)
-        logging.info(f"Trained & saved LGB High for {ticker}")
-
-    # -- Load atau Train LightGBM Low --
-    low_path = f"model_low_{ticker}.pkl"
-    if os.path.exists(low_path):
-        model_low = joblib.load(low_path)
-        logging.info(f"Loaded LGB Low for {ticker}")
-    else:
-        model_low = train_lightgbm(X_tr, yl_tr)
-        with model_save_lock:
-            joblib.dump(model_low, low_path)
-        logging.info(f"Trained & saved LGB Low for {ticker}")
-
-    # -- Load atau Train LSTM --
-    lstm_path = f"model_lstm_{ticker}.keras"
-    if os.path.exists(lstm_path):
-        model_lstm = load_model(lstm_path)
-        logging.info(f"Loaded LSTM for {ticker}")
-    else:
-        model_lstm = train_lstm(X_tr, yh_tr)
-        with model_save_lock:
-            model_lstm.save(lstm_path)
-        logging.info(f"Trained & saved LSTM for {ticker}")
-
-    # -- Hitung probabilitas --
-    prob_high = calculate_probability(model_high, X_te, yh_te)
-    prob_low  = calculate_probability(model_low,  X_te, yl_te)
-
-    if prob_high < 0.9 or prob_low < 0.9:
-        logging.info(f"{ticker} dilewati: prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
+    try:
+        X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = prepare_features_and_labels(df, features)
+    except Exception as e:
+        logging.error(f"{ticker}: Error saat mempersiapkan data - {e}")
         return None
 
-    # -- Prediksi sinyal terbaru --
-    X_last    = X.iloc[-1:]
-    ph        = model_high.predict(X_last)[0]
-    pl        = model_low.predict(X_last)[0]
-    action    = "beli" if ph > price else "jual"
+    model_high = load_or_train_model(f"model_high_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
+    model_low  = load_or_train_model(f"model_low_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
+    model_lstm = load_or_train_model(f"model_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, model_type="keras")
+
+    try:
+        prob_high = calculate_probability(model_high, X_te, yh_te)
+        prob_low  = calculate_probability(model_low,  X_te, yl_te)
+    except Exception as e:
+        logging.error(f"{ticker}: Error saat menghitung probabilitas - {e}")
+        return None
+
+    if prob_high < MIN_PROB or prob_low < MIN_PROB:
+        logging.info(f"{ticker} dilewati: Prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
+        return None
+
+    X_last = df[features].iloc[[-1]]
+    ph = model_high.predict(X_last)[0]
+    pl = model_low.predict(X_last)[0]
+    action = "beli" if ph > price else "jual"
     prob_succ = (prob_high + prob_low) / 2
-    if action == "beli":
-        profit_potential_pct = (ph - price) / price * 100
-    else:
-        profit_potential_pct = (price - pl) / price * 100
-    # === Logging Prediksi ===
+    profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
+
     tanggal = pd.Timestamp.now().strftime("%Y-%m-%d")
     log_prediction(ticker, tanggal, ph, pl, price)
 
     return {
-        "ticker":       ticker,
-        "harga":        round(price,     2),
-        "take_profit":  round(ph,        2),
-        "stop_loss":    round(pl,        2),
-        "aksi":         action,
-        "prob_high":    round(prob_high, 2),
-        "prob_low":     round(prob_low,  2),
-        "prob_success": round(prob_succ,  2),
+        "ticker": ticker,
+        "harga": round(price, 2),
+        "take_profit": round(ph, 2),
+        "stop_loss": round(pl, 2),
+        "aksi": action,
+        "prob_high": round(prob_high, 2),
+        "prob_low": round(prob_low, 2),
+        "prob_success": round(prob_succ, 2),
         "profit_potential_pct": round(profit_potential_pct, 2),
     }
 
