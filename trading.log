@@ -1,4 +1,4 @@
-2025-04-24 11:15:24,272 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BAEK.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BAEK.JK&crumb=bb2bNWX09oE
-2025-04-24 11:15:24,979 - ERROR - $BAEK.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-24 11:15:24,980 - WARNING - BAEK.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-24 11:15:24,980 - ERROR - BAEK.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 13:11:06,985 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BAEK.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BAEK.JK&crumb=gcjOp.l3.4c
+2025-04-24 13:11:07,872 - ERROR - $BAEK.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-24 13:11:07,874 - WARNING - BAEK.JK: Data kosong atau tidak tersedia.
+2025-04-24 13:11:07,874 - ERROR - BAEK.JK: Data saham tidak ditemukan atau kosong.
