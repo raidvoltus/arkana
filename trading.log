@@ -1,15 +1,14 @@
-2025-04-24 04:37:54,253 - ERROR - $BDKR.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677808800 and endTime=1745469474. The requested range must be within the last 730 days.")
-2025-04-24 04:37:54,254 - WARNING - BDKR.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-24 04:37:54,254 - ERROR - BDKR.JK: Data saham tidak ditemukan atau kosong.
-2025-04-24 04:52:54,415 - ERROR - $GOTO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1649642400 and endTime=1745470374. The requested range must be within the last 730 days.")
-2025-04-24 04:52:54,415 - WARNING - GOTO.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-24 04:52:54,415 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
-2025-04-24 05:07:21,730 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681783200 and endTime=1745471241. The requested range must be within the last 730 days.")
-2025-04-24 05:07:21,731 - WARNING - MBMA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-24 05:07:21,731 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-24 05:11:03,516 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681264800 and endTime=1745471463. The requested range must be within the last 730 days.")
-2025-04-24 05:11:03,517 - WARNING - NCKL.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-24 05:11:03,517 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
-2025-04-24 05:13:07,731 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677204000 and endTime=1745471587. The requested range must be within the last 730 days.")
-2025-04-24 05:13:07,732 - WARNING - PGEO.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-24 05:13:07,732 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 06:26:18,047 - ERROR - $GOTO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1649642400 and endTime=1745475978. The requested range must be within the last 730 days.")
+2025-04-24 06:26:18,048 - WARNING - GOTO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-24 06:26:18,048 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 06:35:19,807 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681783200 and endTime=1745476519. The requested range must be within the last 730 days.")
+2025-04-24 06:35:19,808 - WARNING - MBMA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-24 06:35:19,808 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 06:38:06,105 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681264800 and endTime=1745476686. The requested range must be within the last 730 days.")
+2025-04-24 06:38:06,105 - WARNING - NCKL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-24 06:38:06,106 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 06:40:19,934 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677204000 and endTime=1745476819. The requested range must be within the last 730 days.")
+2025-04-24 06:40:19,934 - WARNING - PGEO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-24 06:40:19,934 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-24 06:50:12,428 - ERROR - Error mengambil data TSPC.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-24 06:50:12,428 - ERROR - TSPC.JK: Data saham tidak ditemukan atau kosong.
