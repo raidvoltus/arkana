@@ -481,6 +481,30 @@ def evaluate_prediction_accuracy() -> Dict[str, float]:
 
     return akurasi_per_ticker
     
+def check_and_reset_model_if_needed(ticker, features):
+    hash_path = f"model_feature_hashes.json"
+    current_hash = hash(json.dumps(features, sort_keys=True))
+
+    saved_hashes = {}
+    if os.path.exists(hash_path):
+        try:
+            with open(hash_path, "r") as f:
+                content = f.read().strip()
+                if content:
+                    saved_hashes = json.loads(content)
+        except json.JSONDecodeError:
+            logging.warning("Hash file corrupted, resetting...")
+            saved_hashes = {}
+
+    if saved_hashes.get(ticker) != current_hash:
+        logging.info(f"Fitur berubah untuk {ticker}, reset model.")
+        for fname in [f"model_high_{ticker}.pkl", f"model_low_{ticker}.pkl", f"model_lstm_{ticker}.keras"]:
+            if os.path.exists(fname):
+                os.remove(fname)
+        saved_hashes[ticker] = current_hash
+        with open(hash_path, "w") as f:
+            json.dump(saved_hashes, f, indent=2)
+    
 def reset_models():
     # Pola file model
     patterns = [
