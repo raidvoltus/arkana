@@ -69,19 +69,27 @@ def send_telegram_message(message: str):
 # === Ambil & Validasi Data Saham ===
 def get_stock_data(ticker: str) -> pd.DataFrame:
     try:
-        # Gunakan 60 hari jika pakai interval 1 jam
         stock = yf.Ticker(ticker)
-        df = stock.history(period="730d", interval="1h")
 
+        # Validasi awal: info harus tersedia dan ada harga terakhir
+        info = stock.info
+        if not info or "regularMarketPrice" not in info:
+            logging.error(f"{ticker}: Tidak valid atau kemungkinan delisting (info kosong).")
+            return None
+
+        df = stock.history(period="730d", interval="1h")
         required_cols = ["High", "Low", "Close", "Volume"]
         if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
             df["ticker"] = ticker
             return df
 
         logging.warning(f"{ticker}: Data kosong/kurang atau kolom tidak lengkap.")
-        logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
+        if df is not None:
+            logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
+
     except Exception as e:
-        logging.error(f"Error mengambil data {ticker}: {e}")
+        logging.error(f"{ticker}: Gagal mengambil data dari Yahoo Finance. Error: {e}")
+
     return None
 
 # === Hitung Indikator ===
