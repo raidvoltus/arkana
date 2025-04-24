@@ -131,9 +131,9 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     # === Target prediksi: harga tertinggi & terendah BESOK ===
     # 5 hari ke depan (7 jam per hari = 35 jam)
-FWD_WINDOW = HOURS_PER_DAY * 5
-df["future_high"] = df["High"].shift(-FWD_WINDOW).rolling(FWD_WINDOW).max()
-df["future_low"]  = df["Low"].shift(-FWD_WINDOW).rolling(FWD_WINDOW).min()
+    FWD_WINDOW = HOURS_PER_DAY * 5
+    df["future_high"] = df["High"].shift(-FWD_WINDOW).rolling(FWD_WINDOW).max()
+    df["future_low"]  = df["Low"].shift(-FWD_WINDOW).rolling(FWD_WINDOW).min()
 
     return df.dropna()
 
