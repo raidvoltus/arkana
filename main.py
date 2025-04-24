@@ -362,27 +362,49 @@ def analyze_stock(ticker: str):
     X_last = df[features].iloc[[-1]]
     ph = model_high.predict(X_last)[0]
     pl = model_low.predict(X_last)[0]
-    action = "beli" if (ph - price) / price > 0.02 else "jual"
-    prob_succ = (prob_high + prob_low) / 2
-    profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
+    
+    # Tentukan aksi: BELI atau JUAL
+    action, take_profit, stop_loss, profit_potential_pct = get_action_and_target(price, ph, pl)
 
     if profit_potential_pct < 10:
         logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
         return None
+
+    # Validasi ekstra TP/SL
+    if not validate_tp_sl(action, price, take_profit, stop_loss):
+        return None
+
+    prob_succ = (prob_high + prob_low) / 2
     tanggal = pd.Timestamp.now().strftime("%Y-%m-%d")
-    log_prediction(ticker, tanggal, ph, pl, price)
+    log_prediction(ticker, tanggal, take_profit, stop_loss, price)
 
     return {
         "ticker": ticker,
         "harga": round(price, 2),
-        "take_profit": round(ph, 2),
-        "stop_loss": round(pl, 2),
+        "take_profit": round(take_profit, 2),
+        "stop_loss": round(stop_loss, 2),
         "aksi": action,
         "prob_high": round(prob_high, 2),
         "prob_low": round(prob_low, 2),
         "prob_success": round(prob_succ, 2),
         "profit_potential_pct": round(profit_potential_pct, 2),
     }
+
+# Fungsi untuk menentukan aksi dan target harga
+def get_action_and_target(price: float, take_profit: float, stop_loss: float):
+    action = "beli" if (take_profit - price) / price > 0.02 else "jual"
+    profit_potential_pct = (take_profit - price) / price * 100 if action == "beli" else (price - stop_loss) / price * 100
+    return action, take_profit, stop_loss, profit_potential_pct
+
+# Validasi ekstra: pastikan TP dan SL masuk akal
+def validate_tp_sl(action: str, price: float, take_profit: float, stop_loss: float) -> bool:
+    if action == "beli" and not (take_profit > price > stop_loss):
+        logging.warning(f"TP/SL tidak logis untuk BELI (TP={take_profit}, SL={stop_loss}, harga={price})")
+        return False
+    if action == "jual" and not (take_profit < price < stop_loss):
+        logging.warning(f"TP/SL tidak logis untuk JUAL (TP={take_profit}, SL={stop_loss}, harga={price})")
+        return False
+    return True
 
 def retrain_if_needed(ticker: str):
     akurasi_map = evaluate_prediction_accuracy()
