@@ -358,6 +358,10 @@ def analyze_stock(ticker: str):
     if prob_high < MIN_PROB or prob_low < MIN_PROB:
         logging.info(f"{ticker} dilewati: Prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
         return None
+        
+    if profit_potential_pct < 10:
+        logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
+        return None
 
     X_last = df[features].iloc[[-1]]
     ph = model_high.predict(X_last)[0]
