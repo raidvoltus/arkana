@@ -30,6 +30,12 @@ ATR_MULTIPLIER   = 2.5
 RETRAIN_INTERVAL = 7
 BACKUP_CSV_PATH  = "stock_data_backup.csv"
 HASH_PATH = "features_hash.json"
+# Bersihkan ticker bermasalah dulu
+STOCK_LIST = filter_valid_tickers(STOCK_LIST)
+
+# Lanjut analisa seperti biasa
+with ThreadPoolExecutor() as executor:
+    results = list(executor.map(analyze_stock, STOCK_LIST))
 # === Daftar Saham ===
 STOCK_LIST = [
     "AALI.JK", "ABBA.JK", "ABMM.JK", "ACES.JK", "ACST.JK", "ADHI.JK", "ADMF.JK", "ADMG.JK", "ADRO.JK", "AGII.JK",
