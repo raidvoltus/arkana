@@ -446,29 +446,40 @@ def get_realized_price_data() -> pd.DataFrame:
     return pd.DataFrame(results)
     
 def evaluate_prediction_accuracy() -> Dict[str, float]:
-    if not os.path.exists("prediksi_log.csv"):
+    log_path = "prediksi_log.csv"
+    if not os.path.exists(log_path):
+        logging.warning("File prediksi_log.csv tidak ditemukan.")
         return {}
 
-    # Baca log prediksi
-    df_log = pd.read_csv("prediksi_log.csv", names=["ticker", "tanggal", "harga_awal", "pred_high", "pred_low"])
-    df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
+    try:
+        df_log = pd.read_csv(log_path, names=["ticker", "tanggal", "harga_awal", "pred_high", "pred_low"])
+        df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
+    except Exception as e:
+        logging.error(f"Gagal membaca file log prediksi: {e}")
+        return {}
 
-    # Ambil data realisasi dari yfinance
     df_data = get_realized_price_data()
     if df_data.empty:
+        logging.warning("Data realisasi harga kosong.")
         return {}
 
     df_data["tanggal"] = pd.to_datetime(df_data["tanggal"])
 
-    # Gabungkan berdasarkan ticker dan tanggal
     df_merged = df_log.merge(df_data, on=["ticker", "tanggal"], how="inner")
 
-    # Evaluasi apakah prediksi benar: future_high <= actual_high dan future_low >= actual_low
-    df_merged["benar"] = ((df_merged["actual_high"] >= df_merged["pred_high"]) &
-                          (df_merged["actual_low"] <= df_merged["pred_low"]))
+    if df_merged.empty:
+        logging.info("Tidak ada prediksi yang cocok dengan data realisasi.")
+        return {}
 
-    # Hitung akurasi per ticker
-    return df_merged.groupby("ticker")["benar"].mean().to_dict()
+    df_merged["benar"] = (
+        (df_merged["actual_high"] >= df_merged["pred_high"]) &
+        (df_merged["actual_low"]  <= df_merged["pred_low"])
+    )
+
+    akurasi_per_ticker = df_merged.groupby("ticker")["benar"].mean().to_dict()
+    logging.info(f"Akurasi prediksi dihitung untuk {len(akurasi_per_ticker)} ticker.")
+
+    return akurasi_per_ticker
     
 def reset_models():
     # Pola file model
