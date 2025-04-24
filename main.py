@@ -88,22 +88,46 @@ def send_telegram_message(message: str):
         logging.error(f"Telegram error: {e}")
 
 # === Ambil & Validasi Data Saham ===
+def filter_valid_tickers(ticker_list: List[str]) -> List[str]:
+    valid_tickers = []
+    for ticker in ticker_list:
+        try:
+            stock = yf.Ticker(ticker)
+            info = stock.info
+            if "shortName" in info:
+                valid_tickers.append(ticker)
+            else:
+                logging.warning(f"{ticker}: Tidak valid atau sudah delisting.")
+        except Exception as e:
+            logging.warning(f"{ticker}: Gagal ambil info. Error: {e}")
+    return valid_tickers
+    
 def get_stock_data(ticker: str) -> pd.DataFrame:
     try:
-        # Gunakan 60 hari jika pakai interval 1 jam
         stock = yf.Ticker(ticker)
         df = stock.history(period="730d", interval="1h")
 
-        required_cols = ["High", "Low", "Close", "Volume"]
-        if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
-            df["ticker"] = ticker
-            return df
+        if df is None or df.empty:
+            logging.warning(f"{ticker}: Data kosong atau tidak tersedia.")
+            return None
 
-        logging.warning(f"{ticker}: Data kosong/kurang atau kolom tidak lengkap.")
-        logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
+        required_cols = {"High", "Low", "Close", "Volume"}
+        missing_cols = required_cols - set(df.columns)
+
+        if missing_cols:
+            logging.warning(f"{ticker}: Kolom hilang: {missing_cols}")
+            return None
+
+        if len(df) < 200:
+            logging.warning(f"{ticker}: Data terlalu sedikit: hanya {len(df)} baris.")
+            return None
+
+        df["ticker"] = ticker
+        return df
+
     except Exception as e:
-        logging.error(f"Error mengambil data {ticker}: {e}")
-    return None
+        logging.error(f"{ticker}: Gagal ambil data dari Yahoo Finance: {e}")
+        return None
 
 # === Hitung Indikator ===
 def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
