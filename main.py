@@ -411,36 +411,56 @@ def retrain_if_needed(ticker: str):
         joblib.dump(model_low, f"model_low_{ticker}.pkl")
         
 def get_realized_price_data() -> pd.DataFrame:
-    if not os.path.exists("prediksi_log.csv"):
+    log_path = "prediksi_log.csv"
+    if not os.path.exists(log_path):
         return pd.DataFrame()
 
-    df_log = pd.read_csv("prediksi_log.csv")
+    df_log = pd.read_csv(log_path)
     df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
-    result = []
+    results = []
 
     for ticker in df_log["ticker"].unique():
-        df_ticker = df_log[df_log["ticker"] == ticker]
+        df_ticker = df_log[df_log["ticker"] == ticker].copy()
         start_date = df_ticker["tanggal"].min()
         end_date = df_ticker["tanggal"].max() + pd.Timedelta(days=6)
 
-        df_price = yf.download(ticker, start=start_date.strftime("%Y-%m-%d"),
-                               end=end_date.strftime("%Y-%m-%d"), interval="1h", progress=False)
-        if df_price.empty:
+        try:
+            df_price = yf.download(
+                ticker,
+                start=start_date.strftime("%Y-%m-%d"),
+                end=end_date.strftime("%Y-%m-%d"),
+                interval="1h",
+                progress=False,
+                threads=False
+            )
+        except Exception as e:
+            print(f"Gagal download data untuk {ticker}: {e}")
             continue
 
+        if df_price.empty or "High" not in df_price or "Low" not in df_price:
+            print(f"Data kosong atau kolom hilang untuk {ticker}")
+            continue
+
+        df_price.index = pd.to_datetime(df_price.index)  # pastikan datetime
+        df_price = df_price.sort_index()
+
         for _, row in df_ticker.iterrows():
-            tanggal = row["tanggal"]
-            df_window = df_price.loc[tanggal + pd.Timedelta(days=1): tanggal + pd.Timedelta(days=6)]
-            if len(df_window) < 3:  # fleksibel sedikit
+            tanggal_prediksi = row["tanggal"]
+            start_window = tanggal_prediksi + pd.Timedelta(days=1)
+            end_window = tanggal_prediksi + pd.Timedelta(days=6)
+
+            df_window = df_price.loc[(df_price.index >= start_window) & (df_price.index <= end_window)]
+            if df_window.shape[0] < 3:
                 continue
-            result.append({
+
+            results.append({
                 "ticker": ticker,
-                "tanggal": tanggal,
-                "actual_high": df_window["High"].max(),
-                "actual_low": df_window["Low"].min()
+                "tanggal": tanggal_prediksi,
+                "actual_high": float(df_window["High"].max()),
+                "actual_low": float(df_window["Low"].min())
             })
 
-    return pd.DataFrame(result)
+    return pd.DataFrame(results)
     
 def evaluate_prediction_accuracy() -> Dict[str, float]:
     if not os.path.exists("prediksi_log.csv"):
