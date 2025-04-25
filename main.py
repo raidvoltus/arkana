@@ -71,7 +71,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
     try:
         # Gunakan 60 hari jika pakai interval 1 jam
         stock = yf.Ticker(ticker)
-        df = stock.history(period="5y", interval="1wk")
+        df = stock.history(period="5y", interval="1h")
 
         required_cols = ["High", "Low", "Close", "Volume"]
         if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
@@ -86,7 +86,8 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
 
 # === Hitung Indikator ===
 def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
-    HOURS_PER_DAY = 1  # jumlah jam trading aktif per hari
+    HOURS_PER_DAY = 7
+    HOURS_PER_WEEK = 35  # 5 hari trading, 7 jam per hari
 
     # === Indikator teknikal utama ===
     df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=14).average_true_range()
@@ -121,9 +122,9 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["daily_std"] = df["Close"].rolling(HOURS_PER_DAY).std()
     df["daily_range"] = df["High"].rolling(HOURS_PER_DAY).max() - df["Low"].rolling(HOURS_PER_DAY).min()
 
-    # === Target prediksi: harga tertinggi & terendah BESOK ===
-    df["future_high"] = df["High"].shift(-HOURS_PER_DAY).rolling(HOURS_PER_DAY).max()
-    df["future_low"]  = df["Low"].shift(-HOURS_PER_DAY).rolling(HOURS_PER_DAY).min()
+    # === Target prediksi: harga tertinggi & terendah MINGGU DEPAN ===
+    df["future_high"] = df["High"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).max()
+    df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
 
     return df.dropna()
 
@@ -416,7 +417,7 @@ def get_realized_price_data() -> pd.DataFrame:
                 ticker,
                 start=start_date.strftime("%Y-%m-%d"),
                 end=end_date.strftime("%Y-%m-%d"),
-                interval="1wk",
+                interval="1h",
                 progress=False,
                 threads=False
             )
