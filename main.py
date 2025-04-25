@@ -423,8 +423,17 @@ def analyze_stock(ticker: str):
     pl = model_low.predict(X_last)[0]
 
     action = "beli" if (ph - price) / price > 0.02 else "jual"
-    prob_succ = (prob_high + prob_low) / 2
     profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
+    prob_succ = (prob_high + prob_low) / 2
+    
+    if action == "beli":
+        take_profit = ph
+        stop_loss = pl
+        profit_potential_pct = (ph - price) / price * 100
+    else:
+        take_profit = pl
+        stop_loss = ph
+    profit_potential_pct = (price - pl) / price * 100
 
     if profit_potential_pct < 10:
         logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
