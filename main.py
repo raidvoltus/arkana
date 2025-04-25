@@ -88,7 +88,13 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
 def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     HOURS_PER_DAY = 7
     HOURS_PER_WEEK = 35  # 5 hari trading, 7 jam per hari
-
+    
+    # Pastikan index sudah dalam timezone Asia/Jakarta
+    if df.index.tz is None:
+        df.index = df.index.tz_localize("UTC").tz_convert("Asia/Jakarta")
+    else:
+        df.index = df.index.tz_convert("Asia/Jakarta")
+        
     # === Indikator teknikal utama ===
     df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=14).average_true_range()
     
