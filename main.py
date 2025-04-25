@@ -378,6 +378,19 @@ def analyze_stock(ticker: str):
         "profit_potential_pct": round(profit_potential_pct, 2),
     }
 
+def main():
+    results = list(filter(None, executor.map(analyze_stock, STOCK_LIST)))
+    
+    # Urutkan berdasarkan potensi profit tertinggi
+    results = sorted(results, key=lambda x: x["profit_potential_pct"], reverse=True)
+
+    # Ambil Top N
+    top_n = 5  # atau 1 kalau mau satu sinyal terbaik saja
+    top_signals = results[:top_n]
+
+    for r in top_signals:
+        print_signal(r)
+        
 def retrain_if_needed(ticker: str):
     akurasi_map = evaluate_prediction_accuracy()
     akurasi = akurasi_map.get(ticker, 1.0)  # default 100%
