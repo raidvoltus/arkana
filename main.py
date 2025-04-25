@@ -324,15 +324,25 @@ def load_or_train_model(path, train_fn, X_train, y_train, model_type="joblib"):
         logging.info(f"Trained & saved model to {path}")
     return model
     
-def get_latest_close(ticker: str) -> float:
+def get_latest_close(ticker: str):
     try:
         stock = yf.Ticker(ticker)
-        df_daily = stock.history(period="1d", interval="1d")
-        if not df_daily.empty:
-            return df_daily["Close"].iloc[-1]
+        df = stock.history(period="1d", interval="1d")
+
+        if df is None or df.empty:
+            logging.warning(f"{ticker}: Data daily kosong saat ambil harga terbaru.")
+            return None
+
+        close_price = df["Close"].dropna()
+        if close_price.empty:
+            logging.warning(f"{ticker}: Kolom Close kosong di data daily.")
+            return None
+
+        return close_price.iloc[-1]
+
     except Exception as e:
-        logging.warning(f"Gagal ambil harga terbaru {ticker}: {e}")
-    return None
+        logging.error(f"{ticker}: Gagal ambil harga terbaru - {e}")
+        return None
 
 def analyze_stock(ticker: str):
     df = get_stock_data(ticker)
