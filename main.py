@@ -352,6 +352,12 @@ def analyze_stock(ticker: str):
 
     df = calculate_indicators(df)
 
+# Pastikan kolom dan nilainya ada sebelum lanjut
+    if "ATR" not in df.columns or df["ATR"].dropna().empty:
+        logging.warning(f"{ticker}: ATR kosong setelah kalkulasi.")
+        return None
+
+    atr = df["ATR"].dropna().iloc[-1]
     required_columns = ["High", "Low", "Close", "Volume", "ATR"]
     if not all(col in df.columns for col in required_columns):
         logging.error(f"{ticker}: Kolom yang diperlukan tidak lengkap.")
