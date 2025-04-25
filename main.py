@@ -86,7 +86,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
 
 # === Hitung Indikator ===
 def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
-    HOURS_PER_DAY = 7  # jumlah jam trading aktif per hari
+    HOURS_PER_DAY = 35  # jumlah jam trading aktif per hari
 
     # === Indikator teknikal utama ===
     df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=14).average_true_range()
