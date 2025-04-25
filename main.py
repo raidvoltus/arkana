@@ -360,8 +360,19 @@ def analyze_stock(ticker: str):
 
     # Gunakan harga terbaru dari daily
     price = get_latest_close(ticker)
+
+    # Fallback hanya jika df tidak kosong
     if price is None:
-        price = df["Close"].iloc[-1]  # fallback jika gagal ambil harga daily
+        if df is not None and not df.empty and "Close" in df.columns:
+            price = df["Close"].dropna().iloc[-1] if not df["Close"].dropna().empty else None
+        else:
+            logging.warning(f"{ticker}: Data fallback juga kosong.")
+            return None
+
+    # Hentikan jika harga tetap tidak bisa didapatkan
+    if price is None:
+        logging.warning(f"{ticker}: Tidak bisa mendapatkan harga terbaru.")
+        return None
 
     avg_volume = df["Volume"].tail(20).mean()
     atr = df["ATR"].iloc[-1]
