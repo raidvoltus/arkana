@@ -1,12 +1,457 @@
-2025-04-25 04:55:05,111 - ERROR - $GOTO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1649642400 and endTime=1745556905. The requested range must be within the last 730 days.")
-2025-04-25 04:55:05,117 - WARNING - GOTO.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-25 04:55:05,117 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
-2025-04-25 05:03:04,306 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681783200 and endTime=1745557384. The requested range must be within the last 730 days.")
-2025-04-25 05:03:04,307 - WARNING - MBMA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-25 05:03:04,307 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-25 05:07:13,517 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1681264800 and endTime=1745557633. The requested range must be within the last 730 days.")
-2025-04-25 05:07:13,517 - WARNING - NCKL.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-25 05:07:13,517 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
-2025-04-25 05:07:52,146 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=730d) (Yahoo error = "1h data not available for startTime=1677204000 and endTime=1745557672. The requested range must be within the last 730 days.")
-2025-04-25 05:07:52,147 - WARNING - PGEO.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-25 05:07:52,147 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:29.892810: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-25 05:49:29.895898: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-25 05:49:29.904424: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745560169.918261    2068 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745560169.922351    2068 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745560169.933879    2068 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745560169.933906    2068 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745560169.933909    2068 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745560169.933911    2068 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-25 05:49:29.937440: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Dihapus: model_high_ERAA.JK.pkl
+Dihapus: model_high_ENRG.JK.pkl
+Dihapus: model_high_CTRA.JK.pkl
+Dihapus: model_high_ISAT.JK.pkl
+Dihapus: model_high_BFIN.JK.pkl
+Dihapus: model_high_BRMS.JK.pkl
+Dihapus: model_high_MARK.JK.pkl
+Dihapus: model_high_INDY.JK.pkl
+Dihapus: model_high_AKRA.JK.pkl
+Dihapus: model_high_MIDI.JK.pkl
+Dihapus: model_high_SRTG.JK.pkl
+Dihapus: model_high_MAPA.JK.pkl
+Dihapus: model_high_DEWA.JK.pkl
+Dihapus: model_high_LSIP.JK.pkl
+Dihapus: model_high_HRUM.JK.pkl
+Dihapus: model_high_HMSP.JK.pkl
+Dihapus: model_high_SSIA.JK.pkl
+Dihapus: model_high_SSMS.JK.pkl
+Dihapus: model_high_ESSA.JK.pkl
+Dihapus: model_high_PNLF.JK.pkl
+Dihapus: model_high_MEDC.JK.pkl
+Dihapus: model_high_UNVR.JK.pkl
+Dihapus: model_high_INET.JK.pkl
+Dihapus: model_high_MNCN.JK.pkl
+Dihapus: model_high_ACES.JK.pkl
+Dihapus: model_high_PWON.JK.pkl
+Dihapus: model_high_KPIG.JK.pkl
+Dihapus: model_high_AVIA.JK.pkl
+Dihapus: model_high_AMRT.JK.pkl
+Dihapus: model_high_MAPI.JK.pkl
+Dihapus: model_high_PGAS.JK.pkl
+Dihapus: model_high_SMRA.JK.pkl
+Dihapus: model_high_DSNG.JK.pkl
+Dihapus: model_high_BBTN.JK.pkl
+Dihapus: model_high_ADRO.JK.pkl
+Dihapus: model_high_TOWR.JK.pkl
+Dihapus: model_high_SMIL.JK.pkl
+Dihapus: model_high_BBYB.JK.pkl
+Dihapus: model_high_HEAL.JK.pkl
+Dihapus: model_high_ADMR.JK.pkl
+Dihapus: model_high_MDKA.JK.pkl
+Dihapus: model_high_TRIN.JK.pkl
+Dihapus: model_high_ARTO.JK.pkl
+Dihapus: model_high_GJTL.JK.pkl
+Dihapus: model_high_BRPT.JK.pkl
+Dihapus: model_high_SIDO.JK.pkl
+Dihapus: model_high_BTPS.JK.pkl
+Dihapus: model_high_BNGA.JK.pkl
+Dihapus: model_high_RAJA.JK.pkl
+Dihapus: model_high_BSDE.JK.pkl
+Dihapus: model_high_KLBF.JK.pkl
+Dihapus: model_high_ANTM.JK.pkl
+Dihapus: model_high_NISP.JK.pkl
+Dihapus: model_high_MTEL.JK.pkl
+Dihapus: model_high_KIJA.JK.pkl
+Dihapus: model_high_TOBA.JK.pkl
+Dihapus: model_high_EMTK.JK.pkl
+Dihapus: model_high_ELSA.JK.pkl
+Dihapus: model_high_BMTR.JK.pkl
+Dihapus: model_high_SURI.JK.pkl
+Dihapus: model_high_PTPP.JK.pkl
+Dihapus: model_high_TINS.JK.pkl
+Dihapus: model_high_SCMA.JK.pkl
+Dihapus: model_low_AMRT.JK.pkl
+Dihapus: model_low_BRPT.JK.pkl
+Dihapus: model_low_PWON.JK.pkl
+Dihapus: model_low_ENRG.JK.pkl
+Dihapus: model_low_BTPS.JK.pkl
+Dihapus: model_low_ESSA.JK.pkl
+Dihapus: model_low_ANTM.JK.pkl
+Dihapus: model_low_DEWA.JK.pkl
+Dihapus: model_low_CTRA.JK.pkl
+Dihapus: model_low_SMRA.JK.pkl
+Dihapus: model_low_TINS.JK.pkl
+Dihapus: model_low_INET.JK.pkl
+Dihapus: model_low_BBTN.JK.pkl
+Dihapus: model_low_MAPI.JK.pkl
+Dihapus: model_low_GJTL.JK.pkl
+Dihapus: model_low_PTPP.JK.pkl
+Dihapus: model_low_MNCN.JK.pkl
+Dihapus: model_low_MAPA.JK.pkl
+Dihapus: model_low_TRIN.JK.pkl
+Dihapus: model_low_AKRA.JK.pkl
+Dihapus: model_low_BRMS.JK.pkl
+Dihapus: model_low_HEAL.JK.pkl
+Dihapus: model_low_KIJA.JK.pkl
+Dihapus: model_low_DSNG.JK.pkl
+Dihapus: model_low_RAJA.JK.pkl
+Dihapus: model_low_TOBA.JK.pkl
+Dihapus: model_low_HRUM.JK.pkl
+Dihapus: model_low_ARTO.JK.pkl
+Dihapus: model_low_SURI.JK.pkl
+Dihapus: model_low_SCMA.JK.pkl
+Dihapus: model_low_HMSP.JK.pkl
+Dihapus: model_low_MTEL.JK.pkl
+Dihapus: model_low_ISAT.JK.pkl
+Dihapus: model_low_ADRO.JK.pkl
+Dihapus: model_low_INDY.JK.pkl
+Dihapus: model_low_PNLF.JK.pkl
+Dihapus: model_low_SIDO.JK.pkl
+Dihapus: model_low_BNGA.JK.pkl
+Dihapus: model_low_ACES.JK.pkl
+Dihapus: model_low_MEDC.JK.pkl
+Dihapus: model_low_KLBF.JK.pkl
+Dihapus: model_low_KPIG.JK.pkl
+Dihapus: model_low_EMTK.JK.pkl
+Dihapus: model_low_ELSA.JK.pkl
+Dihapus: model_low_BSDE.JK.pkl
+Dihapus: model_low_ERAA.JK.pkl
+Dihapus: model_low_BMTR.JK.pkl
+Dihapus: model_low_LSIP.JK.pkl
+Dihapus: model_low_AVIA.JK.pkl
+Dihapus: model_low_UNVR.JK.pkl
+Dihapus: model_low_BFIN.JK.pkl
+Dihapus: model_low_TOWR.JK.pkl
+Dihapus: model_low_SSIA.JK.pkl
+Dihapus: model_low_MIDI.JK.pkl
+Dihapus: model_low_SSMS.JK.pkl
+Dihapus: model_low_ADMR.JK.pkl
+Dihapus: model_low_MDKA.JK.pkl
+Dihapus: model_low_SMIL.JK.pkl
+Dihapus: model_low_BBYB.JK.pkl
+Dihapus: model_low_PGAS.JK.pkl
+Dihapus: model_low_NISP.JK.pkl
+Dihapus: model_low_MARK.JK.pkl
+Dihapus: model_low_SRTG.JK.pkl
+Dihapus: model_lstm_BRPT.JK.keras
+Dihapus: model_lstm_LSIP.JK.keras
+Dihapus: model_lstm_SRTG.JK.keras
+Dihapus: model_lstm_TINS.JK.keras
+Dihapus: model_lstm_HEAL.JK.keras
+Dihapus: model_lstm_TRIN.JK.keras
+Dihapus: model_lstm_BBYB.JK.keras
+Dihapus: model_lstm_MTEL.JK.keras
+Dihapus: model_lstm_MIDI.JK.keras
+Dihapus: model_lstm_MARK.JK.keras
+Dihapus: model_lstm_SSIA.JK.keras
+Dihapus: model_lstm_BBTN.JK.keras
+Dihapus: model_lstm_PNLF.JK.keras
+Dihapus: model_lstm_SCMA.JK.keras
+Dihapus: model_lstm_UNVR.JK.keras
+Dihapus: model_lstm_KLBF.JK.keras
+Dihapus: model_lstm_AMRT.JK.keras
+Dihapus: model_lstm_PTPP.JK.keras
+Dihapus: model_lstm_MAPA.JK.keras
+Dihapus: model_lstm_GJTL.JK.keras
+Dihapus: model_lstm_ADMR.JK.keras
+Dihapus: model_lstm_MEDC.JK.keras
+Dihapus: model_lstm_PWON.JK.keras
+Dihapus: model_lstm_CTRA.JK.keras
+Dihapus: model_lstm_RAJA.JK.keras
+Dihapus: model_lstm_ERAA.JK.keras
+Dihapus: model_lstm_EMTK.JK.keras
+Dihapus: model_lstm_MNCN.JK.keras
+Dihapus: model_lstm_ACES.JK.keras
+Dihapus: model_lstm_AVIA.JK.keras
+Dihapus: model_lstm_BRMS.JK.keras
+Dihapus: model_lstm_KPIG.JK.keras
+Dihapus: model_lstm_SMRA.JK.keras
+Dihapus: model_lstm_HRUM.JK.keras
+Dihapus: model_lstm_BSDE.JK.keras
+Dihapus: model_lstm_TOWR.JK.keras
+Dihapus: model_lstm_AKRA.JK.keras
+Dihapus: model_lstm_ARTO.JK.keras
+Dihapus: model_lstm_SMIL.JK.keras
+Dihapus: model_lstm_KIJA.JK.keras
+Dihapus: model_lstm_ENRG.JK.keras
+Dihapus: model_lstm_BNGA.JK.keras
+Dihapus: model_lstm_BMTR.JK.keras
+Dihapus: model_lstm_ISAT.JK.keras
+Dihapus: model_lstm_TOBA.JK.keras
+Dihapus: model_lstm_ESSA.JK.keras
+Dihapus: model_lstm_SURI.JK.keras
+Dihapus: model_lstm_ANTM.JK.keras
+Dihapus: model_lstm_DEWA.JK.keras
+Dihapus: model_lstm_NISP.JK.keras
+Dihapus: model_lstm_MDKA.JK.keras
+Dihapus: model_lstm_INET.JK.keras
+Dihapus: model_lstm_HMSP.JK.keras
+Dihapus: model_lstm_ELSA.JK.keras
+Dihapus: model_lstm_BTPS.JK.keras
+Dihapus: model_lstm_SSMS.JK.keras
+Dihapus: model_lstm_DSNG.JK.keras
+Dihapus: model_lstm_MAPI.JK.keras
+Dihapus: model_lstm_INDY.JK.keras
+Dihapus: model_lstm_SIDO.JK.keras
+Dihapus: model_lstm_PGAS.JK.keras
+Dihapus: model_lstm_ADRO.JK.keras
+Dihapus: model_lstm_BFIN.JK.keras
+Total 189 model dihapus.
+ [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:37,467 - WARNING - BDKR.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:37,468 - ERROR - BDKR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:37,472 - ERROR - $BBYB.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:37,472 - WARNING - BBYB.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:37,473 - ERROR - BBYB.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:37,848 - ERROR - $BFIN.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:37,848 - WARNING - BFIN.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:37,848 - ERROR - BFIN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:38,232 - ERROR - $BMRI.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:38,233 - WARNING - BMRI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:38,233 - ERROR - BMRI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:38,235 - ERROR - $BMTR.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:38,235 - WARNING - BMTR.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:38,235 - ERROR - BMTR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:38,661 - ERROR - $BNGA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:38,662 - WARNING - BNGA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:38,662 - ERROR - BNGA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:39,059 - ERROR - $BRPT.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:39,059 - WARNING - BRPT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:39,060 - ERROR - BRPT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:39,062 - ERROR - $BRMS.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:39,062 - WARNING - BRMS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:39,062 - ERROR - BRMS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:39,064 - ERROR - $BRIS.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:39,064 - WARNING - BRIS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:39,064 - ERROR - BRIS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:39,509 - ERROR - $BSDE.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:39,510 - WARNING - BSDE.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:39,510 - ERROR - BSDE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:39,513 - ERROR - $CMRY.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:39,513 - ERROR - $BTPS.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:39,514 - WARNING - CMRY.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:39,514 - WARNING - BTPS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:39,514 - ERROR - CMRY.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:39,514 - ERROR - BTPS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:40,029 - ERROR - $CPIN.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:40,029 - WARNING - CPIN.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:40,029 - ERROR - CPIN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:40,532 - ERROR - $DEWA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:40,533 - WARNING - DEWA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:40,533 - ERROR - DEWA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:40,535 - ERROR - $DSNG.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:40,535 - WARNING - DSNG.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:40,536 - ERROR - DSNG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:40,536 - ERROR - $CTRA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:40,537 - WARNING - CTRA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:40,537 - ERROR - CTRA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:41,021 - ERROR - $ENRG.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:41,021 - WARNING - ENRG.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:41,021 - ERROR - ENRG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:41,029 - ERROR - $ELSA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:41,029 - WARNING - ELSA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:41,029 - ERROR - ELSA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:41,438 - ERROR - $ERAA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:41,439 - ERROR - $EMTK.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:41,440 - WARNING - ERAA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:41,440 - WARNING - EMTK.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:41,440 - ERROR - ERAA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:41,440 - ERROR - EMTK.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:41,960 - ERROR - $ESSA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:41,960 - WARNING - ESSA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:41,960 - ERROR - ESSA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:42,423 - ERROR - $FILM.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:42,423 - WARNING - FILM.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:42,423 - ERROR - FILM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:42,424 - ERROR - $EXCL.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:42,426 - WARNING - EXCL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:42,426 - ERROR - EXCL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:42,428 - ERROR - $GGRM.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:42,428 - WARNING - GGRM.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:42,428 - ERROR - GGRM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:42,878 - ERROR - $GOTO.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:42,880 - WARNING - GOTO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:42,880 - ERROR - $GJTL.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:42,880 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:42,881 - WARNING - GJTL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:42,881 - ERROR - GJTL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:42,909 - ERROR - $HEAL.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:42,910 - WARNING - HEAL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:42,910 - ERROR - HEAL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:43,316 - ERROR - $HMSP.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:43,316 - WARNING - HMSP.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:43,316 - ERROR - HMSP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:43,749 - ERROR - $ICBP.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:43,750 - ERROR - $HRUM.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:43,750 - WARNING - ICBP.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:43,751 - WARNING - HRUM.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:43,751 - ERROR - ICBP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:43,751 - ERROR - HRUM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:43,755 - ERROR - $INCO.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:43,757 - WARNING - INCO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:43,757 - ERROR - INCO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:44,273 - ERROR - $INDF.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:44,274 - WARNING - INDF.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:44,274 - ERROR - INDF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:44,766 - ERROR - $INDY.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:44,766 - WARNING - INDY.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:44,767 - ERROR - $INET.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:44,767 - ERROR - INDY.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:44,767 - WARNING - INET.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:44,768 - ERROR - INET.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:45,362 - ERROR - $INTP.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:45,363 - WARNING - INTP.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:45,363 - ERROR - INTP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:45,363 - ERROR - $INKP.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:45,365 - WARNING - INKP.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:45,365 - ERROR - INKP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:45,901 - ERROR - $ISAT.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:45,902 - ERROR - $JSMR.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:45,903 - ERROR - $ITMG.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:45,903 - WARNING - ISAT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:45,904 - ERROR - $JPFA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:45,904 - WARNING - JSMR.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:45,904 - WARNING - ITMG.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:45,904 - ERROR - ISAT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:45,905 - WARNING - JPFA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:45,905 - ERROR - JSMR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:45,905 - ERROR - ITMG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:45,906 - ERROR - JPFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:46,408 - ERROR - $KPIG.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:46,409 - WARNING - KPIG.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:46,410 - ERROR - $KLBF.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:46,410 - ERROR - KPIG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:46,410 - ERROR - $KIJA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:46,410 - ERROR - $LSIP.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:46,411 - WARNING - KLBF.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:46,411 - WARNING - KIJA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:46,413 - WARNING - LSIP.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:46,413 - ERROR - KLBF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:46,413 - ERROR - KIJA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:46,413 - ERROR - LSIP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:47,114 - ERROR - $MAPA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:47,114 - WARNING - MAPA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:47,115 - ERROR - $MBMA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:47,115 - ERROR - MAPA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:47,115 - WARNING - MBMA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:47,116 - ERROR - $MARK.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:47,117 - ERROR - $MAPI.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:47,117 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:47,119 - WARNING - MARK.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:47,119 - WARNING - MAPI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:47,120 - ERROR - MARK.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:47,121 - ERROR - MAPI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:47,605 - ERROR - $MIDI.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:47,605 - WARNING - MIDI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:47,606 - ERROR - MIDI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:47,610 - ERROR - $MDKA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:47,611 - WARNING - MDKA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:47,611 - ERROR - MDKA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:47,612 - ERROR - $MIKA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:47,612 - WARNING - MIKA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:47,612 - ERROR - MIKA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:48,004 - ERROR - $MEDC.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:48,005 - WARNING - MEDC.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:48,005 - ERROR - MEDC.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:48,436 - ERROR - $MNCN.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:48,437 - WARNING - MNCN.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:48,437 - ERROR - MNCN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:48,839 - ERROR - $MYOR.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:48,839 - WARNING - MYOR.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:48,839 - ERROR - MYOR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:48,842 - ERROR - $MTEL.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:48,842 - WARNING - MTEL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:48,842 - ERROR - MTEL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:48,844 - ERROR - $NCKL.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:48,844 - WARNING - NCKL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:48,845 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:49,298 - ERROR - $NISP.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:49,299 - WARNING - NISP.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:49,299 - ERROR - NISP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:49,301 - ERROR - $PGEO.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:49,303 - WARNING - PGEO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:49,303 - ERROR - $PANI.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:49,303 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:49,304 - WARNING - PANI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:49,304 - ERROR - PANI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:49,797 - ERROR - $PGAS.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:49,797 - WARNING - PGAS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:49,797 - ERROR - PGAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:50,404 - ERROR - $PTPP.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:50,405 - WARNING - PTPP.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:50,405 - ERROR - PTPP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:50,406 - ERROR - $PTBA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:50,406 - WARNING - PTBA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:50,407 - ERROR - PTBA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:50,807 - ERROR - $PTRO.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:50,808 - WARNING - PTRO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:50,808 - ERROR - PTRO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:50,809 - ERROR - $PNLF.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:50,809 - WARNING - PNLF.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:50,810 - ERROR - PNLF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:51,269 - ERROR - $PWON.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:51,269 - WARNING - PWON.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:51,270 - ERROR - PWON.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:51,270 - ERROR - $RAJA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:51,272 - WARNING - RAJA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:51,272 - ERROR - RAJA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:51,688 - ERROR - $SIDO.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:51,689 - ERROR - $SCMA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:51,690 - WARNING - SIDO.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:51,691 - WARNING - SCMA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:51,692 - ERROR - SIDO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:51,692 - ERROR - SCMA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:52,069 - ERROR - $SMIL.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:52,069 - WARNING - SMIL.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:52,069 - ERROR - SMIL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:52,070 - ERROR - $SMGR.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:52,071 - WARNING - SMGR.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:52,072 - ERROR - SMGR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:52,505 - ERROR - $SRTG.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:52,505 - WARNING - SRTG.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:52,505 - ERROR - SRTG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:52,509 - ERROR - $SSMS.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:52,510 - ERROR - $SMRA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:52,510 - WARNING - SSMS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:52,510 - WARNING - SMRA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:52,510 - ERROR - SSMS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:52,510 - ERROR - SMRA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:52,944 - ERROR - $SSIA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:52,945 - WARNING - SSIA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:52,945 - ERROR - SSIA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:53,465 - ERROR - $SURI.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:53,466 - WARNING - SURI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:53,466 - ERROR - SURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:54,099 - ERROR - $TKIM.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:54,100 - ERROR - $TLKM.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:54,101 - WARNING - TKIM.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:54,101 - ERROR - $TINS.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:54,101 - WARNING - TLKM.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:54,101 - ERROR - TKIM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:54,102 - WARNING - TINS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:54,102 - ERROR - TLKM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:54,104 - ERROR - TINS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:54,622 - ERROR - $TOBA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:54,623 - WARNING - TOBA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:54,623 - ERROR - TOBA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:55,066 - ERROR - $TRIN.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:55,067 - WARNING - TRIN.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:55,067 - ERROR - TRIN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:55,067 - ERROR - $TOWR.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:55,068 - WARNING - TOWR.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:55,068 - ERROR - TOWR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:55,073 - ERROR - $TPIA.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:55,073 - WARNING - TPIA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:55,073 - ERROR - TPIA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:55,440 - ERROR - $TSPC.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:55,440 - WARNING - TSPC.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:55,440 - ERROR - TSPC.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:55,873 - ERROR - $UNTR.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:55,873 - WARNING - UNTR.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:55,873 - ERROR - UNTR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-25 05:49:56,258 - ERROR - $UNVR.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "Invalid input - interval=1w is not supported. Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 4h, 1d, 5d, 1wk, 1mo, 3mo]")
+2025-04-25 05:49:56,259 - WARNING - UNVR.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-25 05:49:56,259 - ERROR - UNVR.JK: Data saham tidak ditemukan atau kosong.
