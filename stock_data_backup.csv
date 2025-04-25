@@ -1,4 +1,3 @@
 ticker,harga,take_profit,stop_loss,aksi,prob_high,prob_low,prob_success,profit_potential_pct
-INET.JK,115.0,167.63,108.96,beli,0.92,0.91,0.91,45.77
-SMIL.JK,482.0,550.6,442.17,beli,0.95,0.95,0.95,14.23
-SURI.JK,52.0,53.12,50.11,beli,0.91,0.9,0.91,2.14
+INET.JK,165.0,167.63,108.96,jual,0.92,0.91,0.91,33.96
+SMIL.JK,456.0,550.6,442.17,beli,0.95,0.95,0.95,20.75
