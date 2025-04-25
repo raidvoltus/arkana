@@ -303,6 +303,16 @@ def load_or_train_model(path, train_fn, X_train, y_train, model_type="joblib"):
         logging.info(f"Trained & saved model to {path}")
     return model
     
+def get_latest_close(ticker: str) -> float:
+    try:
+        stock = yf.Ticker(ticker)
+        df_daily = stock.history(period="5d", interval="1d")
+        if not df_daily.empty:
+            return df_daily["Close"].iloc[-1]
+    except Exception as e:
+        logging.warning(f"Gagal ambil harga terbaru {ticker}: {e}")
+    return None
+
 def analyze_stock(ticker: str):
     df = get_stock_data(ticker)
     if df is None or df.empty:
@@ -317,7 +327,11 @@ def analyze_stock(ticker: str):
         logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
         return None
 
-    price = df["Close"].iloc[-1]
+    # Gunakan harga terbaru dari daily
+    price = get_latest_close(ticker)
+    if price is None:
+        price = df["Close"].iloc[-1]  # fallback jika gagal ambil harga daily
+
     avg_volume = df["Volume"].tail(20).mean()
     atr = df["ATR"].iloc[-1]
 
@@ -359,9 +373,14 @@ def analyze_stock(ticker: str):
     X_last = df[features].iloc[[-1]]
     ph = model_high.predict(X_last)[0]
     pl = model_low.predict(X_last)[0]
+
     action = "beli" if (ph - price) / price > 0.02 else "jual"
     prob_succ = (prob_high + prob_low) / 2
     profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
+
+    if profit_potential_pct < 10:
+        logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
+        return None
 
     tanggal = pd.Timestamp.now().strftime("%Y-%m-%d")
     log_prediction(ticker, tanggal, ph, pl, price)
