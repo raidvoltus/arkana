@@ -71,7 +71,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
     try:
         # Gunakan 60 hari jika pakai interval 1 jam
         stock = yf.Ticker(ticker)
-        df = stock.history(period="5y", interval="1w")
+        df = stock.history(period="5y", interval="1wk")
 
         required_cols = ["High", "Low", "Close", "Volume"]
         if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
@@ -416,7 +416,7 @@ def get_realized_price_data() -> pd.DataFrame:
                 ticker,
                 start=start_date.strftime("%Y-%m-%d"),
                 end=end_date.strftime("%Y-%m-%d"),
-                interval="1w",
+                interval="1wk",
                 progress=False,
                 threads=False
             )
