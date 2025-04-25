@@ -71,7 +71,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
     try:
         # Gunakan 60 hari jika pakai interval 1 jam
         stock = yf.Ticker(ticker)
-        df = stock.history(period="730d", interval="1h")
+        df = stock.history(period="5y", interval="1w")
 
         required_cols = ["High", "Low", "Close", "Volume"]
         if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
@@ -86,7 +86,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
 
 # === Hitung Indikator ===
 def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
-    HOURS_PER_DAY = 35  # jumlah jam trading aktif per hari
+    HOURS_PER_DAY = 1  # jumlah jam trading aktif per hari
 
     # === Indikator teknikal utama ===
     df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=14).average_true_range()
@@ -416,7 +416,7 @@ def get_realized_price_data() -> pd.DataFrame:
                 ticker,
                 start=start_date.strftime("%Y-%m-%d"),
                 end=end_date.strftime("%Y-%m-%d"),
-                interval="1h",
+                interval="1w",
                 progress=False,
                 threads=False
             )
