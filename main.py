@@ -141,7 +141,8 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     # === Target prediksi: harga tertinggi & terendah MINGGU DEPAN ===
     df["future_high"] = df["High"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).max()
     df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
-
+    
+    df = df.copy()
     return df.dropna()
 
 # === Training LightGBM ===
