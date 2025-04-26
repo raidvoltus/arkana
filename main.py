@@ -73,7 +73,6 @@ log_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 log_handler   = RotatingFileHandler("trading.log", maxBytes=5*1024*1024, backupCount=3)
 log_handler.setFormatter(log_formatter)
 logging.getLogger().addHandler(log_handler)
-logging.basicConfig(level=logging.INFO)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
