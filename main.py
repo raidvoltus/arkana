@@ -69,6 +69,7 @@ STOCK_LIST = [
 ]
 
 # === Logging Setup ===
+logging.info(f"{ticker}: Analisis selesai. Aksi: {aksi}, Potensi: {profit_potential_pct:.2f}%")
 log_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 log_handler   = RotatingFileHandler("trading.log", maxBytes=5*1024*1024, backupCount=3)
 log_handler.setFormatter(log_formatter)
