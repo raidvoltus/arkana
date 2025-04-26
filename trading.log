@@ -1,137 +1,17 @@
-2025-04-26 19:11:42.653718: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-26 19:11:42.656813: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-26 19:11:42.665276: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-26 19:19:00.807030: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-26 19:19:00.810131: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-26 19:19:00.818630: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745694702.679282    2145 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745694702.683431    2145 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745694702.694911    2145 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745694702.694928    2145 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745694702.694931    2145 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745694702.694933    2145 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-26 19:11:42.698464: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745695140.832613    2046 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745695140.836719    2046 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745695140.848237    2046 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745695140.848254    2046 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745695140.848258    2046 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745695140.848263    2046 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-26 19:19:00.851810: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-Dihapus: model_high_ISAT.JK.pkl
-Dihapus: model_high_INDY.JK.pkl
-Dihapus: model_high_AKRA.JK.pkl
-Dihapus: model_high_ANJT.JK.pkl
-Dihapus: model_high_SRTG.JK.pkl
-Dihapus: model_high_FORU.JK.pkl
-Dihapus: model_high_KINO.JK.pkl
-Dihapus: model_high_MEDC.JK.pkl
-Dihapus: model_high_UNVR.JK.pkl
-Dihapus: model_high_JPFA.JK.pkl
-Dihapus: model_high_PGAS.JK.pkl
-Dihapus: model_high_TBIG.JK.pkl
-Dihapus: model_high_BBTN.JK.pkl
-Dihapus: model_high_ADRO.JK.pkl
-Dihapus: model_high_CMNP.JK.pkl
-Dihapus: model_high_CLEO.JK.pkl
-Dihapus: model_high_LPPF.JK.pkl
-Dihapus: model_high_MDKA.JK.pkl
-Dihapus: model_high_GJTL.JK.pkl
-Dihapus: model_high_BTPS.JK.pkl
-Dihapus: model_high_BOLT.JK.pkl
-Dihapus: model_high_SMSM.JK.pkl
-Dihapus: model_high_NFCX.JK.pkl
-Dihapus: model_high_KARW.JK.pkl
-Dihapus: model_high_APIC.JK.pkl
-Dihapus: model_high_BNGA.JK.pkl
-Dihapus: model_high_MPRO.JK.pkl
-Dihapus: model_high_KLBF.JK.pkl
-Dihapus: model_high_CLPI.JK.pkl
-Dihapus: model_high_NISP.JK.pkl
-Dihapus: model_high_ULTJ.JK.pkl
-Dihapus: model_high_BISI.JK.pkl
-Dihapus: model_high_DVLA.JK.pkl
-Dihapus: model_high_PNBN.JK.pkl
-Dihapus: model_high_MCAS.JK.pkl
-Dihapus: model_high_TINS.JK.pkl
-Dihapus: model_low_KINO.JK.pkl
-Dihapus: model_low_SMSM.JK.pkl
-Dihapus: model_low_BTPS.JK.pkl
-Dihapus: model_low_FORU.JK.pkl
-Dihapus: model_low_TBIG.JK.pkl
-Dihapus: model_low_APIC.JK.pkl
-Dihapus: model_low_TINS.JK.pkl
-Dihapus: model_low_LPPF.JK.pkl
-Dihapus: model_low_JPFA.JK.pkl
-Dihapus: model_low_NFCX.JK.pkl
-Dihapus: model_low_CLPI.JK.pkl
-Dihapus: model_low_BBTN.JK.pkl
-Dihapus: model_low_GJTL.JK.pkl
-Dihapus: model_low_BOLT.JK.pkl
-Dihapus: model_low_AKRA.JK.pkl
-Dihapus: model_low_ANJT.JK.pkl
-Dihapus: model_low_ISAT.JK.pkl
-Dihapus: model_low_ADRO.JK.pkl
-Dihapus: model_low_MCAS.JK.pkl
-Dihapus: model_low_CMNP.JK.pkl
-Dihapus: model_low_INDY.JK.pkl
-Dihapus: model_low_BNGA.JK.pkl
-Dihapus: model_low_MEDC.JK.pkl
-Dihapus: model_low_KLBF.JK.pkl
-Dihapus: model_low_KARW.JK.pkl
-Dihapus: model_low_CLEO.JK.pkl
-Dihapus: model_low_UNVR.JK.pkl
-Dihapus: model_low_MPRO.JK.pkl
-Dihapus: model_low_ULTJ.JK.pkl
-Dihapus: model_low_DVLA.JK.pkl
-Dihapus: model_low_PNBN.JK.pkl
-Dihapus: model_low_BISI.JK.pkl
-Dihapus: model_low_MDKA.JK.pkl
-Dihapus: model_low_PGAS.JK.pkl
-Dihapus: model_low_NISP.JK.pkl
-Dihapus: model_low_SRTG.JK.pkl
-Dihapus: model_lstm_SRTG.JK.keras
-Dihapus: model_lstm_TINS.JK.keras
-Dihapus: model_lstm_FORU.JK.keras
-Dihapus: model_lstm_LPPF.JK.keras
-Dihapus: model_lstm_ANJT.JK.keras
-Dihapus: model_lstm_ULTJ.JK.keras
-Dihapus: model_lstm_BBTN.JK.keras
-Dihapus: model_lstm_BISI.JK.keras
-Dihapus: model_lstm_KINO.JK.keras
-Dihapus: model_lstm_UNVR.JK.keras
-Dihapus: model_lstm_KLBF.JK.keras
-Dihapus: model_lstm_BOLT.JK.keras
-Dihapus: model_lstm_CLPI.JK.keras
-Dihapus: model_lstm_GJTL.JK.keras
-Dihapus: model_lstm_MEDC.JK.keras
-Dihapus: model_lstm_KARW.JK.keras
-Dihapus: model_lstm_APIC.JK.keras
-Dihapus: model_lstm_MPRO.JK.keras
-Dihapus: model_lstm_DVLA.JK.keras
-Dihapus: model_lstm_AKRA.JK.keras
-Dihapus: model_lstm_TBIG.JK.keras
-Dihapus: model_lstm_BNGA.JK.keras
-Dihapus: model_lstm_CMNP.JK.keras
-Dihapus: model_lstm_ISAT.JK.keras
-Dihapus: model_lstm_NISP.JK.keras
-Dihapus: model_lstm_MDKA.JK.keras
-Dihapus: model_lstm_MCAS.JK.keras
-Dihapus: model_lstm_JPFA.JK.keras
-Dihapus: model_lstm_CLEO.JK.keras
-Dihapus: model_lstm_PNBN.JK.keras
-Dihapus: model_lstm_SMSM.JK.keras
-Dihapus: model_lstm_BTPS.JK.keras
-Dihapus: model_lstm_INDY.JK.keras
-Dihapus: model_lstm_PGAS.JK.keras
-Dihapus: model_lstm_ADRO.JK.keras
-Dihapus: model_lstm_NFCX.JK.keras
-Total 108 model dihapus.
+Matplotlib is building the font cache; this may take a moment.
 Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 866, in <module>
-    results = list(executor.map(analyze_stock, STOCK_LIST))
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
-    yield _result_or_cancel(fs.pop())
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
-    return fut.result(timeout)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 458, in result
-    return self.__get_result()
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
-    raise self._exception
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/home/runner/work/arkana/arkana/main.py", line 421, in analyze_stock
-    df = calculate_indicators(df)
-NameError: name 'calculate_indicators' is not defined
+  File "/home/runner/work/arkana/arkana/main.py", line 186, in <module>
+    df = load_data()
+NameError: name 'load_data' is not defined
