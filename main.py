@@ -124,11 +124,11 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     # Tambahkan semua indikator TA secara otomatis
     df = ta.add_all_ta_features(
-        df, 
-        open="Open", 
-        high="High", 
-        low="Low", 
-        close="Close", 
+        df,
+        open="Open",
+        high="High",
+        low="Low",
+        close="Close",
         volume="Volume",
         fillna=True
     )
@@ -137,16 +137,16 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["hour"] = df.index.hour
     df["is_opening_hour"] = (df["hour"] == 9).astype(int)
     df["is_closing_hour"] = (df["hour"] == 15).astype(int)
-    df["daily_avg"] = df["Close"].rolling(HOURS_PER_DAY).mean()
-    df["daily_std"] = df["Close"].rolling(HOURS_PER_DAY).std()
-    df["daily_range"] = df["High"].rolling(HOURS_PER_DAY).max() - df["Low"].rolling(HOURS_PER_DAY).min()
+    df["daily_avg"] = df["Close"].rolling(window=HOURS_PER_DAY, min_periods=1).mean()
+    df["daily_std"] = df["Close"].rolling(window=HOURS_PER_DAY, min_periods=1).std()
+    df["daily_range"] = (df["High"].rolling(window=HOURS_PER_DAY, min_periods=1).max() -
+                         df["Low"].rolling(window=HOURS_PER_DAY, min_periods=1).min())
 
     # === Target prediksi: harga tertinggi & terendah MINGGU DEPAN ===
-    df["future_high"] = df["High"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).max()
-    df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
-    
-    df = df.copy()
-    return df.dropna()
+    df["future_high"] = df["High"].shift(-HOURS_PER_WEEK).rolling(window=HOURS_PER_WEEK, min_periods=1).max()
+    df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(window=HOURS_PER_WEEK, min_periods=1).min()
+
+    return df.dropna().copy()
 
 # === Training LightGBM ===
 def train_lightgbm(
