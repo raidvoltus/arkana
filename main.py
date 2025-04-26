@@ -339,7 +339,11 @@ def analyze_stock(ticker: str):
     if df is None or df.empty:
         logging.error(f"{ticker}: Data saham tidak ditemukan atau kosong.")
         return None
-
+        
+    if df["High"].isnull().all() or df["Low"].isnull().all():
+        logging.error(f"{ticker}: Data High/Low kosong, lewati.")
+        return None
+        
     df = calculate_indicators(df)
 
 # Pastikan kolom dan nilainya ada sebelum lanjut
