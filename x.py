@@ -154,3 +154,212 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
 
     return df.dropna()
+    
+# === Training LightGBM ===
+def train_lightgbm(
+    X_train: pd.DataFrame,
+    y_train: pd.Series,
+    X_val: Optional[pd.DataFrame] = None,
+    y_val: Optional[pd.Series] = None,
+    n_estimators: int = 500,
+    learning_rate: float = 0.05,
+    early_stopping_rounds: Optional[int] = 50,
+    random_state: int = 42
+) -> lgb.LGBMRegressor:
+    model = lgb.LGBMRegressor(
+        n_estimators=n_estimators,
+        learning_rate=learning_rate,
+        random_state=random_state
+    )
+
+    if X_val is not None and y_val is not None:
+        model.fit(
+            X_train,
+            y_train,
+            eval_set=[(X_val, y_val)],
+            early_stopping_rounds=early_stopping_rounds,
+            verbose=False
+        )
+    else:
+        model.fit(X_train, y_train)
+
+    return model
+
+# === Training LSTM ===
+def train_lstm(
+    X: pd.DataFrame,
+    y: pd.Series,
+    lstm_units: int = 64,
+    dropout_rate: float = 0.2,
+    dense_units: int = 32,
+    epochs: int = 55,
+    batch_size: int = 32,
+    verbose: int = 1
+) -> Sequential:
+    X_arr = np.reshape(X.values, (X.shape[0], X.shape[1], 1))
+
+    model = Sequential([
+        LSTM(lstm_units, return_sequences=True, input_shape=(X.shape[1], 1)),
+        Dropout(dropout_rate),
+        LSTM(lstm_units),
+        Dropout(dropout_rate),
+        Dense(dense_units, activation="relu"),
+        Dense(1)
+    ])
+
+    model.compile(optimizer="adam", loss="mean_squared_error")
+    model.fit(X_arr, y, epochs=epochs, batch_size=batch_size, verbose=verbose)
+
+    return model
+
+# === Hitung Probabilitas Arah Prediksi ===
+def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
+    if "Close" not in X.columns:
+        raise ValueError("'Close' column is required in input features (X).")
+    if len(X) != len(y_true):
+        raise ValueError("Length of X and y_true must match.")
+
+    y_pred = model.predict(X)
+    y_pred_series = pd.Series(y_pred, index=X.index)
+    close_price = X["Close"]
+
+    correct_dir = (
+        ((y_pred_series > close_price) & (y_true > close_price)) |
+        ((y_pred_series < close_price) & (y_true < close_price))
+    )
+    correct_dir = correct_dir.dropna()
+
+    if correct_dir.empty:
+        return 0.0
+
+    return correct_dir.sum() / len(correct_dir)
+
+# Fungsi load_or_train_model (letakkan sebelum atau setelah analyze_stock)
+def load_or_train_model(path, train_func, X, y):
+    if os.path.exists(path):
+        model = joblib.load(path) if path.endswith(".pkl") else load_model(path)
+        logging.info(f"Loaded model from {path}")
+    else:
+        model = train_func(X, y)
+        with model_save_lock:
+            if path.endswith(".pkl"):
+                joblib.dump(model, path)
+            else:
+                model.save(path)
+        logging.info(f"Trained & saved model to {path}")
+    return model
+    
+# === Fungsi Menghitung Hash Fitur ===
+def get_feature_hash(features: List[str]) -> str:
+    features_str = ",".join(sorted(features))
+    return hashlib.md5(features_str.encode()).hexdigest()
+
+# === Cek dan Reset Model Jika Diperlukan ===
+def check_and_reset_model_if_needed(ticker: str, current_features: List[str]):
+    current_hash = get_feature_hash(current_features)
+
+    try:
+        with open(HASH_PATH, "r") as f:
+            saved_hashes = json.load(f)
+    except FileNotFoundError:
+        saved_hashes = {}
+
+    # Jika hash saat ini tidak sama dengan hash yang disimpan
+    if saved_hashes.get(ticker) != current_hash:
+        logging.info(f"{ticker}: Struktur fitur berubah — melakukan reset model")
+
+        # Hapus model LightGBM (high, low)
+        for suffix in ["high", "low"]:
+            model_path = f"model_{suffix}_{ticker}.pkl"
+            if os.path.exists(model_path):
+                os.remove(model_path)
+                logging.info(f"{ticker}: Model LightGBM '{suffix}' dihapus")
+
+        # Hapus model LSTM
+        lstm_path = f"model_lstm_{ticker}.keras"
+        if os.path.exists(lstm_path):
+            os.remove(lstm_path)
+            logging.info(f"{ticker}: Model LSTM dihapus")
+
+        # Simpan hash baru ke file
+        saved_hashes[ticker] = current_hash
+        with open(HASH_PATH, "w") as f:
+            json.dump(saved_hashes, f, indent=2)
+
+        logging.info(f"{ticker}: Model akan dilatih ulang dengan struktur fitur terbaru")
+    else:
+        logging.debug(f"{ticker}: Struktur fitur sama — model tidak di-reset")
+        
+
+# === Konstanta Threshold ===
+MIN_PRICE = 1000
+MAX_PRICE = 2000
+MIN_VOLUME = 10000
+MIN_VOLATILITY = 0.005
+MIN_PROB = 0.9
+
+# === Fungsi Cek Kelayakan Saham ===
+def is_stock_eligible(price: float, avg_volume: float, atr: float, ticker: str) -> bool:
+    # Cek harga terlalu rendah
+    if price < MIN_PRICE:
+        logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
+        return False
+
+    # Cek harga terlalu tinggi
+    if price > MAX_PRICE:
+        logging.info(f"{ticker} dilewati: harga terlalu tinggi ({price:.2f})")
+        return False
+
+    # Cek volume rata-rata terlalu rendah
+    if avg_volume < MIN_VOLUME:
+        logging.info(f"{ticker} dilewati: volume terlalu rendah ({avg_volume:.0f})")
+        return False
+
+    # Cek volatilitas (ATR) terlalu rendah
+    if (atr / price) < MIN_VOLATILITY:
+        logging.info(f"{ticker} dilewati: volatilitas terlalu rendah (ATR={atr:.4f})")
+        return False
+
+    # Jika semua kondisi terpenuhi, saham dianggap eligible
+    return True
+
+def prepare_features_and_labels(df, features):
+    df = df.dropna(subset=features + ["future_high", "future_low"])
+    X = df[features]
+    y_high = df["future_high"]
+    y_low = df["future_low"]
+    return train_test_split(X, y_high, y_low, test_size=0.2, random_state=42)
+
+def load_or_train_model(path, train_fn, X_train, y_train, model_type="joblib"):
+    if os.path.exists(path):
+        model = joblib.load(path) if model_type == "joblib" else load_model(path)
+        logging.info(f"Loaded model from {path}")
+    else:
+        model = train_fn(X_train, y_train)
+        with model_save_lock:
+            if model_type == "joblib":
+                joblib.dump(model, path)
+            else:
+                model.save(path)
+        logging.info(f"Trained & saved model to {path}")
+    return model
+    
+def get_latest_close(ticker: str):
+    try:
+        stock = yf.Ticker(ticker)
+        df = stock.history(period="1d", interval="1d")
+
+        if df is None or df.empty:
+            logging.warning(f"{ticker}: Data daily kosong saat ambil harga terbaru.")
+            return None
+
+        close_price = df["Close"].dropna()
+        if close_price.empty:
+            logging.warning(f"{ticker}: Kolom Close kosong di data daily.")
+            return None
+
+        return close_price.iloc[-1]
+
+    except Exception as e:
+        logging.error(f"{ticker}: Gagal ambil harga terbaru - {e}")
+        return None
