@@ -363,3 +363,466 @@ def get_latest_close(ticker: str):
     except Exception as e:
         logging.error(f"{ticker}: Gagal ambil harga terbaru - {e}")
         return None
+        
+def get_latest_close(ticker: str):
+    try:
+        stock = yf.Ticker(ticker)
+        df = stock.history(period="1d", interval="1d")
+
+        if df is None or df.empty:
+            logging.warning(f"{ticker}: Data daily kosong saat ambil harga terbaru.")
+            return None
+
+        close_price = df["Close"].dropna()
+        if close_price.empty:
+            logging.warning(f"{ticker}: Kolom Close kosong di data daily.")
+            return None
+
+        return close_price.iloc[-1]
+
+    except Exception as e:
+        logging.error(f"{ticker}: Gagal ambil harga terbaru - {e}")
+        return None
+
+def analyze_stock(ticker: str):
+    df = get_stock_data(ticker)
+    if df is None or df.empty:
+        logging.error(f"{ticker}: Data saham tidak ditemukan atau kosong.")
+        return None
+
+    df = calculate_indicators(df)
+
+# Pastikan kolom dan nilainya ada sebelum lanjut
+    if "ATR" not in df.columns or df["ATR"].dropna().empty:
+        logging.warning(f"{ticker}: ATR kosong setelah kalkulasi.")
+        return None
+
+    atr = df["ATR"].dropna().iloc[-1]
+    required_columns = ["High", "Low", "Close", "Volume", "ATR"]
+    if not all(col in df.columns for col in required_columns):
+        logging.error(f"{ticker}: Kolom yang diperlukan tidak lengkap.")
+        logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
+        return None
+
+    # Gunakan harga terbaru dari daily
+    price = get_latest_close(ticker)
+
+    # Fallback hanya jika df tidak kosong
+    if price is None:
+        if df is not None and not df.empty and "Close" in df.columns:
+            price = df["Close"].dropna().iloc[-1] if not df["Close"].dropna().empty else None
+        else:
+            logging.warning(f"{ticker}: Data fallback juga kosong.")
+            return None
+
+    # Hentikan jika harga tetap tidak bisa didapatkan
+    if price is None:
+        logging.warning(f"{ticker}: Tidak bisa mendapatkan harga terbaru.")
+        return None
+
+    avg_volume = df["Volume"].tail(20).mean()
+    atr = df["ATR"].iloc[-1]
+
+    if not is_stock_eligible(price, avg_volume, atr, ticker):
+        logging.debug(f"{ticker}: Tidak memenuhi kriteria awal.")
+        return None
+
+    features = [
+        "Close", "ATR", "RSI", "MACD", "MACD_Hist",
+        "SMA_14", "SMA_28", "SMA_84", "EMA_10",
+        "BB_Upper", "BB_Lower", "Support", "Resistance",
+        "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
+        "daily_avg", "daily_std", "daily_range",
+        "is_opening_hour", "is_closing_hour"
+    ]
+    check_and_reset_model_if_needed(ticker, features)
+
+    try:
+        X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = prepare_features_and_labels(df, features)
+    except Exception as e:
+        logging.error(f"{ticker}: Error saat mempersiapkan data - {e}")
+        return None
+
+    model_high = load_or_train_model(f"model_high_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
+    model_low  = load_or_train_model(f"model_low_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
+    model_lstm = load_or_train_model(f"model_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, model_type="keras")
+
+    try:
+        prob_high = calculate_probability(model_high, X_te, yh_te)
+        prob_low  = calculate_probability(model_low,  X_te, yl_te)
+    except Exception as e:
+        logging.error(f"{ticker}: Error saat menghitung probabilitas - {e}")
+        return None
+
+    if prob_high < MIN_PROB or prob_low < MIN_PROB:
+        logging.info(f"{ticker} dilewati: Prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
+        return None
+
+    X_last = df[features].iloc[[-1]]
+    ph = model_high.predict(X_last)[0]
+    pl = model_low.predict(X_last)[0]
+
+    action = "beli" if (ph - price) / price > 0.02 else "jual"
+    profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
+    prob_succ = (prob_high + prob_low) / 2
+    
+    # Asumsikan ph = potential high, pl = potential low, price = harga saat ini
+
+    if (ph - price) / price > 0.02:
+        aksi = "beli"
+        take_profit = ph
+        stop_loss = pl
+        profit_potential_pct = (take_profit - price) / price * 100
+    else:
+        aksi = "jual"
+        take_profit = pl
+        stop_loss = ph
+        profit_potential_pct = (price - take_profit) / price * 100
+
+    # Validasi sederhana agar TP dan SL masuk akal
+    if aksi == "beli":
+        if take_profit <= price or stop_loss >= price:
+            return None
+    else:  # aksi == "jual"
+        if take_profit >= price or stop_loss <= price:
+            return None
+            
+    if profit_potential_pct < 10:
+        logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
+        return None
+
+    tanggal = pd.Timestamp.now().strftime("%Y-%m-%d")
+    log_prediction(ticker, tanggal, ph, pl, price)
+
+    return {
+        "ticker": ticker,
+        "harga": round(price, 2),
+        "take_profit": round(ph, 2),
+        "stop_loss": round(pl, 2),
+        "aksi": action,
+        "prob_high": round(prob_high, 2),
+        "prob_low": round(prob_low, 2),
+        "prob_success": round(prob_succ, 2),
+        "profit_potential_pct": round(profit_potential_pct, 2),
+    }
+
+def main():
+    results = list(filter(None, executor.map(analyze_stock, STOCK_LIST)))
+    
+    # Urutkan berdasarkan potensi profit tertinggi
+    results = sorted(results, key=lambda x: x["profit_potential_pct"], reverse=True)
+
+    # Ambil Top N
+    top_n = 5  # atau 1 kalau mau satu sinyal terbaik saja
+    top_signals = results[:top_n]
+
+    for r in top_signals:
+        print_signal(r)
+        
+def retrain_if_needed(ticker: str):
+    akurasi_map = evaluate_prediction_accuracy()
+    akurasi = akurasi_map.get(ticker, 1.0)  # default 100%
+    if akurasi < 0.90:
+        logging.info(f"Akurasi model {ticker} rendah ({akurasi:.2%}), retraining...")
+        df = get_stock_data(ticker)
+        if df is None:
+            return
+        df = calculate_indicators(df)
+        df = df.dropna(subset=["future_high", "future_low"])
+        features = [
+            "Close", "ATR", "RSI", "MACD", "MACD_Hist",
+            "SMA_14", "SMA_28", "SMA_84", "EMA_10",
+            "BB_Upper", "BB_Lower", "Support", "Resistance",
+            "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
+            "daily_avg", "daily_std", "daily_range",
+            "is_opening_hour", "is_closing_hour"
+        ]
+        X = df[features]
+        y_high = df["future_high"]
+        y_low = df["future_low"]
+        model_high = train_lightgbm(X, y_high)
+        joblib.dump(model_high, f"model_high_{ticker}.pkl")
+        model_low = train_lightgbm(X, y_low)
+        joblib.dump(model_low, f"model_low_{ticker}.pkl")
+        
+def get_realized_price_data() -> pd.DataFrame:
+    log_path = "prediksi_log.csv"
+    if not os.path.exists(log_path):
+        return pd.DataFrame()
+
+    df_log = pd.read_csv(log_path)
+    df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
+    results = []
+
+    for ticker in df_log["ticker"].unique():
+        df_ticker = df_log[df_log["ticker"] == ticker].copy()
+        start_date = df_ticker["tanggal"].min()
+        end_date = df_ticker["tanggal"].max() + pd.Timedelta(days=6)
+
+        try:
+            df_price = yf.download(
+                ticker,
+                start=start_date.strftime("%Y-%m-%d"),
+                end=end_date.strftime("%Y-%m-%d"),
+                interval="1h",
+                progress=False,
+                threads=False
+            )
+        except Exception as e:
+            print(f"Gagal download data untuk {ticker}: {e}")
+            continue
+
+        if df_price.empty or "High" not in df_price or "Low" not in df_price:
+            print(f"Data kosong atau kolom hilang untuk {ticker}")
+            continue
+
+        df_price.index = pd.to_datetime(df_price.index)  # pastikan datetime
+        df_price = df_price.sort_index()
+
+        for _, row in df_ticker.iterrows():
+            tanggal_prediksi = row["tanggal"]
+            start_window = tanggal_prediksi + pd.Timedelta(days=1)
+            end_window = tanggal_prediksi + pd.Timedelta(days=6)
+
+            df_window = df_price.loc[(df_price.index >= start_window) & (df_price.index <= end_window)]
+            if df_window.shape[0] < 3:
+                continue
+
+            results.append({
+                "ticker": ticker,
+                "tanggal": tanggal_prediksi,
+                "actual_high": float(df_window["High"].max()),
+                "actual_low": float(df_window["Low"].min())
+            })
+
+    return pd.DataFrame(results)
+    
+def evaluate_prediction_accuracy() -> Dict[str, float]:
+    log_path = "prediksi_log.csv"
+    if not os.path.exists(log_path):
+        logging.warning("File prediksi_log.csv tidak ditemukan.")
+        return {}
+
+    try:
+        df_log = pd.read_csv(log_path, names=["ticker", "tanggal", "harga_awal", "pred_high", "pred_low"])
+        df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
+    except Exception as e:
+        logging.error(f"Gagal membaca file log prediksi: {e}")
+        return {}
+
+    df_data = get_realized_price_data()
+    if df_data.empty:
+        logging.warning("Data realisasi harga kosong.")
+        return {}
+
+    df_data["tanggal"] = pd.to_datetime(df_data["tanggal"])
+
+    df_merged = df_log.merge(df_data, on=["ticker", "tanggal"], how="inner")
+
+    if df_merged.empty:
+        logging.info("Tidak ada prediksi yang cocok dengan data realisasi.")
+        return {}
+
+    df_merged["benar"] = (
+        (df_merged["actual_high"] >= df_merged["pred_high"]) &
+        (df_merged["actual_low"]  <= df_merged["pred_low"])
+    )
+
+    akurasi_per_ticker = df_merged.groupby("ticker")["benar"].mean().to_dict()
+    logging.info(f"Akurasi prediksi dihitung untuk {len(akurasi_per_ticker)} ticker.")
+
+    return akurasi_per_ticker
+    
+def check_and_reset_model_if_needed(ticker, features):
+    hash_path = f"model_feature_hashes.json"
+    current_hash = hash(json.dumps(features, sort_keys=True))
+
+    saved_hashes = {}
+    if os.path.exists(hash_path):
+        try:
+            with open(hash_path, "r") as f:
+                content = f.read().strip()
+                if content:
+                    saved_hashes = json.loads(content)
+        except json.JSONDecodeError:
+            logging.warning("Hash file corrupted, resetting...")
+            saved_hashes = {}
+
+    if saved_hashes.get(ticker) != current_hash:
+        logging.info(f"Fitur berubah untuk {ticker}, reset model.")
+        for fname in [f"model_high_{ticker}.pkl", f"model_low_{ticker}.pkl", f"model_lstm_{ticker}.keras"]:
+            if os.path.exists(fname):
+                os.remove(fname)
+        saved_hashes[ticker] = current_hash
+        with open(hash_path, "w") as f:
+            json.dump(saved_hashes, f, indent=2)
+    
+def reset_models():
+    # Pola file model
+    patterns = [
+        "model_high_*.pkl",
+        "model_low_*.pkl",
+        "model_lstm_*.keras"
+    ]
+
+    total_deleted = 0
+    for pattern in patterns:
+        for filepath in glob.glob(pattern):
+            try:
+                os.remove(filepath)
+                print(f"Dihapus: {filepath}")
+                total_deleted += 1
+            except Exception as e:
+                print(f"Gagal menghapus {filepath}: {e}")
+    
+    if total_deleted == 0:
+        print("Tidak ada model yang ditemukan untuk dihapus.")
+    else:
+        print(f"Total {total_deleted} model dihapus.")
+        
+# === Daftar Kutipan Motivasi ===
+MOTIVATION_QUOTES = [
+    "Setiap peluang adalah langkah kecil menuju kebebasan finansial.",
+    "Cuan bukan tentang keberuntungan, tapi tentang konsistensi dan strategi.",
+    "Disiplin hari ini, hasil luar biasa nanti.",
+    "Trader sukses bukan yang selalu benar, tapi yang selalu siap.",
+    "Naik turun harga itu biasa, yang penting arah portofolio naik.",
+    "Fokus pada proses, profit akan menyusul.",
+    "Jangan hanya lihat harga, lihat potensi di baliknya.",
+    "Ketika orang ragu, itulah peluang sesungguhnya muncul.",
+    "Investasi terbaik adalah pada pengetahuan dan ketenangan diri.",
+    "Satu langkah hari ini lebih baik dari seribu penyesalan besok."
+    "Moal rugi jalma nu talek jeung tekadna kuat.",
+    "Rejeki mah moal ka tukang, asal usaha jeung sabar.",
+    "Lamun hayang hasil nu beda, ulah make cara nu sarua terus.",
+    "Ulah sieun gagal, sieun lamun teu nyobaan.",
+    "Cuan nu leres asal ti élmu jeung kasabaran.",
+    "Sabada hujan pasti aya panonpoé, sabada rugi bisa aya untung.",
+    "Ngabagéakeun resiko teh bagian tina kamajuan.",
+    "Jalma nu kuat téh lain nu teu pernah rugi, tapi nu sanggup bangkit deui.",
+    "Ngora kudu wani nyoba, heubeul kudu wani investasi.",
+    "Reureujeungan ayeuna, kabagjaan engké."
+    "Niat alus, usaha terus, hasil bakal nuturkeun.",
+    "Ulah ngadagoan waktu nu pas, tapi cobian ayeuna.",
+    "Hirup teh kawas saham, kadang naek kadang turun, tapi ulah leungit arah.",
+    "Sakumaha gede ruginya, élmu nu diala leuwih mahal hargana.",
+    "Ulah beuki loba mikir, beuki saeutik tindakan.",
+    "Kabagjaan datang ti tangtungan jeung harepan nu dilaksanakeun.",
+    "Panghasilan teu datang ti ngalamun, tapi ti aksi jeung analisa.",
+    "Sasat nu bener, bakal mawa kana untung nu lila.",
+    "Tong ukur ningali batur nu untung, tapi diajar kumaha cara maranéhna usaha.",
+    "Jalma sukses mah sok narima gagal minangka bagian ti perjalanan."
+    "Saham bisa turun, tapi semangat kudu tetap ngora. Jalan terus, rejeki moal salah alamat.",
+    "Kadang market galak, tapi inget, nu sabar jeung konsisten nu bakal panén hasilna.",
+    "Cuan moal datang ti harepan hungkul, kudu dibarengan ku strategi jeung tekad.",
+    "Teu aya jalan pintas ka sukses, ngan aya jalan nu jelas jeung disiplin nu kuat.",
+    "Di balik koreksi aya akumulasi, di balik gagal aya élmu anyar. Ulah pundung!",
+    "Sakumaha seredna pasar, nu kuat haténa bakal salamet.",
+    "Rejeki teu datang ti candaan, tapi ti candak kaputusan jeung tindakan.",
+    "Sugan ayeuna can untung, tapi tong hilap, tiap analisa téh tabungan pangalaman.",
+    "Tenang lain berarti nyerah, tapi ngatur posisi jeung nunggu waktu nu pas.",
+    "Sagalana dimimitian ku niat, dilaksanakeun ku disiplin, jeung dipanen ku waktu."
+    "“Suatu saat akan datang hari di mana semua akan menjadi kenangan.” – Erza Scarlet (Fairy Tail)",
+    "“Lebih baik menerima kejujuran yang pahit, daripada kebohongan yang manis.” – Soichiro Yagami (Death Note)",
+    "“Jangan menyerah. Hal memalukan bukanlah ketika kau jatuh, tetapi ketika kau tidak mau bangkit lagi.” – Midorima Shintarou (Kuroko no Basuke)",
+    "“Jangan khawatirkan apa yang dipikirkan orang lain. Tegakkan kepalamu dan melangkahlah ke depan.” – Izuku Midoriya (Boku no Hero Academia)",
+    "“Tuhan tak akan menempatkan kita di sini melalui derita demi derita bila Ia tak yakin kita bisa melaluinya.” – Kano Yuki (Sword Art Online)",
+    "“Mula-mula, kau harus mengubah dirimu sendiri atau tidak akan ada yang berubah untukmu.” – Sakata Gintoki (Gintama)",
+    "“Banyak orang gagal karena mereka tidak memahami usaha yang diperlukan untuk menjadi sukses.” – Yukino Yukinoshita (Oregairu)",
+    "“Kekuatan sejati dari umat manusia adalah bahwa kita memiliki kuasa penuh untuk mengubah diri kita sendiri.” – Saitama (One Punch Man)",
+    "“Hidup bukanlah permainan keberuntungan. Jika kau ingin menang, kau harus bekerja keras.” – Sora (No Game No Life)",
+    "“Kita harus mensyukuri apa yang kita punya saat ini karena mungkin orang lain belum tentu mempunyainya.” – Kayaba Akihiko (Sword Art Online)",
+    "“Kalau kau ingin menangis karena gagal, berlatihlah lebih keras lagi sehingga kau pantas menangis ketika kau gagal.” – Megumi Takani (Samurai X)",
+    "“Ketika kau bekerja keras dan gagal, penyesalan itu akan cepat berlalu. Berbeda dengan penyesalan ketika tidak berani mencoba.” – Akihiko Usami (Junjou Romantica)",
+    "“Ketakutan bukanlah kejahatan. Itu memberitahukan apa kelemahanmu. Dan begitu tahu kelemahanmu, kamu bisa menjadi lebih kuat.” – Gildarts (Fairy Tail)",
+    "“Untuk mendapatkan kesuksesan, keberanianmu harus lebih besar daripada ketakutanmu.” – Han Juno (Eureka Seven)",
+    "“Kegagalan seorang pria yang paling sulit yaitu ketika dia gagal untuk menghentikan air mata seorang wanita.” – Kasuka Heiwajima (Durarara!)",
+    "“Air mata palsu bisa menyakiti orang lain. Tapi, senyuman palsu hanya akan menyakiti dirimu sendiri.” – C.C (Code Geass)",
+    "“Kita harus menjalani hidup kita sepenuhnya. Kamu tidak pernah tahu, kita mungkin sudah mati besok.” – Kaori Miyazono (Shigatsu wa Kimi no Uso)",
+    "“Bagaimana kamu bisa bergerak maju kalau kamu terus menyesali masa lalu?” – Edward Elric (Fullmetal Alchemist: Brotherhood)",
+    "“Jika kau seorang pria, buatlah wanita yang kau cintai jatuh cinta denganmu apa pun yang terjadi!” – Akhio (Clannad)",
+    "“Semua laki-laki mudah cemburu dan bego, tapi perempuan malah menyukainya. Orang jadi bodoh saat jatuh cinta.” – Horo (Spice and Wolf)",
+    "“Wanita itu sangat indah, satu senyuman mereka saja sudah menjadi sebuah keajaiban.” – Onigiri (Air Gear)",
+    "“Saat kamu harus memilih satu cinta aja, pasti ada orang lain yang menangis.” – Tsubame (Ai Kora)",
+    "“Aku tidak suka hubungan yang tidak jelas.” – Senjougahara (Bakemonogatari)",
+    "“Cewek itu seharusnya lembut dan baik, dan bisa menyembuhkan luka di hati.” – Yoshii (Baka to Test)",
+    "“Keluargamu adalah pahlawanmu.” – Sinchan (C. Sinchan)"
+    "Hidup itu sederhana, kita yang membuatnya sulit. – Confucius.",
+    "Hal yang paling penting adalah menikmati hidupmu, menjadi bahagia, apa pun yang terjadi. - Audrey Hepburn.",
+    "Hidup itu bukan soal menemukan diri Anda sendiri, hidup itu membuat diri Anda sendiri. - George Bernard Shaw.",
+    "Hidup adalah mimpi bagi mereka yang bijaksana, permainan bagi mereka yang bodoh, komedi bagi mereka yang kaya, dan tragedi bagi mereka yang miskin. - Sholom Aleichem.",
+    "Kenyataannya, Anda tidak tahu apa yang akan terjadi besok. Hidup adalah pengendaraan yang gila dan tidak ada yang menjaminnya. – Eminem.",
+    "Tujuan hidup kita adalah menjadi bahagia. - Dalai Lama.",
+    "Hidup yang baik adalah hidup yang diinspirasi oleh cinta dan dipandu oleh ilmu pengetahuan. - Bertrand Russell.",
+    "Seribu orang tua bisa bermimpi, satu orang pemuda bisa mengubah dunia. – Soekarno.",
+    "Pendidikan adalah senjata paling ampuh untuk mengubah dunia. - Nelson Mandela.",
+    "Usaha dan keberanian tidak cukup tanpa tujuan dan arah perencanaan. - John F. Kennedy.",
+    "Dunia ini cukup untuk memenuhi kebutuhan manusia, bukan untuk memenuhi keserakahan manusia. - Mahatma Gandhi.",
+    "Jika kamu berpikir terlalu kecil untuk membuat sebuah perubahan, cobalah tidur di ruangan dengan seekor nyamuk. - Dalai Lama.",
+    "Anda mungkin bisa menunda, tapi waktu tidak akan menunggu. - Benjamin Franklin.",
+    "Kamu tidak perlu menjadi luar biasa untuk memulai, tapi kamu harus memulai untuk menjadi luar biasa. - Zig Ziglar.",
+    "Jangan habiskan waktumu memukuli dinding dan berharap bisa mengubahnya menjadi pintu. - Coco Chanel.",
+    "Tidak ada yang akan berhasil kecuali kau melakukannya. - Maya Angelou.",
+    "Kamu tidak bisa kembali dan mengubah awal saat kamu memulainya, tapi kamu bisa memulainya lagi dari mana kamu berada sekarang dan ubah akhirnya. - C.S Lewis.",
+    "Beberapa orang memimpikan kesuksesan, sementara yang lain bangun setiap pagi untuk mewujudkannya. - Wayne Huizenga.",
+    "Pekerjaan-pekerjaan kecil yang selesai dilakukan lebih baik daripada rencana-rencana besar yang hanya didiskusikan. - Peter Marshall.",
+    "Kita harus berarti untuk diri kita sendiri dulu sebelum kita menjadi orang yang berharga bagi orang lain. - Ralph Waldo Emerson.",
+    "Hal yang paling menyakitkan adalah kehilangan jati dirimu saat engkau terlalu mencintai seseorang. Serta lupa bahwa sebenarnya engkau juga spesial. - Ernest Hemingway.",
+    "Beberapa orang akan pergi dari hidupmu, tapi itu bukan akhir dari ceritamu. Itu cuma akhir dari bagian mereka di ceritamu. - Faraaz Kazi.",
+    "Cinta terjadi begitu singkat, namun melupakan memakan waktu begitu lama. - Pablo Neruda.",
+    "Seseorang tak akan pernah tahu betapa dalam kadar cintanya sampai terjadi sebuah perpisahan. - Kahlil Gibran.",
+    "Hubungan asmara itu seperti kaca. Terkadang lebih baik meninggalkannya dalam keadaan pecah daripada menyakiti dirimu dengan cara menyatukan mereka kembali. - D.Love.",
+    "Cinta itu seperti angin. Kau tak dapat melihatnya, tapi kau dapat merasakannya. - Nicholas Sparks.",
+    "Cinta adalah ketika kebahagiaan orang lain lebih penting dari kebahagiaanmu. - H. Jackson Brown.",
+    "Asmara bukan hanya sekadar saling memandang satu sama lain. Tapi, juga sama-sama melihat ke satu arah yang sama. - Antoine de Saint-Exupéry.",
+    "Bagaimana kau mengeja ‘cinta’? tanya Piglet. Kau tak usah mengejanya, rasakan saja, jawab Pooh. - A.A Milne.",
+    "Kehidupan adalah 10 persen apa yang terjadi terhadap Anda dan 90 persen adalah bagaimana Anda meresponnya. - Lou Holtz.",
+    "Satu-satunya keterbatasan dalam hidup adalah perilaku yang buruk. - Scott Hamilton.",
+    "Seseorang yang berani membuang satu jam waktunya tidak mengetahui nilai dari kehidupan. - Charles Darwin.",
+    "Apa yang kita pikirkan menentukan apa yang akan terjadi pada kita. Jadi jika kita ingin mengubah hidup, kita perlu sedikit mengubah pikiran kita. - Wayne Dyer.",
+    "Ia yang mengerjakan lebih dari apa yang dibayar pada suatu saat nanti akan dibayar lebih dari apa yang ia kerjakan. - Napoleon Hill.",
+    "Saya selalu mencoba untuk mengubah kemalangan menjadi kesempatan. - John D. Rockefeller.",
+    "Seseorang yang pernah melakukan kesalahan dan tidak pernah memperbaikinya berarti ia telah melakukan satu kesalahan lagi. - Konfusius.",
+    "Anda tidak akan pernah belajar sabar dan berani jika di dunia ini hanya ada kebahagiaan. - Helen Keller.",
+    "Tidak apa-apa untuk merayakan kesuksesan, tapi lebih penting untuk memperhatikan pelajaran tentang kegagalan. – Bill Gates."
+]
+
+def get_random_motivation() -> str:
+    return random.choice(MOTIVATION_QUOTES)
+
+# === Eksekusi & Kirim Sinyal ===
+if __name__ == "__main__":
+    reset_models()
+    logging.info("🚀 Memulai analisis saham...")
+    max_workers = min(8, os.cpu_count() or 1)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        results = list(executor.map(analyze_stock, STOCK_LIST))
+
+    results = [r for r in results if r]
+
+    pd.DataFrame(results).to_csv(BACKUP_CSV_PATH, index=False)
+    logging.info("✅ Backup CSV disimpan")
+
+    top_5 = sorted(results, key=lambda x: x["profit_potential_pct"], reverse=True)[:5]
+    if top_5:
+        motivation = get_random_motivation()
+        message = (
+            f"<b>🔮Hai K.N.T.L. Clan Member🔮</b>\n"
+            f"<b>Apapun Yang Sedang Kalian Hadapi Saat Ini, Ingatlah...</b>\n"
+            f"<b><i>{motivation}</i></b>\n\n"
+            f"<b>Berikut Top 5 saham pilihan berdasarkan analisa K.N.T.L.A.I 🤖:</b>\n"
+        )
+        for r in top_5:
+            message += (
+                f"\n🔹 {r['ticker']}\n"
+                f"   💰 Harga: {r['harga']:.2f}\n"
+                f"   🎯 TP: {r['take_profit']:.2f}\n"
+                f"   🛑 SL: {r['stop_loss']:.2f}\n"
+                f"   📈 Potensi Profit: {r['profit_potential_pct']:.2f}%\n"
+                f"   ✅ Probabilitas: {r['prob_success']*100:.1f}%\n"
+                f"   📌 Aksi: <b>{r['aksi'].upper()}</b>\n"
+            )
+        send_telegram_message(message)
+
+    logging.info("✅ Selesai.")
