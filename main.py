@@ -164,6 +164,7 @@ def train_lightgbm(
         learning_rate=learning_rate,
         random_state=random_state
     )
+
     if X_val is not None and y_val is not None:
         model.fit(
             X_train,
@@ -174,6 +175,7 @@ def train_lightgbm(
         )
     else:
         model.fit(X_train, y_train)
+
     return model
 
 # === Training LSTM ===
@@ -188,6 +190,7 @@ def train_lstm(
     verbose: int = 1
 ) -> Sequential:
     X_arr = np.reshape(X.values, (X.shape[0], X.shape[1], 1))
+
     model = Sequential([
         LSTM(lstm_units, return_sequences=True, input_shape=(X.shape[1], 1)),
         Dropout(dropout_rate),
@@ -196,8 +199,10 @@ def train_lstm(
         Dense(dense_units, activation="relu"),
         Dense(1)
     ])
+
     model.compile(optimizer="adam", loss="mean_squared_error")
     model.fit(X_arr, y, epochs=epochs, batch_size=batch_size, verbose=verbose)
+
     return model
 
 # === Hitung Probabilitas Arah Prediksi ===
