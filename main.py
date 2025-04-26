@@ -117,7 +117,7 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
         df.index = df.index.tz_convert("Asia/Jakarta")
         
     # === Indikator teknikal utama ===
-    df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=14).average_true_range()
+    df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=35).average_true_range()
     
     macd = trend.MACD(df["Close"])
     df["MACD"] = macd.macd()
@@ -130,16 +130,16 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["Support"] = df["Low"].rolling(window=48).min()
     df["Resistance"] = df["High"].rolling(window=48).max()
 
-    df["RSI"] = momentum.RSIIndicator(df["Close"], window=14).rsi()
-    df["SMA_14"] = trend.SMAIndicator(df["Close"], window=14).sma_indicator()
-    df["SMA_28"] = trend.SMAIndicator(df["Close"], window=28).sma_indicator()
-    df["SMA_84"] = trend.SMAIndicator(df["Close"], window=84).sma_indicator()
+    df["RSI"] = momentum.RSIIndicator(df["Close"], window=35).rsi()
+    df["SMA_14"] = trend.SMAIndicator(df["Close"], window=24).sma_indicator()
+    df["SMA_28"] = trend.SMAIndicator(df["Close"], window=48).sma_indicator()
+    df["SMA_84"] = trend.SMAIndicator(df["Close"], window=140).sma_indicator()
     df["EMA_10"] = trend.EMAIndicator(df["Close"], window=10).ema_indicator()
     df["VWAP"] = volume.VolumeWeightedAveragePrice(df["High"], df["Low"], df["Close"], df["Volume"]).volume_weighted_average_price()
-    df["ADX"] = trend.ADXIndicator(df["High"], df["Low"], df["Close"], window=14).adx()
-    df["CCI"] = trend.CCIIndicator(df["High"], df["Low"], df["Close"], window=20).cci()
-    df["Momentum"] = momentum.ROCIndicator(df["Close"], window=12).roc()
-    df["WilliamsR"] = momentum.WilliamsRIndicator(df["High"], df["Low"], df["Close"], lbp=14).williams_r()
+    df["ADX"] = trend.ADXIndicator(df["High"], df["Low"], df["Close"], window=35).adx()
+    df["CCI"] = trend.CCIIndicator(df["High"], df["Low"], df["Close"], window=24).cci()
+    df["Momentum"] = momentum.ROCIndicator(df["Close"], window=24).roc()
+    df["WilliamsR"] = momentum.WilliamsRIndicator(df["High"], df["Low"], df["Close"], lbp=24).williams_r()
 
     # === Fitur waktu harian ===
     df["hour"] = df.index.hour
