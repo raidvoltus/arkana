@@ -489,7 +489,7 @@ def retrain_if_needed(ticker: str):
         "bollinger_hband", "bollinger_lband", "bollinger_mavg", 
         "bollinger_hband_indicator", "bollinger_lband_indicator", 
         "ema", "vwap"
-    ]
+        ]
         X = df[features]
         y_high = df["future_high"]
         y_low = df["future_low"]
