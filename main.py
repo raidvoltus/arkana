@@ -383,7 +383,9 @@ def analyze_stock(ticker: str):
         "willr", "sma_fast", "sma_slow", "ema_fast", "ema_slow",
         "bollinger_hband", "bollinger_lband", "bollinger_mavg", 
         "bollinger_hband_indicator", "bollinger_lband_indicator", 
-        "ema", "vwap"
+        "ema", "vwap",
+        "daily_avg", "daily_std", "daily_range",
+        "is_opening_hour", "is_closing_hour"
     ]
     check_and_reset_model_if_needed(ticker, features)
 
