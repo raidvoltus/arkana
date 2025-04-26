@@ -14,6 +14,8 @@ import pandas as pd
 import yfinance as yf
 import lightgbm as lgb
 import tensorflow as tf
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 from typing import Optional, Dict, List, Tuple
 from ta import momentum, trend, volatility, volume
