@@ -577,12 +577,31 @@ def retrain_if_needed(ticker: str):
         df = calculate_indicators(df)
         df = df.dropna(subset=["future_high", "future_low"])
         features = [
-            "Close", "ATR", "RSI", "MACD", "MACD_Hist",
-            "SMA_14", "SMA_28", "SMA_84", "EMA_10",
-            "BB_Upper", "BB_Lower", "Support", "Resistance",
-            "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
-            "daily_avg", "daily_std", "daily_range",
-            "is_opening_hour", "is_closing_hour"
+            "Close",
+            "ATR_14",         # ATR setting 14
+            "RSI_6",          # RSI lebih sensitif
+            "StochRSI",       # Stochastic RSI
+            "MACD",           # MACD Line
+            "MACD_Signal",    # MACD Signal Line
+            "MACD_Hist",      # MACD Histogram
+            "ADX_14",         # ADX trend strength
+            "BB_width",       # Bollinger Band width (volatilitas)
+            "MFI_14",         # Money Flow Index
+            "OBV",            # On Balance Volume
+            "SMA_20",         # SMA 20 sebagai baseline trend
+            "EMA_10",         # EMA 10
+            "EMA_Slope",      # Kemiringan EMA
+            "Support_24h",    # Support level
+            "Resistance_24h", # Resistance level
+            "ROC_6",          # Rate of Change jangka pendek
+            "Supertrend",     # Trend naik/turun binary
+            "daily_avg",      # Rata-rata harian
+            "daily_std",      # Standard deviasi harian
+            "daily_range",    # Range harian
+            "is_opening_hour",
+            "is_closing_hour",
+            "hour",
+            "day_of_week"     # Tambahan fitur waktu supaya model tau weekday bias
         ]
         X = df[features]
         y_high = df["future_high"]
