@@ -180,11 +180,10 @@ def calculate_indicators_prediksi_besok(df: pd.DataFrame) -> pd.DataFrame:
     # === Target harga besok ===
     df["future_high_1d"] = df["High"].shift(-HOURS_PER_DAY).rolling(HOURS_PER_DAY).max()
     df["future_low_1d"] = df["Low"].shift(-HOURS_PER_DAY).rolling(HOURS_PER_DAY).min()
-
+    
+    df = load_data()
+    df = calculate_indicators(df)
     return df.dropna()
-
-df = load_data()
-df = calculate_indicators(df)
     
 # === Training LightGBM ===
 def train_lightgbm(
