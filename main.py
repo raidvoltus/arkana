@@ -490,7 +490,9 @@ def retrain_if_needed(ticker: str):
         "willr", "sma_fast", "sma_slow", "ema_fast", "ema_slow",
         "bollinger_hband", "bollinger_lband", "bollinger_mavg", 
         "bollinger_hband_indicator", "bollinger_lband_indicator", 
-        "ema", "vwap"
+        "ema", "vwap",
+        "daily_avg", "daily_std", "daily_range",
+        "is_opening_hour", "is_closing_hour"
         ]
         X = df[features]
         y_high = df["future_high"]
