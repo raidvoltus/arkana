@@ -284,26 +284,36 @@ def check_and_reset_model_if_needed(ticker: str, current_features: List[str]):
         logging.debug(f"{ticker}: Struktur fitur sama — model tidak di-reset")
         
 
-# Konstanta threshold (letakkan di atas fungsi analyze_stock)
+# === Konstanta Threshold ===
 MIN_PRICE = 1000
 MAX_PRICE = 2000
 MIN_VOLUME = 10000
 MIN_VOLATILITY = 0.005
 MIN_PROB = 0.9
 
-def is_stock_eligible(price, avg_volume, atr, ticker):
+# === Fungsi Cek Kelayakan Saham ===
+def is_stock_eligible(price: float, avg_volume: float, atr: float, ticker: str) -> bool:
+    # Cek harga terlalu rendah
     if price < MIN_PRICE:
         logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
         return False
+
+    # Cek harga terlalu tinggi
     if price > MAX_PRICE:
         logging.info(f"{ticker} dilewati: harga terlalu tinggi ({price:.2f})")
         return False
+
+    # Cek volume rata-rata terlalu rendah
     if avg_volume < MIN_VOLUME:
         logging.info(f"{ticker} dilewati: volume terlalu rendah ({avg_volume:.0f})")
         return False
+
+    # Cek volatilitas (ATR) terlalu rendah
     if (atr / price) < MIN_VOLATILITY:
         logging.info(f"{ticker} dilewati: volatilitas terlalu rendah (ATR={atr:.4f})")
         return False
+
+    # Jika semua kondisi terpenuhi, saham dianggap eligible
     return True
 
 def prepare_features_and_labels(df, features):
