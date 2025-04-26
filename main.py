@@ -242,7 +242,8 @@ def load_or_train_model(path, train_func, X, y):
         logging.info(f"Trained & saved model to {path}")
     return model
     
-def get_feature_hash(features: list[str]) -> str:
+# === Fungsi Menghitung Hash Fitur ===
+def get_feature_hash(features: List[str]) -> str:
     features_str = ",".join(sorted(features))
     return hashlib.md5(features_str.encode()).hexdigest()
 
