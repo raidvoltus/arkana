@@ -95,19 +95,18 @@ def send_telegram_message(message: str):
         logging.error(f"Telegram error: {e}")
 
 # === Ambil & Validasi Data Saham ===
-def get_stock_data(ticker: str) -> pd.DataFrame:
+def get_stock_data(ticker: str) -> Optional[pd.DataFrame]:
     try:
-        # Gunakan 60 hari jika pakai interval 1 jam
         stock = yf.Ticker(ticker)
-        df = stock.history(period="1y", interval="1h")
+        df = stock.history(period="1y", interval="1h")  # 1 tahun data, interval 1 jam
 
         required_cols = ["High", "Low", "Close", "Volume"]
         if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
             df["ticker"] = ticker
             return df
 
-        logging.warning(f"{ticker}: Data kosong/kurang atau kolom tidak lengkap.")
-        logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
+        logging.warning(f"{ticker}: Data kosong, kurang, atau kolom tidak lengkap.")
+        logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist() if df is not None else 'No DataFrame'}")
     except Exception as e:
         logging.error(f"Error mengambil data {ticker}: {e}")
     return None
