@@ -456,31 +456,31 @@ def analyze_stock(ticker: str):
         return None
 
     features = [
-    "Close",
-    "ATR_14",         # ATR setting 14
-    "RSI_6",          # RSI lebih sensitif
-    "StochRSI",       # Stochastic RSI
-    "MACD",           # MACD Line
-    "MACD_Signal",    # MACD Signal Line
-    "MACD_Hist",      # MACD Histogram
-    "ADX_14",         # ADX trend strength
-    "BB_width",       # Bollinger Band width (volatilitas)
-    "MFI_14",         # Money Flow Index
-    "OBV",            # On Balance Volume
-    "SMA_20",         # SMA 20 sebagai baseline trend
-    "EMA_10",         # EMA 10
-    "EMA_Slope",      # Kemiringan EMA
-    "Support_24h",    # Support level
-    "Resistance_24h", # Resistance level
-    "ROC_6",          # Rate of Change jangka pendek
-    "Supertrend",     # Trend naik/turun binary
-    "daily_avg",      # Rata-rata harian
-    "daily_std",      # Standard deviasi harian
-    "daily_range",    # Range harian
-    "is_opening_hour",
-    "is_closing_hour",
-    "hour",
-    "day_of_week"     # Tambahan fitur waktu supaya model tau weekday bias
+        "Close",
+        "ATR_14",         # ATR setting 14
+        "RSI_6",          # RSI lebih sensitif
+        "StochRSI",       # Stochastic RSI
+        "MACD",           # MACD Line
+        "MACD_Signal",    # MACD Signal Line
+        "MACD_Hist",      # MACD Histogram
+        "ADX_14",         # ADX trend strength
+        "BB_width",       # Bollinger Band width (volatilitas)
+        "MFI_14",         # Money Flow Index
+        "OBV",            # On Balance Volume
+        "SMA_20",         # SMA 20 sebagai baseline trend
+        "EMA_10",         # EMA 10
+        "EMA_Slope",      # Kemiringan EMA
+        "Support_24h",    # Support level
+        "Resistance_24h", # Resistance level
+        "ROC_6",          # Rate of Change jangka pendek
+        "Supertrend",     # Trend naik/turun binary
+        "daily_avg",      # Rata-rata harian
+        "daily_std",      # Standard deviasi harian
+        "daily_range",    # Range harian
+        "is_opening_hour",
+        "is_closing_hour",
+        "hour",
+        "day_of_week"     # Tambahan fitur waktu supaya model tau weekday bias
     ]
     check_and_reset_model_if_needed(ticker, features)
 
