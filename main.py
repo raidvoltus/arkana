@@ -69,7 +69,6 @@ STOCK_LIST = [
 ]
 
 # === Logging Setup ===
-logging.info(f"{ticker}: Analisis selesai. Aksi: {aksi}, Potensi: {profit_potential_pct:.2f}%")
 log_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 log_handler   = RotatingFileHandler("trading.log", maxBytes=5*1024*1024, backupCount=3)
 log_handler.setFormatter(log_formatter)
@@ -384,6 +383,7 @@ def analyze_stock(ticker: str):
 
     if not is_stock_eligible(price, avg_volume, atr, ticker):
         logging.debug(f"{ticker}: Tidak memenuhi kriteria awal.")
+        logging.info(f"{ticker}: Analisis selesai. Aksi: {aksi}, Potensi: {profit_potential_pct:.2f}%")
         return None
 
     features = [
