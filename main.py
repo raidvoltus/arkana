@@ -480,13 +480,16 @@ def retrain_if_needed(ticker: str):
         df = calculate_indicators(df)
         df = df.dropna(subset=["future_high", "future_low"])
         features = [
-            "Close", "ATR", "RSI", "MACD", "MACD_Hist",
-            "SMA_14", "SMA_28", "SMA_84", "EMA_10",
-            "BB_Upper", "BB_Lower", "Support", "Resistance",
-            "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
-            "daily_avg", "daily_std", "daily_range",
-            "is_opening_hour", "is_closing_hour"
-        ]
+        "close", "high", "low", "volume", "atr",
+        "rsi", "macd", "macd_diff", "macd_signal",
+        "stoch_rsi", "stoch_rsi_k", "stoch_rsi_d", 
+        "cci", "adx", "adxr", "pvo", "pvo_signal", 
+        "mom", "momentum", "ao", "apo", "roc", 
+        "willr", "sma_fast", "sma_slow", "ema_fast", "ema_slow",
+        "bollinger_hband", "bollinger_lband", "bollinger_mavg", 
+        "bollinger_hband_indicator", "bollinger_lband_indicator", 
+        "ema", "vwap"
+    ]
         X = df[features]
         y_high = df["future_high"]
         y_low = df["future_low"]
