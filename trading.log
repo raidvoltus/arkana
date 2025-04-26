@@ -1,29 +1,32 @@
-2025-04-26 19:26:42.722596: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-26 19:26:42.725674: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-26 19:26:42.734145: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745695602.748380    2053 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745695602.752549    2053 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745695602.764157    2053 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745695602.764173    2053 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745695602.764176    2053 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745695602.764178    2053 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-26 19:26:42.767666: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-Tidak ada model yang ditemukan untuk dihapus.
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 866, in <module>
-    results = list(executor.map(analyze_stock, STOCK_LIST))
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
-    yield _result_or_cancel(fs.pop())
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
-    return fut.result(timeout)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 458, in result
-    return self.__get_result()
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
-    raise self._exception
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/home/runner/work/arkana/arkana/main.py", line 421, in analyze_stock
-    df = calculate_indicators(df)
-NameError: name 'calculate_indicators' is not defined
+2025-04-26 19:52:05,530 - WARNING - DEAL.JK: ATR kosong setelah kalkulasi.
+2025-04-26 19:52:05,692 - WARNING - DEFI.JK: ATR kosong setelah kalkulasi.
+2025-04-26 19:52:09,339 - WARNING - DUCK.JK: ATR kosong setelah kalkulasi.
+2025-04-26 19:52:25,812 - ERROR - $ERA.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-26 19:52:25,813 - WARNING - ERA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 19:52:25,813 - ERROR - ERA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 19:52:39,948 - WARNING - FASW.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 19:52:39,949 - ERROR - FASW.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 19:52:40,422 - WARNING - FISH.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 19:52:40,423 - ERROR - FISH.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 19:53:39,254 - WARNING - GAMA.JK: ATR kosong setelah kalkulasi.
+2025-04-26 19:53:43,658 - WARNING - HDTX.JK: ATR kosong setelah kalkulasi.
+2025-04-26 19:53:44,776 - WARNING - HKMU.JK: ATR kosong setelah kalkulasi.
+2025-04-26 19:54:10,614 - WARNING - INAF.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 19:54:10,614 - ERROR - INAF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 19:57:24,188 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
+2025-04-26 19:58:44,262 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 19:58:44,263 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 19:59:43,786 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 19:59:43,787 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 20:01:19,768 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 20:01:19,768 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 20:01:43,923 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
+2025-04-26 20:03:02,064 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
+2025-04-26 20:06:12,573 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 20:06:12,574 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 20:06:36,397 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-26 20:06:36,399 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 20:06:36,399 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-26 20:07:22,970 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
+2025-04-26 20:07:23,093 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-26 20:07:23,093 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
