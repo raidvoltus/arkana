@@ -74,6 +74,11 @@ log_handler   = RotatingFileHandler("trading.log", maxBytes=5*1024*1024, backupC
 log_handler.setFormatter(log_formatter)
 logging.getLogger().addHandler(log_handler)
 logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.StreamHandler()]
+)
 def log_prediction(ticker: str, tanggal: str, pred_high: float, pred_low: float, harga_awal: float):
     with open("prediksi_log.csv", "a") as f:
         f.write(f"{ticker},{tanggal},{harga_awal},{pred_high},{pred_low}\n")
