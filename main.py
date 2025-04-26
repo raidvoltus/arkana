@@ -216,11 +216,13 @@ def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
     y_pred_series = pd.Series(y_pred, index=X.index)
     close_price = X["Close"]
 
-    correct_dir = ((y_pred_series > close_price) & (y_true > close_price)) | \
-                  ((y_pred_series < close_price) & (y_true < close_price))
+    correct_dir = (
+        ((y_pred_series > close_price) & (y_true > close_price)) |
+        ((y_pred_series < close_price) & (y_true < close_price))
+    )
     correct_dir = correct_dir.dropna()
 
-    if len(correct_dir) == 0:
+    if correct_dir.empty:
         return 0.0
 
     return correct_dir.sum() / len(correct_dir)
