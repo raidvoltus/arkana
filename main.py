@@ -282,7 +282,7 @@ def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
         
 
 # Konstanta threshold (letakkan di atas fungsi analyze_stock)
-MIN_PRICE = 500
+MIN_PRICE = 1000
 MAX_PRICE = 2000
 MIN_VOLUME = 10000
 MIN_VOLATILITY = 0.005
@@ -764,7 +764,7 @@ if __name__ == "__main__":
     pd.DataFrame(results).to_csv(BACKUP_CSV_PATH, index=False)
     logging.info("✅ Backup CSV disimpan")
 
-    top_5 = sorted(results, key=lambda x: x["profit_potential_pct"], reverse=True)[:5]
+    top_5 = sorted(results, key=lambda x: x["profit_potential_pct"], reverse=True)[:10]
     if top_5:
         motivation = get_random_motivation()
         message = (
