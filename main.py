@@ -247,7 +247,8 @@ def get_feature_hash(features: List[str]) -> str:
     features_str = ",".join(sorted(features))
     return hashlib.md5(features_str.encode()).hexdigest()
 
-def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
+# === Cek dan Reset Model Jika Diperlukan ===
+def check_and_reset_model_if_needed(ticker: str, current_features: List[str]):
     current_hash = get_feature_hash(current_features)
 
     try:
@@ -256,23 +257,24 @@ def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
     except FileNotFoundError:
         saved_hashes = {}
 
+    # Jika hash saat ini tidak sama dengan hash yang disimpan
     if saved_hashes.get(ticker) != current_hash:
         logging.info(f"{ticker}: Struktur fitur berubah — melakukan reset model")
 
-        # Hapus LightGBM
+        # Hapus model LightGBM (high, low)
         for suffix in ["high", "low"]:
             model_path = f"model_{suffix}_{ticker}.pkl"
             if os.path.exists(model_path):
                 os.remove(model_path)
                 logging.info(f"{ticker}: Model LightGBM '{suffix}' dihapus")
 
-        # Hapus LSTM
+        # Hapus model LSTM
         lstm_path = f"model_lstm_{ticker}.keras"
         if os.path.exists(lstm_path):
             os.remove(lstm_path)
             logging.info(f"{ticker}: Model LSTM dihapus")
 
-        # Simpan hash baru
+        # Simpan hash baru ke file
         saved_hashes[ticker] = current_hash
         with open(HASH_PATH, "w") as f:
             json.dump(saved_hashes, f, indent=2)
