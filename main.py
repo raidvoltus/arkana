@@ -236,4 +236,51 @@ def main():
     top_n = 5  
     top_signals = results[:top_n]
 
+def evaluate_prediction_accuracy() -> Dict[str, float]:
+    log_path = "prediksi_log.csv"
+    if not os.path.exists(log_path):
+        logging.warning("File prediksi_log.csv tidak ditemukan.")
+        return {}
+
+    try:
+        df_log = pd.read_csv(log_path, names=["tanggal", "ticker", "action", "target", "predicted"], header=0)
+        df_log["tanggal"] = pd.to_datetime(df_log["tanggal"])
+
+        accuracy_map = {}
+
+        for ticker in df_log["ticker"].unique():
+            df_ticker = df_log[df_log["ticker"] == ticker]
+            correct_preds = (df_ticker["action"] == df_ticker["predicted"]).sum()
+            total_preds = len(df_ticker)
+
+            if total_preds > 0:
+                accuracy_map[ticker] = correct_preds / total_preds
+            else:
+                accuracy_map[ticker] = 1.0
+
+        return accuracy_map
+    except Exception as e:
+        logging.error(f"Error saat evaluasi akurasi prediksi: {e}")
+        return {}
+
+# === Main Function ===
+if __name__ == "__main__":
+    # Menjalankan main function yang akan mengambil data dan menganalisa saham
+    logging.info("Memulai analisis saham...")
+    
+    with ThreadPoolExecutor() as executor:
+        # Analisis saham untuk setiap ticker dalam STOCK_LIST
+        results = list(filter(None, executor.map(analyze_stock, STOCK_LIST)))
+        
+        # Mengurutkan hasil berdasarkan potensi profit tertinggi
+        results = sorted(results, key=lambda x: x["profit_potential_pct"], reverse=True)
+        
+        # Menampilkan Top N sinyal (misalnya 5 sinyal terbaik)
+        top_n = 5  # atau bisa diubah menjadi 1 jika hanya ingin satu sinyal terbaik
+        top_signals = results[:top_n]
+        
+        for signal in top_signals:
+            logging.info(f"Signal: {signal}")
+
+    logging.info("Analisis saham selesai.")
    
