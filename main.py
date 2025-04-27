@@ -228,19 +228,22 @@ def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
     return correct_dir.sum() / len(correct_dir)
 
 # Fungsi load_or_train_model (letakkan sebelum atau setelah analyze_stock)
-def load_or_train_model(path, train_func, X, y):
-    if os.path.exists(path):
-        model = joblib.load(path) if path.endswith(".pkl") else load_model(path)
-        logging.info(f"Loaded model from {path}")
-    else:
-        model = train_func(X, y)
-        with model_save_lock:
-            if path.endswith(".pkl"):
-                joblib.dump(model, path)
-            else:
-                model.save(path)
-        logging.info(f"Trained & saved model to {path}")
-    return model
+def load_or_train_models(model_paths, train_funcs, X, y):
+    models = []
+    for path, train_func in zip(model_paths, train_funcs):
+        if os.path.exists(path):
+            model = joblib.load(path) if path.endswith(".pkl") else load_model(path)
+            logging.info(f"Loaded model from {path}")
+        else:
+            model = train_func(X, y)
+            with model_save_lock:
+                if path.endswith(".pkl"):
+                    joblib.dump(model, path)
+                else:
+                    model.save(path)
+            logging.info(f"Trained & saved model to {path}")
+        models.append(model)
+    return models
     
 def get_feature_hash(features: list[str]) -> str:
     features_str = ",".join(sorted(features))
