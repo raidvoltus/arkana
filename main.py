@@ -670,12 +670,6 @@ def evaluate_prediction_accuracy() -> Dict[str, float]:
 
     return akurasi_per_ticker
     
-import hashlib
-import json
-import os
-import glob
-import logging
-
 def check_and_reset_model_if_needed(ticker, features):
     hash_path = f"model_feature_hashes.json"
     
