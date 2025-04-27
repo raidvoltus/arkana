@@ -112,7 +112,7 @@ def train_lstm(X, y):
 
 # === Fungsi Ambil Data Saham ===
 def fetch_stock_data(ticker):
-    df = yf.download(ticker, period="90d", interval="1d", progress=False)
+    df = yf.download(ticker, period="730d", interval="1d", progress=False)
     if df.empty:
         return None
     df["return"] = df["Close"].pct_change()
