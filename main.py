@@ -38,6 +38,15 @@ MOTIVATION_QUOTES = [
     "Tidak apa-apa untuk merayakan kesuksesan, tapi lebih penting untuk memperhatikan pelajaran tentang kegagalan. – Bill Gates."
 ]
 
+# === Fungsi Kirim Telegram ===
+def send_telegram_message(message: str):
+    url  = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    data = {"chat_id": CHAT_ID, "text": message, "parse_mode": "HTML"}
+    try:
+        requests.post(url, data=data)
+    except Exception as e:
+        logging.error(f"Telegram error: {e}")
+        
 # === Fungsi Reset Model ===
 def reset_models():
     patterns = [
