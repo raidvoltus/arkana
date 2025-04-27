@@ -249,9 +249,6 @@ def main():
             )
         send_telegram_message(message)
 
-    # Kirim Motivasi
-    send_telegram_message(get_random_motivation())
-
     logging.info("Analisis saham selesai.")
 
 if __name__ == "__main__":
