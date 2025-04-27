@@ -257,21 +257,23 @@ def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
 
     return correct_dir.sum() / len(correct_dir)
 
-# Fungsi load_or_train_model (letakkan sebelum atau setelah analyze_stock)
+# Fungsi load_or_train_model
 def load_or_train_model(path, train_func, X, y):
     if os.path.exists(path):
-        model = joblib.load(path) if path.endswith(".pkl") else load_model(path)
+        model = joblib.load(path) if path.endswith(".pkl") else tf.keras.models.load_model(path)
         logging.info(f"Loaded model from {path}")
     else:
         model = train_func(X, y)
         with model_save_lock:
             if path.endswith(".pkl"):
+                # Simpan model XGBoost atau LightGBM dalam format .pkl
                 joblib.dump(model, path)
             else:
+                # Simpan model LSTM dalam format .keras
                 model.save(path)
         logging.info(f"Trained & saved model to {path}")
     return model
-    
+
 def get_feature_hash(features: list[str]) -> str:
     features_str = ",".join(sorted(features))
     return hashlib.md5(features_str.encode()).hexdigest()
@@ -288,14 +290,21 @@ def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
     if saved_hashes.get(ticker) != current_hash:
         logging.info(f"{ticker}: Struktur fitur berubah — melakukan reset model")
 
-        # Hapus LightGBM
+        # Hapus model XGBoost jika ada
         for suffix in ["high", "low"]:
-            model_path = f"model_{suffix}_{ticker}.pkl"
-            if os.path.exists(model_path):
-                os.remove(model_path)
+            model_path_xgb = f"model_xgb_{suffix}_{ticker}.pkl"
+            if os.path.exists(model_path_xgb):
+                os.remove(model_path_xgb)
+                logging.info(f"{ticker}: Model XGBoost '{suffix}' dihapus")
+
+        # Hapus model LightGBM jika ada
+        for suffix in ["high", "low"]:
+            model_path_lgb = f"model_lgb_{suffix}_{ticker}.pkl"
+            if os.path.exists(model_path_lgb):
+                os.remove(model_path_lgb)
                 logging.info(f"{ticker}: Model LightGBM '{suffix}' dihapus")
 
-        # Hapus LSTM
+        # Hapus model LSTM jika ada
         lstm_path = f"model_lstm_{ticker}.keras"
         if os.path.exists(lstm_path):
             os.remove(lstm_path)
@@ -310,7 +319,6 @@ def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
     else:
         logging.debug(f"{ticker}: Struktur fitur sama — model tidak di-reset")
         
-
 # Konstanta threshold (letakkan di atas fungsi analyze_stock)
 MIN_PRICE = 500
 MAX_PRICE = 2000
