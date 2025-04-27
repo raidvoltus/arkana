@@ -26,6 +26,8 @@ logging.basicConfig(
 )
 
 # === Global Constants ===
+TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN")
+CHAT_ID          = os.environ.get("CHAT_ID")
 BACKUP_CSV_PATH = "backup_results.csv"
 STOCK_LIST = ["BBRI.JK", "BBCA.JK", "BMRI.JK", "TLKM.JK", "ASII.JK"]
 
