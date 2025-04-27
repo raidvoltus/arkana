@@ -8,6 +8,7 @@ import json
 import requests
 import random
 import logging
+import xgboost as xgb
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -155,6 +156,35 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     return df.dropna()
 
+# === Training XGBoost ===
+def train_xgboost(
+    X_train: pd.DataFrame,
+    y_train: pd.Series,
+    X_val: Optional[pd.DataFrame] = None,
+    y_val: Optional[pd.Series] = None,
+    n_estimators: int = 500,
+    learning_rate: float = 0.05,
+    early_stopping_rounds: Optional[int] = 50,
+    random_state: int = 42
+) -> xgb.XGBRegressor:
+    model = xgb.XGBRegressor(
+        n_estimators=n_estimators,
+        learning_rate=learning_rate,
+        random_state=random_state,
+        objective="reg:squarederror"
+    )
+    if X_val is not None and y_val is not None:
+        model.fit(
+            X_train,
+            y_train,
+            eval_set=[(X_val, y_val)],
+            early_stopping_rounds=early_stopping_rounds,
+            verbose=False
+        )
+    else:
+        model.fit(X_train, y_train)
+    return model
+    
 # === Training LightGBM ===
 def train_lightgbm(
     X_train: pd.DataFrame,
