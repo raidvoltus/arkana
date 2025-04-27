@@ -5,6 +5,7 @@ import json
 import logging
 import random
 import joblib
+import xgboost as xgb
 import yfinance as yf
 import pandas as pd
 import numpy as np
