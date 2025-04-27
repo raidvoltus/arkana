@@ -228,15 +228,25 @@ def main():
     logging.info(f"Hasil disimpan ke {BACKUP_CSV_PATH}")
 
     # Kirim Telegram
-    for signal in top_signals:
+    top_5 = sorted(results, key=lambda x: x["profit_potential_pct"], reverse=True)[:5]
+    if top_5:
+        motivation = get_random_motivation()
         message = (
-            f"<b>{signal['ticker']}</b>\n"
-            f"Harga Saat Ini: {signal['harga']:.2f}\n"
-            f"Take Profit: {signal['take_profit']:.2f}\n"
-            f"Stop Loss: {signal['stop_loss']:.2f}\n"
-            f"Rekomendasi: <b>{signal['aksi']}</b>\n"
-            f"Probabilitas Sukses: {signal['prob_success']:.2%}\n"
+            f"<b>🔮Hai K.N.T.L. Clan Member🔮</b>\n"
+            f"<b>Apapun Yang Sedang Kalian Hadapi Saat Ini, Ingatlah...</b>\n"
+            f"<b><i>{motivation}</i></b>\n\n"
+            f"<b>Berikut Top 5 saham pilihan berdasarkan analisa K.N.T.L. AI:</b>\n"
         )
+        for r in top_5:
+            message += (
+                f"\n🔹 {r['ticker']}\n"
+                f"   💰 Harga: {r['harga']:.2f}\n"
+                f"   🎯 TP: {r['take_profit']:.2f}\n"
+                f"   🛑 SL: {r['stop_loss']:.2f}\n"
+                f"   📈 Potensi Profit: {r['profit_potential_pct']:.2f}%\n"
+                f"   ✅ Probabilitas: {r['prob_success']*100:.1f}%\n"
+                f"   📌 Aksi: <b>{r['aksi'].upper()}</b>\n"
+            )
         send_telegram_message(message)
 
     # Kirim Motivasi
