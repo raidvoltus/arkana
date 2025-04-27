@@ -100,13 +100,15 @@ def train_best_model(X, y, model_type="lgbm"):
 
 # === Fungsi Train LSTM ===
 def train_lstm(X, y):
+    # Memastikan data memiliki dimensi yang benar
+    X = X.reshape((X.shape[0], X.shape[1], 1))  # Menambahkan dimensi ketiga
     model = keras.Sequential([
-        keras.layers.Input(shape=(X.shape[1], 1)),
+        keras.layers.Input(shape=(X.shape[1], 1)),  # Sesuaikan dengan dimensi input
         keras.layers.LSTM(64),
         keras.layers.Dense(1, activation='sigmoid')
     ])
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-    model.fit(X.reshape((X.shape[0], X.shape[1], 1)), y, epochs=10, batch_size=32, verbose=0)
+    model.fit(X, y, epochs=10, batch_size=32, verbose=0)
     return model
 
 # === Fungsi Ambil Data Saham ===
