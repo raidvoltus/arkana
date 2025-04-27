@@ -151,23 +151,27 @@ def analyze_stock(ticker):
         if df is None or len(df) < 30:
             return None
 
-        feature_cols = ["return", "sma_5", "sma_20", "rsi_14", "macd", "macd_signal", "bollinger_h", "bollinger_l", "atr_14", "stoch_k", "stoch_d", "cci", "williams_r"]
-        X = df[feature_cols].values
+        feature_cols = ["return", "sma_5", "sma_20"]
+        X_raw = df[feature_cols].values
         y = (df["Close"].shift(-1) > df["Close"]).astype(int).values[:-1]
-        X = X[:-1]
+        X_raw = X_raw[:-1]
 
-        # Merubah dimensi X untuk LSTM (menambahkan dimensi ketiga)
-        X = X.reshape((X.shape[0], X.shape[1], 1))
+        # Split untuk model 2D
+        X_train_2d, X_test_2d, y_train, y_test = train_test_split(X_raw, y, test_size=0.2, random_state=42)
 
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        # Split untuk model 3D (LSTM)
+        X_train_3d = X_train_2d.reshape((X_train_2d.shape[0], X_train_2d.shape[1], 1))
+        X_test_3d = X_test_2d.reshape((X_test_2d.shape[0], X_test_2d.shape[1], 1))
 
-        lgbm_model = train_best_model(X_train, y_train, model_type="lgbm")
-        xgb_model = train_best_model(X_train, y_train, model_type="xgb")
-        lstm_model = train_lstm(X_train, y_train)
+        # Training
+        lgbm_model = train_best_model(X_train_2d, y_train, model_type="lgbm")
+        xgb_model = train_best_model(X_train_2d, y_train, model_type="xgb")
+        lstm_model = train_lstm(X_train_3d, y_train)
 
-        preds_lgbm = lgbm_model.predict(X_test)
-        preds_xgb = xgb_model.predict(X_test)
-        preds_lstm = (lstm_model.predict(X_test) > 0.5).astype(int).flatten()
+        # Prediksi
+        preds_lgbm = lgbm_model.predict(X_test_2d)
+        preds_xgb = xgb_model.predict(X_test_2d)
+        preds_lstm = (lstm_model.predict(X_test_3d) > 0.5).astype(int).flatten()
 
         final_preds = (preds_lgbm + preds_xgb + preds_lstm) >= 2
         acc = accuracy_score(y_test, final_preds)
