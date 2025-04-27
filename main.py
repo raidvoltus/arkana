@@ -670,9 +670,17 @@ def evaluate_prediction_accuracy() -> Dict[str, float]:
 
     return akurasi_per_ticker
     
+import hashlib
+import json
+import os
+import glob
+import logging
+
 def check_and_reset_model_if_needed(ticker, features):
     hash_path = f"model_feature_hashes.json"
-    current_hash = hash(json.dumps(features, sort_keys=True))
+    
+    # Hitung hash untuk fitur saat ini
+    current_hash = hashlib.md5(json.dumps(features, sort_keys=True).encode()).hexdigest()
 
     saved_hashes = {}
     if os.path.exists(hash_path):
@@ -685,21 +693,39 @@ def check_and_reset_model_if_needed(ticker, features):
             logging.warning("Hash file corrupted, resetting...")
             saved_hashes = {}
 
+    # Jika hash fitur berbeda, reset model
     if saved_hashes.get(ticker) != current_hash:
         logging.info(f"Fitur berubah untuk {ticker}, reset model.")
-        for fname in [f"model_high_{ticker}.pkl", f"model_low_{ticker}.pkl", f"model_lstm_{ticker}.keras"]:
+        
+        # Hapus model-model yang sudah ada
+        model_files = [
+            f"model_high_lgb_{ticker}.pkl",  # LightGBM
+            f"model_low_lgb_{ticker}.pkl",   # LightGBM
+            f"model_high_xgb_{ticker}.pkl",  # XGBoost
+            f"model_low_xgb_{ticker}.pkl",   # XGBoost
+            f"model_lstm_{ticker}.keras"     # LSTM
+        ]
+        
+        for fname in model_files:
             if os.path.exists(fname):
                 os.remove(fname)
+                logging.info(f"Model {fname} dihapus.")
+        
+        # Simpan hash baru untuk fitur
         saved_hashes[ticker] = current_hash
         with open(hash_path, "w") as f:
             json.dump(saved_hashes, f, indent=2)
-    
+    else:
+        logging.info(f"Fitur untuk {ticker} tidak berubah, model tidak di-reset.")
+
 def reset_models():
     # Pola file model
     patterns = [
-        "model_high_*.pkl",
-        "model_low_*.pkl",
-        "model_lstm_*.keras"
+        "model_high_lgb_*.pkl",  # LightGBM
+        "model_low_lgb_*.pkl",   # LightGBM
+        "model_high_xgb_*.pkl",  # XGBoost
+        "model_low_xgb_*.pkl",   # XGBoost
+        "model_lstm_*.keras"     # LSTM
     ]
 
     total_deleted = 0
@@ -707,15 +733,15 @@ def reset_models():
         for filepath in glob.glob(pattern):
             try:
                 os.remove(filepath)
-                print(f"Dihapus: {filepath}")
+                logging.info(f"Dihapus: {filepath}")
                 total_deleted += 1
             except Exception as e:
-                print(f"Gagal menghapus {filepath}: {e}")
+                logging.error(f"Gagal menghapus {filepath}: {e}")
     
     if total_deleted == 0:
-        print("Tidak ada model yang ditemukan untuk dihapus.")
+        logging.info("Tidak ada model yang ditemukan untuk dihapus.")
     else:
-        print(f"Total {total_deleted} model dihapus.")
+        logging.info(f"Total {total_deleted} model dihapus.")
         
 # === Daftar Kutipan Motivasi ===
 MOTIVATION_QUOTES = [
