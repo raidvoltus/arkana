@@ -390,7 +390,7 @@ def analyze_stock(ticker: str):
 
     df = calculate_indicators(df)
 
-# Pastikan kolom dan nilainya ada sebelum lanjut
+    # Pastikan kolom dan nilainya ada sebelum lanjut
     if "ATR" not in df.columns or df["ATR"].dropna().empty:
         logging.warning(f"{ticker}: ATR kosong setelah kalkulasi.")
         return None
@@ -441,48 +441,60 @@ def analyze_stock(ticker: str):
         logging.error(f"{ticker}: Error saat mempersiapkan data - {e}")
         return None
 
-    model_high = load_or_train_model(f"model_high_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
-    model_low  = load_or_train_model(f"model_low_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
+    # Latih dan muat model LightGBM dan XGBoost
+    model_high_lgb = load_or_train_model(f"model_high_lgb_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
+    model_low_lgb  = load_or_train_model(f"model_low_lgb_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
+    model_high_xgb = load_or_train_model(f"model_high_xgb_{ticker}.pkl", train_xgboost, X_tr, yh_tr)
+    model_low_xgb  = load_or_train_model(f"model_low_xgb_{ticker}.pkl", train_xgboost, X_tr, yl_tr)
+
+    # Latih dan muat model LSTM
     model_lstm = load_or_train_model(f"model_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, model_type="keras")
 
     try:
-        prob_high = calculate_probability(model_high, X_te, yh_te)
-        prob_low  = calculate_probability(model_low,  X_te, yl_te)
+        # Hitung probabilitas dari model LightGBM dan XGBoost
+        prob_high_lgb = calculate_probability(model_high_lgb, X_te, yh_te)
+        prob_low_lgb  = calculate_probability(model_low_lgb,  X_te, yl_te)
+        prob_high_xgb = calculate_probability(model_high_xgb, X_te, yh_te)
+        prob_low_xgb  = calculate_probability(model_low_xgb,  X_te, yl_te)
     except Exception as e:
         logging.error(f"{ticker}: Error saat menghitung probabilitas - {e}")
         return None
+
+    # Gabungkan probabilitas dari kedua model (LightGBM dan XGBoost)
+    prob_high = (prob_high_lgb + prob_high_xgb) / 2
+    prob_low  = (prob_low_lgb + prob_low_xgb) / 2
 
     if prob_high < MIN_PROB or prob_low < MIN_PROB:
         logging.info(f"{ticker} dilewati: Prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
         return None
 
+    # Ambil data terakhir untuk prediksi harga
     X_last = df[features].iloc[[-1]]
-    ph = model_high.predict(X_last)[0]
-    pl = model_low.predict(X_last)[0]
+    
+    # Prediksi harga dari LightGBM dan XGBoost
+    ph_lgb = model_high_lgb.predict(X_last)[0]
+    pl_lgb = model_low_lgb.predict(X_last)[0]
+    ph_xgb = model_high_xgb.predict(X_last)[0]
+    pl_xgb = model_low_xgb.predict(X_last)[0]
+
+    # Prediksi harga dari LSTM
+    ph_lstm = model_lstm.predict(np.reshape(X_last.values, (X_last.shape[0], X_last.shape[1], 1)))[0][0]
+    pl_lstm = model_lstm.predict(np.reshape(X_last.values, (X_last.shape[0], X_last.shape[1], 1)))[0][0]
+
+    # Ambil rata-rata dari hasil prediksi
+    ph = (ph_lgb + ph_xgb + ph_lstm) / 3
+    pl = (pl_lgb + pl_xgb + pl_lstm) / 3
 
     action = "beli" if (ph - price) / price > 0.02 else "jual"
     profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
     prob_succ = (prob_high + prob_low) / 2
     
-    # Asumsikan ph = potential high, pl = potential low, price = harga saat ini
-
-    if (ph - price) / price > 0.02:
-        aksi = "beli"
-        take_profit = ph
-        stop_loss = pl
-        profit_potential_pct = (take_profit - price) / price * 100
-    else:
-        aksi = "jual"
-        take_profit = pl
-        stop_loss = ph
-        profit_potential_pct = (price - take_profit) / price * 100
-
     # Validasi sederhana agar TP dan SL masuk akal
-    if aksi == "beli":
-        if take_profit <= price or stop_loss >= price:
+    if action == "beli":
+        if ph <= price or pl >= price:
             return None
     else:  # aksi == "jual"
-        if take_profit >= price or stop_loss <= price:
+        if ph >= price or pl <= price:
             return None
             
     if profit_potential_pct < 10:
