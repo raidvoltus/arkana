@@ -156,6 +156,9 @@ def analyze_stock(ticker):
         y = (df["Close"].shift(-1) > df["Close"]).astype(int).values[:-1]
         X = X[:-1]
 
+        # Merubah dimensi X untuk LSTM (menambahkan dimensi ketiga)
+        X = X.reshape((X.shape[0], X.shape[1], 1))
+
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
         lgbm_model = train_best_model(X_train, y_train, model_type="lgbm")
@@ -164,7 +167,7 @@ def analyze_stock(ticker):
 
         preds_lgbm = lgbm_model.predict(X_test)
         preds_xgb = xgb_model.predict(X_test)
-        preds_lstm = (lstm_model.predict(X_test.reshape((X_test.shape[0], X_test.shape[1], 1))) > 0.5).astype(int).flatten()
+        preds_lstm = (lstm_model.predict(X_test) > 0.5).astype(int).flatten()
 
         final_preds = (preds_lgbm + preds_xgb + preds_lstm) >= 2
         acc = accuracy_score(y_test, final_preds)
