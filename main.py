@@ -215,8 +215,6 @@ def train_lstm(
     model.fit(X_arr, y, epochs=epochs, batch_size=batch_size, verbose=verbose)
     return model
 
-from sklearn.model_selection import cross_val_score
-
 def cross_validate_model(model, X, y):
     scores = cross_val_score(model, X, y, cv=5, scoring='neg_mean_squared_error')
     logging.info(f"Cross-validation scores: {scores}")
