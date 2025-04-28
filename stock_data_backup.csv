@@ -1,4 +1,3 @@
 ticker,harga,take_profit,stop_loss,aksi,prob_high,prob_low,prob_success,profit_potential_pct
-FORU.JK,1690.0,1929.71,1257.41,beli,0.94,0.96,0.95,14.18
-LPPF.JK,1660.0,1894.02,1575.13,beli,0.96,0.98,0.97,14.1
-UNVR.JK,1750.0,1965.5,1596.74,beli,0.9,0.98,0.94,12.31
+FORU.JK,1765.0,2169.03,1247.68,beli,0.94,0.97,0.96,22.89
+LPPF.JK,1690.0,1903.42,1580.69,beli,0.96,0.95,0.95,12.63
