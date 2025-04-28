@@ -8,6 +8,7 @@ import json
 import requests
 import random
 import logging
+import datetime
 import xgboost as xgb
 import numpy as np
 import pandas as pd
@@ -279,6 +280,22 @@ def tune_lightgbm_hyperparameters(X_train, y_train):
     logging.info(f"Best Parameters: {grid_search.best_params_}")
     return grid_search.best_estimator_
     return model
+
+def send_alert(message):
+    # Anda bisa mengirim email atau menggunakan sistem alert lainnya di sini.
+    logging.error(f"ALERT: {message}")
+    
+def save_preprocessed_data(df, path):
+    df.to_csv(path)
+    logging.info(f"Data diproses dan disimpan ke {path}")
+
+def load_preprocessed_data(path):
+    return pd.read_csv(path)
+    
+def save_model_with_versioning(model, path):
+    versioned_path = f"{path}_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}.pkl"
+    joblib.dump(model, versioned_path)
+    logging.info(f"Model disimpan dengan versi: {versioned_path}")
 
 def get_feature_hash(features: list[str]) -> str:
     features_str = ",".join(sorted(features))
