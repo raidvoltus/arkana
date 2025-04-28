@@ -510,7 +510,7 @@ def analyze_stock(ticker: str):
         if take_profit >= price or stop_loss <= price:
             return None
 
-    if profit_potential_pct < 10:
+    if profit_potential_pct < 5:
         logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
         return None
 
