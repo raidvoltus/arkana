@@ -156,61 +156,39 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     return df.dropna()
 
-# === Training XGBoost ===
-def train_xgboost(
-    X_train: pd.DataFrame,
-    y_train: pd.Series,
-    X_val: Optional[pd.DataFrame] = None,
-    y_val: Optional[pd.Series] = None,
-    n_estimators: int = 500,
-    learning_rate: float = 0.05,
-    early_stopping_rounds: Optional[int] = 50,
-    random_state: int = 42
-) -> xgb.XGBRegressor:
-    model = xgb.XGBRegressor(
-        n_estimators=n_estimators,
-        learning_rate=learning_rate,
-        random_state=random_state,
-        objective="reg:squarederror"
-    )
-    if X_val is not None and y_val is not None:
-        model.fit(
-            X_train,
-            y_train,
-            eval_set=[(X_val, y_val)],
-            early_stopping_rounds=early_stopping_rounds,
-            verbose=False
-        )
-    else:
-        model.fit(X_train, y_train)
-    return model
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+
+def evaluate_model(model, X, y_true):
+    y_pred = model.predict(X)
+    rmse = np.sqrt(mean_squared_error(y_true, y_pred))
+    mae = mean_absolute_error(y_true, y_pred)
+    logging.info(f"Model Evaluation - RMSE: {rmse:.2f}, MAE: {mae:.2f}")
+    return rmse, mae
+
+def train_lightgbm(X_train: pd.DataFrame, y_train: pd.Series, X_val: Optional[pd.DataFrame] = None, y_val: Optional[pd.Series] = None, n_estimators: int = 500, learning_rate: float = 0.05, early_stopping_rounds: Optional[int] = 50, random_state: int = 42) -> lgb.LGBMRegressor:
+    model = lgb.LGBMRegressor(n_estimators=n_estimators, learning_rate=learning_rate, random_state=random_state)
     
-# === Training LightGBM ===
-def train_lightgbm(
-    X_train: pd.DataFrame,
-    y_train: pd.Series,
-    X_val: Optional[pd.DataFrame] = None,
-    y_val: Optional[pd.Series] = None,
-    n_estimators: int = 500,
-    learning_rate: float = 0.05,
-    early_stopping_rounds: Optional[int] = 50,
-    random_state: int = 42
-) -> lgb.LGBMRegressor:
-    model = lgb.LGBMRegressor(
-        n_estimators=n_estimators,
-        learning_rate=learning_rate,
-        random_state=random_state
-    )
     if X_val is not None and y_val is not None:
-        model.fit(
-            X_train,
-            y_train,
-            eval_set=[(X_val, y_val)],
-            early_stopping_rounds=early_stopping_rounds,
-            verbose=False
-        )
+        model.fit(X_train, y_train, eval_set=[(X_val, y_val)], early_stopping_rounds=early_stopping_rounds, verbose=False)
     else:
         model.fit(X_train, y_train)
+
+    # Evaluate Model
+    evaluate_model(model, X_train, y_train)
+    
+    return model
+
+def train_xgboost(X_train: pd.DataFrame, y_train: pd.Series, X_val: Optional[pd.DataFrame] = None, y_val: Optional[pd.Series] = None, n_estimators: int = 500, learning_rate: float = 0.05, early_stopping_rounds: Optional[int] = 50, random_state: int = 42) -> XGBRegressor:
+    model = XGBRegressor(n_estimators=n_estimators, learning_rate=learning_rate, random_state=random_state)
+    
+    if X_val is not None and y_val is not None:
+        model.fit(X_train, y_train, eval_set=[(X_val, y_val)], early_stopping_rounds=early_stopping_rounds, verbose=False)
+    else:
+        model.fit(X_train, y_train)
+
+    # Evaluate Model
+    evaluate_model(model, X_train, y_train)
+    
     return model
 
 # === Training LSTM ===
