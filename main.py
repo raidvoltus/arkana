@@ -1,3 +1,4 @@
+import os
 import glob
 import time
 import threading
@@ -544,55 +545,56 @@ def main():
 def retrain_if_needed(ticker: str):
     akurasi_map = evaluate_prediction_accuracy()
     akurasi = akurasi_map.get(ticker, 1.0)  # default 100%
-    
-    if akurasi < 0.90:
-        logging.info(f"Akurasi model {ticker} rendah ({akurasi:.2%}), retraining...")
-        
-        # Ambil data saham
-        df = get_stock_data(ticker)
-        if df is None or df.empty:
-            logging.error(f"{ticker}: Data saham tidak ditemukan atau kosong.")
-            return
-        
-        # Kalkulasi indikator teknikal
-        df = calculate_indicators(df)
-        df = df.dropna(subset=["future_high", "future_low"])
-        
-        # Tentukan fitur yang akan digunakan
-        features = [
-            "Close", "ATR", "RSI", "MACD", "MACD_Hist",
-            "SMA_14", "SMA_28", "SMA_84", "EMA_10",
-            "BB_Upper", "BB_Lower", "Support", "Resistance",
-            "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
-            "daily_avg", "daily_std", "daily_range",
-            "is_opening_hour", "is_closing_hour"
-        ]
-        
-        X = df[features]
-        y_high = df["future_high"]
-        y_low = df["future_low"]
-        
-        # Latih model LightGBM
-        model_high_lgb = train_lightgbm(X, y_high)
-        joblib.dump(model_high_lgb, f"model_high_lgb_{ticker}.pkl")
-        
-        model_low_lgb = train_lightgbm(X, y_low)
-        joblib.dump(model_low_lgb, f"model_low_lgb_{ticker}.pkl")
+    if akurasi >= 0.90:
+        return  # Akurasi bagus, tidak perlu retrain
 
-        # Latih model XGBoost
-        model_high_xgb = train_xgboost(X, y_high)
-        joblib.dump(model_high_xgb, f"model_high_xgb_{ticker}.pkl")
-        
-        model_low_xgb = train_xgboost(X, y_low)
-        joblib.dump(model_low_xgb, f"model_low_xgb_{ticker}.pkl")
-        
-        # Latih model LSTM
-        model_lstm = train_lstm(X, y_high)  # Asumsi menggunakan y_high untuk LSTM
-        model_lstm.save(f"model_lstm_{ticker}.keras")
-        
-        logging.info(f"Model untuk {ticker} telah dilatih ulang dan disimpan.")
-    else:
-        logging.info(f"Akurasi model {ticker} sudah cukup baik ({akurasi:.2%}), tidak perlu retraining.")
+    logging.info(f"Akurasi model {ticker} rendah ({akurasi:.2%}), retraining semua model...")
+
+    df = get_stock_data(ticker)
+    if df is None or df.empty:
+        logging.error(f"{ticker}: Gagal ambil data untuk retrain.")
+        return
+
+    df = calculate_indicators(df)
+    df = df.dropna(subset=["future_high", "future_low"])
+
+    features = [
+        "Close", "ATR", "RSI", "MACD", "MACD_Hist",
+        "SMA_14", "SMA_28", "SMA_84", "EMA_10",
+        "BB_Upper", "BB_Lower", "Support", "Resistance",
+        "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
+        "daily_avg", "daily_std", "daily_range",
+        "is_opening_hour", "is_closing_hour"
+    ]
+
+    try:
+        X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = prepare_features_and_labels(df, features)
+    except Exception as e:
+        logging.error(f"{ticker}: Error saat mempersiapkan data untuk retrain - {e}")
+        return
+
+    # Retrain LightGBM
+    model_high_lgbm = train_lightgbm(X_tr, yh_tr)
+    model_low_lgbm  = train_lightgbm(X_tr, yl_tr)
+    joblib.dump(model_high_lgbm, f"model_high_lgbm_{ticker}.pkl")
+    joblib.dump(model_low_lgbm, f"model_low_lgbm_{ticker}.pkl")
+    logging.info(f"{ticker}: LightGBM retrained & saved.")
+
+    # Retrain XGBoost
+    model_high_xgb = train_xgboost(X_tr, yh_tr)
+    model_low_xgb  = train_xgboost(X_tr, yl_tr)
+    joblib.dump(model_high_xgb, f"model_high_xgb_{ticker}.pkl")
+    joblib.dump(model_low_xgb, f"model_low_xgb_{ticker}.pkl")
+    logging.info(f"{ticker}: XGBoost retrained & saved.")
+
+    # Retrain LSTM
+    model_high_lstm = train_lstm(X_tr, yh_tr)
+    model_low_lstm  = train_lstm(X_tr, yl_tr)
+    model_high_lstm.save(f"model_high_lstm_{ticker}.keras")
+    model_low_lstm.save(f"model_low_lstm_{ticker}.keras")
+    logging.info(f"{ticker}: LSTM retrained & saved.")
+
+    logging.info(f"{ticker}: Semua model berhasil diretrain dan disimpan.")
         
 def get_realized_price_data() -> pd.DataFrame:
     log_path = "prediksi_log.csv"
