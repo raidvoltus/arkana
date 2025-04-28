@@ -1,16 +1,45 @@
-2025-04-28 05:36:22.337965: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-28 05:36:22.341263: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-28 05:36:22.350005: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745818582.364638    2078 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745818582.368927    2078 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745818582.380622    2078 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745818582.380642    2078 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745818582.380645    2078 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745818582.380647    2078 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-28 05:36:22.384329: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 31, in <module>
-    TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN")
-NameError: name 'os' is not defined
+2025-04-28 05:59:14,084 - WARNING - CBMF.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:00:41,664 - WARNING - CNTX.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:00:41,665 - ERROR - CNTX.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:00:42,225 - WARNING - COWL.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:01:29,134 - WARNING - DEAL.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:01:29,309 - WARNING - DEFI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:01:29,311 - ERROR - DEFI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:01:31,746 - WARNING - DUCK.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:01:38,322 - ERROR - $ERA.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-28 06:01:38,323 - WARNING - ERA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:01:38,324 - ERROR - ERA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:02:45,057 - WARNING - FASW.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:02:45,058 - ERROR - FASW.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:02:45,610 - WARNING - FISH.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:02:45,610 - ERROR - FISH.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:03:26,301 - WARNING - GAMA.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:03:41,702 - WARNING - HDTX.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:03:42,987 - ERROR - $HITS.JK: possibly delisted; no price data found  (period=1d)
+2025-04-28 06:03:42,988 - WARNING - HITS.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-28 06:03:43,162 - WARNING - HKMU.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:04:06,302 - WARNING - INAF.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:04:06,305 - ERROR - INAF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:08:02,436 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:09:56,878 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:09:56,880 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:11:16,203 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:11:16,205 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:13:11,803 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:13:11,806 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:14:00,493 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:15:21,436 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:15:22,052 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
+2025-04-28 06:15:22,052 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-28 06:16:50,888 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
+2025-04-28 06:16:50,890 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-28 06:19:29,255 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:19:29,255 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:20:00,526 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-28 06:20:00,527 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:20:00,527 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 06:20:24,351 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
+2025-04-28 06:20:24,352 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-28 06:20:24,871 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
+2025-04-28 06:20:25,049 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 06:20:25,050 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
