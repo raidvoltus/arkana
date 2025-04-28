@@ -1,24 +1,25 @@
-2025-04-28 04:27:16,647 - ERROR - $MAPB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 04:27:16,651 - WARNING - MAPB.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 04:27:46,916 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:27:46,917 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:28:25,685 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:28:25,686 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:29:28,344 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:29:28,345 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:29:56,915 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
-2025-04-28 04:30:39,127 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
-2025-04-28 04:30:39,705 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 04:30:39,706 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 04:31:27,593 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 04:31:27,593 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 04:32:52,743 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:32:52,743 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:33:10,978 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-28 04:33:10,979 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:33:10,979 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:33:21,793 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 04:33:21,793 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 04:33:22,303 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
-2025-04-28 04:33:22,495 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:33:22,498 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 04:52:28,944 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
+2025-04-28 04:53:02,710 - ERROR - $MAPB.JK: possibly delisted; no price data found  (period=1d)
+2025-04-28 04:53:02,711 - WARNING - MAPB.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-28 04:53:32,067 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 04:53:32,067 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 04:54:10,346 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 04:54:10,348 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 04:55:02,212 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 04:55:02,213 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 04:55:43,360 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
+2025-04-28 04:56:02,626 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
+2025-04-28 04:56:03,265 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
+2025-04-28 04:56:03,265 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-28 04:56:57,671 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
+2025-04-28 04:56:57,672 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-28 04:58:15,485 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 04:58:15,485 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 04:58:27,094 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-28 04:58:27,094 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 04:58:27,097 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 04:59:05,254 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
+2025-04-28 04:59:05,254 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-28 04:59:05,732 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
+2025-04-28 04:59:05,878 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-28 04:59:05,879 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
