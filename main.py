@@ -15,6 +15,7 @@ import yfinance as yf
 import lightgbm as lgb
 import tensorflow as tf
 
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 from typing import Optional, Dict, List, Tuple
 from ta import momentum, trend, volatility, volume
 from datetime import datetime
@@ -155,8 +156,6 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
 
     return df.dropna()
-
-from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 def evaluate_model(model, X, y_true):
     y_pred = model.predict(X)
