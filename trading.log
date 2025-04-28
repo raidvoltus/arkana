@@ -1,25 +1,16 @@
-2025-04-28 04:52:28,944 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
-2025-04-28 04:53:02,710 - ERROR - $MAPB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 04:53:02,711 - WARNING - MAPB.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 04:53:32,067 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:53:32,067 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:54:10,346 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:54:10,348 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:55:02,212 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:55:02,213 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:55:43,360 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
-2025-04-28 04:56:02,626 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
-2025-04-28 04:56:03,265 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 04:56:03,265 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 04:56:57,671 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 04:56:57,672 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 04:58:15,485 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:58:15,485 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:58:27,094 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-28 04:58:27,094 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:58:27,097 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 04:59:05,254 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 04:59:05,254 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 04:59:05,732 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
-2025-04-28 04:59:05,878 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 04:59:05,879 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 05:36:22.337965: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-28 05:36:22.341263: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-28 05:36:22.350005: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745818582.364638    2078 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745818582.368927    2078 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745818582.380622    2078 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745818582.380642    2078 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745818582.380645    2078 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745818582.380647    2078 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-28 05:36:22.384329: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 31, in <module>
+    TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN")
+NameError: name 'os' is not defined
