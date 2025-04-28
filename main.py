@@ -326,14 +326,14 @@ def check_and_reset_model_if_needed(ticker: str, current_features: list[str]):
         logging.info(f"{ticker}: Struktur fitur berubah — melakukan reset model")
 
         # Hapus model XGBoost jika ada
-        for suffix in ["high", "low"]:
+        for suffix in ["high", "low", "close"]:
             model_path_xgb = f"model_xgb_{suffix}_{ticker}.pkl"
             if os.path.exists(model_path_xgb):
                 os.remove(model_path_xgb)
                 logging.info(f"{ticker}: Model XGBoost '{suffix}' dihapus")
 
         # Hapus model LightGBM jika ada
-        for suffix in ["high", "low"]:
+        for suffix in ["high", "low", "close"]:
             model_path_lgb = f"model_lgb_{suffix}_{ticker}.pkl"
             if os.path.exists(model_path_lgb):
                 os.remove(model_path_lgb)
@@ -381,7 +381,7 @@ def prepare_features_and_labels(df, features):
     X = df[features]
     y_high = df["future_high"]
     y_low = df["future_low"]
-    return train_test_split(X, y_high, y_low, test_size=0.2, random_state=42)
+    return train_test_split(X, y_high, y_low, y_close, test_size=0.2, random_state=42)
 
 def load_or_train_model(path, train_fn, X_train, y_train, model_type="joblib"):
     if os.path.exists(path):
