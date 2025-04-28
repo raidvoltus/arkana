@@ -241,7 +241,6 @@ def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
 
     return correct_dir.sum() / len(correct_dir)
 
-# Fungsi load_or_train_model
 # === Fungsi Utama Load or Train Model ===
 def load_or_train_model(path, train_func, X, y, model_type="joblib"):
     if os.path.exists(path):
