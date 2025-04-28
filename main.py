@@ -111,30 +111,26 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
     return None
 
 # === Hitung Indikator ===
-def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
+def calculate_indicators_v2(df: pd.DataFrame) -> pd.DataFrame:
     HOURS_PER_DAY = 7
     HOURS_PER_WEEK = 35  # 5 hari trading, 7 jam per hari
-    
+
     # Pastikan index sudah dalam timezone Asia/Jakarta
     if df.index.tz is None:
         df.index = df.index.tz_localize("UTC").tz_convert("Asia/Jakarta")
     else:
         df.index = df.index.tz_convert("Asia/Jakarta")
-        
+
     # === Indikator teknikal utama ===
     df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=14).average_true_range()
-    
     macd = trend.MACD(df["Close"])
     df["MACD"] = macd.macd()
     df["MACD_Hist"] = macd.macd_diff()
-    
     bb = volatility.BollingerBands(df["Close"], window=20)
     df["BB_Upper"] = bb.bollinger_hband()
     df["BB_Lower"] = bb.bollinger_lband()
-
     df["Support"] = df["Low"].rolling(window=48).min()
     df["Resistance"] = df["High"].rolling(window=48).max()
-
     df["RSI"] = momentum.RSIIndicator(df["Close"], window=14).rsi()
     df["SMA_14"] = trend.SMAIndicator(df["Close"], window=14).sma_indicator()
     df["SMA_28"] = trend.SMAIndicator(df["Close"], window=28).sma_indicator()
@@ -146,6 +142,20 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["Momentum"] = momentum.ROCIndicator(df["Close"], window=12).roc()
     df["WilliamsR"] = momentum.WilliamsRIndicator(df["High"], df["Low"], df["Close"], lbp=14).williams_r()
 
+    # === Indikator tambahan ===
+    df["OBV"] = volume.OnBalanceVolumeIndicator(df["Close"], df["Volume"]).on_balance_volume()
+
+    stoch = momentum.StochasticOscillator(df["High"], df["Low"], df["Close"], window=14, smooth_window=3)
+    df["Stoch_K"] = stoch.stoch()
+    df["Stoch_D"] = stoch.stoch_signal()
+
+    # Lagging features (harga close kemarin & 2 hari lalu)
+    df["Close_Lag1"] = df["Close"].shift(1)
+    df["Close_Lag2"] = df["Close"].shift(2)
+
+    # Composite feature: trend strength score
+    df["Trend_Strength"] = (df["ADX"] + df["MACD"].fillna(0) + df["SMA_14"].fillna(0)) / 3
+
     # === Fitur waktu harian ===
     df["hour"] = df.index.hour
     df["is_opening_hour"] = (df["hour"] == 9).astype(int)
@@ -154,9 +164,10 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["daily_std"] = df["Close"].rolling(HOURS_PER_DAY).std()
     df["daily_range"] = df["High"].rolling(HOURS_PER_DAY).max() - df["Low"].rolling(HOURS_PER_DAY).min()
 
-    # === Target prediksi: harga tertinggi & terendah MINGGU DEPAN ===
+    # === Target prediksi: harga tertinggi & terendah & close MINGGU DEPAN ===
     df["future_high"] = df["High"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).max()
     df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
+    df["future_close"] = df["Close"].shift(-HOURS_PER_WEEK)
 
     return df.dropna()
 
