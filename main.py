@@ -522,7 +522,7 @@ def analyze_stock(ticker: str):
         if ph >= price or pl <= price:
             return None
             
-    if profit_potential_pct < 10:
+    if profit_potential_pct < 3:
         logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
         return None
 
