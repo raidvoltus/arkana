@@ -494,8 +494,10 @@ def analyze_stock(ticker: str):
         # Hitung probabilitas dari model LightGBM dan XGBoost
         prob_high_lgb = calculate_probability(model_high_lgb, X_te, yh_te)
         prob_low_lgb  = calculate_probability(model_low_lgb,  X_te, yl_te)
+        prob_close_lgb  = calculate_probability(model_close_lgb,  X_te, yc_te)
         prob_high_xgb = calculate_probability(model_high_xgb, X_te, yh_te)
         prob_low_xgb  = calculate_probability(model_low_xgb,  X_te, yl_te)
+        prob_close_xgb  = calculate_probability(model_close_lgb,  X_te, yc_te)
     except Exception as e:
         logging.error(f"{ticker}: Error saat menghitung probabilitas - {e}")
         return None
