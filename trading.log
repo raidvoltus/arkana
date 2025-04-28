@@ -1,22 +1,28 @@
-2025-04-28 11:11:01,974 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 11:11:01,977 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 11:11:38,549 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 11:11:38,550 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 11:12:25,962 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 11:12:25,962 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 11:12:46,419 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
-2025-04-28 11:13:22,069 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
-2025-04-28 11:13:22,693 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 11:13:22,693 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 11:14:29,943 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 11:14:29,946 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 11:15:41,058 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 11:15:41,058 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 11:16:01,003 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-28 11:16:01,004 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 11:16:01,004 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-28 11:16:35,238 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
-2025-04-28 11:16:35,238 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-28 11:16:35,712 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
-2025-04-28 11:16:35,853 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-28 11:16:35,853 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 15:49:24.922529: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-28 15:49:24.925636: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-28 15:49:24.934113: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745855364.948808    2076 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745855364.953057    2076 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745855364.964661    2076 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745855364.964691    2076 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745855364.964693    2076 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745855364.964696    2076 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-28 15:49:24.968348: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 898, in <module>
+    results = list(executor.map(analyze_stock, STOCK_LIST))
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/runner/work/arkana/arkana/main.py", line 426, in analyze_stock
+    df = calculate_indicators(df)
+NameError: name 'calculate_indicators' is not defined. Did you mean: 'calculate_indicators_v2'?
