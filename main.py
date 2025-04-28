@@ -268,6 +268,16 @@ def tune_xgboost_hyperparameters(X_train, y_train):
     return grid_search.best_estimator_
 
 # Dalam fungsi load_or_train_model, jika model_type == 'xgboost', Anda bisa menambahkan kode ini.
+def tune_lightgbm_hyperparameters(X_train, y_train):
+    param_grid = {
+        'learning_rate': [0.01, 0.05, 0.1],
+        'n_estimators': [100, 200],
+        'max_depth': [3, 5, 7]
+    }
+    grid_search = GridSearchCV(lgb.LGBMRegressor(), param_grid, cv=3)
+    grid_search.fit(X_train, y_train)
+    logging.info(f"Best Parameters: {grid_search.best_params_}")
+    return grid_search.best_estimator_
     return model
 
 def get_feature_hash(features: list[str]) -> str:
