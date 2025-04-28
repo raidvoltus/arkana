@@ -111,7 +111,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
     return None
 
 # === Hitung Indikator ===
-def calculate_indicators_v2(df: pd.DataFrame) -> pd.DataFrame:
+def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     HOURS_PER_DAY = 7
     HOURS_PER_WEEK = 35  # 5 hari trading, 7 jam per hari
 
