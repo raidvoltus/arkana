@@ -608,7 +608,10 @@ def retrain_if_needed(ticker: str):
         
         model_low_lgb = train_lightgbm(X, y_low)
         joblib.dump(model_low_lgb, f"model_low_lgb_{ticker}.pkl")
-
+        
+        model_close_lgb = train_lightgbm(X, y_close)
+        joblib.dump(model_close, f"model_close_lgb_{ticker}.pkl")
+        
         # Latih model XGBoost
         model_high_xgb = train_xgboost(X, y_high)
         joblib.dump(model_high_xgb, f"model_high_xgb_{ticker}.pkl")
@@ -616,8 +619,11 @@ def retrain_if_needed(ticker: str):
         model_low_xgb = train_xgboost(X, y_low)
         joblib.dump(model_low_xgb, f"model_low_xgb_{ticker}.pkl")
         
+        model_close_xgb = train_xgboost(X, y_close)
+        joblib.dump(model_close, f"model_close_xgb_{ticker}.pkl")
+
         # Latih model LSTM
-        model_lstm = train_lstm(X, y_high)  # Asumsi menggunakan y_high untuk LSTM
+        model_lstm = train_lstm(X, y_high, y_close)  # Asumsi menggunakan y_high untuk LSTM
         model_lstm.save(f"model_lstm_{ticker}.keras")
         
         logging.info(f"Model untuk {ticker} telah dilatih ulang dan disimpan.")
