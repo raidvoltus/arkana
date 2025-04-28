@@ -1,17 +1,16 @@
-2025-04-27 16:24:33,773 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
-2025-04-27 16:25:39,638 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-27 16:25:39,638 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-27 16:26:29,684 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-27 16:26:29,684 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
-2025-04-27 16:27:29,012 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-27 16:27:29,012 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
-2025-04-27 16:27:52,201 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
-2025-04-27 16:28:39,523 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
-2025-04-27 16:31:04,173 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-27 16:31:04,174 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-27 16:31:22,396 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-27 16:31:22,397 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-27 16:31:22,397 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-27 16:31:38,205 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
-2025-04-27 16:31:38,339 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-27 16:31:38,339 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-28 04:12:05.215428: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-28 04:12:05.218542: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-28 04:12:05.226977: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745813525.241046    2161 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745813525.245298    2161 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745813525.256728    2161 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745813525.256745    2161 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745813525.256747    2161 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745813525.256749    2161 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-28 04:12:05.260268: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 182, in <module>
+    def train_xgboost(X_train: pd.DataFrame, y_train: pd.Series, X_val: Optional[pd.DataFrame] = None, y_val: Optional[pd.Series] = None, n_estimators: int = 500, learning_rate: float = 0.05, early_stopping_rounds: Optional[int] = 50, random_state: int = 42) -> XGBRegressor:
+NameError: name 'XGBRegressor' is not defined
