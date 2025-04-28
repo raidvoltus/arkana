@@ -474,13 +474,14 @@ def analyze_stock(ticker: str):
     check_and_reset_model_if_needed(ticker, features)
 
     try:
-        X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = prepare_features_and_labels(df, features)
+        X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te, yc_tr, yc_te = prepare_features_and_labels(df, features)
     except Exception as e:
         logging.error(f"{ticker}: Error saat mempersiapkan data - {e}")
         return None
 
     # Latih dan muat model LightGBM dan XGBoost
     model_high_lgb = load_or_train_model(f"model_high_lgb_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
+    model_low_lgb  = load_or_train_model(f"model_low_lgb_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
     model_low_lgb  = load_or_train_model(f"model_low_lgb_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
     model_high_xgb = load_or_train_model(f"model_high_xgb_{ticker}.pkl", train_xgboost, X_tr, yh_tr)
     model_low_xgb  = load_or_train_model(f"model_low_xgb_{ticker}.pkl", train_xgboost, X_tr, yl_tr)
