@@ -482,12 +482,13 @@ def analyze_stock(ticker: str):
     # Latih dan muat model LightGBM dan XGBoost
     model_high_lgb = load_or_train_model(f"model_high_lgb_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
     model_low_lgb  = load_or_train_model(f"model_low_lgb_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
-    model_low_lgb  = load_or_train_model(f"model_low_lgb_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
+    model_close_lgb  = load_or_train_model(f"model_close_lgb_{ticker}.pkl", train_lightgbm, X_tr, yc_tr)
     model_high_xgb = load_or_train_model(f"model_high_xgb_{ticker}.pkl", train_xgboost, X_tr, yh_tr)
     model_low_xgb  = load_or_train_model(f"model_low_xgb_{ticker}.pkl", train_xgboost, X_tr, yl_tr)
+    model_close_xgb  = load_or_train_model(f"model_close_xgb_{ticker}.pkl", train_xgboost, X_tr, yc_tr)
 
     # Latih dan muat model LSTM
-    model_lstm = load_or_train_model(f"model_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, model_type="keras")
+    model_lstm = load_or_train_model(f"model_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, yc_tr model_type="keras")
 
     try:
         # Hitung probabilitas dari model LightGBM dan XGBoost
