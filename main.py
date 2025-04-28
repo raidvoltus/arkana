@@ -465,6 +465,9 @@ def analyze_stock(ticker: str):
         "SMA_14", "SMA_28", "SMA_84", "EMA_10",
         "BB_Upper", "BB_Lower", "Support", "Resistance",
         "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
+        "OBV", "Stoch_K", "Stoch_D",
+        "Close_Lag1", "Close_Lag2",
+        "Trend_Strength",
         "daily_avg", "daily_std", "daily_range",
         "is_opening_hour", "is_closing_hour"
     ]
