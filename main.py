@@ -600,6 +600,7 @@ def retrain_if_needed(ticker: str):
         X = df[features]
         y_high = df["future_high"]
         y_low = df["future_low"]
+        y_close = df["future_close"]
         
         # Latih model LightGBM
         model_high_lgb = train_lightgbm(X, y_high)
