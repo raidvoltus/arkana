@@ -240,7 +240,6 @@ def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
 
     return correct_dir.sum() / len(correct_dir)
 
-# Fungsi load_or_train_model
 # === Fungsi Utama Load or Train Model ===
 def load_or_train_model(path, train_func, X, y, model_type="joblib"):
     if os.path.exists(path):
@@ -414,7 +413,6 @@ def analyze_stock(ticker: str):
 
     df = calculate_indicators(df)
 
-    # Pastikan kolom dan nilainya ada sebelum lanjut
     if "ATR" not in df.columns or df["ATR"].dropna().empty:
         logging.warning(f"{ticker}: ATR kosong setelah kalkulasi.")
         return None
@@ -426,10 +424,7 @@ def analyze_stock(ticker: str):
         logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
         return None
 
-    # Gunakan harga terbaru dari daily
     price = get_latest_close(ticker)
-
-    # Fallback hanya jika df tidak kosong
     if price is None:
         if df is not None and not df.empty and "Close" in df.columns:
             price = df["Close"].dropna().iloc[-1] if not df["Close"].dropna().empty else None
@@ -437,7 +432,6 @@ def analyze_stock(ticker: str):
             logging.warning(f"{ticker}: Data fallback juga kosong.")
             return None
 
-    # Hentikan jika harga tetap tidak bisa didapatkan
     if price is None:
         logging.warning(f"{ticker}: Tidak bisa mendapatkan harga terbaru.")
         return None
@@ -465,63 +459,57 @@ def analyze_stock(ticker: str):
         logging.error(f"{ticker}: Error saat mempersiapkan data - {e}")
         return None
 
-    # Latih dan muat model LightGBM dan XGBoost
-    model_high_lgb = load_or_train_model(f"model_high_lgb_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
-    model_low_lgb  = load_or_train_model(f"model_low_lgb_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
-    model_high_xgb = load_or_train_model(f"model_high_xgb_{ticker}.pkl", train_xgboost, X_tr, yh_tr)
-    model_low_xgb  = load_or_train_model(f"model_low_xgb_{ticker}.pkl", train_xgboost, X_tr, yl_tr)
-
-    # Latih dan muat model LSTM
-    model_lstm = load_or_train_model(f"model_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, model_type="keras")
+    # Load semua model
+    model_high_lgbm = load_or_train_model(f"model_high_lgbm_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
+    model_low_lgbm  = load_or_train_model(f"model_low_lgbm_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
+    model_high_xgb  = load_or_train_model(f"model_high_xgb_{ticker}.pkl", train_xgboost, X_tr, yh_tr)
+    model_low_xgb   = load_or_train_model(f"model_low_xgb_{ticker}.pkl", train_xgboost, X_tr, yl_tr)
+    model_high_lstm = load_or_train_model(f"model_high_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, model_type="keras")
+    model_low_lstm  = load_or_train_model(f"model_low_lstm_{ticker}.keras", train_lstm, X_tr, yl_tr, model_type="keras")
 
     try:
-        # Hitung probabilitas dari model LightGBM dan XGBoost
-        prob_high_lgb = calculate_probability(model_high_lgb, X_te, yh_te)
-        prob_low_lgb  = calculate_probability(model_low_lgb,  X_te, yl_te)
-        prob_high_xgb = calculate_probability(model_high_xgb, X_te, yh_te)
-        prob_low_xgb  = calculate_probability(model_low_xgb,  X_te, yl_te)
+        prob_high = calculate_probability(model_high_lgbm, X_te, yh_te)
+        prob_low  = calculate_probability(model_low_lgbm, X_te, yl_te)
     except Exception as e:
         logging.error(f"{ticker}: Error saat menghitung probabilitas - {e}")
         return None
-
-    # Gabungkan probabilitas dari kedua model (LightGBM dan XGBoost)
-    prob_high = (prob_high_lgb + prob_high_xgb) / 2
-    prob_low  = (prob_low_lgb + prob_low_xgb) / 2
 
     if prob_high < MIN_PROB or prob_low < MIN_PROB:
         logging.info(f"{ticker} dilewati: Prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
         return None
 
-    # Ambil data terakhir untuk prediksi harga
     X_last = df[features].iloc[[-1]]
-    
-    # Prediksi harga dari LightGBM dan XGBoost
-    ph_lgb = model_high_lgb.predict(X_last)[0]
-    pl_lgb = model_low_lgb.predict(X_last)[0]
-    ph_xgb = model_high_xgb.predict(X_last)[0]
-    pl_xgb = model_low_xgb.predict(X_last)[0]
 
-    # Prediksi harga dari LSTM
-    ph_lstm = model_lstm.predict(np.reshape(X_last.values, (X_last.shape[0], X_last.shape[1], 1)))[0][0]
-    pl_lstm = model_lstm.predict(np.reshape(X_last.values, (X_last.shape[0], X_last.shape[1], 1)))[0][0]
+    # Prediksi dari masing-masing model
+    ph_lgbm = model_high_lgbm.predict(X_last)[0]
+    ph_xgb  = model_high_xgb.predict(X_last)[0]
+    ph_lstm = model_high_lstm.predict(X_last.values.reshape(1, -1, 1))[0][0]
 
-    # Ambil rata-rata dari hasil prediksi
-    ph = (ph_lgb + ph_xgb + ph_lstm) / 3
-    pl = (pl_lgb + pl_xgb + pl_lstm) / 3
+    pl_lgbm = model_low_lgbm.predict(X_last)[0]
+    pl_xgb  = model_low_xgb.predict(X_last)[0]
+    pl_lstm = model_low_lstm.predict(X_last.values.reshape(1, -1, 1))[0][0]
 
+    # Weighted voting
+    ph = (0.4 * ph_lgbm) + (0.4 * ph_xgb) + (0.2 * ph_lstm)
+    pl = (0.4 * pl_lgbm) + (0.4 * pl_xgb) + (0.2 * pl_lstm)
+
+    # Hitung action
     action = "beli" if (ph - price) / price > 0.02 else "jual"
     profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
     prob_succ = (prob_high + prob_low) / 2
-    
-    # Validasi sederhana agar TP dan SL masuk akal
+
     if action == "beli":
-        if ph <= price or pl >= price:
+        take_profit = ph
+        stop_loss = pl
+        if take_profit <= price or stop_loss >= price:
             return None
-    else:  # aksi == "jual"
-        if ph >= price or pl <= price:
+    else:
+        take_profit = pl
+        stop_loss = ph
+        if take_profit >= price or stop_loss <= price:
             return None
-            
-    if profit_potential_pct < 3:
+
+    if profit_potential_pct < 10:
         logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
         return None
 
@@ -531,8 +519,8 @@ def analyze_stock(ticker: str):
     return {
         "ticker": ticker,
         "harga": round(price, 2),
-        "take_profit": round(ph, 2),
-        "stop_loss": round(pl, 2),
+        "take_profit": round(take_profit, 2),
+        "stop_loss": round(stop_loss, 2),
         "aksi": action,
         "prob_high": round(prob_high, 2),
         "prob_low": round(prob_low, 2),
