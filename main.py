@@ -241,22 +241,22 @@ def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
     return correct_dir.sum() / len(correct_dir)
 
 # Fungsi load_or_train_model
-def load_or_train_model(path, train_func, X, y):
+# === Fungsi Utama Load or Train Model ===
+def load_or_train_model(path, train_func, X, y, model_type="joblib"):
     if os.path.exists(path):
-        model = joblib.load(path) if path.endswith(".pkl") else tf.keras.models.load_model(path)
+        model = joblib.load(path) if model_type == "joblib" else tf.keras.models.load_model(path)
         logging.info(f"Loaded model from {path}")
     else:
         model = train_func(X, y)
         with model_save_lock:
-            if path.endswith(".pkl"):
-                # Simpan model XGBoost atau LightGBM dalam format .pkl
+            if model_type == "joblib":
                 joblib.dump(model, path)
             else:
-                # Simpan model LSTM dalam format .keras
                 model.save(path)
         logging.info(f"Trained & saved model to {path}")
-        from sklearn.model_selection import GridSearchCV
+    return model
 
+# === Hyperparameter Tuning untuk XGBoost ===
 def tune_xgboost_hyperparameters(X_train, y_train):
     param_grid = {
         'learning_rate': [0.01, 0.05, 0.1],
@@ -265,10 +265,10 @@ def tune_xgboost_hyperparameters(X_train, y_train):
     }
     grid_search = GridSearchCV(XGBRegressor(), param_grid, cv=3)
     grid_search.fit(X_train, y_train)
-    logging.info(f"Best Parameters: {grid_search.best_params_}")
+    logging.info(f"Best XGBoost Parameters: {grid_search.best_params_}")
     return grid_search.best_estimator_
 
-# Dalam fungsi load_or_train_model, jika model_type == 'xgboost', Anda bisa menambahkan kode ini.
+# === Hyperparameter Tuning untuk LightGBM ===
 def tune_lightgbm_hyperparameters(X_train, y_train):
     param_grid = {
         'learning_rate': [0.01, 0.05, 0.1],
@@ -277,21 +277,22 @@ def tune_lightgbm_hyperparameters(X_train, y_train):
     }
     grid_search = GridSearchCV(lgb.LGBMRegressor(), param_grid, cv=3)
     grid_search.fit(X_train, y_train)
-    logging.info(f"Best Parameters: {grid_search.best_params_}")
+    logging.info(f"Best LightGBM Parameters: {grid_search.best_params_}")
     return grid_search.best_estimator_
-    return model
 
+# === Fungsi Kirim Alert ===
 def send_alert(message):
-    # Anda bisa mengirim email atau menggunakan sistem alert lainnya di sini.
     logging.error(f"ALERT: {message}")
-    
+
+# === Fungsi Simpan dan Load Preprocessed Data ===
 def save_preprocessed_data(df, path):
-    df.to_csv(path)
+    df.to_csv(path, index=False)
     logging.info(f"Data diproses dan disimpan ke {path}")
 
 def load_preprocessed_data(path):
     return pd.read_csv(path)
-    
+
+# === Fungsi Save Model dengan Versioning ===
 def save_model_with_versioning(model, path):
     versioned_path = f"{path}_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}.pkl"
     joblib.dump(model, versioned_path)
