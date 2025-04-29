@@ -1,209 +1,132 @@
-2025-04-29 06:14:05.202167: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-29 06:14:05.205304: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-29 06:14:05.213837: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-29 06:47:29.928983: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 06:47:29.932096: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 06:47:29.940628: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745907245.227731    2120 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745907245.231844    2120 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745907245.243330    2120 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745907245.243346    2120 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745907245.243348    2120 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745907245.243350    2120 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-29 06:14:05.246924: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745909249.954754    2122 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745909249.958977    2122 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745909249.970437    2122 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745909249.970453    2122 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745909249.970468    2122 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745909249.970472    2122 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-29 06:47:29.973967: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-04-29 06:14:15.464730: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-this error, but please be aware what you are doing.
-2025-04-29 06:15:29,735 - ERROR - IPCC.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:30,531 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
-2025-04-29 06:15:33,398 - ERROR - KARW.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:33,459 - ERROR - JPFA.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:36,376 - ERROR - KLBF.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:36,516 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 06:15:36,516 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 06:15:38,897 - ERROR - LPPF.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:40,746 - ERROR - MAIN.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:41,618 - ERROR - MAPA.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:43,077 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 06:15:43,078 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 06:15:44,134 - ERROR - MCAS.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:46,531 - ERROR - MDKA.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:48,421 - ERROR - MEDC.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:49,228 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 06:15:49,228 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 06:15:51,626 - ERROR - MTDL.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:51,825 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
-2025-04-29 06:15:53,455 - ERROR - NFCX.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:54,103 - ERROR - NISP.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:15:54,977 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
-2025-04-29 06:15:55,480 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 06:15:55,481 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 06:15:56,829 - ERROR - PBID.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:00,158 - ERROR - PGAS.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:01,690 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 06:16:01,690 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 06:16:02,218 - ERROR - PNBN.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:04,950 - ERROR - ROTI.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:06,534 - ERROR - SIDO.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:07,825 - ERROR - SMCB.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:11,108 - ERROR - SMSM.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:11,690 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 06:16:11,690 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 06:16:13,073 - ERROR - STAA.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:13,580 - ERROR - SRTG.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:15,726 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-29 06:16:15,726 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 06:16:15,726 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 06:16:15,781 - ERROR - TBIG.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:16,581 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 06:16:16,582 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 06:16:17,032 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
-2025-04-29 06:16:17,159 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 06:16:17,159 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 06:16:18,471 - ERROR - TINS.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:20,876 - ERROR - ULTJ.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
-2025-04-29 06:16:21,367 - ERROR - UNVR.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
-You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 06:47:33,506 - ERROR - ACES.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:34,321 - ERROR - ADRO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:34,523 - ERROR - AKRA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:34,792 - ERROR - $ALMI.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 06:47:34,809 - WARNING - ALMI.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 06:47:35,398 - ERROR - ANJT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:35,590 - ERROR - APIC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:35,778 - ERROR - ARNA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:36,213 - ERROR - ASSA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:37,529 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BAEK.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BAEK.JK&crumb=dxOKVv8Z9Wt
+2025-04-29 06:47:38,094 - ERROR - $BAEK.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 06:47:38,094 - WARNING - BAEK.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:38,095 - ERROR - BAEK.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:38,122 - ERROR - BALI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:38,614 - ERROR - BBHI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:39,124 - ERROR - BBTN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:39,595 - ERROR - BJBR.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:39,624 - ERROR - BISI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:39,629 - ERROR - BJTM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:40,633 - ERROR - BNBA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:41,003 - ERROR - BNGA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:41,188 - WARNING - BOSS.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:41,443 - ERROR - BOLT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:41,507 - ERROR - BOGA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:41,519 - WARNING - BPII.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:42,140 - ERROR - BRPT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:42,310 - WARNING - BTEL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:42,477 - ERROR - BSDE.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:42,936 - ERROR - BTPS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:44,059 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BVSN.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BVSN.JK&crumb=dxOKVv8Z9Wt
+2025-04-29 06:47:44,769 - ERROR - $BVSN.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 06:47:44,769 - WARNING - BVSN.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:44,770 - ERROR - BVSN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:44,894 - WARNING - CBMF.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:45,046 - ERROR - CASA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:45,709 - ERROR - CLAY.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:46,007 - ERROR - CLEO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:46,187 - ERROR - CLPI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:46,195 - ERROR - CMNP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:46,284 - WARNING - CNTX.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:46,286 - ERROR - CNTX.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:46,442 - WARNING - COWL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:47,026 - WARNING - DEAL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:47,047 - WARNING - DEFI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:47,052 - ERROR - DEFI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:47,151 - ERROR - CTRA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:48,205 - WARNING - DUCK.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:49,450 - ERROR - EMTK.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:50,561 - ERROR - $ERA.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 06:47:50,561 - WARNING - ERA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:50,562 - ERROR - ERA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:50,776 - WARNING - FASW.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:50,786 - ERROR - FASW.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:50,882 - ERROR - ESSA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:51,053 - WARNING - FISH.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:51,054 - ERROR - FISH.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:51,567 - WARNING - GAMA.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:51,575 - ERROR - FORU.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:52,094 - ERROR - GJTL.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:52,307 - WARNING - HDTX.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:52,654 - WARNING - HKMU.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:52,970 - ERROR - $HITS.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 06:47:52,972 - WARNING - HITS.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 06:47:53,126 - ERROR - HMSP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:53,362 - ERROR - HRUM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:53,475 - WARNING - INAF.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:53,476 - ERROR - INAF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:54,015 - ERROR - INCI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:54,359 - ERROR - INDY.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:55,205 - ERROR - IPCC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:55,766 - ERROR - ISAT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:56,270 - ERROR - JPFA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:56,664 - ERROR - KARW.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:57,471 - ERROR - KLBF.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:57,503 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:47:57,986 - ERROR - LPPF.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:58,112 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:58,126 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:58,253 - ERROR - MAIN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:58,347 - ERROR - MAPA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:58,432 - ERROR - MCAS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:58,633 - ERROR - MDKA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:58,752 - ERROR - MEDC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:47:58,970 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:47:58,978 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:47:59,696 - ERROR - MTDL.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:00,087 - ERROR - NFCX.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:00,231 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:48:00,251 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:48:00,266 - ERROR - NISP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:00,565 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:48:00,733 - ERROR - PBID.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:01,193 - ERROR - PGAS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:01,259 - ERROR - PJAA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:01,269 - ERROR - PNBN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:01,449 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:48:01,775 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 06:48:01,775 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 06:48:02,852 - ERROR - ROTI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:03,323 - ERROR - SIDO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:03,773 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 06:48:03,784 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 06:48:03,788 - ERROR - SMCB.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:04,305 - ERROR - SMSM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:04,756 - ERROR - SRTG.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:04,869 - ERROR - STAA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:05,209 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:48:05,210 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:48:05,272 - ERROR - TBIG.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:05,375 - ERROR - TINS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:06,762 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 06:48:06,763 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:48:06,763 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 06:48:06,799 - ERROR - ULTJ.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:07,202 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 06:48:07,202 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 06:48:07,232 - ERROR - UNVR.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 06:48:07,270 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
+2025-04-29 06:48:07,320 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 06:48:07,321 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
