@@ -576,7 +576,7 @@ def retrain_if_needed(ticker: str):
         "Trend_Strength",
         "daily_avg", "daily_std", "daily_range",
         "is_opening_hour", "is_closing_hour"
-        ]
+    ]
 
     try:
         X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = prepare_features_and_labels(df, features)
