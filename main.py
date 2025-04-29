@@ -470,13 +470,13 @@ def analyze_stock(ticker: str):
         logging.error(f"{ticker}: Error saat mempersiapkan data - {e}")
         return None
 
-    # Load semua model
-    model_high_lgbm = load_or_train_model(f"model_high_lgbm_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
-    model_low_lgbm  = load_or_train_model(f"model_low_lgbm_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
-    model_high_xgb  = load_or_train_model(f"model_high_xgb_{ticker}.pkl", train_xgboost, X_tr, yh_tr)
-    model_low_xgb   = load_or_train_model(f"model_low_xgb_{ticker}.pkl", train_xgboost, X_tr, yl_tr)
-    model_high_lstm = load_or_train_model(f"model_high_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, model_type="keras")
-    model_low_lstm  = load_or_train_model(f"model_low_lstm_{ticker}.keras", train_lstm, X_tr, yl_tr, model_type="keras")
+    # Load semua model dan fitur
+    model_high_lgbm, features_high_lgbm = load_or_train_model(f"model_high_lgbm_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
+    model_low_lgbm, features_low_lgbm   = load_or_train_model(f"model_low_lgbm_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
+    model_high_xgb, features_high_xgb   = load_or_train_model(f"model_high_xgb_{ticker}.pkl", train_xgboost, X_tr, yh_tr)
+    model_low_xgb, features_low_xgb     = load_or_train_model(f"model_low_xgb_{ticker}.pkl", train_xgboost, X_tr, yl_tr)
+    model_high_lstm, features_high_lstm = load_or_train_model(f"model_high_lstm_{ticker}.keras", train_lstm, X_tr, yh_tr, model_type="keras")
+    model_low_lstm, features_low_lstm   = load_or_train_model(f"model_low_lstm_{ticker}.keras", train_lstm, X_tr, yl_tr, model_type="keras")
 
     try:
         prob_high = calculate_probability(model_high_lgbm, X_te, yh_te)
