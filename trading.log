@@ -1,4 +1,6 @@
 Traceback (most recent call last):
   File "/home/runner/work/arkana/arkana/main.py", line 8, in <module>
     import model_utils
-ModuleNotFoundError: No module named 'model_utils'
+  File "/home/runner/work/arkana/arkana/model_utils.py", line 3, in <module>
+    import optuna
+ModuleNotFoundError: No module named 'optuna'
