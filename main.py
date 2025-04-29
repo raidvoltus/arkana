@@ -395,9 +395,6 @@ def analyze_stock(ticker: str):
     profit_potential_pct = (ph - price) / price * 100 if action == "beli" else (price - pl) / price * 100
 
     if profit_potential_pct < 3:
-        logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f
-
-    if profit_potential_pct < 3:
         logging.info(f"{ticker} dilewati: potensi profit rendah ({profit_potential_pct:.2f}%)")
         return None
 
