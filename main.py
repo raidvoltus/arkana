@@ -164,7 +164,7 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["future_high"] = df["High"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).max()
     df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
 
-    return df.dropna(
+    return df.dropna()
 def evaluate_model(model, X, y_true):
     y_pred = model.predict(X)
     rmse = np.sqrt(mean_squared_error(y_true, y_pred))
