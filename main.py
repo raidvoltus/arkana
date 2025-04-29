@@ -586,28 +586,36 @@ def retrain_if_needed(ticker: str):
         logging.error(f"{ticker}: Error saat mempersiapkan data untuk retrain - {e}")
         return
 
-    # Retrain LightGBM
+    # --- Retrain semua model + simpan fitur terkait ---
     model_high_lgbm = train_lightgbm(X_tr, yh_tr)
     model_low_lgbm  = train_lightgbm(X_tr, yl_tr)
-    joblib.dump(model_high_lgbm, f"model_high_lgbm_{ticker}.pkl")
-    joblib.dump(model_low_lgbm, f"model_low_lgbm_{ticker}.pkl")
+    joblib.dump((model_high_lgbm, features), f"model_high_lgbm_{ticker}.pkl")
+    joblib.dump((model_low_lgbm, features), f"model_low_lgbm_{ticker}.pkl")
     logging.info(f"{ticker}: LightGBM retrained & saved.")
 
-    # Retrain XGBoost
     model_high_xgb = train_xgboost(X_tr, yh_tr)
     model_low_xgb  = train_xgboost(X_tr, yl_tr)
-    joblib.dump(model_high_xgb, f"model_high_xgb_{ticker}.pkl")
-    joblib.dump(model_low_xgb, f"model_low_xgb_{ticker}.pkl")
+    joblib.dump((model_high_xgb, features), f"model_high_xgb_{ticker}.pkl")
+    joblib.dump((model_low_xgb, features), f"model_low_xgb_{ticker}.pkl")
     logging.info(f"{ticker}: XGBoost retrained & saved.")
 
-    # Retrain LSTM
     model_high_lstm = train_lstm(X_tr, yh_tr)
     model_low_lstm  = train_lstm(X_tr, yl_tr)
     model_high_lstm.save(f"model_high_lstm_{ticker}.keras")
     model_low_lstm.save(f"model_low_lstm_{ticker}.keras")
+    
+    # Untuk LSTM, simpan fitur ke file JSON
+    features_lstm_path = f"features_lstm_{ticker}.json"
+    with open(features_lstm_path, "w") as f:
+        json.dump(features, f)
+
     logging.info(f"{ticker}: LSTM retrained & saved.")
 
-    logging.info(f"{ticker}: Semua model berhasil diretrain dan disimpan.")
+    # Simpan fitur global ke file utama (backup)
+    with open(f"{ticker}_features.json", "w") as f:
+        json.dump(features, f)
+
+    logging.info(f"{ticker}: Semua model & fitur berhasil disimpan setelah retrain.")
         
 def get_realized_price_data() -> pd.DataFrame:
     log_path = "prediksi_log.csv"
