@@ -460,8 +460,13 @@ def analyze_stock(ticker: str):
         "daily_avg", "daily_std", "daily_range",
         "is_opening_hour", "is_closing_hour"
     ]
+    
     check_and_reset_model_if_needed(ticker, features)
-
+        
+    X = df[features]
+    y_high = df["future_high"]
+    y_low = df["future_low"]
+    
     try:
         X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = prepare_features_and_labels(df, features)
     except Exception as e:
