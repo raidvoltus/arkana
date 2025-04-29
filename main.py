@@ -228,24 +228,19 @@ def cross_validate_model(model, X, y):
     logging.info(f"Cross-validation scores: {scores}")
     
 # === Hitung Probabilitas Arah Prediksi ===
-def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
-    if "Close" not in X.columns:
-        raise ValueError("'Close' column is required in input features (X).")
-    if len(X) != len(y_true):
-        raise ValueError("Length of X and y_true must match.")
-
-    y_pred = model.predict(X)
-    y_pred_series = pd.Series(y_pred, index=X.index)
-    close_price = X["Close"]
-
-    correct_dir = ((y_pred_series > close_price) & (y_true > close_price)) | \
-                  ((y_pred_series < close_price) & (y_true < close_price))
-    correct_dir = correct_dir.dropna()
-
-    if len(correct_dir) == 0:
+def calculate_probability(model, X_test, y_test):
+    try:
+        if hasattr(model, "predict_proba"):
+            probs = model.predict_proba(X_test)
+            # Ambil probabilitas kelas target (asumsi target = kelas 1)
+            return np.mean(probs[:, 1])
+        else:
+            preds = model.predict(X_test)
+            acc = np.mean((preds >= y_test) | (np.abs(preds - y_test) <= 0.02 * y_test))
+            return acc
+    except Exception as e:
+        logging.error(f"Error saat menghitung probabilitas - {e}")
         return 0.0
-
-    return correct_dir.sum() / len(correct_dir)
 
 # === Fungsi Utama Load or Train Model ===
 def load_or_train_model(filename, train_func, X_train, y_train, model_type=None):
