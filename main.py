@@ -255,11 +255,11 @@ def retrain_if_needed(ticker: str):
 
 def send_telegram_message(message: str):
     """ Mengirim pesan ke Telegram menggunakan bot API """
-    bot_token = "YOUR_BOT_TOKEN"
-    chat_id = "YOUR_CHAT_ID"
-    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN")
+    CHAT_ID          = os.environ.get("CHAT_ID")
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     params = {
-        "chat_id": chat_id,
+        "CHAT_ID": CHAT_ID,
         "text": message,
         "parse_mode": "HTML"
     }
