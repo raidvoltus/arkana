@@ -385,19 +385,23 @@ def is_stock_eligible(price, avg_volume, atr, ticker):
         return False
     return True
 
-def prepare_features_and_labels(df: pd.DataFrame, features: list):
+def prepare_features_and_labels(df: pd.DataFrame, features: list, reshape_for_lstm: bool = False):
     df = df.copy()
     df = df.dropna(subset=features + ["future_high", "future_low"])
 
-    X = df[features]
-    y_high = df["future_high"]
-    y_low = df["future_low"]
+    X = df[features].values
+    y_high = df["future_high"].values
+    y_low = df["future_low"].values
 
-    # Split manual pakai slicing biar hasil stabil & cocok buat time-series
-    split_idx = int(len(df) * 0.8)
+    split_idx = int(len(X) * 0.8)
     X_train, X_test = X[:split_idx], X[split_idx:]
     y_high_train, y_high_test = y_high[:split_idx], y_high[split_idx:]
     y_low_train, y_low_test = y_low[:split_idx], y_low[split_idx:]
+
+    if reshape_for_lstm:
+        # Reshape to (samples, timesteps, features) for LSTM
+        X_train = X_train.reshape((X_train.shape[0], X_train.shape[1], 1))
+        X_test = X_test.reshape((X_test.shape[0], X_test.shape[1], 1))
 
     return X_train, X_test, y_high_train, y_high_test, y_low_train, y_low_test
 
