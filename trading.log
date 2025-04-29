@@ -1,132 +1,133 @@
-2025-04-29 07:21:24.371569: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-29 07:21:24.374790: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-29 07:21:24.383484: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-29 07:28:05.876431: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 07:28:05.879665: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 07:28:05.888359: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745911284.398365    2105 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745911284.402631    2105 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745911284.414291    2105 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745911284.414325    2105 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745911284.414328    2105 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745911284.414330    2105 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-29 07:21:24.417926: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745911685.902421    2101 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745911685.906555    2101 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745911685.918215    2101 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745911685.918232    2101 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745911685.918235    2101 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745911685.918237    2101 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-29 07:28:05.921750: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-04-29 07:21:29,897 - ERROR - ACES.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:30,573 - ERROR - ADRO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:30,930 - ERROR - AKRA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:31,194 - ERROR - $ALMI.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 07:21:31,198 - WARNING - ALMI.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 07:21:31,722 - ERROR - ANJT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:31,924 - ERROR - APIC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:32,154 - ERROR - ARNA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:32,653 - ERROR - ASSA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:34,282 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BAEK.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BAEK.JK&crumb=NNpwGb8Z9Pn
-2025-04-29 07:21:34,942 - ERROR - $BAEK.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-29 07:21:34,951 - ERROR - BALI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:34,951 - WARNING - BAEK.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:34,951 - ERROR - BAEK.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:35,478 - ERROR - BBHI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:36,073 - ERROR - BBTN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:36,648 - ERROR - BISI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:36,657 - ERROR - BJBR.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:36,682 - ERROR - BJTM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:37,940 - ERROR - BNBA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:38,027 - ERROR - BNGA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:38,369 - WARNING - BOSS.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:38,474 - ERROR - BOGA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:38,491 - ERROR - BOLT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:38,682 - WARNING - BPII.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:39,253 - ERROR - BSDE.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:39,435 - WARNING - BTEL.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:39,565 - ERROR - BRPT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:40,051 - ERROR - BTPS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:40,883 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BVSN.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BVSN.JK&crumb=NNpwGb8Z9Pn
-2025-04-29 07:21:41,711 - ERROR - $BVSN.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-29 07:21:41,711 - WARNING - BVSN.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:41,711 - ERROR - BVSN.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:41,862 - WARNING - CBMF.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:42,207 - ERROR - CASA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:42,882 - ERROR - CLAY.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:43,225 - ERROR - CLEO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:43,239 - ERROR - CMNP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:43,249 - ERROR - CLPI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:43,366 - WARNING - CNTX.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:43,371 - ERROR - CNTX.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:43,554 - WARNING - COWL.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:44,260 - WARNING - DEAL.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:44,287 - WARNING - DEFI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:44,287 - ERROR - DEFI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:44,664 - ERROR - CTRA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:45,540 - WARNING - DUCK.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:46,929 - ERROR - EMTK.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:47,954 - ERROR - $ERA.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-29 07:21:47,954 - WARNING - ERA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:47,954 - ERROR - ERA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:48,374 - ERROR - ESSA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:48,465 - WARNING - FASW.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:48,467 - ERROR - FASW.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:48,650 - WARNING - FISH.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:48,654 - ERROR - FISH.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:49,128 - WARNING - GAMA.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:49,339 - ERROR - FORU.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:49,907 - ERROR - GJTL.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:50,031 - WARNING - HDTX.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:50,505 - WARNING - HKMU.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:50,585 - ERROR - $HITS.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 07:21:50,585 - WARNING - HITS.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 07:21:50,852 - ERROR - HMSP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:51,022 - ERROR - HRUM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:51,158 - WARNING - INAF.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:51,161 - ERROR - INAF.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:51,703 - ERROR - INCI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:51,890 - ERROR - INDY.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:52,531 - ERROR - IPCC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:53,256 - ERROR - ISAT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:53,962 - ERROR - JPFA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:55,185 - ERROR - KARW.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:56,456 - ERROR - KLBF.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:56,646 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:21:57,099 - ERROR - LPPF.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:57,252 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:57,258 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:57,370 - ERROR - MAIN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:57,506 - ERROR - MAPA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:57,634 - ERROR - MCAS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:57,687 - ERROR - MDKA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:57,830 - ERROR - MEDC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:58,066 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:58,085 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:21:59,127 - ERROR - MPRO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:59,138 - ERROR - MTDL.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:59,572 - ERROR - NFCX.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:59,725 - ERROR - NISP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:21:59,792 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:21:59,792 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:22:00,093 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:22:00,220 - ERROR - PBID.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:00,823 - ERROR - PNBN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:00,834 - ERROR - PGAS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:01,023 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:22:01,280 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 07:22:01,288 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 07:22:02,596 - ERROR - ROTI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:03,112 - ERROR - SIDO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:03,534 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 07:22:03,535 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 07:22:03,537 - ERROR - SMCB.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:04,130 - ERROR - SMSM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:04,444 - ERROR - SRTG.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:04,666 - ERROR - STAA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:04,971 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:22:04,972 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:22:05,045 - ERROR - TBIG.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:05,178 - ERROR - TINS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:06,638 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-29 07:22:06,638 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:22:06,638 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:22:07,097 - ERROR - ULTJ.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:07,181 - ERROR - UNVR.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
-2025-04-29 07:22:07,337 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
-2025-04-29 07:22:07,392 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 07:22:07,403 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 07:22:07,463 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 07:22:07,472 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 07:28:09,019 - ERROR - ACES.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:09,649 - ERROR - ADRO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:10,065 - ERROR - AKRA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:10,281 - ERROR - $ALMI.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 07:28:10,282 - WARNING - ALMI.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 07:28:10,688 - ERROR - ANJT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:11,103 - ERROR - APIC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:11,130 - ERROR - ARNA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:11,732 - ERROR - ASSA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:13,176 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BAEK.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BAEK.JK&crumb=LkGlrrr.gfS
+2025-04-29 07:28:13,879 - ERROR - $BAEK.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 07:28:13,879 - WARNING - BAEK.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:13,879 - ERROR - BAEK.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:13,911 - ERROR - BALI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:14,413 - ERROR - BBHI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:14,970 - ERROR - BBTN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:15,479 - ERROR - BJTM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:15,491 - ERROR - BISI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:15,501 - ERROR - BJBR.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:16,888 - ERROR - BNGA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:16,889 - ERROR - BNBA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:17,385 - ERROR - BOGA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:17,464 - ERROR - BOLT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:17,477 - WARNING - BOSS.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:17,620 - WARNING - BPII.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:18,489 - ERROR - BSDE.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:18,509 - ERROR - BRPT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:18,605 - WARNING - BTEL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:19,019 - ERROR - BTPS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:20,357 - ERROR - 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BVSN.JK?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BVSN.JK&crumb=LkGlrrr.gfS
+2025-04-29 07:28:20,940 - ERROR - $BVSN.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 07:28:20,950 - WARNING - BVSN.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:20,950 - ERROR - BVSN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:21,064 - WARNING - CBMF.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:21,401 - ERROR - CASA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:22,133 - ERROR - CLAY.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:22,418 - ERROR - CLEO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:22,436 - ERROR - CLPI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:22,536 - ERROR - CMNP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:22,662 - WARNING - CNTX.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:22,664 - ERROR - CNTX.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:22,822 - WARNING - COWL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:23,394 - WARNING - DEAL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:23,489 - WARNING - DEFI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:23,491 - ERROR - DEFI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:23,711 - ERROR - CTRA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:24,681 - WARNING - DUCK.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:26,068 - ERROR - EMTK.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:27,031 - ERROR - $ERA.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 07:28:27,032 - WARNING - ERA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:27,032 - ERROR - ERA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:27,040 - ERROR - ESSA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:27,309 - WARNING - FASW.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:27,310 - ERROR - FASW.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:27,515 - WARNING - FISH.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:27,517 - ERROR - FISH.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:28,015 - ERROR - FORU.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:28,061 - WARNING - GAMA.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:28,612 - ERROR - GJTL.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:28,990 - WARNING - HDTX.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:29,187 - WARNING - HKMU.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:29,469 - ERROR - $HITS.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 07:28:29,471 - WARNING - HITS.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 07:28:29,692 - ERROR - HMSP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:29,771 - ERROR - HRUM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:29,930 - WARNING - INAF.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:29,936 - ERROR - INAF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:30,587 - ERROR - INCI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:30,846 - ERROR - INDY.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:31,650 - ERROR - IPCC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:32,206 - ERROR - ISAT.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:32,732 - ERROR - JPFA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:33,140 - ERROR - KARW.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:33,946 - ERROR - KLBF.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:34,170 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:34,439 - ERROR - LPPF.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:34,689 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:34,693 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:34,843 - ERROR - MAPA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:34,853 - ERROR - MAIN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:35,030 - ERROR - MCAS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:35,181 - ERROR - MDKA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:35,368 - ERROR - MEDC.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:35,498 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:35,499 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:36,293 - ERROR - MPRO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:36,516 - ERROR - MTDL.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:36,906 - ERROR - NFCX.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:37,496 - ERROR - NISP.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:38,396 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:38,397 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:38,550 - ERROR - PBID.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:38,633 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:39,202 - ERROR - PJAA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:39,255 - ERROR - PGAS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:39,277 - ERROR - PNBN.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:39,417 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:39,705 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 07:28:39,705 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 07:28:40,937 - ERROR - ROTI.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:41,330 - ERROR - SIDO.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:41,997 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 07:28:42,000 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 07:28:42,002 - ERROR - SMCB.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:42,592 - ERROR - SMSM.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:43,027 - ERROR - STAA.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:43,050 - ERROR - SRTG.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:43,247 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:43,249 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:43,482 - ERROR - TBIG.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:43,698 - ERROR - TINS.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:44,907 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 07:28:44,907 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:44,907 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 07:28:44,949 - ERROR - ULTJ.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:45,399 - ERROR - UNVR.JK: Fitur tidak ditemukan, pastikan model sudah ditraining.
+2025-04-29 07:28:45,408 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 07:28:45,408 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 07:28:45,512 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
+2025-04-29 07:28:45,550 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 07:28:45,550 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
