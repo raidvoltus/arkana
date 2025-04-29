@@ -1,16 +1,32 @@
-2025-04-29 10:27:04.229749: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-29 10:27:04.232678: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-29 10:27:04.240864: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-29 10:32:55.219595: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 10:32:55.222974: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 10:32:55.234653: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745922424.254870    2075 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745922424.259096    2075 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745922424.270874    2075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745922424.270893    2075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745922424.270896    2075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745922424.270898    2075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-29 10:27:04.274547: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745922775.250082    2083 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745922775.254458    2083 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745922775.266606    2083 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745922775.266626    2083 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745922775.266629    2083 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745922775.266631    2083 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-29 10:32:55.270637: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-04-29 10:32:59,385 - INFO - 🚀 Memulai analisis saham...
+YF.download() has changed argument auto_adjust default to True
 Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 281, in <module>
-    reset_models()
-NameError: name 'reset_models' is not defined
+  File "/home/runner/work/arkana/arkana/main.py", line 287, in <module>
+    results = list(executor.map(analyze_stock, STOCK_LIST))
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/runner/work/arkana/arkana/main.py", line 145, in analyze_stock
+    df = df.dropna(subset=["future_high", "future_low"])
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/frame.py", line 6670, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['future_high', 'future_low']
