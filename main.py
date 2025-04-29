@@ -277,9 +277,6 @@ def send_telegram_message(message: str):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     
-    # Reset model jika perlu
-    reset_models()
-    
     logging.info("🚀 Memulai analisis saham...")
     
     # Tentukan jumlah pekerja untuk paralelisme
