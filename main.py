@@ -451,16 +451,12 @@ def analyze_stock(ticker: str):
         logging.debug(f"{ticker}: Tidak memenuhi kriteria awal.")
         return None
         
-    features = [
-        "Close", "ATR", "RSI", "MACD", "MACD_Hist",
-        "SMA_14", "SMA_28", "SMA_84", "EMA_10",
-        "BB_Upper", "BB_Lower", "Support", "Resistance",
-        "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
-        "OBV", "Stoch_K", "Stoch_D",
-        "Trend_Strength",
-        "daily_avg", "daily_std", "daily_range",
-        "is_opening_hour", "is_closing_hour"
-    ]
+    try:
+        with open(f"{ticker}_features.json") as f:
+            features = json.load(f)
+    except FileNotFoundError:
+        logging.error(f"{ticker}: Fitur tidak ditemukan, pastikan model sudah ditraining.")
+        return None
     
     check_and_reset_model_if_needed(ticker, features)
         
