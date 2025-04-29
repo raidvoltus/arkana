@@ -1,4 +1,209 @@
-  File "/home/runner/work/arkana/arkana/main.py", line 167
-    return df.dropna(
-                    ^
-SyntaxError: '(' was never closed
+2025-04-29 05:38:17.846516: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 05:38:17.849629: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 05:38:17.858168: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745905097.871936    2117 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745905097.876057    2117 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745905097.887618    2117 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745905097.887633    2117 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745905097.887635    2117 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745905097.887637    2117 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-29 05:38:17.891179: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-04-29 05:38:27.848785: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+[LightGBM] [Fatal] The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+this error, but please be aware what you are doing.
+2025-04-29 05:39:44,509 - ERROR - IPCC.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:39:45,749 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
+2025-04-29 05:39:48,685 - ERROR - KARW.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:39:48,685 - ERROR - JPFA.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:39:51,751 - ERROR - KLBF.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:39:51,942 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 05:39:51,943 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 05:39:53,923 - ERROR - LPPF.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:39:56,336 - ERROR - MAIN.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:39:57,217 - ERROR - MAPA.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:39:58,994 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 05:39:58,994 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 05:39:59,731 - ERROR - MCAS.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:01,492 - ERROR - MDKA.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:03,655 - ERROR - MEDC.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:04,619 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 05:40:04,620 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 05:40:07,283 - ERROR - MTDL.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:07,528 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
+2025-04-29 05:40:08,997 - ERROR - NFCX.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:09,488 - ERROR - NISP.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:10,963 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
+2025-04-29 05:40:11,722 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 05:40:11,722 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 05:40:12,287 - ERROR - PBID.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:15,603 - ERROR - PGAS.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:17,112 - ERROR - PNBN.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:17,565 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 05:40:17,566 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 05:40:20,524 - ERROR - ROTI.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:22,266 - ERROR - SIDO.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:23,201 - ERROR - SMCB.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:26,993 - ERROR - SMSM.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:27,646 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 05:40:27,646 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 05:40:28,733 - ERROR - STAA.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:29,282 - ERROR - SRTG.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:31,365 - ERROR - TBIG.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:31,853 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-29 05:40:31,854 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 05:40:31,854 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 05:40:32,851 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
+2025-04-29 05:40:32,852 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
+2025-04-29 05:40:33,406 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
+2025-04-29 05:40:33,590 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-29 05:40:33,590 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 05:40:33,823 - ERROR - TINS.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:37,231 - ERROR - ULTJ.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2025-04-29 05:40:37,570 - ERROR - UNVR.JK: Error saat menghitung probabilitas - The number of features in data (27) is not the same as it was in training data (23).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
