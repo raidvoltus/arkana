@@ -29,8 +29,8 @@ STOCK_LIST = ["BBCA.JK", "BBRI.JK", "TLKM.JK", "BMRI.JK", "UNVR.JK"]  # Contoh
 def send_telegram_message(message: str):
     import requests
 
-    TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
-    CHAT_ID = "YOUR_CHAT_ID"
+    TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN")
+    CHAT_ID          = os.environ.get("CHAT_ID")
 
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
     payload = {
