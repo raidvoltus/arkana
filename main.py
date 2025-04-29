@@ -248,19 +248,33 @@ def calculate_probability(model, X: pd.DataFrame, y_true: pd.Series) -> float:
     return correct_dir.sum() / len(correct_dir)
 
 # === Fungsi Utama Load or Train Model ===
-def load_or_train_model(path, train_func, X, y, model_type="joblib"):
-    if os.path.exists(path):
-        model = joblib.load(path) if model_type == "joblib" else tf.keras.models.load_model(path)
-        logging.info(f"Loaded model from {path}")
-    else:
-        model = train_func(X, y)
-        with model_save_lock:
-            if model_type == "joblib":
-                joblib.dump(model, path)
+def load_or_train_model(filename, train_func, X_train, y_train, model_type=None):
+    if os.path.exists(filename):
+        try:
+            if model_type == "keras":
+                model = keras.models.load_model(filename)
+                features_file = f"features_lstm_{filename.split('_')[-1].split('.')[0]}.json"
+                with open(features_file) as f:
+                    features = json.load(f)
+                return model, features
             else:
-                model.save(path)
-        logging.info(f"Trained & saved model to {path}")
-    return model
+                model, features = joblib.load(filename)
+                return model, features
+        except Exception as e:
+            logging.warning(f"{filename}: Gagal load model, akan retrain - {e}")
+
+    model = train_func(X_train, y_train)
+    features = X_train.columns.tolist()
+
+    if model_type == "keras":
+        model.save(filename)
+        features_file = f"features_lstm_{filename.split('_')[-1].split('.')[0]}.json"
+        with open(features_file, "w") as f:
+            json.dump(features, f)
+    else:
+        joblib.dump((model, features), filename)
+
+    return model, features
 
 # === Hyperparameter Tuning untuk XGBoost ===
 def tune_xgboost_hyperparameters(X_train, y_train):
