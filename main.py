@@ -5,6 +5,7 @@ import joblib
 import logging
 import hashlib
 import random
+import model_utils
 import pandas as pd
 import numpy as np
 import yfinance as yf
@@ -16,6 +17,7 @@ from concurrent.futures import ThreadPoolExecutor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 
+from model_utils import some_function
 from model_utils import train_lightgbm, train_xgboost, train_lstm
 from indicator_utils import calculate_indicators
 from feature_utils import prepare_features_and_labels
