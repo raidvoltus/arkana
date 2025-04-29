@@ -1,23 +1,16 @@
-2025-04-29 09:56:07,793 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
-2025-04-29 09:57:17,310 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 09:57:17,311 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 09:57:51,434 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 09:57:51,435 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 09:58:45,215 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 09:58:45,216 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 09:59:07,954 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
-2025-04-29 09:59:53,554 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
-2025-04-29 09:59:53,961 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 09:59:53,961 - WARNING - PPRO.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 10:00:29,862 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 10:00:29,862 - WARNING - SMCB.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 10:02:07,774 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 10:02:07,774 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 10:02:26,734 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-29 10:02:26,735 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 10:02:26,735 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 10:02:29,877 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 10:02:29,878 - WARNING - WIKA.JK: Data daily kosong saat ambil harga terbaru.
-2025-04-29 10:02:30,568 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
-2025-04-29 10:02:30,735 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 10:02:30,736 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-29 10:18:18.207980: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 10:18:18.211210: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 10:18:18.220019: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745921898.234888    2093 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745921898.239114    2093 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745921898.250928    2093 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745921898.250961    2093 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745921898.250964    2093 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745921898.250966    2093 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-29 10:18:18.254572: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/home/runner/work/arkana/arkana/main.py", line 122, in <module>
+    def train_lstm(X: pd.DataFrame, y: pd.Series) -> tf.keras.Model:
+NameError: name 'tf' is not defined. Did you mean: 'yf'?
