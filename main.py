@@ -235,6 +235,27 @@ def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     return df.dropna()
 
+# Konstanta threshold (letakkan di atas fungsi analyze_stock)
+MIN_PRICE = 500
+MAX_PRICE = 2000
+MIN_VOLUME = 10000
+MIN_VOLATILITY = 0.005
+MIN_PROB = 0.9
+
+def is_stock_eligible(price, avg_volume, atr, ticker):
+    if price < MIN_PRICE:
+        logging.info(f"{ticker} dilewati: harga terlalu rendah ({price:.2f})")
+        return False
+    if price > MAX_PRICE:
+        logging.info(f"{ticker} dilewati: harga terlalu tinggi ({price:.2f})")
+        return False
+    if avg_volume < MIN_VOLUME:
+        logging.info(f"{ticker} dilewati: volume terlalu rendah ({avg_volume:.0f})")
+        return False
+    if (atr / price) < MIN_VOLATILITY:
+        logging.info(f"{ticker} dilewati: volatilitas terlalu rendah (ATR={atr:.4f})")
+        return False
+    return True
 
 def is_stock_eligible(price, avg_volume, atr, ticker) -> bool:
     # Tentukan kriteria kelayakan saham
