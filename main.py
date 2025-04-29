@@ -412,6 +412,7 @@ def get_latest_close(ticker: str):
         logging.error(f"{ticker}: Gagal ambil harga terbaru - {e}")
         return None
 
+
 def analyze_stock(ticker: str):
     df = get_stock_data(ticker)
     if df is None or df.empty:
