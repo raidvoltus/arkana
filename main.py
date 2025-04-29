@@ -385,12 +385,21 @@ def is_stock_eligible(price, avg_volume, atr, ticker):
         return False
     return True
 
-def prepare_features_and_labels(df, features):
+def prepare_features_and_labels(df: pd.DataFrame, features: list):
+    df = df.copy()
     df = df.dropna(subset=features + ["future_high", "future_low"])
+
     X = df[features]
     y_high = df["future_high"]
     y_low = df["future_low"]
-    return train_test_split(X, y_high, y_low, test_size=0.2, random_state=42)
+
+    # Split manual pakai slicing biar hasil stabil & cocok buat time-series
+    split_idx = int(len(df) * 0.8)
+    X_train, X_test = X[:split_idx], X[split_idx:]
+    y_high_train, y_high_test = y_high[:split_idx], y_high[split_idx:]
+    y_low_train, y_low_test = y_low[:split_idx], y_low[split_idx:]
+
+    return X_train, X_test, y_high_train, y_high_test, y_low_train, y_low_test
 
 def load_or_train_model(path, train_fn, X_train, y_train, model_type="joblib"):
     if os.path.exists(path):
