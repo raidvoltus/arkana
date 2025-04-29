@@ -565,14 +565,18 @@ def retrain_if_needed(ticker: str):
     df = calculate_indicators(df)
     df = df.dropna(subset=["future_high", "future_low"])
 
+    # Tentukan fitur yang akan digunakan
     features = [
         "Close", "ATR", "RSI", "MACD", "MACD_Hist",
         "SMA_14", "SMA_28", "SMA_84", "EMA_10",
         "BB_Upper", "BB_Lower", "Support", "Resistance",
         "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
+        "OBV", "Stoch_K", "Stoch_D",
+        "Close_Lag1", "Close_Lag2",
+        "Trend_Strength",
         "daily_avg", "daily_std", "daily_range",
         "is_opening_hour", "is_closing_hour"
-    ]
+        ]
 
     try:
         X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = prepare_features_and_labels(df, features)
