@@ -1,19 +1,42 @@
-2025-04-29 10:32:55.219595: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-29 10:32:55.222974: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-29 10:32:55.234653: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-29 12:41:27.754067: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 12:41:27.757193: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-29 12:41:27.765668: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745922775.250082    2083 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745922775.254458    2083 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1745922775.266606    2083 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745922775.266626    2083 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745922775.266629    2083 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1745922775.266631    2083 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-29 10:32:55.270637: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1745930487.779662    2173 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745930487.783913    2173 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745930487.796251    2173 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745930487.796266    2173 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745930487.796268    2173 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745930487.796271    2173 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-29 12:41:27.799798: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-04-29 10:32:59,385 - INFO - 🚀 Memulai analisis saham...
-YF.download() has changed argument auto_adjust default to True
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000169 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5187
+[LightGBM] [Info] Number of data points in the train set: 1196, number of used features: 27
+[LightGBM] [Info] Start training from score 801.952341
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000269 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5272
+[LightGBM] [Info] Number of data points in the train set: 1195, number of used features: 27
+[LightGBM] [Info] Start training from score 260.456067
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.023643 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5507
+[LightGBM] [Info] Number of data points in the train set: 1196, number of used features: 27
+[LightGBM] [Info] Start training from score 3019.230769
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000360 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5184
+[LightGBM] [Info] Number of data points in the train set: 1196, number of used features: 27
+[LightGBM] [Info] Start training from score 245.435619
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000421 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 5366
+[LightGBM] [Info] Number of data points in the train set: 1195, number of used features: 27
+[LightGBM] [Info] Start training from score 1417.481172
 Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 287, in <module>
+  File "/home/runner/work/arkana/arkana/main.py", line 490, in <module>
     results = list(executor.map(analyze_stock, STOCK_LIST))
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
     yield _result_or_cancel(fs.pop())
@@ -25,8 +48,10 @@ Traceback (most recent call last):
     raise self._exception
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
     result = self.fn(*self.args, **self.kwargs)
-  File "/home/runner/work/arkana/arkana/main.py", line 145, in analyze_stock
-    df = df.dropna(subset=["future_high", "future_low"])
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/frame.py", line 6670, in dropna
-    raise KeyError(np.array(subset)[check].tolist())
-KeyError: ['future_high', 'future_low']
+  File "/home/runner/work/arkana/arkana/main.py", line 360, in analyze_stock
+    model_high_lgb = load_or_train_model(f"model_high_lgb_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
+  File "/home/runner/work/arkana/arkana/main.py", line 250, in load_or_train_model
+    model = train_fn(X_train, y_train)
+  File "/home/runner/work/arkana/arkana/main.py", line 104, in train_lightgbm
+    evaluate_model(model, X_train, y_train)
+NameError: name 'evaluate_model' is not defined
