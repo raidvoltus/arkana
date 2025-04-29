@@ -448,12 +448,14 @@ def analyze_stock(ticker: str):
     if not is_stock_eligible(price, avg_volume, atr, ticker):
         logging.debug(f"{ticker}: Tidak memenuhi kriteria awal.")
         return None
-
+        
     features = [
         "Close", "ATR", "RSI", "MACD", "MACD_Hist",
         "SMA_14", "SMA_28", "SMA_84", "EMA_10",
         "BB_Upper", "BB_Lower", "Support", "Resistance",
         "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
+        "OBV", "Stoch_K", "Stoch_D",
+        "Trend_Strength",
         "daily_avg", "daily_std", "daily_range",
         "is_opening_hour", "is_closing_hour"
     ]
