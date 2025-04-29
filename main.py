@@ -7,6 +7,7 @@ import joblib
 import logging
 import random
 import warnings
+import tensorflow as tf
 from typing import Dict
 from concurrent.futures import ThreadPoolExecutor
 
