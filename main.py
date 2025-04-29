@@ -412,7 +412,6 @@ def get_latest_close(ticker: str):
         logging.error(f"{ticker}: Gagal ambil harga terbaru - {e}")
         return None
 
-
 def analyze_stock(ticker: str):
     df = get_stock_data(ticker)
     if df is None or df.empty:
@@ -425,7 +424,6 @@ def analyze_stock(ticker: str):
         logging.warning(f"{ticker}: ATR kosong setelah kalkulasi.")
         return None
 
-    atr = df["ATR"].dropna().iloc[-1]
     required_columns = ["High", "Low", "Close", "Volume", "ATR"]
     if not all(col in df.columns for col in required_columns):
         logging.error(f"{ticker}: Kolom yang diperlukan tidak lengkap.")
@@ -450,27 +448,23 @@ def analyze_stock(ticker: str):
     if not is_stock_eligible(price, avg_volume, atr, ticker):
         logging.debug(f"{ticker}: Tidak memenuhi kriteria awal.")
         return None
-        
+
     try:
         with open(f"{ticker}_features.json") as f:
             features = json.load(f)
     except FileNotFoundError:
         logging.error(f"{ticker}: Fitur tidak ditemukan, pastikan model sudah ditraining.")
         return None
-    
+
     check_and_reset_model_if_needed(ticker, features)
-        
-    X = df[features]
-    y_high = df["future_high"]
-    y_low = df["future_low"]
-    
+
     try:
         X_tr, X_te, yh_tr, yh_te, yl_tr, yl_te = prepare_features_and_labels(df, features)
     except Exception as e:
         logging.error(f"{ticker}: Error saat mempersiapkan data - {e}")
         return None
 
-    # Load semua model dan fitur
+    # Load semua model + fitur spesifik
     model_high_lgbm, features_high_lgbm = load_or_train_model(f"model_high_lgbm_{ticker}.pkl", train_lightgbm, X_tr, yh_tr)
     model_low_lgbm, features_low_lgbm   = load_or_train_model(f"model_low_lgbm_{ticker}.pkl", train_lightgbm, X_tr, yl_tr)
     model_high_xgb, features_high_xgb   = load_or_train_model(f"model_high_xgb_{ticker}.pkl", train_xgboost, X_tr, yh_tr)
@@ -479,8 +473,8 @@ def analyze_stock(ticker: str):
     model_low_lstm, features_low_lstm   = load_or_train_model(f"model_low_lstm_{ticker}.keras", train_lstm, X_tr, yl_tr, model_type="keras")
 
     try:
-        prob_high = calculate_probability(model_high_lgbm, X_te, yh_te)
-        prob_low  = calculate_probability(model_low_lgbm, X_te, yl_te)
+        prob_high = calculate_probability(model_high_lgbm, X_te[features_high_lgbm], yh_te)
+        prob_low  = calculate_probability(model_low_lgbm, X_te[features_low_lgbm], yl_te)
     except Exception as e:
         logging.error(f"{ticker}: Error saat menghitung probabilitas - {e}")
         return None
@@ -489,16 +483,22 @@ def analyze_stock(ticker: str):
         logging.info(f"{ticker} dilewati: Prob rendah (H={prob_high:.2f}, L={prob_low:.2f})")
         return None
 
-    X_last = df[features].iloc[[-1]]
+    # Prediksi dari masing-masing model, pastikan pakai fitur masing-masing
+    X_last_high_lgbm = df[features_high_lgbm].iloc[[-1]]
+    X_last_high_xgb  = df[features_high_xgb].iloc[[-1]]
+    X_last_high_lstm = df[features_high_lstm].iloc[[-1]]
 
-    # Prediksi dari masing-masing model
-    ph_lgbm = model_high_lgbm.predict(X_last)[0]
-    ph_xgb  = model_high_xgb.predict(X_last)[0]
-    ph_lstm = model_high_lstm.predict(X_last.values.reshape(1, -1, 1))[0][0]
+    X_last_low_lgbm = df[features_low_lgbm].iloc[[-1]]
+    X_last_low_xgb  = df[features_low_xgb].iloc[[-1]]
+    X_last_low_lstm = df[features_low_lstm].iloc[[-1]]
 
-    pl_lgbm = model_low_lgbm.predict(X_last)[0]
-    pl_xgb  = model_low_xgb.predict(X_last)[0]
-    pl_lstm = model_low_lstm.predict(X_last.values.reshape(1, -1, 1))[0][0]
+    ph_lgbm = model_high_lgbm.predict(X_last_high_lgbm)[0]
+    ph_xgb  = model_high_xgb.predict(X_last_high_xgb)[0]
+    ph_lstm = model_high_lstm.predict(X_last_high_lstm.values.reshape(1, -1, 1))[0][0]
+
+    pl_lgbm = model_low_lgbm.predict(X_last_low_lgbm)[0]
+    pl_xgb  = model_low_xgb.predict(X_last_low_xgb)[0]
+    pl_lstm = model_low_lstm.predict(X_last_low_lstm.values.reshape(1, -1, 1))[0][0]
 
     # Weighted voting
     ph = (0.4 * ph_lgbm) + (0.4 * ph_xgb) + (0.2 * ph_lstm)
