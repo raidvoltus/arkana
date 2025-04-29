@@ -10,3 +10,4 @@ requests>=2.28.0
 matplotlib>=3.6.0
 python-telegram-bot==13.15
 xgboost
+optuna>=3.0.0
