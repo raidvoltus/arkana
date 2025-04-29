@@ -26,6 +26,29 @@ MIN_PROB = 0.6
 BACKUP_CSV_PATH = "backup_predictions.csv"
 STOCK_LIST = ["BBCA.JK", "BBRI.JK", "TLKM.JK", "BMRI.JK", "UNVR.JK"]  # Contoh
 
+def send_telegram_message(message: str):
+    import requests
+
+    TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+    CHAT_ID = "YOUR_CHAT_ID"
+
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    payload = {
+        "chat_id": CHAT_ID,
+        "text": message,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": True
+    }
+
+    try:
+        response = requests.post(url, data=payload)
+        if response.status_code != 200:
+            logging.error(f"Gagal mengirim pesan Telegram: {response.text}")
+        else:
+            logging.info("Pesan berhasil dikirim ke Telegram.")
+    except Exception as e:
+        logging.error(f"Exception saat mengirim Telegram: {e}")
+        
 def get_stock_data(ticker: str, period="3mo", interval="1h") -> pd.DataFrame:
     try:
         df = yf.download(ticker, period=period, interval=interval, progress=False, threads=False)
