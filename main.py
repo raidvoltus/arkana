@@ -90,7 +90,6 @@ def calculate_indicators(df):
     
     # Tambahkan fitur waktu
     HOURS_PER_DAY = 7
-    HOURS_PER_WEEK = 35
     df["hour"] = df.index.hour
     df["is_opening_hour"] = (df["hour"] == 9).astype(int)
     df["is_closing_hour"] = (df["hour"] == 15).astype(int)
@@ -148,9 +147,9 @@ def calculate_indicators(df):
     df["daily_std"] = df["close"].rolling(HOURS_PER_DAY).std()
     df["daily_range"] = df["high"].rolling(HOURS_PER_DAY).max() - df["low"].rolling(HOURS_PER_DAY).min()
 
-    # === Future target labels ===
-    df["future_high"] = df["high"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).max()
-    df["future_low"]  = df["low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
+    # === Target prediksi: harga tertinggi & terendah BESOK ===
+    df["future_high"] = df["high"].shift(-HOURS_PER_DAY).rolling(HOURS_PER_DAY).max()
+    df["future_low"]  = df["low"].shift(-HOURS_PER_DAY).rolling(HOURS_PER_DAY).min()
 
     return df.dropna()
 
