@@ -1,41 +1,19 @@
-2025-04-30 19:24:50.893975: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-30 19:24:50.897123: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-30 19:24:50.905765: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-30 19:50:39.154945: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-30 19:50:39.158096: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-30 19:50:39.166580: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1746041090.919958    2012 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1746041090.924171    2012 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1746041090.935733    2012 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746041090.935749    2012 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746041090.935752    2012 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746041090.935754    2012 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-30 19:24:50.939342: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1746042639.180743    2039 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1746042639.185001    2039 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1746042639.196581    2039 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746042639.196603    2039 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746042639.196606    2039 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746042639.196608    2039 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-30 19:50:39.200282: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 /home/runner/work/arkana/arkana/main.py:33: DeprecationWarning: `import kerastuner` is deprecated, please use `import keras_tuner`.
   from kerastuner.tuners import RandomSearch
-[I 2025-04-30 19:24:55,031] A new study created in memory with name: no-name-3fe989fe-1766-42fa-a2b2-99aa22cc1b67
-/home/runner/work/arkana/arkana/main.py:347: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
-  "learning_rate": trial.suggest_loguniform("learning_rate", 1e-3, 0.3),
-[W 2025-04-30 19:24:55,033] Trial 0 failed with parameters: {'n_estimators': 250, 'learning_rate': 0.0036771045432324673, 'num_leaves': 31, 'max_depth': 12, 'subsample': 0.9314682931477418, 'colsample_bytree': 0.712938978382309} because of the following error: NameError("name 'X_train' is not defined").
+[I 2025-04-30 19:50:42,421] A new study created in memory with name: no-name-1b82f43e-dd68-4dda-b413-867f32a7a7c8
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
-    value_or_values = func(trial)
-  File "/home/runner/work/arkana/arkana/main.py", line 355, in objective_lgb
-    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], early_stopping_rounds=50, verbose=False)
-NameError: name 'X_train' is not defined
-[W 2025-04-30 19:24:55,033] Trial 0 failed with value None.
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 360, in <module>
-    study.optimize(objective_lgb, n_trials=50)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/optuna/study/study.py", line 475, in optimize
-    _optimize(
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/optuna/study/_optimize.py", line 63, in _optimize
-    _optimize_sequential(
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
-    frozen_trial = _run_trial(study, func, catch)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
-    raise func_err
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
-    value_or_values = func(trial)
-  File "/home/runner/work/arkana/arkana/main.py", line 355, in objective_lgb
-    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], early_stopping_rounds=50, verbose=False)
+  File "/home/runner/work/arkana/arkana/main.py", line 362, in <module>
+    study.optimize(make_objective_lgb(X_train, y_train, X_val, y_val), n_trials=50)
 NameError: name 'X_train' is not defined
