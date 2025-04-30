@@ -1,300 +1,31 @@
-2025-04-30 15:59:09.429455: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-30 15:59:09.432577: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-30 15:59:09.441087: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-30 16:08:31.090681: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-30 16:08:31.093796: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-30 16:08:31.102312: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1746028749.455195    2062 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1746028749.459285    2062 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1746028749.470721    2062 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746028749.470738    2062 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746028749.470741    2062 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746028749.470743    2062 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-30 15:59:09.474255: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1746029311.116523    2080 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1746029311.120691    2080 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1746029311.132332    2080 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746029311.132348    2080 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746029311.132350    2080 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746029311.132352    2080 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-30 16:08:31.136101: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-Dihapus: model_high_CTRA.JK.pkl
-Dihapus: model_high_ISAT.JK.pkl
-Dihapus: model_high_lgbm_ADRO.JK.pkl
-Dihapus: model_high_lgbm_CASA.JK.pkl
-Dihapus: model_high_lgbm_KLBF.JK.pkl
-Dihapus: model_high_INDY.JK.pkl
-Dihapus: model_high_AKRA.JK.pkl
-Dihapus: model_high_BOGA.JK.pkl
-Dihapus: model_high_lgbm_ESSA.JK.pkl
-Dihapus: model_high_BBHI.JK.pkl
-Dihapus: model_high_lgbm_NFCX.JK.pkl
-Dihapus: model_high_ANJT.JK.pkl
-Dihapus: model_high_lgbm_STAA.JK.pkl
-Dihapus: model_high_lgbm_EMTK.JK.pkl
-Dihapus: model_high_lgbm_IPCC.JK.pkl
-Dihapus: model_high_lgbm_BTPS.JK.pkl
-Dihapus: model_high_SRTG.JK.pkl
-Dihapus: model_high_MAPA.JK.pkl
-Dihapus: model_high_lgbm_HMSP.JK.pkl
-Dihapus: model_high_lgbm_SRTG.JK.pkl
-Dihapus: model_high_HRUM.JK.pkl
-Dihapus: model_high_lgbm_MPRO.JK.pkl
-Dihapus: model_high_lgbm_INCI.JK.pkl
-Dihapus: model_high_CLAY.JK.pkl
-Dihapus: model_high_lgbm_BRPT.JK.pkl
-Dihapus: model_high_FORU.JK.pkl
-Dihapus: model_high_HMSP.JK.pkl
-Dihapus: model_high_lgbm_BJTM.JK.pkl
-Dihapus: model_high_lgbm_PNBN.JK.pkl
-Dihapus: model_high_KINO.JK.pkl
-Dihapus: model_high_RIGS.JK.pkl
-Dihapus: model_high_lgbm_TINS.JK.pkl
-Dihapus: model_high_ESSA.JK.pkl
-Dihapus: model_high_CASA.JK.pkl
-Dihapus: model_high_MEDC.JK.pkl
-Dihapus: model_high_lgbm_MCAS.JK.pkl
-Dihapus: model_high_UNVR.JK.pkl
-Dihapus: model_high_lgbm_BNGA.JK.pkl
-Dihapus: model_high_JPFA.JK.pkl
-Dihapus: model_high_lgbm_UNVR.JK.pkl
-Dihapus: model_high_lgbm_CLAY.JK.pkl
-Dihapus: model_high_lgbm_ASSA.JK.pkl
-Dihapus: model_high_ACES.JK.pkl
-Dihapus: model_high_lgbm_KARW.JK.pkl
-Dihapus: model_high_INCI.JK.pkl
-Dihapus: model_high_BNBA.JK.pkl
-Dihapus: model_high_lgbm_TBIG.JK.pkl
-Dihapus: model_high_lgbm_CTRA.JK.pkl
-Dihapus: model_high_lgbm_PJAA.JK.pkl
-Dihapus: model_high_lgbm_BNBA.JK.pkl
-Dihapus: model_high_BJTM.JK.pkl
-Dihapus: model_high_lgbm_PGAS.JK.pkl
-Dihapus: model_high_lgbm_SIDO.JK.pkl
-Dihapus: model_high_PGAS.JK.pkl
-Dihapus: model_high_TBIG.JK.pkl
-Dihapus: model_high_lgbm_AKRA.JK.pkl
-Dihapus: model_high_lgbm_GJTL.JK.pkl
-Dihapus: model_high_lgbm_FORU.JK.pkl
-Dihapus: model_high_PBID.JK.pkl
-Dihapus: model_high_BBTN.JK.pkl
-Dihapus: model_high_lgbm_BOLT.JK.pkl
-Dihapus: model_high_lgbm_MEDC.JK.pkl
-Dihapus: model_high_ADRO.JK.pkl
-Dihapus: model_high_ROTI.JK.pkl
-Dihapus: model_high_CMNP.JK.pkl
-Dihapus: model_high_CLEO.JK.pkl
-Dihapus: model_high_LPPF.JK.pkl
-Dihapus: model_high_lgbm_SMSM.JK.pkl
-Dihapus: model_high_PJAA.JK.pkl
-Dihapus: model_high_lgbm_MTDL.JK.pkl
-Dihapus: model_high_lgbm_MAIN.JK.pkl
-Dihapus: model_high_lgbm_PBID.JK.pkl
-Dihapus: model_high_MDKA.JK.pkl
-Dihapus: model_high_STAA.JK.pkl
-Dihapus: model_high_BJBR.JK.pkl
-Dihapus: model_high_lgbm_BISI.JK.pkl
-Dihapus: model_high_lgbm_BSDE.JK.pkl
-Dihapus: model_high_lgbm_BALI.JK.pkl
-Dihapus: model_high_lgbm_ISAT.JK.pkl
-Dihapus: model_high_GJTL.JK.pkl
-Dihapus: model_high_lgbm_ACES.JK.pkl
-Dihapus: model_high_BRPT.JK.pkl
-Dihapus: model_high_lgbm_BBTN.JK.pkl
-Dihapus: model_high_SIDO.JK.pkl
-Dihapus: model_high_BTPS.JK.pkl
-Dihapus: model_high_lgbm_CMNP.JK.pkl
-Dihapus: model_high_lgbm_MDKA.JK.pkl
-Dihapus: model_high_lgbm_BOGA.JK.pkl
-Dihapus: model_high_BOLT.JK.pkl
-Dihapus: model_high_lgbm_ROTI.JK.pkl
-Dihapus: model_high_SMSM.JK.pkl
-Dihapus: model_high_NFCX.JK.pkl
-Dihapus: model_high_KARW.JK.pkl
-Dihapus: model_high_APIC.JK.pkl
-Dihapus: model_high_ASSA.JK.pkl
-Dihapus: model_high_BNGA.JK.pkl
-Dihapus: model_high_MPRO.JK.pkl
-Dihapus: model_high_MAIN.JK.pkl
-Dihapus: model_high_BSDE.JK.pkl
-Dihapus: model_high_KLBF.JK.pkl
-Dihapus: model_high_lgbm_HRUM.JK.pkl
-Dihapus: model_high_CLPI.JK.pkl
-Dihapus: model_high_lgbm_KINO.JK.pkl
-Dihapus: model_high_NISP.JK.pkl
-Dihapus: model_high_lgbm_ULTJ.JK.pkl
-Dihapus: model_high_ULTJ.JK.pkl
-Dihapus: model_high_lgbm_MAPA.JK.pkl
-Dihapus: model_high_ARNA.JK.pkl
-Dihapus: model_high_lgbm_DVLA.JK.pkl
-Dihapus: model_high_lgbm_ARNA.JK.pkl
-Dihapus: model_high_BISI.JK.pkl
-Dihapus: model_high_EMTK.JK.pkl
-Dihapus: model_high_lgbm_LPPF.JK.pkl
-Dihapus: model_high_lgbm_CLPI.JK.pkl
-Dihapus: model_high_DVLA.JK.pkl
-Dihapus: model_high_lgbm_APIC.JK.pkl
-Dihapus: model_high_lgbm_SMCB.JK.pkl
-Dihapus: model_high_lgbm_RIGS.JK.pkl
-Dihapus: model_high_PNBN.JK.pkl
-Dihapus: model_high_lgbm_BBHI.JK.pkl
-Dihapus: model_high_lgbm_INDY.JK.pkl
-Dihapus: model_high_SMCB.JK.pkl
-Dihapus: model_high_lgbm_CLEO.JK.pkl
-Dihapus: model_high_lgbm_ANJT.JK.pkl
-Dihapus: model_high_MCAS.JK.pkl
-Dihapus: model_high_lgbm_JPFA.JK.pkl
-Dihapus: model_high_TINS.JK.pkl
-Dihapus: model_high_lgbm_NISP.JK.pkl
-Dihapus: model_high_lgbm_BJBR.JK.pkl
-Dihapus: model_high_MTDL.JK.pkl
-Dihapus: model_high_IPCC.JK.pkl
-Dihapus: model_low_PJAA.JK.pkl
-Dihapus: model_low_lgbm_FORU.JK.pkl
-Dihapus: model_low_KINO.JK.pkl
-Dihapus: model_low_BRPT.JK.pkl
-Dihapus: model_low_lgbm_KARW.JK.pkl
-Dihapus: model_low_SMSM.JK.pkl
-Dihapus: model_low_ROTI.JK.pkl
-Dihapus: model_low_ASSA.JK.pkl
-Dihapus: model_low_MTDL.JK.pkl
-Dihapus: model_low_BTPS.JK.pkl
-Dihapus: model_low_ESSA.JK.pkl
-Dihapus: model_low_lgbm_HRUM.JK.pkl
-Dihapus: model_low_lgbm_BALI.JK.pkl
-Dihapus: model_low_CTRA.JK.pkl
-Dihapus: model_low_lgbm_INDY.JK.pkl
-Dihapus: model_low_lgbm_PJAA.JK.pkl
-Dihapus: model_low_lgbm_ESSA.JK.pkl
-Dihapus: model_low_lgbm_CMNP.JK.pkl
-Dihapus: model_low_FORU.JK.pkl
-Dihapus: model_low_lgbm_PNBN.JK.pkl
-Dihapus: model_low_lgbm_MTDL.JK.pkl
-Dihapus: model_low_lgbm_BNGA.JK.pkl
-Dihapus: model_low_lgbm_BJBR.JK.pkl
-Dihapus: model_low_TBIG.JK.pkl
-Dihapus: model_low_APIC.JK.pkl
-Dihapus: model_low_TINS.JK.pkl
-Dihapus: model_low_LPPF.JK.pkl
-Dihapus: model_low_lgbm_TINS.JK.pkl
-Dihapus: model_low_JPFA.JK.pkl
-Dihapus: model_low_ARNA.JK.pkl
-Dihapus: model_low_NFCX.JK.pkl
-Dihapus: model_low_lgbm_BBHI.JK.pkl
-Dihapus: model_low_CLPI.JK.pkl
-Dihapus: model_low_BBTN.JK.pkl
-Dihapus: model_low_GJTL.JK.pkl
-Dihapus: model_low_lgbm_PBID.JK.pkl
-Dihapus: model_low_lgbm_CASA.JK.pkl
-Dihapus: model_low_lgbm_BOGA.JK.pkl
-Dihapus: model_low_lgbm_MAIN.JK.pkl
-Dihapus: model_low_lgbm_ARNA.JK.pkl
-Dihapus: model_low_MAIN.JK.pkl
-Dihapus: model_low_BOLT.JK.pkl
-Dihapus: model_low_MAPA.JK.pkl
-Dihapus: model_low_AKRA.JK.pkl
-Dihapus: model_low_lgbm_ISAT.JK.pkl
-Dihapus: model_low_CASA.JK.pkl
-Dihapus: model_low_lgbm_KINO.JK.pkl
-Dihapus: model_low_ANJT.JK.pkl
-Dihapus: model_low_lgbm_BSDE.JK.pkl
-Dihapus: model_low_HRUM.JK.pkl
-Dihapus: model_low_STAA.JK.pkl
-Dihapus: model_low_HMSP.JK.pkl
-Dihapus: model_low_lgbm_LPPF.JK.pkl
-Dihapus: model_low_lgbm_HMSP.JK.pkl
-Dihapus: model_low_lgbm_INCI.JK.pkl
-Dihapus: model_low_ISAT.JK.pkl
-Dihapus: model_low_lgbm_BOLT.JK.pkl
-Dihapus: model_low_INCI.JK.pkl
-Dihapus: model_low_lgbm_ADRO.JK.pkl
-Dihapus: model_low_ADRO.JK.pkl
-Dihapus: model_low_BBHI.JK.pkl
-Dihapus: model_low_MCAS.JK.pkl
-Dihapus: model_low_lgbm_CTRA.JK.pkl
-Dihapus: model_low_lgbm_CLAY.JK.pkl
-Dihapus: model_low_CMNP.JK.pkl
-Dihapus: model_low_INDY.JK.pkl
-Dihapus: model_low_RIGS.JK.pkl
-Dihapus: model_low_lgbm_ROTI.JK.pkl
-Dihapus: model_low_lgbm_UNVR.JK.pkl
-Dihapus: model_low_lgbm_MDKA.JK.pkl
-Dihapus: model_low_SIDO.JK.pkl
-Dihapus: model_low_BNGA.JK.pkl
-Dihapus: model_low_lgbm_ASSA.JK.pkl
-Dihapus: model_low_ACES.JK.pkl
-Dihapus: model_low_PBID.JK.pkl
-Dihapus: model_low_BJTM.JK.pkl
-Dihapus: model_low_lgbm_MPRO.JK.pkl
-Dihapus: model_low_lgbm_MAPA.JK.pkl
-Dihapus: model_low_MEDC.JK.pkl
-Dihapus: model_low_KLBF.JK.pkl
-Dihapus: model_low_EMTK.JK.pkl
-Dihapus: model_low_SMCB.JK.pkl
-Dihapus: model_low_lgbm_STAA.JK.pkl
-Dihapus: model_low_lgbm_RIGS.JK.pkl
-Dihapus: model_low_BSDE.JK.pkl
-Dihapus: model_low_KARW.JK.pkl
-Dihapus: model_low_lgbm_BBTN.JK.pkl
-Dihapus: model_low_CLEO.JK.pkl
-Dihapus: model_low_BNBA.JK.pkl
-Dihapus: model_low_lgbm_BJTM.JK.pkl
-Dihapus: model_low_lgbm_APIC.JK.pkl
-Dihapus: model_low_lgbm_SIDO.JK.pkl
-Dihapus: model_low_lgbm_KLBF.JK.pkl
-Dihapus: model_low_lgbm_CLPI.JK.pkl
-Dihapus: model_low_lgbm_BTPS.JK.pkl
-Dihapus: model_low_lgbm_JPFA.JK.pkl
-Dihapus: model_low_lgbm_ANJT.JK.pkl
-Dihapus: model_low_UNVR.JK.pkl
-Dihapus: model_low_lgbm_CLEO.JK.pkl
-Dihapus: model_low_lgbm_ACES.JK.pkl
-Dihapus: model_low_MPRO.JK.pkl
-Dihapus: model_low_ULTJ.JK.pkl
-Dihapus: model_low_BOGA.JK.pkl
-Dihapus: model_low_lgbm_TBIG.JK.pkl
-Dihapus: model_low_lgbm_NISP.JK.pkl
-Dihapus: model_low_lgbm_SMSM.JK.pkl
-Dihapus: model_low_DVLA.JK.pkl
-Dihapus: model_low_lgbm_EMTK.JK.pkl
-Dihapus: model_low_lgbm_MCAS.JK.pkl
-Dihapus: model_low_PNBN.JK.pkl
-Dihapus: model_low_IPCC.JK.pkl
-Dihapus: model_low_lgbm_AKRA.JK.pkl
-Dihapus: model_low_BISI.JK.pkl
-Dihapus: model_low_lgbm_DVLA.JK.pkl
-Dihapus: model_low_MDKA.JK.pkl
-Dihapus: model_low_lgbm_NFCX.JK.pkl
-Dihapus: model_low_lgbm_BNBA.JK.pkl
-Dihapus: model_low_lgbm_SRTG.JK.pkl
-Dihapus: model_low_lgbm_MEDC.JK.pkl
-Dihapus: model_low_lgbm_BRPT.JK.pkl
-Dihapus: model_low_BJBR.JK.pkl
-Dihapus: model_low_lgbm_ULTJ.JK.pkl
-Dihapus: model_low_lgbm_IPCC.JK.pkl
-Dihapus: model_low_lgbm_GJTL.JK.pkl
-Dihapus: model_low_lgbm_BISI.JK.pkl
-Dihapus: model_low_CLAY.JK.pkl
-Dihapus: model_low_lgbm_SMCB.JK.pkl
-Dihapus: model_low_PGAS.JK.pkl
-Dihapus: model_low_NISP.JK.pkl
-Dihapus: model_low_SRTG.JK.pkl
-Dihapus: model_low_lgbm_PGAS.JK.pkl
-Total 262 model dihapus.
+Tidak ada model yang ditemukan untuk dihapus.
 Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 756, in <module>
+  File "/home/runner/work/arkana/arkana/main.py", line 755, in <module>
     results = list(executor.map(analyze_stock, STOCK_LIST))
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
     yield _result_or_cancel(fs.pop())
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
     return fut.result(timeout)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 458, in result
     return self.__get_result()
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
     raise self._exception
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
     result = self.fn(*self.args, **self.kwargs)
-  File "/home/runner/work/arkana/arkana/main.py", line 343, in analyze_stock
+  File "/home/runner/work/arkana/arkana/main.py", line 342, in analyze_stock
     df = calculate_indicators(df)
-NameError: name 'calculate_indicators' is not defined
- delisted; no price data found  (period=5y) (Yahoo error = "1h data not available for startTime=1588348757 and endTime=1746028757. The requested range must be within the last 730 days.")
-2025-04-30 15:59:17,071 - WARNING - ARTO.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-30 15:59:17,071 - ERROR - ARTO.JK: Data saham tidak ditemukan atau kosong.
-2025-04-30 15:59:17,362 - ERROR - $ANTM.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "1h data not available for startTime=1588348757 and endTime=1746028757. The requested range must be within the last 730 days.")
-2025-04-30 15:59:17,362 - WARNING - ANTM.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-30 15:59:17,362 - ERROR - ANTM.JK: Data saham tidak ditemukan atau kosong.
-2025-04-30 15:59:18,046 - ERROR - $ASII.JK: possibly delisted; no price data found  (period=5y) (Yahoo error = "1h data not available for startTime=1588348757 and endTime=1746028757. The requested range must be within the last 730 days.")
-2025-04-30 15:59:18,046 - WARNING - ASII.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-30 15:59:18,046 - ERROR - ASII.JK: Data saham tidak ditemukan atau kosong.
+  File "/home/runner/work/arkana/arkana/main.py", line 99, in calculate_indicators
+    df = ta.trend.adx(df['high'], df['low'], df['close'], window=14, fillna=True)
+NameError: name 'ta' is not defined. Did you mean: 'tf'?
