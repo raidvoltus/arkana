@@ -9,5 +9,6 @@ joblib>=1.2.0
 requests>=2.28.0
 matplotlib>=3.6.0
 python-telegram-bot==13.15
-xgboost
+keras-tuner>=1.1.3
 optuna>=3.0.0
+xgboost>=1.5
