@@ -533,15 +533,34 @@ def retrain_if_needed(ticker: str):
         
         # Tentukan fitur yang akan digunakan
         features = [
-            "Close", "ATR", "RSI", "MACD", "MACD_Hist",
-            "SMA_14", "SMA_28", "SMA_84", "EMA_10",
-            "BB_Upper", "BB_Lower", "Support", "Resistance",
-            "VWAP", "ADX", "CCI", "Momentum", "WilliamsR",
-            "OBV", "Stoch_K", "Stoch_D",
-            "Close_Lag1", "Close_Lag2",
-            "Trend_Strength",
+            # === Time-based features ===
+            "hour", "is_opening_time", "is_closing_time",
             "daily_avg", "daily_std", "daily_range",
-            "is_opening_hour", "is_closing_hour"
+
+            # === Trend & Volatility Indicators ===
+            "adx", "adx_pos", "adx_neg", "atr",
+
+            # === Momentum Indicators ===
+            "rsi", "stoch_k", "stoch_d", "williams_r", "roc",
+            "mfi", "cci", "macd", "macd_signal", "macd_diff",
+
+            # === Volume Indicators ===
+            "obv", "cmf", "efi", "nvi", "pvi",
+
+            # === Volatility Bands ===
+            "bb_upper", "bb_middle", "bb_lower",
+            "kc_upper", "kc_lower",
+            "donchian_upper", "donchian_lower",
+
+            # === Moving Averages ===
+            "ma_10", "ema_10",
+            "ma_20", "ema_20",
+            "ma_50", "ema_50",
+            "ma_100", "ema_100",
+            "ma_200", "ema_200",
+
+            # === Linear Regression ===
+            "linreg"
         ]
         
         X = df[features]
