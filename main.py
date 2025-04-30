@@ -459,6 +459,19 @@ def analyze_stock(ticker: str):
     logging.info(f"{ticker}: {action.upper()} | TP: {ph:.2f} | SL: {pl:.2f} | Potensi Profit: {profit_potential_pct:.2f}% | Probabilitas: {result['prob_success']*100:.1f}%")
     return result
 
+def save_model(model, model_name: str, model_type: str = "sklearn", output_dir: str = "models"):
+    os.makedirs(output_dir, exist_ok=True)
+    filepath = os.path.join(output_dir, model_name)
+    
+    if model_type == "sklearn":
+        joblib.dump(model, filepath + ".pkl")
+        logging.info(f"Model saved to {filepath}.pkl")
+    elif model_type == "keras":
+        model.save(filepath + ".keras")
+        logging.info(f"Model saved to {filepath}.keras")
+    else:
+        raise ValueError(f"Unsupported model type: {model_type}")
+        
 # === Retrain Model If Accuracy is Low ===
 def retrain_if_needed(ticker: str):
     akurasi_map = evaluate_prediction_accuracy()
