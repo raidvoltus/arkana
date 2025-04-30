@@ -91,9 +91,11 @@ def calculate_indicators(df):
     
     # Tambahkan fitur waktu
     HOURS_PER_DAY = 7
-    df["hour"] = df.index.hour
-    df["is_opening_hour"] = (df["hour"] == 9).astype(int)
-    df["is_closing_hour"] = (df["hour"] == 15).astype(int)
+    df['hour'] = df.index.tz_convert('Asia/Jakarta').hour
+    df['minute'] = df.index.tz_convert('Asia/Jakarta').minute
+
+    df['is_opening_time'] = ((df['hour'] == 9) & (df['minute'] == 0)).astype(int)
+    df['is_closing_time'] = ((df['hour'] == 15) & (df['minute'] == 49)).astype(int)
 
     # === Trend & Volatility Indicators ===
     df = ta.trend.adx(df['high'], df['low'], df['close'], window=14, fillna=True)
@@ -361,7 +363,7 @@ def analyze_stock(ticker: str):
 
     features = [
         # === Time-based features ===
-        "hour", "is_opening_hour", "is_closing_hour",
+        "hour", "is_opening_time", "is_closing_time",
         "daily_avg", "daily_std", "daily_range",
 
         # === Trend & Volatility Indicators ===
@@ -464,7 +466,7 @@ def retrain_if_needed(ticker: str):
         df = df.dropna(subset=["future_high", "future_low"])
         features = [
             # === Time-based features ===
-            "hour", "is_opening_hour", "is_closing_hour",
+            "hour", "is_opening_time", "is_closing_time",
             "daily_avg", "daily_std", "daily_range",
 
             # === Trend & Volatility Indicators ===
