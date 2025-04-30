@@ -1,4 +1,5 @@
 import os
+import ta
 import glob
 import time
 import threading
