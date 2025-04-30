@@ -1,25 +1,23 @@
-2025-04-29 15:20:55,204 - WARNING - INAF.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 15:20:55,210 - ERROR - INAF.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 15:23:11,585 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
-2025-04-29 15:23:26,528 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 15:23:26,530 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 15:24:28,450 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 15:24:28,450 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 15:25:03,659 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 15:25:03,660 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 15:25:05,581 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
-2025-04-29 15:26:04,685 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
-2025-04-29 15:26:05,712 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 15:26:05,713 - WARNING - PPRO.JK: Data kosong.
-2025-04-29 15:27:41,818 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 15:27:41,819 - WARNING - SMCB.JK: Data kosong.
-2025-04-29 15:28:36,431 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 15:28:36,432 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 15:29:43,000 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
-2025-04-29 15:29:43,000 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 15:29:43,000 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
-2025-04-29 15:29:52,878 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
-2025-04-29 15:29:52,879 - WARNING - WIKA.JK: Data kosong.
-2025-04-29 15:29:53,621 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
-2025-04-29 15:29:53,990 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
-2025-04-29 15:29:53,990 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 06:52:22,088 - WARNING - LIFE.JK: ATR kosong setelah kalkulasi.
+2025-04-30 06:52:48,604 - WARNING - MASA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-30 06:52:48,605 - ERROR - MASA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 06:53:39,963 - WARNING - MKNT.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-30 06:53:39,964 - ERROR - MKNT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 06:54:10,302 - WARNING - OMRE.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-30 06:54:10,302 - ERROR - OMRE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 06:54:55,255 - WARNING - PCAR.JK: ATR kosong setelah kalkulasi.
+2025-04-30 06:55:25,091 - WARNING - POOL.JK: ATR kosong setelah kalkulasi.
+2025-04-30 06:55:25,865 - ERROR - $PPRO.JK: possibly delisted; no price data found  (period=1d)
+2025-04-30 06:55:25,865 - WARNING - PPRO.JK: Data kosong.
+2025-04-30 06:57:27,668 - ERROR - $SMCB.JK: possibly delisted; no price data found  (period=1d)
+2025-04-30 06:57:27,668 - WARNING - SMCB.JK: Data kosong.
+2025-04-30 06:58:00,138 - WARNING - TIFA.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-30 06:58:00,138 - ERROR - TIFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 06:59:14,033 - ERROR - $TURI.JK: possibly delisted; no price data found  (period=1y) (Yahoo error = "No data found, symbol may be delisted")
+2025-04-30 06:59:14,034 - WARNING - TURI.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-30 06:59:14,034 - ERROR - TURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 06:59:19,138 - ERROR - $WIKA.JK: possibly delisted; no price data found  (period=1d)
+2025-04-30 06:59:19,138 - WARNING - WIKA.JK: Data kosong.
+2025-04-30 06:59:19,862 - WARNING - WSKT.JK: ATR kosong setelah kalkulasi.
+2025-04-30 06:59:20,206 - WARNING - YPAS.JK: Data kosong/kurang atau kolom tidak lengkap.
+2025-04-30 06:59:20,206 - ERROR - YPAS.JK: Data saham tidak ditemukan atau kosong.
