@@ -29,6 +29,7 @@ from tensorflow.keras.layers import LSTM, Dense, Dropout
 from sklearn.model_selection import train_test_split
 from concurrent.futures import ThreadPoolExecutor
 from logging.handlers import RotatingFileHandler
+from kerastuner.tuners import RandomSearch
 
 # === Konfigurasi Bot ===
 TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN")
@@ -358,6 +359,43 @@ study = optuna.create_study(direction="minimize")
 study.optimize(objective_lgb, n_trials=50)
 best_lgb = lgb.LGBMRegressor(**study.best_params)
 best_lgb.fit(X_train, y_train)
+
+def objective_xgb(trial):
+    params = {
+        "n_estimators": trial.suggest_int("n_estimators", 100, 1000),
+        "learning_rate": trial.suggest_loguniform("learning_rate", 1e-3, 0.3),
+        "max_depth": trial.suggest_int("max_depth", 3, 12),
+        "subsample": trial.suggest_float("subsample", 0.5, 1.0),
+        "colsample_bytree": trial.suggest_float("colsample_bytree", 0.5, 1.0),
+        "gamma": trial.suggest_float("gamma", 0, 5),
+        "random_state": 42
+    }
+    model = XGBRegressor(**params)
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], early_stopping_rounds=50, verbose=False)
+    preds = model.predict(X_val)
+    return mean_squared_error(y_val, preds)
+
+study = optuna.create_study(direction="minimize")
+study.optimize(objective_xgb, n_trials=50)
+best_xgb = XGBRegressor(**study.best_params)
+best_xgb.fit(X_train, y_train)
+
+def build_model(hp):
+    model = Sequential()
+    model.add(LSTM(units=hp.Int('units1', 32, 128, step=32), return_sequences=True, input_shape=(X.shape[1], 1)))
+    model.add(Dropout(hp.Float('dropout1', 0.1, 0.5, step=0.1)))
+    model.add(LSTM(units=hp.Int('units2', 32, 128, step=32)))
+    model.add(Dropout(hp.Float('dropout2', 0.1, 0.5, step=0.1)))
+    model.add(Dense(hp.Int('dense_units', 16, 64, step=16), activation='relu'))
+    model.add(Dense(1))
+    model.compile(optimizer='adam', loss='mse')
+    return model
+
+tuner = RandomSearch(build_model, objective='val_loss', max_trials=20, executions_per_trial=1, directory='lstm_tuning', project_name='lstm')
+X_reshaped = np.reshape(X.values, (X.shape[0], X.shape[1], 1))
+tuner.search(X_reshaped, y, epochs=30, validation_split=0.2, batch_size=32)
+best_lstm = tuner.get_best_models(num_models=1)[0]
+
 # === Reset Models ===
 def reset_models():
     # Pola file model
