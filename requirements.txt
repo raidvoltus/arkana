@@ -12,3 +12,4 @@ python-telegram-bot==13.15
 keras-tuner>=1.1.3
 optuna>=3.0.0
 xgboost>=1.5
+seaborn>=0.11
