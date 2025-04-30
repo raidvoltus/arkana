@@ -328,7 +328,7 @@ def load_or_train_model(path, train_fn, X_train, y_train, model_type="joblib"):
 def get_latest_close(ticker: str) -> float:
     try:
         stock = yf.Ticker(ticker)
-        df_daily = stock.history(period="1d", interval="1d")
+        df_daily = stock.history(period="1d", interval="1h")
         if not df_daily.empty:
             return df_daily["Close"].iloc[-1]
     except Exception as e:
