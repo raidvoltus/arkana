@@ -17,6 +17,7 @@ import pandas as pd
 import yfinance as yf
 import lightgbm as lgb
 import tensorflow as tf
+import keras_tuner as kt
 
 from xgboost import XGBRegressor
 from sklearn.model_selection import cross_val_score
