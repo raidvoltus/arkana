@@ -1,31 +1,213 @@
-2025-04-30 16:08:31.090681: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-30 16:08:31.093796: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-04-30 16:08:31.102312: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-04-30 16:14:24.541726: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-30 16:14:24.544790: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-30 16:14:24.553187: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1746029311.116523    2080 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1746029311.120691    2080 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1746029311.132332    2080 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746029311.132348    2080 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746029311.132350    2080 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746029311.132352    2080 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-04-30 16:08:31.136101: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1746029664.566913    2062 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1746029664.571009    2062 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1746029664.582429    2062 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746029664.582445    2062 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746029664.582448    2062 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746029664.582450    2062 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-30 16:14:24.585958: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Tidak ada model yang ditemukan untuk dihapus.
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 755, in <module>
-    results = list(executor.map(analyze_stock, STOCK_LIST))
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
-    yield _result_or_cancel(fs.pop())
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
-    return fut.result(timeout)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 458, in result
-    return self.__get_result()
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
-    raise self._exception
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/home/runner/work/arkana/arkana/main.py", line 342, in analyze_stock
-    df = calculate_indicators(df)
-  File "/home/runner/work/arkana/arkana/main.py", line 99, in calculate_indicators
-    df = ta.trend.adx(df['high'], df['low'], df['close'], window=14, fillna=True)
-NameError: name 'ta' is not defined. Did you mean: 'tf'?
+bil data ADMR.JK: database is locked
+2025-04-30 16:14:28,179 - ERROR - ADMR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:29,898 - ERROR - Error mengambil data ACES.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:29,898 - ERROR - ACES.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:29,899 - ERROR - Error mengambil data ADRO.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:29,899 - ERROR - ADRO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:29,914 - ERROR - Error mengambil data AMMN.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:29,914 - ERROR - AMMN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:29,956 - ERROR - Error mengambil data AKRA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:29,957 - ERROR - AKRA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:31,048 - ERROR - Error mengambil data ANTM.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:31,048 - ERROR - ANTM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:31,060 - ERROR - Error mengambil data ARTO.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:31,060 - ERROR - ARTO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:31,116 - ERROR - Error mengambil data ASII.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:31,116 - ERROR - ASII.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:31,134 - ERROR - Error mengambil data AMRT.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:31,134 - ERROR - AMRT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:32,176 - ERROR - Error mengambil data AUTO.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:32,177 - ERROR - AUTO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:32,179 - ERROR - Error mengambil data BBCA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:32,179 - ERROR - BBCA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:32,222 - ERROR - Error mengambil data AVIA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:32,222 - ERROR - AVIA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:32,522 - ERROR - Error mengambil data BBNI.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:32,523 - ERROR - BBNI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:32,899 - ERROR - Error mengambil data BBRI.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:32,899 - ERROR - BBRI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:33,029 - ERROR - Error mengambil data BBYB.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:33,029 - ERROR - BBYB.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:33,189 - ERROR - Error mengambil data BBTN.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:33,189 - ERROR - BBTN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:33,786 - ERROR - Error mengambil data BDKR.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:33,786 - ERROR - BDKR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:34,826 - ERROR - Error mengambil data BMTR.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:34,826 - ERROR - BMTR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:34,831 - ERROR - Error mengambil data BFIN.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:34,831 - ERROR - BFIN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:34,834 - ERROR - Error mengambil data BMRI.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:34,834 - ERROR - BMRI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:35,790 - ERROR - Error mengambil data BNGA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:35,790 - ERROR - BNGA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:36,679 - ERROR - Error mengambil data BRPT.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:36,680 - ERROR - BRPT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:36,703 - ERROR - Error mengambil data BRIS.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:36,703 - ERROR - BRIS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:36,747 - ERROR - Error mengambil data BRMS.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:36,747 - ERROR - BRMS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:37,520 - ERROR - Error mengambil data BTPS.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:37,520 - ERROR - Error mengambil data BSDE.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:37,520 - ERROR - BTPS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:37,520 - ERROR - BSDE.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:37,524 - ERROR - Error mengambil data CMRY.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:37,524 - ERROR - CMRY.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:38,579 - ERROR - Error mengambil data DEWA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:38,579 - ERROR - DEWA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:38,581 - ERROR - Error mengambil data CPIN.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:38,581 - ERROR - CPIN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:38,582 - ERROR - Error mengambil data CTRA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:38,582 - ERROR - CTRA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:38,823 - ERROR - Error mengambil data DSNG.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:38,823 - ERROR - DSNG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:39,600 - ERROR - Error mengambil data ENRG.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:39,600 - ERROR - ENRG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:39,661 - ERROR - Error mengambil data EMTK.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:39,661 - ERROR - EMTK.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:39,662 - ERROR - Error mengambil data ELSA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:39,663 - ERROR - ELSA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:40,543 - ERROR - Error mengambil data ERAA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:40,544 - ERROR - ERAA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:40,546 - ERROR - Error mengambil data ESSA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:40,546 - ERROR - ESSA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:41,431 - ERROR - Error mengambil data EXCL.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:41,431 - ERROR - EXCL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:41,445 - ERROR - Error mengambil data FILM.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:41,445 - ERROR - FILM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:41,450 - ERROR - Error mengambil data GGRM.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:41,450 - ERROR - GGRM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:42,506 - ERROR - Error mengambil data GJTL.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:42,506 - ERROR - GJTL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:42,544 - ERROR - Error mengambil data HEAL.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:42,544 - ERROR - HEAL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:42,622 - ERROR - Error mengambil data HMSP.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:42,622 - ERROR - HMSP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:42,875 - ERROR - Error mengambil data GOTO.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:42,875 - ERROR - GOTO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:43,414 - ERROR - Error mengambil data ICBP.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:43,414 - ERROR - ICBP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:43,656 - ERROR - Error mengambil data HRUM.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:43,656 - ERROR - HRUM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:44,437 - ERROR - Error mengambil data INDF.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:44,437 - ERROR - INDF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:44,450 - ERROR - Error mengambil data INDY.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:44,451 - ERROR - INDY.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:44,505 - ERROR - Error mengambil data INCO.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:44,506 - ERROR - INCO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:45,336 - ERROR - Error mengambil data INET.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:45,336 - ERROR - INET.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:45,338 - ERROR - Error mengambil data INKP.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:45,338 - ERROR - INKP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:45,342 - ERROR - Error mengambil data INTP.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:45,342 - ERROR - INTP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:46,123 - ERROR - Error mengambil data ISAT.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:46,123 - ERROR - ISAT.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:47,111 - ERROR - Error mengambil data ITMG.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:47,111 - ERROR - ITMG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:47,118 - ERROR - Error mengambil data JPFA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:47,118 - ERROR - JPFA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:47,127 - ERROR - Error mengambil data JSMR.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:47,127 - ERROR - JSMR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:47,940 - ERROR - Error mengambil data KIJA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:47,940 - ERROR - KIJA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:47,946 - ERROR - Error mengambil data KPIG.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:47,946 - ERROR - KPIG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:47,960 - ERROR - Error mengambil data KLBF.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:47,961 - ERROR - KLBF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:48,930 - ERROR - Error mengambil data MARK.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:48,930 - ERROR - MARK.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:48,964 - ERROR - Error mengambil data LSIP.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:48,964 - ERROR - LSIP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:48,991 - ERROR - Error mengambil data MAPA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:48,991 - ERROR - MAPA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:49,105 - ERROR - Error mengambil data MAPI.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:49,105 - ERROR - MAPI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:49,962 - ERROR - Error mengambil data MBMA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:49,963 - ERROR - MBMA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:49,970 - ERROR - Error mengambil data MEDC.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:49,970 - ERROR - MEDC.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:50,048 - ERROR - Error mengambil data MDKA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:50,048 - ERROR - MDKA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:51,017 - ERROR - Error mengambil data MIDI.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:51,017 - ERROR - MIDI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:51,921 - ERROR - Error mengambil data MIKA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:51,921 - ERROR - MIKA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:51,923 - ERROR - Error mengambil data MNCN.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:51,923 - ERROR - MNCN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:51,924 - ERROR - Error mengambil data MTEL.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:51,926 - ERROR - MTEL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:52,840 - ERROR - Error mengambil data PANI.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:52,840 - ERROR - PANI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:52,846 - ERROR - Error mengambil data NCKL.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:52,846 - ERROR - NCKL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:52,865 - ERROR - Error mengambil data MYOR.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:52,865 - ERROR - MYOR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:52,910 - ERROR - Error mengambil data NISP.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:52,910 - ERROR - NISP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:53,871 - ERROR - Error mengambil data PGAS.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:53,871 - ERROR - PGAS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:53,887 - ERROR - Error mengambil data PTBA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:53,888 - ERROR - PTBA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:53,911 - ERROR - Error mengambil data PGEO.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:53,911 - ERROR - PGEO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:53,945 - ERROR - Error mengambil data PNLF.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:53,945 - ERROR - PNLF.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:54,649 - ERROR - Error mengambil data PTRO.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:54,649 - ERROR - PTRO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:54,653 - ERROR - Error mengambil data PWON.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:54,653 - ERROR - PWON.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:54,674 - ERROR - Error mengambil data PTPP.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:54,674 - ERROR - PTPP.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:55,799 - ERROR - Error mengambil data RAJA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:55,799 - ERROR - RAJA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:56,545 - ERROR - Error mengambil data SIDO.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:56,545 - ERROR - SIDO.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:56,554 - ERROR - Error mengambil data SMGR.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:56,554 - ERROR - SMGR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:56,575 - ERROR - Error mengambil data SCMA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:56,575 - ERROR - SCMA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:57,825 - ERROR - Error mengambil data SMRA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:57,825 - ERROR - SMRA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:57,838 - ERROR - Error mengambil data SSIA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:57,838 - ERROR - SSIA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:57,900 - ERROR - Error mengambil data SMIL.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:57,900 - ERROR - SMIL.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:57,990 - ERROR - Error mengambil data SRTG.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:57,990 - ERROR - SRTG.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:59,036 - ERROR - Error mengambil data SSMS.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:59,036 - ERROR - SSMS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:14:59,047 - ERROR - Error mengambil data SURI.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:14:59,047 - ERROR - SURI.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:00,001 - ERROR - Error mengambil data TINS.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:00,001 - ERROR - TINS.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:00,008 - ERROR - Error mengambil data TKIM.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:00,008 - ERROR - TKIM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:00,951 - ERROR - Error mengambil data TOBA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:00,951 - ERROR - TOBA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:00,996 - ERROR - Error mengambil data TLKM.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:00,996 - ERROR - TLKM.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:02,141 - ERROR - Error mengambil data TSPC.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:02,141 - ERROR - TSPC.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:02,208 - ERROR - Error mengambil data TPIA.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:02,208 - ERROR - TPIA.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:02,320 - ERROR - Error mengambil data TOWR.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:02,320 - ERROR - TOWR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:02,856 - ERROR - Error mengambil data TRIN.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:02,856 - ERROR - TRIN.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:03,726 - ERROR - Error mengambil data UNTR.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:03,726 - ERROR - UNTR.JK: Data saham tidak ditemukan atau kosong.
+2025-04-30 16:15:03,806 - ERROR - Error mengambil data UNVR.JK: Too Many Requests. Rate limited. Try after a while.
+2025-04-30 16:15:03,807 - ERROR - UNVR.JK: Data saham tidak ditemukan atau kosong.
