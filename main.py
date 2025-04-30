@@ -392,7 +392,14 @@ def build_model(hp):
     model.compile(optimizer='adam', loss='mse')
     return model
 
-tuner = RandomSearch(build_model, objective='val_loss', max_trials=20, executions_per_trial=1, directory='lstm_tuning', project_name='lstm')
+tuner = kt.RandomSearch(
+    build_model,
+    objective='val_loss',
+    max_trials=20,
+    executions_per_trial=1,
+    directory='lstm_tuning',
+    project_name='lstm'
+)
 X_reshaped = np.reshape(X.values, (X.shape[0], X.shape[1], 1))
 tuner.search(X_reshaped, y, epochs=30, validation_split=0.2, batch_size=32)
 best_lstm = tuner.get_best_models(num_models=1)[0]
