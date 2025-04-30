@@ -180,58 +180,75 @@ def get_latest_close(ticker: str) -> float:
         return None
 
 # === Hitung Indikator ===
-def calculate_indicators(df: pd.DataFrame) -> pd.DataFrame:
+# === Hitung Indikator ===
+def calculate_indicators(df):
+    # Pastikan index datetime
+    df.index = pd.to_datetime(df.index)
+    
+    # Tambahkan fitur waktu
     HOURS_PER_DAY = 7
-    HOURS_PER_WEEK = 35  # 5 hari trading, 7 jam per hari
+    df['hour'] = df.index.tz_convert('Asia/Jakarta').hour
+    df['minute'] = df.index.tz_convert('Asia/Jakarta').minute
 
-    # Pastikan index sudah dalam timezone Asia/Jakarta
-    if df.index.tz is None:
-        df.index = df.index.tz_localize("UTC").tz_convert("Asia/Jakarta")
-    else:
-        df.index = df.index.tz_convert("Asia/Jakarta")
+    df['is_opening_time'] = ((df['hour'] == 9) & (df['minute'] == 0)).astype(int)
+    df['is_closing_time'] = ((df['hour'] == 15) & (df['minute'] == 49)).astype(int)
 
-    # === Indikator teknikal utama ===
-    df["ATR"] = volatility.AverageTrueRange(df["High"], df["Low"], df["Close"], window=14).average_true_range()
-    macd = trend.MACD(df["Close"])
-    df["MACD"] = macd.macd()
-    df["MACD_Hist"] = macd.macd_diff()
-    bb = volatility.BollingerBands(df["Close"], window=20)
-    df["BB_Upper"] = bb.bollinger_hband()
-    df["BB_Lower"] = bb.bollinger_lband()
-    df["Support"] = df["Low"].rolling(window=48).min()
-    df["Resistance"] = df["High"].rolling(window=48).max()
-    df["RSI"] = momentum.RSIIndicator(df["Close"], window=14).rsi()
-    df["SMA_14"] = trend.SMAIndicator(df["Close"], window=14).sma_indicator()
-    df["SMA_28"] = trend.SMAIndicator(df["Close"], window=28).sma_indicator()
-    df["SMA_84"] = trend.SMAIndicator(df["Close"], window=84).sma_indicator()
-    df["EMA_10"] = trend.EMAIndicator(df["Close"], window=10).ema_indicator()
-    df["VWAP"] = volume.VolumeWeightedAveragePrice(df["High"], df["Low"], df["Close"], df["Volume"]).volume_weighted_average_price()
-    df["ADX"] = trend.ADXIndicator(df["High"], df["Low"], df["Close"], window=14).adx()
-    df["CCI"] = trend.CCIIndicator(df["High"], df["Low"], df["Close"], window=20).cci()
-    df["Momentum"] = momentum.ROCIndicator(df["Close"], window=12).roc()
-    df["WilliamsR"] = momentum.WilliamsRIndicator(df["High"], df["Low"], df["Close"], lbp=14).williams_r()
+    # === Trend & Volatility Indicators ===
+    df = ta.trend.adx(df['high'], df['low'], df['close'], window=14, fillna=True)
+    df['atr'] = ta.volatility.AverageTrueRange(high=df['high'], low=df['low'], close=df['close'], window=14).average_true_range()
 
-    # === Indikator tambahan ===
-    df["OBV"] = volume.OnBalanceVolumeIndicator(df["Close"], df["Volume"]).on_balance_volume()
+    # === Momentum Indicators ===
+    df['rsi'] = ta.momentum.RSIIndicator(df['close'], window=14).rsi()
+    stoch = ta.momentum.StochasticOscillator(df['high'], df['low'], df['close'], window=14)
+    df['stoch_k'] = stoch.stoch()
+    df['stoch_d'] = stoch.stoch_signal()
+    df['williams_r'] = ta.momentum.WilliamsRIndicator(df['high'], df['low'], df['close'], lbp=14).williams_r()
+    df['roc'] = ta.momentum.ROCIndicator(df['close'], window=14).roc()
+    df['mfi'] = ta.volume.MFIIndicator(df['high'], df['low'], df['close'], df['volume'], window=14).money_flow_index()
+    df['cci'] = ta.trend.CCIIndicator(df['high'], df['low'], df['close'], window=14).cci()
+    macd = ta.trend.MACD(df['close'])
+    df['macd'] = macd.macd()
+    df['macd_signal'] = macd.macd_signal()
+    df['macd_diff'] = macd.macd_diff()
 
-    stoch = momentum.StochasticOscillator(df["High"], df["Low"], df["Close"], window=14, smooth_window=3)
-    df["Stoch_K"] = stoch.stoch()
-    df["Stoch_D"] = stoch.stoch_signal()
+    # === Volume Indicators ===
+    df['obv'] = ta.volume.OnBalanceVolumeIndicator(df['close'], df['volume']).on_balance_volume()
+    df['cmf'] = ta.volume.ChaikinMoneyFlowIndicator(df['high'], df['low'], df['close'], df['volume']).chaikin_money_flow()
+    df['efi'] = ta.volume.EaseOfMovementIndicator(df['high'], df['low'], df['volume'], window=14).ease_of_movement()
+    df['nvi'] = ta.volume.NegativeVolumeIndexIndicator(df['close'], df['volume']).negative_volume_index()
+    df['pvi'] = ta.volume.PositiveVolumeIndexIndicator(df['close'], df['volume']).positive_volume_index()
 
-    # Composite feature: trend strength score
-    df["Trend_Strength"] = (df["ADX"] + df["MACD"].fillna(0) + df["SMA_14"].fillna(0)) / 3
+    # === Volatility: BBANDS, Keltner, Donchian ===
+    bb = ta.volatility.BollingerBands(df['close'], window=14, window_dev=2)
+    df['bb_upper'] = bb.bollinger_hband()
+    df['bb_middle'] = bb.bollinger_mavg()
+    df['bb_lower'] = bb.bollinger_lband()
 
-    # === Fitur waktu harian ===
-    df["hour"] = df.index.hour
-    df["is_opening_hour"] = (df["hour"] == 9).astype(int)
-    df["is_closing_hour"] = (df["hour"] == 15).astype(int)
-    df["daily_avg"] = df["Close"].rolling(HOURS_PER_DAY).mean()
-    df["daily_std"] = df["Close"].rolling(HOURS_PER_DAY).std()
-    df["daily_range"] = df["High"].rolling(HOURS_PER_DAY).max() - df["Low"].rolling(HOURS_PER_DAY).min()
+    kc = ta.volatility.KeltnerChannel(df['high'], df['low'], df['close'], window=14)
+    df['kc_upper'] = kc.keltner_channel_hband()
+    df['kc_lower'] = kc.keltner_channel_lband()
 
-    # === Target prediksi: harga tertinggi & terendah & close MINGGU DEPAN ===
-    df["future_high"] = df["High"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).max()
-    df["future_low"]  = df["Low"].shift(-HOURS_PER_WEEK).rolling(HOURS_PER_WEEK).min()
+    donchian = ta.volatility.DonchianChannel(df['high'], df['low'], df['close'], window=14)
+    df['donchian_upper'] = donchian.donchian_channel_hband()
+    df['donchian_lower'] = donchian.donchian_channel_lband()
+
+    # === Moving Averages ===
+    ma_periods = [10, 20, 50, 100, 200]
+    for p in ma_periods:
+        df[f'ma_{p}'] = ta.trend.SMAIndicator(df['close'], window=p).sma_indicator()
+        df[f'ema_{p}'] = ta.trend.EMAIndicator(df['close'], window=p).ema_indicator()
+
+    # === Linear Regression ===
+    df['linreg'] = ta.trend.LinearRegressionIndicator(df['close'], window=14).linear_regression()
+
+    # === Daily Aggregates ===
+    df["daily_avg"] = df["close"].rolling(HOURS_PER_DAY).mean()
+    df["daily_std"] = df["close"].rolling(HOURS_PER_DAY).std()
+    df["daily_range"] = df["high"].rolling(HOURS_PER_DAY).max() - df["low"].rolling(HOURS_PER_DAY).min()
+
+    # === Target prediksi: harga tertinggi & terendah BESOK ===
+    df["future_high"] = df["high"].shift(-HOURS_PER_DAY).rolling(HOURS_PER_DAY).max()
+    df["future_low"]  = df["low"].shift(-HOURS_PER_DAY).rolling(HOURS_PER_DAY).min()
 
     return df.dropna()
 
