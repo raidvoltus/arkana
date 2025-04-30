@@ -69,9 +69,8 @@ def send_telegram_message(message: str):
 # === Ambil & Validasi Data Saham ===
 def get_stock_data(ticker: str) -> pd.DataFrame:
     try:
-        # Gunakan 60 hari jika pakai interval 1 jam
         stock = yf.Ticker(ticker)
-        df = stock.history(period="5y", interval="1h")
+        df = stock.history(period="730d", interval="1h")
 
         required_cols = ["High", "Low", "Close", "Volume"]
         if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
@@ -85,7 +84,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
     return None
 
 # === Hitung Indikator ===
-def calculate_technical_indicators(df):
+def calculate_indicators(df):
     # Pastikan index datetime
     df.index = pd.to_datetime(df.index)
     
