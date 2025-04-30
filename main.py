@@ -1,4 +1,5 @@
 import os
+import ta
 import glob
 import time
 import threading
@@ -9,6 +10,7 @@ import requests
 import random
 import logging
 import datetime
+import optuna
 import xgboost as xgb
 import numpy as np
 import pandas as pd
@@ -180,7 +182,6 @@ def get_latest_close(ticker: str) -> float:
         return None
 
 # === Hitung Indikator ===
-# === Hitung Indikator ===
 def calculate_indicators(df):
     # Pastikan index datetime
     df.index = pd.to_datetime(df.index)
@@ -338,6 +339,25 @@ def evaluate_prediction_accuracy() -> Dict[str, float]:
 
     return akurasi_per_ticker
 
+def objective_lgb(trial):
+    params = {
+        "n_estimators": trial.suggest_int("n_estimators", 100, 1000),
+        "learning_rate": trial.suggest_loguniform("learning_rate", 1e-3, 0.3),
+        "num_leaves": trial.suggest_int("num_leaves", 20, 300),
+        "max_depth": trial.suggest_int("max_depth", 3, 12),
+        "subsample": trial.suggest_float("subsample", 0.5, 1.0),
+        "colsample_bytree": trial.suggest_float("colsample_bytree", 0.5, 1.0),
+        "random_state": 42
+    }
+    model = lgb.LGBMRegressor(**params)
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], early_stopping_rounds=50, verbose=False)
+    preds = model.predict(X_val)
+    return mean_squared_error(y_val, preds)
+
+study = optuna.create_study(direction="minimize")
+study.optimize(objective_lgb, n_trials=50)
+best_lgb = lgb.LGBMRegressor(**study.best_params)
+best_lgb.fit(X_train, y_train)
 # === Reset Models ===
 def reset_models():
     # Pola file model
