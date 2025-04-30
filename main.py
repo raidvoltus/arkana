@@ -39,6 +39,10 @@ ATR_MULTIPLIER   = 2.5
 RETRAIN_INTERVAL = 7
 BACKUP_CSV_PATH  = "stock_data_backup.csv"
 HASH_PATH = "features_hash.json"
+
+# === Load data ===
+df = pd.read_csv("stock_data_backup.csv", index_col=0, parse_dates=True)
+
 # === Daftar Saham ===
 STOCK_LIST = [
     "AALI.JK", "ABBA.JK", "ABMM.JK", "ACES.JK", "ACST.JK", "ADHI.JK", "ADMF.JK", "ADMG.JK", "ADRO.JK", "AGII.JK",
@@ -340,6 +344,13 @@ def evaluate_prediction_accuracy() -> Dict[str, float]:
     logging.info(f"Akurasi prediksi dihitung untuk {len(akurasi_per_ticker)} ticker.")
 
     return akurasi_per_ticker
+
+# === Fitur dan target ===
+target = df["future_high"]
+features = df.drop(columns=["future_high", "future_low"])  # Hindari data leakage
+
+# === Split data ===
+X_train, X_val, y_train, y_val = train_test_split(features, target, test_size=0.2, random_state=42)
 
 def make_objective_lgb(X_train, y_train, X_val, y_val):
     def objective(trial):
