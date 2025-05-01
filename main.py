@@ -431,11 +431,12 @@ def get_latest_close(ticker: str):
         return None
 
 def analyze_stock(ticker: str):
-    df.columns = [col.lower() for col in df.columns]
     df = get_stock_data(ticker)
     if df is None or df.empty:
         logging.error(f"{ticker}: Data saham tidak ditemukan atau kosong.")
         return None
+    else:
+        df.columns = [col.lower() for col in df.columns]
 
     df = calculate_indicators(df)
 
