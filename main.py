@@ -438,6 +438,8 @@ def analyze_stock(ticker: str):
     else:
         df.columns = [col.lower() for col in df.columns]
 
+    df.columns = df.columns.str.lower()
+    
     df = calculate_indicators(df)
 
     # Pastikan kolom dan nilainya ada sebelum lanjut
