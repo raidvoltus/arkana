@@ -98,20 +98,33 @@ def send_telegram_message(message: str):
 
 # === Ambil & Validasi Data Saham ===
 def get_stock_data(ticker: str) -> pd.DataFrame:
-    try:
-        # Gunakan 60 hari jika pakai interval 1 jam
+    def fetch_data(interval: str, period: str) -> pd.DataFrame:
         stock = yf.Ticker(ticker)
-        df = stock.history(period="1y", interval="1h")
+        df = stock.history(period=period, interval=interval)
+        if df is not None and not df.empty:
+            df.columns = [col.lower() for col in df.columns]
+        return df
+
+    try:
+        # Coba dulu data 1 jam, 1 tahun
+        df = fetch_data("1h", "1y")
 
         required_cols = ["high", "low", "close", "volume"]
-        if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
+        if df is not None and all(col in df.columns for col in required_cols) and len(df) >= 200:
             df["ticker"] = ticker
             return df
 
-        logging.warning(f"{ticker}: Data kosong/kurang atau kolom tidak lengkap.")
-        logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
+        logging.warning(f"{ticker}: Data 1h tidak memadai. Mencoba fallback ke 1d.")
+        # Fallback ke 1 hari, 2 tahun
+        df = fetch_data("1d", "2y")
+        if df is not None and all(col in df.columns for col in required_cols) and len(df) >= 200:
+            df["ticker"] = ticker
+            return df
+
+        logging.warning(f"{ticker}: Data tetap tidak memadai setelah fallback.")
+        logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist() if df is not None else 'None'}, jumlah baris: {len(df) if df is not None else 0}")
     except Exception as e:
-        logging.error(f"Error mengambil data {ticker}: {e}")
+        logging.error(f"{ticker}: Error mengambil data - {e}")
     return None
 
 # === Hitung Indikator ===
