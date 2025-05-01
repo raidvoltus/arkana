@@ -18,6 +18,9 @@ import lightgbm as lgb
 import tensorflow as tf
 
 from xgboost import XGBRegressor
+from keras_tuner import RandomSearch
+from keras.models import Sequential
+from keras.layers import LSTM, Dropout, Dense
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from typing import Optional, Dict, List, Tuple
@@ -220,25 +223,59 @@ def train_xgboost(X_train: pd.DataFrame, y_train: pd.Series, X_val: Optional[pd.
 def train_lstm(
     X: pd.DataFrame,
     y: pd.Series,
-    lstm_units: int = 64,
-    dropout_rate: float = 0.2,
-    dense_units: int = 32,
-    epochs: int = 55,
+    max_trials: int = 10,
+    executions_per_trial: int = 1,
+    epochs: int = 20,
     batch_size: int = 32,
-    verbose: int = 1
+    verbose: int = 1,
+    ticker: str = "default"
 ) -> Sequential:
-    X_arr = np.reshape(X.values, (X.shape[0], X.shape[1], 1))
-    model = Sequential([
-        LSTM(lstm_units, return_sequences=True, input_shape=(X.shape[1], 1)),
-        Dropout(dropout_rate),
-        LSTM(lstm_units),
-        Dropout(dropout_rate),
-        Dense(dense_units, activation="relu"),
-        Dense(1)
-    ])
-    model.compile(optimizer="adam", loss="mean_squared_error")
-    model.fit(X_arr, y, epochs=epochs, batch_size=batch_size, verbose=verbose)
-    return model
+    X_arr = np.reshape(X.values, (X.shape[0], X.shape[1], 1))  # (samples, timesteps, features)
+
+    def build_model(hp):
+        model = Sequential()
+        model.add(LSTM(
+            units=hp.Int("lstm_units_1", 32, 256, step=32),
+            return_sequences=True,
+            input_shape=(X_arr.shape[1], 1)
+        ))
+        model.add(Dropout(hp.Float("dropout_1", 0.1, 0.5, step=0.1)))
+        model.add(LSTM(
+            units=hp.Int("lstm_units_2", 32, 256, step=32)
+        ))
+        model.add(Dropout(hp.Float("dropout_2", 0.1, 0.5, step=0.1)))
+        model.add(Dense(
+            units=hp.Int("dense_units", 16, 128, step=16),
+            activation="relu"
+        ))
+        model.add(Dense(1))
+        model.compile(optimizer="adam", loss="mean_squared_error")
+        return model
+
+    tuner = RandomSearch(
+        build_model,
+        objective="val_loss",
+        max_trials=max_trials,
+        executions_per_trial=executions_per_trial,
+        directory="lstm_tuning",
+        project_name=f"price_pred_{ticker}",
+        overwrite=True
+    )
+
+    tuner.search(X_arr, y, epochs=epochs, batch_size=batch_size, validation_split=0.2, verbose=verbose)
+
+    # Simpan model terbaik
+    best_model = tuner.get_best_models(1)[0]
+    model_path = f"model_lstm_{ticker}.keras"
+    best_model.save(model_path)
+
+    # Simpan hasil tuning ke CSV
+    results_df = pd.DataFrame(tuner.results_summary(num_trials=max_trials, print_results=False))
+    results_csv_path = f"lstm_tuning_results_{ticker}.csv"
+    with open(results_csv_path, "w") as f:
+        tuner.results_summary(print_fn=lambda x: f.write(x + "\n"))
+
+    return best_model
 
 def cross_validate_model(model, X, y):
     scores = cross_val_score(model, X, y, cv=5, scoring='neg_mean_squared_error')
