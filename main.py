@@ -682,6 +682,22 @@ def get_random_motivation() -> str:
 
 # === Main Execution & Signal Sending ===
 if __name__ == "__main__":
+    try:
+        print("Mulai tuning LGBM dengan Optuna...")
+        study = optuna.create_study(direction="minimize")
+        study.optimize(make_objective_lgb(X_train, y_train, X_val, y_val), n_trials=50)
+
+        print("\nBest params:")
+        print(study.best_params)
+
+        # Train final model
+        best_model = lgb.LGBMRegressor(**study.best_params)
+        best_model.fit(X_train, y_train)
+        print("Model final berhasil dilatih.")
+        
+    except Exception as e:
+        print("Gagal menjalankan tuning:", str(e))
+        
     reset_models()
     logging.info("🚀 Memulai analisis saham...")
     max_workers = min(8, os.cpu_count() or 1)
