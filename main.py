@@ -431,6 +431,7 @@ def get_latest_close(ticker: str):
         return None
 
 def analyze_stock(ticker: str):
+    df.columns = [col.lower() for col in df.columns]
     df = get_stock_data(ticker)
     if df is None or df.empty:
         logging.error(f"{ticker}: Data saham tidak ditemukan atau kosong.")
@@ -444,7 +445,7 @@ def analyze_stock(ticker: str):
         return None
 
     atr = df["ATR"].dropna().iloc[-1]
-    required_columns = ["High", "Low", "Close", "Volume", "ATR"]
+    required_columns = ["high", "low", "close", "volume", "atr"]
     if not all(col in df.columns for col in required_columns):
         logging.error(f"{ticker}: Kolom yang diperlukan tidak lengkap.")
         logging.debug(f"{ticker}: Kolom tersedia: {df.columns.tolist()}")
