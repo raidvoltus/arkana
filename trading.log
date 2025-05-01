@@ -1,35 +1,30 @@
-2025-05-01 00:14:10.993357: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-05-01 00:14:10.996407: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
-2025-05-01 00:14:11.004764: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-05-01 01:21:52.829862: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-05-01 01:21:52.832932: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-05-01 01:21:52.841380: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1746058451.018771    2066 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1746058451.022893    2066 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1746058451.034415    2066 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746058451.034434    2066 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746058451.034437    2066 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1746058451.034440    2066 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-2025-05-01 00:14:11.037945: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1746062512.855349    2065 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1746062512.859472    2065 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1746062512.870910    2065 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746062512.870926    2065 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746062512.870929    2065 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1746062512.870931    2065 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-05-01 01:21:52.874416: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-/home/runner/work/arkana/arkana/main.py:33: DeprecationWarning: `import kerastuner` is deprecated, please use `import keras_tuner`.
-  from kerastuner.tuners import RandomSearch
-/home/runner/work/arkana/arkana/main.py:44: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
-  df = pd.read_csv("stock_data_backup.csv", index_col=0, parse_dates=True)
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
-    return self._engine.get_loc(casted_key)
-  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
-  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
-  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
-KeyError: 'future_high'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/runner/work/arkana/arkana/main.py", line 349, in <module>
-    target = df["future_high"]
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
-    indexer = self.columns.get_loc(key)
-  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
-    raise KeyError(key) from err
-KeyError: 'future_high'
+  File "/home/runner/work/arkana/arkana/main.py", line 948, in <module>
+    results = list(executor.map(analyze_stock, STOCK_LIST))
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/runner/work/arkana/arkana/main.py", line 438, in analyze_stock
+    df = calculate_indicators(df)
+  File "/home/runner/work/arkana/arkana/main.py", line 127, in calculate_indicators
+    df = ta.trend.adx(df['high'], df['low'], df['close'], window=14, fillna=True)
+NameError: name 'ta' is not defined. Did you mean: 'tf'?
