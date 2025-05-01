@@ -100,7 +100,7 @@ def get_stock_data(ticker: str) -> pd.DataFrame:
         stock = yf.Ticker(ticker)
         df = stock.history(period="1y", interval="1h")
 
-        required_cols = ["High", "Low", "Close", "Volume"]
+        required_cols = ["high", "low", "close", "volume"]
         if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
             df["ticker"] = ticker
             return df
