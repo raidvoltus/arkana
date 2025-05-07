@@ -599,7 +599,7 @@ def load_or_train_model(path, train_fn, X_train, y_train, model_type="joblib"):
 def get_latest_close(ticker: str):
     try:
         stock = yf.Ticker(ticker)
-        df = stock.history(period="1d", interval="1d")
+        df = stock.history(period="1d", interval="1h")
 
         if df is None or df.empty:
             logging.warning(f"{ticker}: Data daily kosong saat ambil harga terbaru.")
