@@ -1,1 +1,5 @@
-
+ticker,harga,take_profit,stop_loss,aksi,prob_high,prob_low,prob_success,profit_potential_pct
+SRTG.JK,1690.0,1792.02,1658.81,beli,0.92,0.94,0.93,6.04
+WEGE.JK,61.0,62.24,60.9,beli,0.67,0.86,0.77,2.03
+TOWR.JK,590.0,608.48,581.81,beli,0.86,0.87,0.86,3.13
+NFCX.JK,1740.0,1782.71,1669.42,beli,0.88,0.89,0.88,2.45
