@@ -101,7 +101,6 @@ def send_telegram_message(message: str):
     except Exception as e:
         logging.error(f"Telegram error: {e}")
 
-# === Ambil & Validasi Data Saham ===
 # === Ambil & Validasi Data Saham (dengan periode adaptif) ===
 def get_stock_data(ticker: str, model_type: str = "lstm", interval: str = "1h") -> pd.DataFrame:
     try:
