@@ -102,11 +102,22 @@ def send_telegram_message(message: str):
         logging.error(f"Telegram error: {e}")
 
 # === Ambil & Validasi Data Saham ===
-def get_stock_data(ticker: str) -> pd.DataFrame:
+# === Ambil & Validasi Data Saham (dengan periode adaptif) ===
+def get_stock_data(ticker: str, model_type: str = "lstm", interval: str = "1h") -> pd.DataFrame:
     try:
-        # Gunakan 60 hari jika pakai interval 1 jam
+        # Pilih periode berdasarkan model
+        if interval == "1h":
+            if model_type == "lstm":
+                period = "1y"
+            elif model_type in ["xgb", "lgbm", "lightgbm"]:
+                period = "90d"
+            else:
+                period = "180d"  # default aman
+        else:
+            period = "6mo"  # fallback umum jika bukan 1h
+
         stock = yf.Ticker(ticker)
-        df = stock.history(period="180d", interval="1h")
+        df = stock.history(period=period, interval=interval)
 
         required_cols = ["High", "Low", "Close", "Volume"]
         if df is not None and not df.empty and all(col in df.columns for col in required_cols) and len(df) >= 200:
