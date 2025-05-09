@@ -596,7 +596,7 @@ MIN_PRICE = 0
 MAX_PRICE = 2000000
 MIN_VOLUME = 10000
 MIN_VOLATILITY = 0.005
-MIN_PROB = 0.5
+MIN_PROB = 0.87
 
 def is_stock_eligible(price, avg_volume, atr, ticker):
     if price < MIN_PRICE:
