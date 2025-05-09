@@ -448,29 +448,29 @@ def tune_xgboost_hyperparameters_optuna(X_train, y_train, n_trials=50):
     return best_model
 
 # === Hyperparameter Tuning untuk LightGBM ===
-def tune_lightgbm_hyperparameters(X_train, y_train, n_iter=25):
-    param_dist = {
-        'learning_rate': [0.005, 0.01, 0.02, 0.05, 0.1, 0.2],
-        'n_estimators': [100, 200, 300, 400],
-        'max_depth': [3, 5, 7, 9],
-        'num_leaves': [15, 31, 63, 127],
-        'subsample': [0.6, 0.8, 1.0],
-        'colsample_bytree': [0.6, 0.8, 1.0]
-    }
+def tune_lightgbm_hyperparameters_optuna(X_train, y_train, n_trials=50):
+    def objective(trial):
+        params = {
+            'learning_rate': trial.suggest_float('learning_rate', 0.005, 0.3, log=True),
+            'n_estimators': trial.suggest_int('n_estimators', 100, 1000, step=100),
+            'max_depth': trial.suggest_int('max_depth', 3, 12),
+            'num_leaves': trial.suggest_int('num_leaves', 7, 255),
+            'subsample': trial.suggest_float('subsample', 0.6, 1.0),
+            'colsample_bytree': trial.suggest_float('colsample_bytree', 0.6, 1.0),
+            'reg_alpha': trial.suggest_float('reg_alpha', 0.0, 1.0),
+            'reg_lambda': trial.suggest_float('reg_lambda', 0.0, 1.0),
+        }
+        model = lgb.LGBMRegressor(**params, random_state=42)
+        score = cross_val_score(model, X_train, y_train, scoring='neg_mean_absolute_error', cv=3, n_jobs=-1)
+        return -score.mean()
 
-    search = RandomizedSearchCV(
-        estimator=lgb.LGBMRegressor(),
-        param_distributions=param_dist,
-        n_iter=n_iter,
-        cv=3,
-        scoring='neg_mean_absolute_error',
-        random_state=42,
-        n_jobs=-1
-    )
+    study = optuna.create_study(direction='minimize')
+    study.optimize(objective, n_trials=n_trials)
 
-    search.fit(X_train, y_train)
-    logging.info(f"Best LightGBM Parameters: {search.best_params_}")
-    return search.best_estimator_
+    best_model = lgb.LGBMRegressor(**study.best_params, random_state=42)
+    best_model.fit(X_train, y_train)
+
+    return best_model
 
 # === Hyperparameter Tuning untuk LSTM ===
 def tune_lstm_hyperparameters(X_train, y_train, n_iter=10):
