@@ -423,62 +423,79 @@ def train_and_select_best_model(ticker: str, X: pd.DataFrame, y: pd.Series) -> s
     return best_model_type
 
 # === Hyperparameter Tuning untuk XGBoost ===
-def tune_xgboost_hyperparameters(X_train, y_train):
-    param_grid = {
-        'learning_rate': [0.01, 0.05, 0.1],
-        'n_estimators': [100, 200, 300],
-        'max_depth': [3, 5, 7]
+def tune_xgboost_hyperparameters(X_train, y_train, n_iter=25):
+    param_dist = {
+        'learning_rate': [0.005, 0.01, 0.02, 0.05, 0.1, 0.2],
+        'n_estimators': [100, 200, 300, 400],
+        'max_depth': [3, 5, 7, 9],
+        'subsample': [0.6, 0.8, 1.0],
+        'colsample_bytree': [0.6, 0.8, 1.0]
     }
-    search = GridSearchCV(
-        XGBRegressor(),
-        param_grid,
+
+    search = RandomizedSearchCV(
+        estimator=XGBRegressor(),
+        param_distributions=param_dist,
+        n_iter=n_iter,
         cv=3,
         scoring='neg_mean_absolute_error',
+        random_state=42,
         n_jobs=-1
     )
+
     search.fit(X_train, y_train)
     logging.info(f"Best XGBoost Parameters: {search.best_params_}")
     return search.best_estimator_
 
 # === Hyperparameter Tuning untuk LightGBM ===
-def tune_lightgbm_hyperparameters(X_train, y_train):
-    param_grid = {
-        'learning_rate': [0.01, 0.05, 0.1],
-        'n_estimators': [100, 200, 300],
-        'max_depth': [3, 5, 7],
-        'num_leaves': [15, 31, 63]
+def tune_lightgbm_hyperparameters(X_train, y_train, n_iter=25):
+    param_dist = {
+        'learning_rate': [0.005, 0.01, 0.02, 0.05, 0.1, 0.2],
+        'n_estimators': [100, 200, 300, 400],
+        'max_depth': [3, 5, 7, 9],
+        'num_leaves': [15, 31, 63, 127],
+        'subsample': [0.6, 0.8, 1.0],
+        'colsample_bytree': [0.6, 0.8, 1.0]
     }
 
-    grid_search = GridSearchCV(
+    search = RandomizedSearchCV(
         estimator=lgb.LGBMRegressor(),
-        param_grid=param_grid,
+        param_distributions=param_dist,
+        n_iter=n_iter,
         cv=3,
         scoring='neg_mean_absolute_error',
+        random_state=42,
         n_jobs=-1
     )
 
-    grid_search.fit(X_train, y_train)
-    logging.info(f"Best LightGBM Parameters: {grid_search.best_params_}")
-    return grid_search.best_estimator_
+    search.fit(X_train, y_train)
+    logging.info(f"Best LightGBM Parameters: {search.best_params_}")
+    return search.best_estimator_
 
 # === Hyperparameter Tuning untuk LSTM ===
-def tune_lstm_hyperparameters(X, y, n_iter=5):
-    param_grid = {
-        "lstm_units": [32, 64, 128],
+def tune_lstm_hyperparameters(X_train, y_train, n_iter=10):
+    param_dist = {
+        "lstm_units": [32, 64, 128, 256],
         "dropout_rate": [0.1, 0.2, 0.3],
         "dense_units": [16, 32, 64],
-        "batch_size": [16, 32],
-        "epochs": [50, 75, 100]
+        "batch_size": [16, 32, 64],
+        "epochs": [50, 75, 100, 150],
+        "optimizer": ['adam', 'rmsprop']
     }
 
     best_model = None
     best_loss = np.inf
     best_params = None
 
-    for params in ParameterSampler(param_grid, n_iter=n_iter, random_state=42):
+    for params in ParameterSampler(param_dist, n_iter=n_iter, random_state=42):
         try:
-            model = train_lstm(X, y, **params, verbose=0)
-            loss = model.evaluate(np.reshape(X.values, (X.shape[0], X.shape[1], 1)), y, verbose=0)
+            model = build_lstm_model(X_train, **params)
+            model.fit(np.reshape(X_train.values, (X_train.shape[0], X_train.shape[1], 1)), y_train,
+                      batch_size=params['batch_size'], epochs=params['epochs'], verbose=0)
+
+            # Evaluasi loss
+            loss = model.evaluate(np.reshape(X_train.values, (X_train.shape[0], X_train.shape[1], 1)), y_train, verbose=0)
+            
+            # Simpan model terbaik
             if loss < best_loss:
                 best_loss = loss
                 best_model = model
@@ -488,6 +505,17 @@ def tune_lstm_hyperparameters(X, y, n_iter=5):
 
     logging.info(f"Best LSTM params: {best_params}, loss: {best_loss:.4f}")
     return best_model
+
+# Fungsi untuk membangun model LSTM
+def build_lstm_model(X_train, lstm_units, dropout_rate, dense_units, optimizer):
+    model = Sequential()
+    model.add(LSTM(lstm_units, activation='relu', input_shape=(X_train.shape[1], 1)))
+    model.add(Dropout(dropout_rate))
+    model.add(Dense(dense_units, activation='relu'))
+    model.add(Dense(1))  # Output layer untuk prediksi harga
+
+    model.compile(optimizer=optimizer, loss='mean_squared_error')
+    return model
 
 def save_best_params(ticker: str, model_type: str, params: dict):
     os.makedirs("params", exist_ok=True)
