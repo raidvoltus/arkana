@@ -473,38 +473,42 @@ def tune_lightgbm_hyperparameters_optuna(X_train, y_train, n_trials=50):
     return best_model
 
 # === Hyperparameter Tuning untuk LSTM ===
-def tune_lstm_hyperparameters(X_train, y_train, n_iter=10):
-    param_dist = {
-        "lstm_units": [32, 64, 128, 256],
-        "dropout_rate": [0.1, 0.2, 0.3],
-        "dense_units": [16, 32, 64],
-        "batch_size": [16, 32, 64],
-        "epochs": [50, 75, 100, 150],
-        "optimizer": ['adam', 'rmsprop']
-    }
+def tune_lstm_hyperparameters_optuna(X, y, n_trials=20):
+    def create_model(trial):
+        lstm_units = trial.suggest_categorical("lstm_units", [32, 64, 128])
+        dense_units = trial.suggest_categorical("dense_units", [16, 32, 64])
+        dropout_rate = trial.suggest_float("dropout_rate", 0.1, 0.5)
+        learning_rate = trial.suggest_float("learning_rate", 1e-4, 1e-2, log=True)
 
-    best_model = None
-    best_loss = np.inf
-    best_params = None
+        model = Sequential()
+        model.add(LSTM(lstm_units, input_shape=(X.shape[1], X.shape[2]), return_sequences=False))
+        model.add(Dropout(dropout_rate))
+        model.add(Dense(dense_units, activation="relu"))
+        model.add(Dense(1))
+        
+        optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
+        model.compile(loss="mean_absolute_error", optimizer=optimizer)
+        return model
 
-    for params in ParameterSampler(param_dist, n_iter=n_iter, random_state=42):
-        try:
-            model = build_lstm_model(X_train, **params)
-            model.fit(np.reshape(X_train.values, (X_train.shape[0], X_train.shape[1], 1)), y_train,
-                      batch_size=params['batch_size'], epochs=params['epochs'], verbose=0)
+    def objective(trial):
+        model = create_model(trial)
+        X_train_split, X_val_split, y_train_split, y_val_split = train_test_split(X, y, test_size=0.2, random_state=42)
+        history = model.fit(
+            X_train_split, y_train_split,
+            validation_data=(X_val_split, y_val_split),
+            epochs=trial.suggest_int("epochs", 50, 150, step=25),
+            batch_size=trial.suggest_categorical("batch_size", [16, 32, 64]),
+            verbose=0,
+        )
+        val_loss = history.history["val_loss"][-1]
+        return val_loss
 
-            # Evaluasi loss
-            loss = model.evaluate(np.reshape(X_train.values, (X_train.shape[0], X_train.shape[1], 1)), y_train, verbose=0)
-            
-            # Simpan model terbaik
-            if loss < best_loss:
-                best_loss = loss
-                best_model = model
-                best_params = params
-        except Exception as e:
-            logging.warning(f"Gagal tuning LSTM dengan params {params}: {e}")
+    study = optuna.create_study(direction="minimize")
+    study.optimize(objective, n_trials=n_trials)
 
-    logging.info(f"Best LSTM params: {best_params}, loss: {best_loss:.4f}")
+    best_model = create_model(study.best_trial)
+    best_model.fit(X, y, epochs=study.best_trial.params["epochs"], batch_size=study.best_trial.params["batch_size"], verbose=0)
+
     return best_model
 
 # Fungsi untuk membangun model LSTM
