@@ -21,6 +21,7 @@ from xgboost import XGBRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from typing import Optional, Dict, List, Tuple
 from ta.volatility import AverageTrueRange, BollingerBands
